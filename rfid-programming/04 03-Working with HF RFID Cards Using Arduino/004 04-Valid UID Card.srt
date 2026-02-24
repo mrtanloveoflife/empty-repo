@@ -1,0 +1,232 @@
+1
+00:00:01,320 --> 00:00:06,020
+So now we are going to see a valid Uid program.
+
+2
+00:00:06,030 --> 00:00:07,500
+So it's quite similar.
+
+3
+00:00:07,500 --> 00:00:13,200
+We are going to use the same circuit diagram which we used before.
+
+4
+00:00:13,230 --> 00:00:18,720
+The only difference is this time we have also added a buzzer.
+
+5
+00:00:19,970 --> 00:00:22,460
+So let me do a little zoom on it.
+
+6
+00:00:25,950 --> 00:00:28,920
+So the complete circuit diagram is similar.
+
+7
+00:00:29,130 --> 00:00:31,340
+Other than this this buzzer.
+
+8
+00:00:31,350 --> 00:00:40,560
+So we have added this buzzer and we have connected the high pin of buzzer with pin seven over here,
+
+9
+00:00:40,560 --> 00:00:41,730
+as you can see.
+
+10
+00:00:41,760 --> 00:00:51,480
+So all the other things like the LCD and RMF, RC 5 to 2 module using the same circuit and we are just
+
+11
+00:00:51,480 --> 00:01:00,030
+using this pin seven for Buzzer and we are connecting the low end of buzzer with the ground.
+
+12
+00:01:00,030 --> 00:01:03,150
+And we have also set up the ground as you can see.
+
+13
+00:01:03,990 --> 00:01:06,630
+So this is the only change in the circuit.
+
+14
+00:01:06,660 --> 00:01:08,370
+Let me show you the code.
+
+15
+00:01:10,550 --> 00:01:13,310
+So over here you can see the code.
+
+16
+00:01:16,090 --> 00:01:22,510
+While the code is also similar, we have defined all the things which we defined before.
+
+17
+00:01:22,780 --> 00:01:26,740
+The only thing here is the difference of buzzer.
+
+18
+00:01:26,770 --> 00:01:32,560
+We have also added the constant string buzzer on pin seven.
+
+19
+00:01:32,560 --> 00:01:36,320
+So over here we are defining the PIN seven, right?
+
+20
+00:01:36,340 --> 00:01:43,540
+And we are passing this pin on pin mode and as an output on pin seven.
+
+21
+00:01:44,270 --> 00:01:45,380
+As you can see.
+
+22
+00:01:47,690 --> 00:01:50,150
+And we are passing it on the setup, right.
+
+23
+00:01:50,300 --> 00:01:58,810
+And then we are over here where we are checking where we are getting the uuids.
+
+24
+00:01:58,820 --> 00:02:04,400
+We are also checking the Uuids so we have hardcoded this to Uids.
+
+25
+00:02:05,060 --> 00:02:06,920
+So these are the two uuids.
+
+26
+00:02:06,920 --> 00:02:15,380
+We are checking if the Uuid string is similar to this Uid or the Uid string is similar to this uid.
+
+27
+00:02:15,590 --> 00:02:18,230
+Then we are passing a valid Uid function.
+
+28
+00:02:18,230 --> 00:02:24,140
+Else we are passing the invalid Uid function and invalid and invalid Uid functions.
+
+29
+00:02:24,440 --> 00:02:30,590
+We are just displaying the text valid Uid and we are defining the text layers over here.
+
+30
+00:02:32,640 --> 00:02:39,960
+And we are also setting up the tone in buzzer with the delay of 100 milliseconds.
+
+31
+00:02:42,170 --> 00:02:44,390
+And an invalid function.
+
+32
+00:02:44,750 --> 00:02:46,730
+An invalid function.
+
+33
+00:02:47,030 --> 00:02:50,650
+We are also setting up the text and printing invalid uid.
+
+34
+00:02:51,780 --> 00:02:57,690
+And we are also setting up the buzzer tone with the delay of one second.
+
+35
+00:02:58,500 --> 00:03:04,530
+So this is what we have set up and clear and print functions are similar as before.
+
+36
+00:03:05,480 --> 00:03:06,930
+So this is the code.
+
+37
+00:03:06,950 --> 00:03:10,460
+Let me just upload this code and run this code.
+
+38
+00:03:15,670 --> 00:03:18,070
+All right, so the code uploading is done.
+
+39
+00:03:18,070 --> 00:03:24,760
+Now let's just place a valid measure card on our module and see what happens.
+
+40
+00:03:28,510 --> 00:03:33,820
+So as you can see, it's reading the card perfectly fine and it's also displaying the Uid.
+
+41
+00:03:34,360 --> 00:03:36,730
+Let's just place another valid ID card.
+
+42
+00:03:39,590 --> 00:03:43,940
+So it's also reading the other card as well.
+
+43
+00:03:44,900 --> 00:03:50,230
+And we have hard coded these two uuids in our code.
+
+44
+00:03:50,240 --> 00:03:50,660
+Right?
+
+45
+00:03:50,660 --> 00:03:53,000
+So it's reading only these two cards.
+
+46
+00:03:53,000 --> 00:03:57,830
+If we place another invalid card, let's just see what happens.
+
+47
+00:04:02,770 --> 00:04:10,480
+So as you can see it prints invalid card and it's also displaying the Uid of the other card.
+
+48
+00:04:10,480 --> 00:04:10,990
+Right.
+
+49
+00:04:11,020 --> 00:04:16,570
+Let's just place the valid ID card which we have hardcoded in our code one more time.
+
+50
+00:04:21,680 --> 00:04:24,680
+So it's reading it perfectly fine, as you can see.
+
+51
+00:04:25,010 --> 00:04:33,110
+So this is how we use uuids of cards to check whether the card is valid or not.
+
+52
+00:04:33,500 --> 00:04:41,330
+In the next video, we are going to see that how much this code is secure or whether the whether this
+
+53
+00:04:41,330 --> 00:04:45,290
+code is according to the industry standards or not.
+
+54
+00:04:45,290 --> 00:04:51,470
+And we will also see if this code is hackable or vulnerable or not.
+
+55
+00:04:51,500 --> 00:04:54,860
+We are going to see all those things in the coming up video.
+
+56
+00:04:54,890 --> 00:04:55,670
+Right.
+
+57
+00:04:55,670 --> 00:05:03,800
+So right now, this is how we read card and this is how we display IDs of the cards.
+
+58
+00:05:03,920 --> 00:05:11,090
+And in the next video, we are going to see the security of Uuids and see how much uuids are secure.
+

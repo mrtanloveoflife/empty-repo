@@ -1,0 +1,68 @@
+1
+00:00:01,990 --> 00:00:08,260
+So now that you have understand the concept of sectors and blocks, there is one more concept which
+
+2
+00:00:08,260 --> 00:00:11,260
+you have to know is related to Uid.
+
+3
+00:00:11,470 --> 00:00:16,000
+So as you know that each sector has 16.
+
+4
+00:00:16,210 --> 00:00:22,840
+Each Mifare classic card has 16 sectors and each sector has four blocks.
+
+5
+00:00:23,050 --> 00:00:30,080
+But blocks zero of sector zero is a special case which I am going to tell you right now.
+
+6
+00:00:30,100 --> 00:00:31,430
+So sector.
+
+7
+00:00:31,450 --> 00:00:31,720
+So.
+
+8
+00:00:31,720 --> 00:00:35,830
+Block zero of sector zero, the first four bytes.
+
+9
+00:00:36,690 --> 00:00:38,790
+Are the Uuid, right?
+
+10
+00:00:38,790 --> 00:00:44,760
+So the Uid, which we are using right now and which we used in our previous lectures is the which is
+
+11
+00:00:44,760 --> 00:00:49,890
+coming from the first four bytes of, of block zero of sector zero.
+
+12
+00:00:49,890 --> 00:00:50,370
+Right.
+
+13
+00:00:50,370 --> 00:00:56,790
+The other bytes in the in this block are the manufacturer data.
+
+14
+00:00:56,790 --> 00:00:57,180
+Right.
+
+15
+00:00:57,180 --> 00:01:01,650
+So these x x x are related to the manufacturer data.
+
+16
+00:01:01,890 --> 00:01:07,560
+So so the only thing which I need to tell you in this video is related to the Uid.
+
+17
+00:01:07,740 --> 00:01:13,740
+So the first four bytes in block zero of sector zero is Uid.
+

@@ -1,0 +1,260 @@
+1
+00:00:01,839 --> 00:00:05,800
+So now we are going to update the firmware of Proc Spark three device.
+
+2
+00:00:05,980 --> 00:00:11,650
+So before updating the firmware, make sure you are in the same client directory as before.
+
+3
+00:00:11,830 --> 00:00:15,820
+So it's proc mark three clients directory.
+
+4
+00:00:15,850 --> 00:00:17,680
+Let me clear out the screen.
+
+5
+00:00:20,780 --> 00:00:21,290
+All right.
+
+6
+00:00:21,290 --> 00:00:23,960
+So the first command to update the prox mark three.
+
+7
+00:00:24,020 --> 00:00:27,920
+First of all, let me tell you how to update the firmware.
+
+8
+00:00:27,920 --> 00:00:29,630
+So it's a little tricky.
+
+9
+00:00:29,630 --> 00:00:32,420
+But at the same time, it's also very easy.
+
+10
+00:00:32,420 --> 00:00:39,890
+So before updating the firmware or before connecting the device for update for the firmware, make sure
+
+11
+00:00:39,890 --> 00:00:48,710
+you have press the side button on prox mark three and then you connect the device with your laptop or
+
+12
+00:00:48,710 --> 00:00:49,790
+your PC, right?
+
+13
+00:00:49,790 --> 00:00:55,640
+So, uh, the button should be pressed and then the device should be connected.
+
+14
+00:00:55,640 --> 00:01:02,390
+So when the device will connect, the red and green led will blow up, will light up.
+
+15
+00:01:02,390 --> 00:01:09,470
+So it will make easier for you to know that the prox mark three is ready for the firmware update.
+
+16
+00:01:09,740 --> 00:01:12,710
+So make sure the side button is pressed.
+
+17
+00:01:12,710 --> 00:01:16,880
+And when the device is connected, the green and red led is turned on.
+
+18
+00:01:17,240 --> 00:01:21,090
+So now we will run our first command to update the firmware.
+
+19
+00:01:21,420 --> 00:01:23,490
+So it's flasher.
+
+20
+00:01:24,760 --> 00:01:35,470
+Then we have to give the directory div ty cm0 and then we have to give the boot file.
+
+21
+00:01:38,330 --> 00:01:40,400
+Bootrom obj.
+
+22
+00:01:43,040 --> 00:01:43,550
+Bootrom.
+
+23
+00:01:43,610 --> 00:01:44,630
+Dot elf.
+
+24
+00:01:46,310 --> 00:01:46,610
+Right.
+
+25
+00:01:46,610 --> 00:01:52,340
+So let's just hit enter and let's just connect our x mark three.
+
+26
+00:01:53,420 --> 00:01:56,440
+Make sure the button is pressed and then connect.
+
+27
+00:01:56,450 --> 00:01:57,560
+So the red and.
+
+28
+00:01:58,810 --> 00:02:00,850
+Uh, criminality will be.
+
+29
+00:02:02,740 --> 00:02:03,520
+Blinking.
+
+30
+00:02:05,920 --> 00:02:12,140
+And let's just wait to update the firmware so it will update the firmware in seconds.
+
+31
+00:02:12,160 --> 00:02:17,380
+So as you can see, flashing and resetting hardware all done.
+
+32
+00:02:17,410 --> 00:02:18,260
+Have a nice day.
+
+33
+00:02:18,280 --> 00:02:21,510
+So that means our first file is updated successfully.
+
+34
+00:02:21,520 --> 00:02:26,110
+Now we have to update the full image so we will run the flasher again.
+
+35
+00:02:26,110 --> 00:02:29,710
+So make sure you have disconnected your Proxmox three.
+
+36
+00:02:30,840 --> 00:02:36,330
+So now we will run our second command for flashing the firmware.
+
+37
+00:02:36,810 --> 00:02:41,400
+So it's again in the same directory and we will run flasher.
+
+38
+00:02:42,330 --> 00:02:48,190
+Then we have to give the directory dev t zero.
+
+39
+00:02:48,720 --> 00:02:58,050
+And then it's in directory src object directory and full image dot.
+
+40
+00:03:00,210 --> 00:03:01,920
+So let's just run this command.
+
+41
+00:03:01,920 --> 00:03:07,860
+And again, we have to press the prox, mark three side button and then connect.
+
+42
+00:03:08,010 --> 00:03:10,860
+So the red and green led will turn on.
+
+43
+00:03:11,730 --> 00:03:13,620
+And then it will flash.
+
+44
+00:03:15,160 --> 00:03:15,880
+The firmware.
+
+45
+00:03:20,180 --> 00:03:27,380
+So make sure you have keep that button pressed until the full image is flashed.
+
+46
+00:03:27,380 --> 00:03:29,140
+So it's flashed now.
+
+47
+00:03:29,150 --> 00:03:33,320
+So I'll release the button and all done.
+
+48
+00:03:33,320 --> 00:03:37,190
+So this is how you update firmware on Proxmox three.
+
+49
+00:03:40,370 --> 00:03:45,380
+So the firmware is totally updated and let's just clear out the screen.
+
+50
+00:03:50,590 --> 00:03:53,200
+And let's just run the prox mark three device.
+
+51
+00:03:54,170 --> 00:03:56,000
+So it's Mach three.
+
+52
+00:03:56,900 --> 00:03:59,030
+Then we have to give the directory.
+
+53
+00:04:06,370 --> 00:04:07,300
+So it's connected.
+
+54
+00:04:07,300 --> 00:04:09,340
+Let's just do hardware tuning.
+
+55
+00:04:09,460 --> 00:04:11,940
+So it's tune.
+
+56
+00:04:11,980 --> 00:04:14,110
+The command is tune.
+
+57
+00:04:14,830 --> 00:04:19,450
+So it will just tune the hardware and it will check all the frequencies.
+
+58
+00:04:20,950 --> 00:04:22,740
+And it will also display a graph.
+
+59
+00:04:22,750 --> 00:04:26,290
+So let's just do version as well.
+
+60
+00:04:28,090 --> 00:04:32,650
+That will show you the version and we can do status as well.
+
+61
+00:04:32,650 --> 00:04:35,110
+So it will just display the status.
+
+62
+00:04:38,580 --> 00:04:38,850
+Right.
+
+63
+00:04:38,850 --> 00:04:40,800
+So these are the basic commands.
+
+64
+00:04:41,430 --> 00:04:47,640
+In the coming videos, we are going to see how we can use Proc Smart three to find vulnerabilities in
+
+65
+00:04:47,640 --> 00:04:49,050
+our classic cod.
+

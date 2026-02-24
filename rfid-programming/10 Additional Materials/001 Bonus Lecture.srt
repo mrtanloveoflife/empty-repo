@@ -1,0 +1,48 @@
+1
+00:00:00,280 --> 00:00:01,040
+Hello guys.
+
+2
+00:00:01,040 --> 00:00:03,280
+Thank you for joining this course and completing this course.
+
+3
+00:00:03,280 --> 00:00:07,560
+If you find this course interesting or learn something new in this course, or if you have any suggestions
+
+4
+00:00:07,560 --> 00:00:12,240
+about this course, please consider giving us a review, an honest review on what you think about this
+
+5
+00:00:12,240 --> 00:00:14,800
+course and what we can improve in this course.
+
+6
+00:00:14,800 --> 00:00:19,520
+So we will wait for you to view, because your review keeps us motivated and your review keeps us creating
+
+7
+00:00:19,560 --> 00:00:21,080
+other interesting courses as well.
+
+8
+00:00:21,080 --> 00:00:24,680
+So you can find out our other courses as well in this bonus section.
+
+9
+00:00:24,680 --> 00:00:26,840
+So you can download this HTML file from the resources.
+
+10
+00:00:26,840 --> 00:00:31,920
+And you can get these existing courses with discounted coupon codes and with discounted price.
+
+11
+00:00:31,920 --> 00:00:35,880
+So you can just download this file from the resources and you can check out our other courses as well.
+
+12
+00:00:36,280 --> 00:00:36,800
+Thank you.
+

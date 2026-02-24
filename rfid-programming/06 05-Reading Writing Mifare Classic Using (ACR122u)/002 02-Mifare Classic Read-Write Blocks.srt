@@ -1,0 +1,1116 @@
+1
+00:00:00,680 --> 00:00:04,370
+So now we are going to program Mifare Classic one cards.
+
+2
+00:00:04,370 --> 00:00:09,950
+And first we will see how to program a value blocks sorry, the data blocks.
+
+3
+00:00:09,950 --> 00:00:14,270
+Then later we will see how to program sector trailers and value blocks as well.
+
+4
+00:00:15,440 --> 00:00:23,390
+So before programming mifare classic cards, make sure this memory structure is open on your screen
+
+5
+00:00:23,390 --> 00:00:30,110
+so it will help you a lot in programming and it will help you a lot while checking out the addresses
+
+6
+00:00:30,110 --> 00:00:32,180
+and sector trailers as well.
+
+7
+00:00:32,299 --> 00:00:32,990
+All right.
+
+8
+00:00:32,990 --> 00:00:35,270
+So let's just get started on it.
+
+9
+00:00:36,370 --> 00:00:40,600
+Let me make it a little zoom and let's just minimize it.
+
+10
+00:00:40,870 --> 00:00:47,590
+So as I told you, that 1 to 2 comes with its own SDK.
+
+11
+00:00:47,740 --> 00:00:53,900
+So make sure you get that SDK from wherever you purchase this 1 to 2.
+
+12
+00:00:54,190 --> 00:00:58,420
+And this is the SDK over here.
+
+13
+00:01:00,890 --> 00:01:04,700
+So this is the SDK I have got from my own cellar.
+
+14
+00:01:04,700 --> 00:01:09,520
+So make sure you get this SDK from your cellar as well.
+
+15
+00:01:09,530 --> 00:01:16,820
+So all you have to do is you just have to do a few clicks and this tool will install automatically.
+
+16
+00:01:16,820 --> 00:01:21,320
+It's not that hard, so I'm not going to show you how to install this tool, but you can install this
+
+17
+00:01:21,320 --> 00:01:22,640
+tool very easily.
+
+18
+00:01:22,820 --> 00:01:31,580
+It's just few clicks right After installing this tool on Windows 10, I have to also install the drivers
+
+19
+00:01:31,580 --> 00:01:35,720
+of ACR one two, two so you can get the drivers very easily.
+
+20
+00:01:35,720 --> 00:01:38,930
+This is the link through which you can get the drivers.
+
+21
+00:01:40,390 --> 00:01:44,100
+I will provide this link in the resources file as well.
+
+22
+00:01:44,110 --> 00:01:48,220
+So I have to download this MSI installer for PC.
+
+23
+00:01:48,220 --> 00:01:49,390
+SC Driver.
+
+24
+00:01:49,840 --> 00:01:53,420
+It's around five MB, so you can download it.
+
+25
+00:01:53,530 --> 00:01:59,770
+And for Windows 10, I have to download this driver after installing the SDK so you can download this
+
+26
+00:01:59,770 --> 00:02:00,370
+driver.
+
+27
+00:02:04,830 --> 00:02:06,660
+And let's just start the tool.
+
+28
+00:02:07,540 --> 00:02:11,630
+So over here there is a folder ACR one, two, two.
+
+29
+00:02:11,980 --> 00:02:13,690
+So let me click on it.
+
+30
+00:02:13,690 --> 00:02:17,950
+And there are basically two tools which comes with this SDK.
+
+31
+00:02:18,190 --> 00:02:23,350
+The first one is ACR one, two, two tool, and the other one is easy key.
+
+32
+00:02:23,530 --> 00:02:27,250
+So we are going to see Easy Key later in our video series.
+
+33
+00:02:27,250 --> 00:02:30,700
+But for now, let's just click on ACR one, two, two tool.
+
+34
+00:02:33,490 --> 00:02:33,640
+Right.
+
+35
+00:02:34,050 --> 00:02:36,600
+So let's just go through the screen first.
+
+36
+00:02:36,600 --> 00:02:38,400
+So this is the log screen.
+
+37
+00:02:38,400 --> 00:02:44,370
+You will get all the details like if the card is updated successfully or there are some errors, you
+
+38
+00:02:44,370 --> 00:02:48,510
+will get those errors instantly on log screen over here.
+
+39
+00:02:48,510 --> 00:02:48,870
+Right?
+
+40
+00:02:48,870 --> 00:02:53,220
+So let's just first make a connection with our ACR 1 to 2 device.
+
+41
+00:02:53,220 --> 00:02:58,110
+So to make a connection, you can make a connection from here as well.
+
+42
+00:02:58,110 --> 00:03:03,600
+Reader commands so you can make a new connection and you will get ACR one, two, two.
+
+43
+00:03:03,600 --> 00:03:09,060
+Over here in the readers, if you have multiple readers, you will get all the readers over here.
+
+44
+00:03:09,210 --> 00:03:10,830
+Let me cancel out it.
+
+45
+00:03:10,980 --> 00:03:15,360
+And you can also make connection from this instant button over here.
+
+46
+00:03:15,360 --> 00:03:19,500
+So let's just click on it and you can make a connection from here as well, right?
+
+47
+00:03:19,500 --> 00:03:27,900
+So on the small screen over here, you can see that right now, the, uh, the ACR one, two, two is
+
+48
+00:03:27,900 --> 00:03:30,540
+connected, but showing the red led, right?
+
+49
+00:03:30,540 --> 00:03:34,600
+So it's showing the red led because we haven't placed any card on it.
+
+50
+00:03:34,600 --> 00:03:39,400
+So let's just first place a mifare classic one card.
+
+51
+00:03:39,730 --> 00:03:42,070
+So this is one card you can see.
+
+52
+00:03:47,600 --> 00:03:52,310
+Well, as soon as I placed this card, the lid goes on green.
+
+53
+00:03:52,730 --> 00:03:53,870
+So let's just.
+
+54
+00:03:54,680 --> 00:03:55,880
+Place this card.
+
+55
+00:03:59,770 --> 00:04:04,720
+So the Led will be green and let's just do our connection now.
+
+56
+00:04:08,060 --> 00:04:10,990
+So for 1 to 2 you is connected.
+
+57
+00:04:11,000 --> 00:04:17,140
+So let's just click on Readers command and over here you can see get data.
+
+58
+00:04:17,149 --> 00:04:20,329
+So get data will print the Uid of the card.
+
+59
+00:04:20,390 --> 00:04:21,829
+So let's just.
+
+60
+00:04:22,520 --> 00:04:23,870
+Do get data.
+
+61
+00:04:26,040 --> 00:04:29,370
+And over here you can see the Uuid of the card.
+
+62
+00:04:31,090 --> 00:04:31,480
+Right.
+
+63
+00:04:31,480 --> 00:04:36,370
+So this is the of this card and each card has a different Uid.
+
+64
+00:04:36,610 --> 00:04:40,450
+So let me show you another card which has a different uid.
+
+65
+00:04:41,170 --> 00:04:43,750
+So let me remove this card.
+
+66
+00:04:45,330 --> 00:04:50,850
+And the lady will again go on, read and let's just do a close connection.
+
+67
+00:04:51,730 --> 00:04:54,460
+And we will place another card.
+
+68
+00:04:55,400 --> 00:04:56,750
+This is a different card.
+
+69
+00:04:58,220 --> 00:04:59,780
+So let's just do.
+
+70
+00:05:00,560 --> 00:05:01,460
+Reconnect.
+
+71
+00:05:02,540 --> 00:05:04,400
+And again, do get data.
+
+72
+00:05:05,940 --> 00:05:09,430
+So over here you can see the Uid is different.
+
+73
+00:05:09,450 --> 00:05:15,870
+It's easy to see A6919 and over here it's E to d e.
+
+74
+00:05:17,000 --> 00:05:18,740
+0519.
+
+75
+00:05:19,070 --> 00:05:23,630
+So you can see clearly the uuids are different on each card.
+
+76
+00:05:23,750 --> 00:05:30,010
+So let's just clear out our screen so or we can keep the Uuid as well.
+
+77
+00:05:30,020 --> 00:05:32,360
+Let me show you one more thing.
+
+78
+00:05:33,720 --> 00:05:40,320
+So over here in Raiders Command, there is another option, which is get HDR, right?
+
+79
+00:05:40,620 --> 00:05:42,330
+So let's just click on it.
+
+80
+00:05:44,050 --> 00:05:51,340
+This will show you multiple options like load authentication, keys, authenticate, read, write,
+
+81
+00:05:51,340 --> 00:05:54,370
+read, value, write value, increment, decrement and copy.
+
+82
+00:05:54,400 --> 00:05:58,570
+We are going to see all these options in very detail in this video.
+
+83
+00:05:58,570 --> 00:06:02,260
+So let's just first use load authentication.
+
+84
+00:06:02,260 --> 00:06:02,890
+Keys.
+
+85
+00:06:04,200 --> 00:06:08,220
+And over here you can see load authentication, key menu.
+
+86
+00:06:08,760 --> 00:06:12,660
+It is a pop up and over here you can see the command.
+
+87
+00:06:12,780 --> 00:06:16,110
+Sorry, the keys f f, f, f, f, f, f, f, f f.
+
+88
+00:06:16,110 --> 00:06:16,620
+Right.
+
+89
+00:06:16,620 --> 00:06:22,410
+So as I told you in my previous video animation card comes with transport configuration.
+
+90
+00:06:22,410 --> 00:06:26,400
+Any new card you purchase will always come with a transport configuration.
+
+91
+00:06:26,400 --> 00:06:31,110
+And in transport configuration all the keys are f, f, f, f, f, f, f, f, f, f.
+
+92
+00:06:31,140 --> 00:06:31,560
+Right.
+
+93
+00:06:31,560 --> 00:06:34,020
+So this is the key.
+
+94
+00:06:34,620 --> 00:06:40,050
+You have to basically, if you have changed the keys from anywhere, any other software, you have to
+
+95
+00:06:40,050 --> 00:06:42,360
+provide the correct key over here.
+
+96
+00:06:42,360 --> 00:06:47,490
+But right now the card is on transport configuration.
+
+97
+00:06:47,490 --> 00:06:50,250
+So it is loading the default keys right now.
+
+98
+00:06:50,250 --> 00:06:50,700
+Right?
+
+99
+00:06:50,700 --> 00:06:55,260
+So but if you have another key, you have to provide the key over here, right?
+
+100
+00:06:55,260 --> 00:06:57,840
+So make sure you provide the correct key over here.
+
+101
+00:06:57,930 --> 00:07:04,120
+So right now the my card is on transport configuration, so I don't need to change the keys, so I'll
+
+102
+00:07:04,120 --> 00:07:04,750
+just do.
+
+103
+00:07:04,750 --> 00:07:05,440
+Okay.
+
+104
+00:07:06,610 --> 00:07:07,090
+Right.
+
+105
+00:07:07,090 --> 00:07:08,500
+So load authentication.
+
+106
+00:07:08,630 --> 00:07:10,620
+Authentication key success.
+
+107
+00:07:10,630 --> 00:07:11,070
+Right.
+
+108
+00:07:11,080 --> 00:07:13,120
+So this is the message we are getting on log.
+
+109
+00:07:14,200 --> 00:07:15,520
+A screen.
+
+110
+00:07:15,520 --> 00:07:18,460
+And now let's just authenticate our block.
+
+111
+00:07:19,060 --> 00:07:25,660
+So we will authenticate with key type A because we have already loaded our key and we have to provide
+
+112
+00:07:25,660 --> 00:07:26,720
+the block number.
+
+113
+00:07:26,740 --> 00:07:31,360
+So let's just load a authenticate block zero first.
+
+114
+00:07:33,860 --> 00:07:35,690
+And authentication success.
+
+115
+00:07:35,690 --> 00:07:38,780
+That means our block is authenticated successfully.
+
+116
+00:07:38,810 --> 00:07:40,850
+Now let's just read this block.
+
+117
+00:07:42,350 --> 00:07:47,030
+So we are going to read this block with the read command and read binary block.
+
+118
+00:07:47,030 --> 00:07:51,020
+And we have to provide the block number, which is zero, which is already written over here.
+
+119
+00:07:51,020 --> 00:07:53,210
+So we don't need to change anything over here.
+
+120
+00:07:53,210 --> 00:07:56,500
+And then we have to provide the number of bytes to read.
+
+121
+00:07:56,510 --> 00:08:02,900
+We will read all the 16 bytes and then we will read in hexadecimal format and we can also read it in
+
+122
+00:08:02,910 --> 00:08:03,920
+Ascii format as well.
+
+123
+00:08:03,920 --> 00:08:07,010
+We will see later how to read as key as well.
+
+124
+00:08:07,310 --> 00:08:11,300
+Right now we will read the block in hexadecimal, so let's just click on it.
+
+125
+00:08:12,620 --> 00:08:18,830
+And over here you can see the hex mode and the 16 bytes of data in block zero.
+
+126
+00:08:18,860 --> 00:08:19,040
+Right.
+
+127
+00:08:19,040 --> 00:08:23,000
+So this is the 16 bytes of data in block zero.
+
+128
+00:08:23,150 --> 00:08:23,540
+Right.
+
+129
+00:08:23,540 --> 00:08:30,440
+So over here you can notice the first four bytes are exactly identical to the Uid.
+
+130
+00:08:30,710 --> 00:08:31,070
+Right.
+
+131
+00:08:31,070 --> 00:08:38,780
+So as I told you before, the Block zero is the manufacturer's block, and the first four bytes represent
+
+132
+00:08:38,780 --> 00:08:40,730
+the Uid of any card.
+
+133
+00:08:40,730 --> 00:08:41,179
+Right.
+
+134
+00:08:41,270 --> 00:08:43,909
+So you can compare the Uid as well.
+
+135
+00:08:45,050 --> 00:08:45,640
+Where is the.
+
+136
+00:08:46,150 --> 00:08:47,740
+Let me check it out.
+
+137
+00:08:47,950 --> 00:08:53,320
+So let's just load the kids one more time and we will compare it as well.
+
+138
+00:08:55,960 --> 00:08:57,940
+So here is the UI, right?
+
+139
+00:08:57,940 --> 00:09:04,060
+And you can compare the UI with the first four blocks of block zero.
+
+140
+00:09:04,090 --> 00:09:05,950
+It's exactly identical.
+
+141
+00:09:08,470 --> 00:09:09,790
+So you can see this.
+
+142
+00:09:10,650 --> 00:09:12,990
+So Block zero is manufacturers.
+
+143
+00:09:12,990 --> 00:09:21,840
+Block Right Now, let's just authenticate block one because we are on a transport transport configuration.
+
+144
+00:09:21,840 --> 00:09:24,870
+We don't need to change the keys because keys are similar.
+
+145
+00:09:24,870 --> 00:09:26,700
+So we will just do authenticate.
+
+146
+00:09:26,700 --> 00:09:27,720
+Block Zero.
+
+147
+00:09:29,320 --> 00:09:30,460
+Authentication success.
+
+148
+00:09:30,460 --> 00:09:32,140
+And let's just read Block zero.
+
+149
+00:09:34,150 --> 00:09:36,400
+We are going to read blog zero in hexadecimal.
+
+150
+00:09:37,460 --> 00:09:40,970
+And you can see hex mode and all the zeros over here.
+
+151
+00:09:40,970 --> 00:09:45,580
+So there is no data on block zero or the data is 000.
+
+152
+00:09:45,590 --> 00:09:47,240
+You can say anything.
+
+153
+00:09:48,280 --> 00:09:51,880
+And now let's just authenticate block two as well.
+
+154
+00:09:54,560 --> 00:09:56,780
+Now let's just read block two.
+
+155
+00:09:58,360 --> 00:10:00,490
+Block two is also 000.
+
+156
+00:10:00,490 --> 00:10:03,970
+Right now let's just authenticate block three.
+
+157
+00:10:05,550 --> 00:10:15,090
+And if you remember from our memory structure, Block three in each sector is a sector trailer, and
+
+158
+00:10:15,090 --> 00:10:21,330
+block three contains the key A key B and excess bits of any sector, right?
+
+159
+00:10:21,330 --> 00:10:26,370
+So block three in sector Zero is the sector trailer.
+
+160
+00:10:27,490 --> 00:10:31,510
+So we will authenticate this block three first.
+
+161
+00:10:35,000 --> 00:10:39,620
+And let's just read the block three in the hexadecimal.
+
+162
+00:10:45,700 --> 00:10:52,450
+So over here you can see we have read the Block three successfully as well.
+
+163
+00:10:52,720 --> 00:10:56,500
+But you can notice we are not able to read Key A.
+
+164
+00:10:58,520 --> 00:11:02,240
+So as I told you before, Key A is never readable.
+
+165
+00:11:02,240 --> 00:11:10,400
+In any case, whatever the access bit condition is, you are not able to read key A technically, but
+
+166
+00:11:10,400 --> 00:11:16,400
+in our later videos when we will see how to crack these cards and how to find vulnerabilities in this
+
+167
+00:11:16,400 --> 00:11:21,670
+card, we will also see how to read this card through another tool, which is Prox three.
+
+168
+00:11:21,680 --> 00:11:24,500
+We will see this in later videos, so don't worry.
+
+169
+00:11:24,500 --> 00:11:33,350
+But till now, officially you cannot read key A so you are not able to read key A You can read key B
+
+170
+00:11:33,380 --> 00:11:38,510
+because we are on a transport configuration and in transport configuration we can easily read key B
+
+171
+00:11:38,750 --> 00:11:40,880
+and all the access bits as well.
+
+172
+00:11:41,210 --> 00:11:46,940
+Similarly, let's just authenticate another block tractor trailer block.
+
+173
+00:11:46,970 --> 00:11:47,960
+So.
+
+174
+00:11:49,810 --> 00:11:51,010
+Let's just.
+
+175
+00:11:51,780 --> 00:11:52,890
+Authenticate.
+
+176
+00:11:54,820 --> 00:11:56,200
+Block 11 over here.
+
+177
+00:11:57,170 --> 00:11:58,640
+Uh, there is a reason.
+
+178
+00:11:59,360 --> 00:12:00,290
+There is a reason.
+
+179
+00:12:00,290 --> 00:12:04,430
+I'm authenticating block 11 to show you one condition.
+
+180
+00:12:04,430 --> 00:12:07,400
+So let's just authenticate block 11 first.
+
+181
+00:12:09,050 --> 00:12:13,190
+Because over here you can see block 11 is sector trailer, right?
+
+182
+00:12:13,190 --> 00:12:16,490
+So technically, we should get all the keys.
+
+183
+00:12:17,120 --> 00:12:17,750
+Sorry.
+
+184
+00:12:17,750 --> 00:12:21,830
+The key B and the access bits and key A should be hidden.
+
+185
+00:12:21,830 --> 00:12:22,270
+Right.
+
+186
+00:12:22,280 --> 00:12:25,220
+When we will do authenticate block 11.
+
+187
+00:12:26,370 --> 00:12:27,690
+So let's just authenticate.
+
+188
+00:12:27,690 --> 00:12:28,860
+Block 11.
+
+189
+00:12:32,280 --> 00:12:35,190
+And over here you can see authentication success.
+
+190
+00:12:35,220 --> 00:12:36,930
+Now let's just read block level.
+
+191
+00:12:39,730 --> 00:12:45,700
+So as you can see in hex mode, Block 11 is showing all the zeros.
+
+192
+00:12:45,730 --> 00:12:47,170
+Now, why is that?
+
+193
+00:12:49,110 --> 00:12:58,350
+It is because over here in authentication and this complete tool work on hexadecimal format, not in
+
+194
+00:12:58,350 --> 00:12:59,130
+decimal.
+
+195
+00:12:59,220 --> 00:13:05,030
+Over here you can see all the addresses in decimal format in our memory structure.
+
+196
+00:13:05,070 --> 00:13:09,300
+But this tool reads data in hexadecimal format.
+
+197
+00:13:09,300 --> 00:13:11,890
+You have to remember this key point, right?
+
+198
+00:13:11,910 --> 00:13:13,860
+Let me repeat this one more time.
+
+199
+00:13:13,860 --> 00:13:17,790
+So this tool read all the data in hexadecimal format.
+
+200
+00:13:18,060 --> 00:13:25,110
+So 11 in hex hexadecimal is some other number, and in decimal it's a different number.
+
+201
+00:13:25,110 --> 00:13:29,010
+So let's just convert this 11 into hexadecimal.
+
+202
+00:13:29,010 --> 00:13:34,070
+So there are multiple tools available to convert this.
+
+203
+00:13:34,080 --> 00:13:35,520
+So let's just do.
+
+204
+00:13:36,620 --> 00:13:39,470
+Hexa to decimal to hexa.
+
+205
+00:13:40,340 --> 00:13:42,480
+So our number is 11.
+
+206
+00:13:42,500 --> 00:13:44,900
+In decimal, let's just convert this number.
+
+207
+00:13:46,130 --> 00:13:50,300
+So in hexadecimal 11 is equal to b.
+
+208
+00:13:51,460 --> 00:13:51,910
+Right.
+
+209
+00:13:51,910 --> 00:13:54,910
+And ten is equal to a.
+
+210
+00:13:56,120 --> 00:13:57,230
+As you can see.
+
+211
+00:13:57,440 --> 00:13:58,310
+So.
+
+212
+00:14:02,960 --> 00:14:04,070
+11 is equal to B.
+
+213
+00:14:04,100 --> 00:14:05,090
+As you can see.
+
+214
+00:14:05,750 --> 00:14:07,310
+So let's just type B.
+
+215
+00:14:08,210 --> 00:14:12,170
+And see if we can get the sector trailer or not.
+
+216
+00:14:14,250 --> 00:14:19,170
+So we have authenticated block B, which is in decimal block 11.
+
+217
+00:14:19,170 --> 00:14:20,280
+And let's just read.
+
+218
+00:14:22,030 --> 00:14:29,650
+We will read Block B and we are successfully able to read Sector trailer of Block sector three, I suppose.
+
+219
+00:14:29,650 --> 00:14:30,120
+Yeah.
+
+220
+00:14:30,900 --> 00:14:33,040
+Uh, or sector two.
+
+221
+00:14:33,070 --> 00:14:33,450
+Yeah.
+
+222
+00:14:33,460 --> 00:14:34,050
+Sorry.
+
+223
+00:14:34,060 --> 00:14:36,310
+So 11 is in sector two.
+
+224
+00:14:37,650 --> 00:14:40,170
+As you can see it over here in memory structure.
+
+225
+00:14:40,170 --> 00:14:41,940
+So 11 is in Sector two.
+
+226
+00:14:41,970 --> 00:14:49,110
+We are easily able to read through hexadecimal and let's just try to read authentic first authenticate.
+
+227
+00:14:51,060 --> 00:14:52,350
+Block A as well.
+
+228
+00:14:57,200 --> 00:14:58,850
+And let's just read block A.
+
+229
+00:15:01,970 --> 00:15:04,060
+So block A is 000.
+
+230
+00:15:04,640 --> 00:15:09,830
+So block A is ten and 11 is equal to B in hexadecimal.
+
+231
+00:15:09,830 --> 00:15:11,540
+So you have to remember this key point.
+
+232
+00:15:11,990 --> 00:15:14,170
+So now we are able to read data.
+
+233
+00:15:14,180 --> 00:15:16,660
+Let's just write some data as well.
+
+234
+00:15:16,670 --> 00:15:20,270
+So to write data, it's not that difficult.
+
+235
+00:15:20,300 --> 00:15:27,950
+It's just you clicks through this SDK, so you have to first authenticate the block in which you have
+
+236
+00:15:27,950 --> 00:15:28,910
+to write data.
+
+237
+00:15:28,940 --> 00:15:30,050
+Let's just.
+
+238
+00:15:30,980 --> 00:15:33,140
+Authenticate block for first.
+
+239
+00:15:34,360 --> 00:15:36,100
+Which is in sector one.
+
+240
+00:15:37,200 --> 00:15:38,350
+Uh, and.
+
+241
+00:15:39,230 --> 00:15:41,300
+Let's just write block number four.
+
+242
+00:15:42,920 --> 00:15:45,230
+And string authentication success.
+
+243
+00:15:45,260 --> 00:15:46,580
+Now let's just read.
+
+244
+00:15:47,680 --> 00:15:51,820
+So showing all the zeros and we will write some data.
+
+245
+00:15:52,910 --> 00:15:56,570
+So we can write data in hexadecimal as well as in Ascii.
+
+246
+00:15:57,140 --> 00:16:02,720
+So to write data in SRC is quite simple and easy, so we will use SRC format.
+
+247
+00:16:07,290 --> 00:16:10,920
+And make sure you write all the 16 bytes of data.
+
+248
+00:16:14,990 --> 00:16:15,400
+Right.
+
+249
+00:16:15,400 --> 00:16:20,230
+So hello world is equal to 16 bytes, so let's just click.
+
+250
+00:16:20,230 --> 00:16:20,980
+Okay.
+
+251
+00:16:22,610 --> 00:16:24,660
+So write binary block success.
+
+252
+00:16:24,680 --> 00:16:27,020
+Now let's just read block for.
+
+253
+00:16:29,120 --> 00:16:31,700
+First we will read in hexadecimal.
+
+254
+00:16:32,730 --> 00:16:38,070
+So this is the hexadecimal of Ascii characters which we have written.
+
+255
+00:16:38,070 --> 00:16:45,540
+So no matter if you write in Ascii format or in hexadecimal format, the data will be written in hexadecimal
+
+256
+00:16:45,540 --> 00:16:47,340
+format in Mifare cards.
+
+257
+00:16:49,590 --> 00:16:52,470
+So let's just read the data as well.
+
+258
+00:16:54,540 --> 00:16:55,950
+In Ascii format.
+
+259
+00:16:59,460 --> 00:17:00,330
+So you can see.
+
+260
+00:17:00,360 --> 00:17:00,920
+Hello world.
+
+261
+00:17:00,950 --> 00:17:03,960
+RFID is reading the data successfully.
+
+262
+00:17:04,230 --> 00:17:07,650
+Now let's just authenticate another block.
+
+263
+00:17:08,099 --> 00:17:09,480
+Block five.
+
+264
+00:17:12,460 --> 00:17:14,290
+And let's just read this.
+
+265
+00:17:16,670 --> 00:17:17,960
+Destroying all the zeros.
+
+266
+00:17:17,960 --> 00:17:21,050
+And we will write some data on block five as well.
+
+267
+00:17:21,079 --> 00:17:23,089
+We will use SRC format.
+
+268
+00:17:41,040 --> 00:17:42,810
+And this is my message one.
+
+269
+00:17:43,050 --> 00:17:47,040
+This is the data we will write on block number five.
+
+270
+00:17:50,600 --> 00:17:52,830
+To write binary block success.
+
+271
+00:17:52,850 --> 00:17:55,070
+Now, let's just read this data as well.
+
+272
+00:18:00,800 --> 00:18:03,320
+So it's reading in hexadecimal.
+
+273
+00:18:03,830 --> 00:18:06,380
+Now let's just read it in as well.
+
+274
+00:18:08,410 --> 00:18:09,940
+So this is my message.
+
+275
+00:18:10,730 --> 00:18:14,200
+So this is how you write data blocks in Mifare classic cards.
+
+276
+00:18:14,210 --> 00:18:20,750
+In the next video, we are going to see how we can update key A and key B, So in the next video, we
+
+277
+00:18:20,750 --> 00:18:26,630
+are also going to see how to update sector trailer and how to change the access bits as well.
+
+278
+00:18:26,630 --> 00:18:29,630
+Then we will see how to create value.
+
+279
+00:18:29,630 --> 00:18:33,290
+Block So we are going to see all this in our coming videos.
+

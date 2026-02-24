@@ -1,0 +1,216 @@
+1
+00:00:01,650 --> 00:00:13,080
+So in the previous video we have seen how to upload the file using STB program into STM eight microcontroller.
+
+2
+00:00:13,800 --> 00:00:20,910
+In this video we are going to see how to make a USB two connection with MFC 5 to 2 module.
+
+3
+00:00:21,030 --> 00:00:26,430
+So we are going to use other header pins as you can see it over here.
+
+4
+00:00:27,000 --> 00:00:35,850
+The connection we made for STM eight microcontroller, we use this pins which are near to this crystal.
+
+5
+00:00:36,920 --> 00:00:44,600
+Right now we have to make a connection for USB to TTL, and with this connection we are going to do
+
+6
+00:00:44,600 --> 00:00:51,270
+all our related tasks like updating the blocks and updating the keys.
+
+7
+00:00:51,290 --> 00:00:53,450
+We are going to do through this connection.
+
+8
+00:00:53,600 --> 00:01:00,320
+Right, So this connection you have to make from test point, this is you can see the test point is
+
+9
+00:01:00,320 --> 00:01:04,550
+written over here and you have to make a connection for from here.
+
+10
+00:01:04,580 --> 00:01:05,030
+Right.
+
+11
+00:01:05,030 --> 00:01:07,610
+So this is a usb2 connection.
+
+12
+00:01:08,260 --> 00:01:10,420
+This connection is also very simple.
+
+13
+00:01:10,450 --> 00:01:16,060
+What you have to do is first you have to make 5 volt to 5 volt connection, right?
+
+14
+00:01:16,090 --> 00:01:23,680
+So there is a five volt written on the board as well as on the USB to USB.
+
+15
+00:01:24,430 --> 00:01:24,730
+Right.
+
+16
+00:01:24,730 --> 00:01:27,010
+So you have to make up five volt connection.
+
+17
+00:01:27,010 --> 00:01:29,950
+Then there is a ground connection after that.
+
+18
+00:01:30,100 --> 00:01:34,630
+And there are two other connections which are r, x and t x.
+
+19
+00:01:34,900 --> 00:01:39,490
+Now this is these are these two connections are cross connections, right?
+
+20
+00:01:39,490 --> 00:01:49,120
+So ground will go to ground and five volts will go to five volts but r x of board will go into the t
+
+21
+00:01:49,390 --> 00:01:51,850
+of USB to USB.
+
+22
+00:01:51,940 --> 00:01:52,510
+Right.
+
+23
+00:01:52,510 --> 00:01:58,600
+And the t of board will go into the r of this USB.
+
+24
+00:01:59,230 --> 00:02:08,720
+So it is a cross connection from the board will go into the t of USB and from the board will go into
+
+25
+00:02:08,720 --> 00:02:09,949
+the r of USB.
+
+26
+00:02:09,949 --> 00:02:16,810
+So you have to remember that and make a connection and you can see the connection in the video as well
+
+27
+00:02:16,820 --> 00:02:17,660
+over here.
+
+28
+00:02:19,120 --> 00:02:19,390
+Right.
+
+29
+00:02:19,390 --> 00:02:20,690
+So this is the correction.
+
+30
+00:02:20,710 --> 00:02:23,170
+Now, let's just see this in action.
+
+31
+00:02:23,680 --> 00:02:25,720
+So let me move into my machine.
+
+32
+00:02:26,170 --> 00:02:30,610
+So our board is connected from USB to device.
+
+33
+00:02:30,610 --> 00:02:32,520
+And this is the software.
+
+34
+00:02:32,530 --> 00:02:35,130
+It's RC 522 manager.
+
+35
+00:02:35,140 --> 00:02:40,960
+So let's just double click on it and you will get this software from the resources which I have provided
+
+36
+00:02:40,960 --> 00:02:41,700
+before, right?
+
+37
+00:02:41,920 --> 00:02:47,380
+So all you have to do is first you have to select the serial port over here.
+
+38
+00:02:48,950 --> 00:02:55,220
+And you can refresh it after making a connection and the serial port will be visible in the select box,
+
+39
+00:02:55,270 --> 00:02:58,100
+you have to select it and make it open.
+
+40
+00:02:59,240 --> 00:03:02,870
+And to test it, you just have to press normal.
+
+41
+00:03:04,590 --> 00:03:08,100
+And to close the connection, you just have to close it, right?
+
+42
+00:03:08,100 --> 00:03:13,140
+So right now I haven't placed any card on it, so we cannot do any read or write operation.
+
+43
+00:03:13,140 --> 00:03:17,310
+In the next video, we are going to see how to write data blocks.
+
+44
+00:03:17,310 --> 00:03:23,610
+Then we will also see how to write Keys Key A and key B on sector trailer.
+
+45
+00:03:23,970 --> 00:03:28,410
+After that, we will see the how to create the value blocks, right?
+
+46
+00:03:28,410 --> 00:03:34,020
+So all the things which we have covered in 1 to 2 module, we will cover it over here as well.
+
+47
+00:03:34,380 --> 00:03:41,070
+Before continuing in this section, I would recommend that you should go through that 1 to 2 section
+
+48
+00:03:41,070 --> 00:03:46,950
+as well, because I have covered Mifare classic concepts in very detail in that section.
+
+49
+00:03:46,950 --> 00:03:47,280
+Right.
+
+50
+00:03:47,280 --> 00:03:51,150
+So I'm not going to cover that details again in this section.
+
+51
+00:03:51,150 --> 00:03:59,100
+All I'm going to do is I'm just going to go through how to write and update the blocks through this
+
+52
+00:03:59,100 --> 00:03:59,910
+software, right?
+
+53
+00:04:00,030 --> 00:04:03,540
+So we will specifically target this software in this section.
+
+54
+00:04:03,660 --> 00:04:08,260
+So in the next video, we are going to see how to read and write data blocks.
+

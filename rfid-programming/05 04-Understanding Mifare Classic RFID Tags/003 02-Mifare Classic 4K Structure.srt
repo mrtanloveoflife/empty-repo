@@ -1,0 +1,128 @@
+1
+00:00:01,680 --> 00:00:05,920
+So now we will see the concept of Mifare classic 4K structure.
+
+2
+00:00:05,939 --> 00:00:08,910
+So we will start with the memory structure.
+
+3
+00:00:08,910 --> 00:00:15,570
+So 4K cards have 4096 bytes of total memory.
+
+4
+00:00:16,110 --> 00:00:21,900
+And this memory is divided into 40 sectors starting from zero till 39.
+
+5
+00:00:22,880 --> 00:00:27,890
+So it's quite similar to Mifare classic one K structure.
+
+6
+00:00:28,760 --> 00:00:35,750
+The 32 the first 32 sectors starting from zero till 31 are of four blocks.
+
+7
+00:00:35,800 --> 00:00:40,400
+As it's quite similar to the classic one K structure.
+
+8
+00:00:40,760 --> 00:00:48,860
+So 3232 sectors starting from zero till 31 are of four blocks and the remaining eight sectors are of
+
+9
+00:00:48,860 --> 00:00:49,860
+16 blocks.
+
+10
+00:00:49,880 --> 00:00:51,320
+This is the only difference.
+
+11
+00:00:51,320 --> 00:00:54,620
+We will see this in the diagram in a moment.
+
+12
+00:00:55,190 --> 00:00:58,180
+But the eight sectors are of 16 blocks.
+
+13
+00:00:58,190 --> 00:01:00,080
+This is the only difference.
+
+14
+00:01:00,290 --> 00:01:03,260
+Each sector has a sector trailer as before.
+
+15
+00:01:03,290 --> 00:01:05,990
+The 1K1K also has.
+
+16
+00:01:06,170 --> 00:01:11,300
+Each sector has a sector trailer and it's similar to the authentication as well.
+
+17
+00:01:11,330 --> 00:01:14,390
+Authentication is required in 4k structure as well.
+
+18
+00:01:14,900 --> 00:01:18,650
+So let's just see this diagram.
+
+19
+00:01:19,580 --> 00:01:25,820
+So measure classic 4K starting from sector zero till 31.
+
+20
+00:01:29,920 --> 00:01:35,800
+Over here, you can see 31 out of four blocks starting from zero till three.
+
+21
+00:01:35,800 --> 00:01:41,050
+So altogether four blocks after 31 starting from 32.
+
+22
+00:01:41,960 --> 00:01:44,100
+Each block is of sorry.
+
+23
+00:01:44,120 --> 00:01:47,990
+Each sector is of 16 blocks, starting from zero till 15.
+
+24
+00:01:48,020 --> 00:01:55,360
+As you can see, if you need bigger memory for some reason you can you can use these 4K cards as well.
+
+25
+00:01:55,370 --> 00:02:02,390
+But in my opinion, one K cards are enough because there are 16 blocks sorry, in 16 sectors in one
+
+26
+00:02:02,390 --> 00:02:03,260
+K as well.
+
+27
+00:02:03,590 --> 00:02:13,160
+So you can use a single card, one k card in 16 places like you can use sector four for your garage
+
+28
+00:02:13,190 --> 00:02:16,330
+and sector five for your library access.
+
+29
+00:02:16,340 --> 00:02:24,050
+Similarly, sector eight, you can use it for your door access control and and so on.
+
+30
+00:02:24,050 --> 00:02:30,200
+So one k is enough, but there is 4k as well for bigger projects as well.
+
+31
+00:02:30,230 --> 00:02:30,860
+Right?
+
+32
+00:02:30,860 --> 00:02:35,210
+So this is the memory structure of 4k cards.
+

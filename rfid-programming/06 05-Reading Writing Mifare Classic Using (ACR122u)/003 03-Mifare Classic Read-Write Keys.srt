@@ -1,0 +1,680 @@
+1
+00:00:01,460 --> 00:00:06,080
+So in the previous video we have seen how to update data blocks.
+
+2
+00:00:06,200 --> 00:00:14,480
+And in this video we are going to see how to update sector trailers and how to change the key A and
+
+3
+00:00:14,480 --> 00:00:15,380
+key B's.
+
+4
+00:00:15,500 --> 00:00:22,160
+So the tool we are going to use is Easy key, which also comes with the same SDK.
+
+5
+00:00:25,240 --> 00:00:27,310
+So over here there is easy key.
+
+6
+00:00:27,880 --> 00:00:31,210
+You just have to click and the tool will be open.
+
+7
+00:00:31,630 --> 00:00:37,300
+So the reader connection is the first option how you are going to make the connection.
+
+8
+00:00:37,300 --> 00:00:42,170
+So we are going to make the connection using PC slash SC.
+
+9
+00:00:42,220 --> 00:00:47,020
+So let's just click on it and you will get the reader name.
+
+10
+00:00:47,020 --> 00:00:52,210
+So over here, one, two, two is the only reader which is connected.
+
+11
+00:00:52,210 --> 00:00:53,950
+You can see it over here as well.
+
+12
+00:00:54,340 --> 00:00:57,730
+So we are just going to select this.
+
+13
+00:00:58,830 --> 00:01:00,210
+And the tool will connect.
+
+14
+00:01:00,210 --> 00:01:07,710
+The next screen is current logging parameters so you can log in with key A or key B, It depends on
+
+15
+00:01:07,710 --> 00:01:10,350
+your access conditions, right?
+
+16
+00:01:10,500 --> 00:01:14,130
+So our access condition is on transport configuration.
+
+17
+00:01:14,130 --> 00:01:20,850
+So we can log in with key A and the default key is f, f, f, f, f, f, f, f, f, f and f f.
+
+18
+00:01:21,900 --> 00:01:25,110
+So we are going to log in with this key.
+
+19
+00:01:25,230 --> 00:01:26,820
+This is the default key.
+
+20
+00:01:26,940 --> 00:01:29,610
+And over here, there is a sector decimal.
+
+21
+00:01:29,730 --> 00:01:32,760
+So this tool accepts data in decimal.
+
+22
+00:01:32,760 --> 00:01:34,380
+It's written over here.
+
+23
+00:01:34,890 --> 00:01:37,920
+So you you have to give only the sector number.
+
+24
+00:01:37,920 --> 00:01:43,000
+So there are 16 sectors in each mifare classic card, as I told you before.
+
+25
+00:01:43,020 --> 00:01:49,950
+So if you have to change the sector keys of key sector one, then you have to provide sector one over
+
+26
+00:01:49,950 --> 00:01:50,340
+here.
+
+27
+00:01:50,340 --> 00:01:54,150
+If you want to change the keys of sector zero, you can provide sector zero.
+
+28
+00:01:54,150 --> 00:02:00,240
+Similarly, if you want to change the sector keys of sector 16, which is the last sector or sorry sector
+
+29
+00:02:00,240 --> 00:02:02,730
+15 because we start from zero.
+
+30
+00:02:02,880 --> 00:02:11,430
+So method classic one cards has 0 to 15 sectors, so you can provide 15 over here if you want to update
+
+31
+00:02:11,430 --> 00:02:12,450
+the last sector.
+
+32
+00:02:13,800 --> 00:02:14,150
+Right.
+
+33
+00:02:14,150 --> 00:02:17,030
+So this is the sector decimal.
+
+34
+00:02:17,810 --> 00:02:21,020
+And over here there is new key A.
+
+35
+00:02:22,360 --> 00:02:25,780
+New option base and new keeb.
+
+36
+00:02:26,680 --> 00:02:34,980
+So after logging with any key, let's just suppose we log in with key A If you want to change key A,
+
+37
+00:02:35,050 --> 00:02:37,310
+you can provide a new key over here.
+
+38
+00:02:37,330 --> 00:02:44,740
+And if you want to update option bits or the access conditions or the access bits, all three are same.
+
+39
+00:02:45,130 --> 00:02:51,910
+You can change it over here and you can update key B similarly over here.
+
+40
+00:02:53,350 --> 00:02:53,800
+All right.
+
+41
+00:02:53,800 --> 00:03:03,010
+So we will first update the sector keys of Sector one because we have written data in Sector one.
+
+42
+00:03:03,010 --> 00:03:07,240
+So let's just update the key of sector one as well.
+
+43
+00:03:07,390 --> 00:03:11,860
+So let's just make our keys real simple to remember.
+
+44
+00:03:11,860 --> 00:03:17,320
+So we will update our new key with the last two bytes.
+
+45
+00:03:17,470 --> 00:03:19,050
+So I'll do a.
+
+46
+00:03:20,910 --> 00:03:26,160
+And a over here and let's just do format sector.
+
+47
+00:03:29,650 --> 00:03:31,240
+And it's quite fast.
+
+48
+00:03:31,240 --> 00:03:33,250
+And you can see over here, right.
+
+49
+00:03:33,250 --> 00:03:34,810
+Data to block three.
+
+50
+00:03:35,560 --> 00:03:37,720
+And this is the data which is written.
+
+51
+00:03:39,150 --> 00:03:41,970
+Why you think write data to block three.
+
+52
+00:03:42,000 --> 00:03:44,510
+Because block three is a sector trailer.
+
+53
+00:03:44,520 --> 00:03:47,790
+You can see it over here in each sector.
+
+54
+00:03:49,180 --> 00:03:50,900
+Block three is a sector trailer.
+
+55
+00:03:52,390 --> 00:03:56,740
+You can see this in-memory structure of mifare classic one card as well.
+
+56
+00:03:58,270 --> 00:03:59,860
+So right data is successful.
+
+57
+00:03:59,860 --> 00:04:02,740
+Now let's just try to do format sector one more time.
+
+58
+00:04:05,610 --> 00:04:06,360
+Nothing.
+
+59
+00:04:06,390 --> 00:04:09,600
+Authenticate or fail to authenticate to sector one.
+
+60
+00:04:09,630 --> 00:04:10,500
+Why is that?
+
+61
+00:04:10,500 --> 00:04:12,960
+We just authenticated successfully.
+
+62
+00:04:12,960 --> 00:04:15,000
+But now it's not authenticating.
+
+63
+00:04:15,240 --> 00:04:20,430
+It is because we have changed our key and we are logging with key A.
+
+64
+00:04:20,700 --> 00:04:29,280
+So in Mifare classic card, as I told you before, in Mifare classic card, you have to whatever action
+
+65
+00:04:29,280 --> 00:04:29,910
+you want to do.
+
+66
+00:04:29,940 --> 00:04:34,320
+Either you have to read data, write data, or update data.
+
+67
+00:04:34,830 --> 00:04:38,760
+You have to log in or you have to authenticate each time.
+
+68
+00:04:40,240 --> 00:04:46,990
+So over here we authenticated with key A, which was the correct key before and then we changed key
+
+69
+00:04:47,020 --> 00:04:47,230
+A.
+
+70
+00:04:47,500 --> 00:04:52,000
+Now again, we want to format data or we again want to update something.
+
+71
+00:04:52,000 --> 00:04:53,950
+We have to again log in.
+
+72
+00:04:53,950 --> 00:05:01,090
+And because we have changed the key A and we are logging with the old key, it's not going to log in.
+
+73
+00:05:01,600 --> 00:05:01,890
+Right.
+
+74
+00:05:01,900 --> 00:05:04,930
+So we have to update key A over here as well.
+
+75
+00:05:06,960 --> 00:05:09,570
+And let's just do format sector one more time.
+
+76
+00:05:10,250 --> 00:05:13,580
+So now it's able to write data to block three.
+
+77
+00:05:13,930 --> 00:05:14,540
+Successfully.
+
+78
+00:05:15,870 --> 00:05:18,450
+And now let's just update KB as well.
+
+79
+00:05:18,450 --> 00:05:20,910
+So I'll update the last two bytes.
+
+80
+00:05:25,440 --> 00:05:27,840
+And I'll do B, B and B over here.
+
+81
+00:05:28,150 --> 00:05:32,670
+So it's simple to remember and I'll do format sector one.
+
+82
+00:05:34,640 --> 00:05:42,770
+So it's able to format the data so key A and B are updated on sector one.
+
+83
+00:05:43,880 --> 00:05:44,180
+Right.
+
+84
+00:05:45,590 --> 00:05:47,650
+There is option bits as well.
+
+85
+00:05:47,660 --> 00:05:49,970
+You can update option bits as well.
+
+86
+00:05:49,970 --> 00:05:57,560
+So right now we are using transport configuration, but if you want to update each block configuration,
+
+87
+00:05:57,560 --> 00:06:02,750
+let's suppose you just want to read data and never write.
+
+88
+00:06:02,750 --> 00:06:04,430
+You can use this configuration.
+
+89
+00:06:04,430 --> 00:06:08,270
+This is the same table which we have described in our previous video.
+
+90
+00:06:08,270 --> 00:06:15,530
+So over here you can see you can update this table over here and it will automatically adjust the bits
+
+91
+00:06:15,530 --> 00:06:16,220
+over here.
+
+92
+00:06:17,480 --> 00:06:26,150
+So if you want to change the configuration to read, write, block or read from key A or B or when we
+
+93
+00:06:26,150 --> 00:06:29,570
+will see later in our video how to create value blocks.
+
+94
+00:06:29,570 --> 00:06:37,760
+And you want to just increment with key and decrement with key B, you can do all the configuration
+
+95
+00:06:37,760 --> 00:06:38,340
+over here.
+
+96
+00:06:38,360 --> 00:06:40,430
+This type of configuration.
+
+97
+00:06:42,810 --> 00:06:43,170
+All right.
+
+98
+00:06:43,170 --> 00:06:50,640
+So I'll keep my settings to transport configuration of access bits for now, but you can update all
+
+99
+00:06:50,640 --> 00:06:56,400
+the access bits as well from the same easy key management tool.
+
+100
+00:06:57,230 --> 00:06:59,800
+So we have changed our keys for now.
+
+101
+00:06:59,810 --> 00:07:04,970
+Let's just close this tool and let's just log in.
+
+102
+00:07:06,570 --> 00:07:10,200
+On our 1 to 2 you tool one more time.
+
+103
+00:07:11,880 --> 00:07:15,210
+Connect and let's just get data.
+
+104
+00:07:15,240 --> 00:07:21,120
+So this is our Uuid, the same Uid we are getting and let's just do get attr.
+
+105
+00:07:23,680 --> 00:07:31,090
+And let's just authenticate with the default key, which was the transport configuration key and hit.
+
+106
+00:07:31,090 --> 00:07:31,810
+Okay.
+
+107
+00:07:32,020 --> 00:07:35,650
+And let's just try to authenticate block four.
+
+108
+00:07:36,880 --> 00:07:45,100
+And if you see, block four is in Sector one, and we have updated the keys of sector one.
+
+109
+00:07:45,370 --> 00:07:48,550
+So it shouldn't be able to authenticate this.
+
+110
+00:07:48,550 --> 00:07:49,360
+Block Right?
+
+111
+00:07:49,360 --> 00:07:51,250
+So let's just check out this first.
+
+112
+00:07:54,200 --> 00:07:57,410
+So as you can see, it's saying Operation Field.
+
+113
+00:07:58,230 --> 00:07:58,410
+Right.
+
+114
+00:07:58,710 --> 00:08:07,050
+So let's just try to authenticate block five as well with the same key, not able to authenticate block
+
+115
+00:08:07,050 --> 00:08:11,130
+five or authenticate block six.
+
+116
+00:08:13,080 --> 00:08:15,900
+It's not able to authenticate Block six as well.
+
+117
+00:08:16,500 --> 00:08:18,030
+And block seven.
+
+118
+00:08:20,100 --> 00:08:22,410
+It's saying authentication field, right?
+
+119
+00:08:22,590 --> 00:08:32,520
+If I authenticate Block eight, which is in Sector two over here, you can see Block eight is in Sector
+
+120
+00:08:32,520 --> 00:08:33,030
+two.
+
+121
+00:08:33,450 --> 00:08:36,450
+So it should be able to authenticate Block eight, right?
+
+122
+00:08:36,450 --> 00:08:41,280
+Because we haven't changed anything on Block on Sector two.
+
+123
+00:08:42,770 --> 00:08:44,670
+So it should be able to authenticate.
+
+124
+00:08:44,690 --> 00:08:50,930
+We have just updated the keys of sector one, so it should be able to authenticate all the other blocks
+
+125
+00:08:50,930 --> 00:08:52,670
+with the transport configuration.
+
+126
+00:08:53,660 --> 00:08:56,630
+So let's just do authenticate Block eight.
+
+127
+00:08:57,620 --> 00:09:02,570
+So you can see it's authentication success and we can read data block eight as well.
+
+128
+00:09:02,870 --> 00:09:09,920
+We can write data on block on block eight as well, but we are not able to get our data from Sector
+
+129
+00:09:09,920 --> 00:09:13,340
+one on which we have updated our keys.
+
+130
+00:09:13,760 --> 00:09:19,880
+So let's just authenticate or load the first, let's just load the correct keys.
+
+131
+00:09:21,370 --> 00:09:25,830
+So I'll authenticate with key A on zero zero.
+
+132
+00:09:25,840 --> 00:09:31,610
+You can provide any key and on one one you can provide a key B as well.
+
+133
+00:09:31,630 --> 00:09:37,420
+So first I'll just do key A and let's just try to authenticate with key A.
+
+134
+00:09:41,510 --> 00:09:45,710
+So over here you can see the message load authentication key success.
+
+135
+00:09:45,710 --> 00:09:48,290
+Now let's just try to authenticate block for.
+
+136
+00:09:52,320 --> 00:09:55,230
+And over here it's saying authentication success.
+
+137
+00:09:55,860 --> 00:09:59,910
+That means we have authenticated our block successfully.
+
+138
+00:09:59,940 --> 00:10:01,650
+Now, let's just read this block.
+
+139
+00:10:04,430 --> 00:10:08,740
+So you can see the hexadecimal data.
+
+140
+00:10:09,380 --> 00:10:12,050
+Let's just read this data in as well.
+
+141
+00:10:14,240 --> 00:10:16,400
+So you can see Hello World RFID.
+
+142
+00:10:16,640 --> 00:10:20,150
+This is the data which we have written in our previous video.
+
+143
+00:10:20,720 --> 00:10:26,810
+Now let's just authenticate block five as well from the same key.
+
+144
+00:10:28,000 --> 00:10:30,160
+And let's just read this block.
+
+145
+00:10:32,010 --> 00:10:33,420
+In Ascii format.
+
+146
+00:10:35,050 --> 00:10:37,120
+So over here you can see this is my message.
+
+147
+00:10:37,120 --> 00:10:39,400
+One reading the blog successfully.
+
+148
+00:10:39,430 --> 00:10:43,020
+Now let's just read the sector trailer block as well.
+
+149
+00:10:43,030 --> 00:10:44,860
+So let's just authenticate.
+
+150
+00:10:45,040 --> 00:10:49,480
+Block seven, which is our sector trailer from Sector One.
+
+151
+00:10:54,220 --> 00:10:55,930
+And seeing authentication success.
+
+152
+00:10:55,930 --> 00:10:57,370
+Let's just read this block.
+
+153
+00:11:01,530 --> 00:11:07,950
+So over here, as you can see, we are not able to read Key A and I have told you the reason why we
+
+154
+00:11:07,950 --> 00:11:14,670
+are not able to read Key A, but we are able to read the access bits successfully and we are also able
+
+155
+00:11:14,670 --> 00:11:16,980
+to read our.
+
+156
+00:11:17,840 --> 00:11:18,920
+Keep as well.
+
+157
+00:11:19,550 --> 00:11:26,840
+So as you can see, we have updated our key using easy key tool and we are easily able to read our key
+
+158
+00:11:26,840 --> 00:11:29,270
+because we are on a transport configuration right now.
+
+159
+00:11:29,270 --> 00:11:35,000
+We haven't changed anything on our access bits, so that's why we are able to read key as well.
+
+160
+00:11:35,600 --> 00:11:43,580
+But in few conditions, if we change the access bits, we can also not able to read key be in some condition.
+
+161
+00:11:43,580 --> 00:11:46,550
+We are we can even not read access bits as well.
+
+162
+00:11:46,550 --> 00:11:54,080
+So it all depends on your program and it all depends on your requirements, basically what type of requirement
+
+163
+00:11:54,080 --> 00:11:55,670
+you are getting from the client.
+
+164
+00:11:55,820 --> 00:11:56,020
+Right?
+
+165
+00:11:56,030 --> 00:12:02,060
+So this is this all things depends on the client requirement, how you want to program your thing.
+
+166
+00:12:02,060 --> 00:12:08,360
+So right now I have kept it very simple so we can just understand how to program a classic cards.
+
+167
+00:12:08,360 --> 00:12:15,820
+So this is how you program keys and this is how you read data after changing the keys, right?
+
+168
+00:12:15,830 --> 00:12:22,500
+So in the next video, we are going to see how to create value blocks and how to do increment decrement
+
+169
+00:12:22,500 --> 00:12:25,130
+operations and how to write on value blocks, Right?
+
+170
+00:12:25,140 --> 00:12:28,340
+So this is what we are going to see in our next video.
+

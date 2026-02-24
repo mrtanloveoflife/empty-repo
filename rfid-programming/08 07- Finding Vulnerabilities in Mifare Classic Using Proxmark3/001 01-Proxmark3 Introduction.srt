@@ -1,0 +1,84 @@
+1
+00:00:01,000 --> 00:00:06,970
+So now we are going to see how we can find vulnerabilities in mifare classic cards and how to check
+
+2
+00:00:06,970 --> 00:00:08,900
+the security of our classic cards.
+
+3
+00:00:08,940 --> 00:00:09,340
+Right.
+
+4
+00:00:09,340 --> 00:00:13,150
+So the tool we are going to use is known as Prox three.
+
+5
+00:00:13,750 --> 00:00:20,020
+This is the tool which is used for penetration testing, cloning and simulating RFID tags.
+
+6
+00:00:21,140 --> 00:00:26,690
+So its price range is around 35 to $190.
+
+7
+00:00:27,230 --> 00:00:29,720
+Basically, it depends on the device.
+
+8
+00:00:29,720 --> 00:00:36,230
+So I'm using this is the Chinese version, which is I'm using it's around 35 to $40, but you can also
+
+9
+00:00:36,230 --> 00:00:38,030
+purchase it from Amazon.
+
+10
+00:00:38,570 --> 00:00:43,920
+It might cost you around 100 or more, so you have to look for it.
+
+11
+00:00:43,940 --> 00:00:51,770
+So Mark three used for multiple types of RFID tags and for multiple types of RFID frequencies.
+
+12
+00:00:51,770 --> 00:00:58,580
+But we are going to use Mark three for Mifare classic cards and see how we can find vulnerabilities
+
+13
+00:00:58,610 --> 00:01:07,790
+in classic card and and see if we can clone these cards and see other vulnerabilities in classic cards,
+
+14
+00:01:07,790 --> 00:01:08,330
+Right?
+
+15
+00:01:08,570 --> 00:01:12,140
+So we will first start by setting up prox mark three.
+
+16
+00:01:12,140 --> 00:01:15,710
+Then we will also update the firmware of Prox mark three.
+
+17
+00:01:15,710 --> 00:01:21,030
+Then we will see how to crack card with the manufacturer keys or default keys.
+
+18
+00:01:21,030 --> 00:01:25,440
+Then we will see how to crack card using single manufacturer key.
+
+19
+00:01:26,070 --> 00:01:30,240
+After that, we are also going to see how to clone these RFID cards.
+
+20
+00:01:30,360 --> 00:01:30,720
+Right.
+
+21
+00:01:30,720 --> 00:01:32,940
+So let's just get started on it.
+

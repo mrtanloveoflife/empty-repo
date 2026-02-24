@@ -1,0 +1,120 @@
+1
+00:00:01,320 --> 00:00:10,260
+So now that we have seen how we can crack Mifare classic card using only one manufacture key in this
+
+2
+00:00:10,260 --> 00:00:17,070
+video, we are going to see what if we have all the keys modified and we have changed all the manufacturer
+
+3
+00:00:17,100 --> 00:00:17,610
+keys.
+
+4
+00:00:17,850 --> 00:00:21,520
+So let's just start with prox Mk3.
+
+5
+00:00:21,540 --> 00:00:24,660
+So let's just connect our prox Mk3.
+
+6
+00:00:31,120 --> 00:00:32,450
+So it's connected.
+
+7
+00:00:32,470 --> 00:00:36,200
+Now let's just check out the Uid of this card.
+
+8
+00:00:36,220 --> 00:00:36,760
+Now.
+
+9
+00:00:44,440 --> 00:00:46,690
+So this is the new card.
+
+10
+00:00:46,870 --> 00:00:49,150
+Let's just check out all the keys.
+
+11
+00:00:51,590 --> 00:01:04,489
+So we'll run a check command as we did before, and we will run it with all unknown keys because we
+
+12
+00:01:04,489 --> 00:01:05,780
+don't know any keys.
+
+13
+00:01:10,130 --> 00:01:15,380
+Or here you can see it's saying no valid key found or zero key found.
+
+14
+00:01:18,020 --> 00:01:22,520
+So it's not able to find any manufacturer key.
+
+15
+00:01:22,550 --> 00:01:26,330
+So let's just run nested attack as well.
+
+16
+00:01:29,620 --> 00:01:32,170
+So we are going to run nested attack.
+
+17
+00:01:33,730 --> 00:01:35,890
+With all the unknown factors.
+
+18
+00:01:41,650 --> 00:01:46,170
+So it's not able to find any known case, as you are seeing over here.
+
+19
+00:01:46,180 --> 00:01:51,580
+Can't found any of the known keys, so it's not able to find any keys.
+
+20
+00:01:51,610 --> 00:01:54,550
+Let's just run a slow attack as well.
+
+21
+00:02:02,330 --> 00:02:05,090
+So it's still not able to find any keys.
+
+22
+00:02:05,270 --> 00:02:11,150
+So the bottom line is, if you have modified all the keys in all the sector trailers, the card gets
+
+23
+00:02:11,150 --> 00:02:11,820
+secured.
+
+24
+00:02:11,840 --> 00:02:19,130
+But if you forget to modify any of the keys and left any of the keys on the manufacture or transport
+
+25
+00:02:19,130 --> 00:02:22,010
+configuration, the card is still vulnerable.
+
+26
+00:02:22,370 --> 00:02:30,260
+So make sure you modify all the keys in all the sector trailers when you are programming mifare Classic
+
+27
+00:02:30,260 --> 00:02:30,950
+cards.
+
+28
+00:02:32,670 --> 00:02:35,900
+So in the next video, we are going to see how to clone cards.
+
+29
+00:02:35,910 --> 00:02:38,160
+So first we will crack a card.
+
+30
+00:02:38,190 --> 00:02:41,720
+Then we will clone the same card on magic cards.
+

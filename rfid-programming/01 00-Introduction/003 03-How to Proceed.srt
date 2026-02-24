@@ -1,0 +1,140 @@
+1
+00:00:01,510 --> 00:00:08,020
+So you can start this course by understanding RFID concepts, which are in Section one, and we are
+
+2
+00:00:08,020 --> 00:00:11,920
+going to see what type of RFID cards we are going to use.
+
+3
+00:00:12,700 --> 00:00:13,120
+Right.
+
+4
+00:00:13,120 --> 00:00:19,360
+So all the things which are necessary, we will cover in understanding RFID.
+
+5
+00:00:19,720 --> 00:00:22,270
+Then there is quick overview of Arduino.
+
+6
+00:00:23,320 --> 00:00:31,070
+After that, we will utilize Arduino and we will try to get the Uuid of Mifare classic RFID cards.
+
+7
+00:00:31,090 --> 00:00:32,530
+In Section three.
+
+8
+00:00:32,770 --> 00:00:39,820
+In Section four, we are going to understand the complete memory structure of Mifare classic cards.
+
+9
+00:00:40,830 --> 00:00:51,420
+And in Section five, we are going to program RFID cards using ACR 1 to 2 you tool and we will see what
+
+10
+00:00:51,420 --> 00:00:56,940
+are sectors and blocks and how we are going to program these sectors and blocks.
+
+11
+00:00:56,970 --> 00:01:03,570
+In section six, we are going to program the same classic card, but this time we will use a different
+
+12
+00:01:03,570 --> 00:01:04,170
+tool.
+
+13
+00:01:04,680 --> 00:01:10,710
+And the tool is known as MFC 5 to 2 with STM eight microcontroller.
+
+14
+00:01:11,430 --> 00:01:23,520
+So you can use either ACR 1 to 2 or you can also use MFC 5 to 2 two with eight microcontroller In section
+
+15
+00:01:23,520 --> 00:01:30,990
+seven, we are going to see how we can find vulnerabilities in Mifare classic card using prox Mark three
+
+16
+00:01:30,990 --> 00:01:36,150
+and we are also going to see how we can clone these Mifare classic cards.
+
+17
+00:01:36,570 --> 00:01:38,190
+In section eight.
+
+18
+00:01:38,220 --> 00:01:42,700
+We are going to utilize all our knowledge in our final project.
+
+19
+00:01:42,730 --> 00:01:47,020
+We will try to create an industry standard project in section eight.
+
+20
+00:01:47,680 --> 00:01:55,480
+So either you can proceed in the same manner as it is shown over here, or you can also proceed in this
+
+21
+00:01:55,480 --> 00:01:59,320
+manner in which you can first understand the RFID concept.
+
+22
+00:01:59,320 --> 00:02:05,350
+Then you can understand the method, classic card memory structure, and then you can try to program
+
+23
+00:02:05,350 --> 00:02:12,220
+using ACR one, two, 2 or 5 2223522.
+
+24
+00:02:12,250 --> 00:02:17,920
+With STM eight microcontroller, I would recommend that you should follow this method in which you first
+
+25
+00:02:17,920 --> 00:02:21,070
+understand the RFID concepts and then you can.
+
+26
+00:02:21,250 --> 00:02:25,360
+And then you can understand the memory structure of RFID cards.
+
+27
+00:02:25,360 --> 00:02:27,340
+And then you should program these cards.
+
+28
+00:02:27,340 --> 00:02:33,550
+And after that you can go through quick overview of Arduino and then you can utilize Arduino to get
+
+29
+00:02:33,550 --> 00:02:34,240
+the Uid.
+
+30
+00:02:34,600 --> 00:02:41,320
+After that, you can see the vulnerabilities using prox mark three and then you can use all the knowledge
+
+31
+00:02:41,320 --> 00:02:42,340
+in your final project.
+
+32
+00:02:42,340 --> 00:02:48,980
+So this is the recommended method in which you should first go to section one, then section four,
+
+33
+00:02:48,980 --> 00:02:53,870
+five, six, then you can go through section two, three, seven and eight.
+
+34
+00:02:53,900 --> 00:02:58,190
+So whatever method is convenient to you, you can go through it.
+
+35
+00:02:58,220 --> 00:03:02,090
+It is just the matter of your own convenience, right?
+

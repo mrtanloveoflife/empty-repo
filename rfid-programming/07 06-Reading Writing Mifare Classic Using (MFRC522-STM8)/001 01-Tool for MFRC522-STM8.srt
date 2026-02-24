@@ -1,0 +1,124 @@
+1
+00:00:01,530 --> 00:00:09,180
+So in our previous section we have seen how to update Mifare classic card using ACR 1 to 2 tool.
+
+2
+00:00:09,870 --> 00:00:18,020
+In this section we are going to update the same Mifare classic card, but using this MFC 5 to 2 STM
+
+3
+00:00:18,030 --> 00:00:19,500
+eight microcontroller.
+
+4
+00:00:19,680 --> 00:00:23,880
+So this is the board we are going to use.
+
+5
+00:00:23,910 --> 00:00:30,090
+So it has the same chip which we have used before in our earlier sections.
+
+6
+00:00:30,240 --> 00:00:32,369
+The MFC 5 to 2 Chip.
+
+7
+00:00:32,369 --> 00:00:37,050
+But this board also contains this STM chip over here.
+
+8
+00:00:37,590 --> 00:00:39,450
+This STM microcontroller.
+
+9
+00:00:39,660 --> 00:00:47,820
+So first we will program this STM eight microcontroller and using this microcontroller, we will operate
+
+10
+00:00:47,820 --> 00:00:56,370
+this MFC 5 to 2 Chip and we will read, write and update data using this STM eight microcontroller.
+
+11
+00:00:56,760 --> 00:01:02,470
+So to operate on this board, we need two other things as well.
+
+12
+00:01:02,710 --> 00:01:09,340
+The first thing we need is USB to TTL cable, which is over here in Silver Color, you can see.
+
+13
+00:01:09,340 --> 00:01:17,620
+And the other thing is STM eight and Stm32 USB, which you can easily purchase from Amazon or AliExpress.
+
+14
+00:01:18,130 --> 00:01:23,200
+So all these things you can easily purchase from Amazon or AliExpress.
+
+15
+00:01:23,230 --> 00:01:25,540
+These are the tools which we are going to use.
+
+16
+00:01:25,570 --> 00:01:30,490
+Now let me just go through the cost of these tools real quick.
+
+17
+00:01:30,520 --> 00:01:35,970
+So the cost of hardware MFC 5 to 2 with STM microcontroller.
+
+18
+00:01:35,980 --> 00:01:40,690
+This is the board which we are going to use and it will cost you around 4 to $5.
+
+19
+00:01:41,260 --> 00:01:50,830
+Then USB two cable, we will use USB two cable to operate on Mifare classic card and we will use STM
+
+20
+00:01:50,830 --> 00:01:57,290
+eight and Stm32 USB, which is the same USB for STM eight and stm32.
+
+21
+00:01:57,310 --> 00:02:05,370
+This is the USB over here and we will use this USB to program our STM eight microcontroller.
+
+22
+00:02:05,980 --> 00:02:06,340
+Right.
+
+23
+00:02:06,360 --> 00:02:15,080
+So this is the cost of USB two cable, then STM eight and STM 32 USB will cost you around 3 to $5.
+
+24
+00:02:15,090 --> 00:02:22,950
+So the complete cost of all these hardware is around $10, which is quite less than 1 to 2 module,
+
+25
+00:02:22,950 --> 00:02:25,260
+which was around 25 to $30.
+
+26
+00:02:25,410 --> 00:02:34,680
+So these are the hardware requirements and the both the softwares for this tool are free.
+
+27
+00:02:34,950 --> 00:02:37,320
+So you can easily download these two software.
+
+28
+00:02:37,350 --> 00:02:43,830
+The first one is STB, which is a software to program STM eight microcontroller.
+
+29
+00:02:43,830 --> 00:02:52,890
+And the other tool is MFC 5 to 2, which is a software we will use to, you know, update our Mifare
+
+30
+00:02:52,890 --> 00:02:54,190
+classic card through this software.
+
+31
+00:02:54,540 --> 00:02:57,150
+So make sure you download these two softwares as well.
+

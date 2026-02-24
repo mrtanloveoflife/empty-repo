@@ -1,0 +1,504 @@
+1
+00:00:03,670 --> 00:00:07,580
+So now we are going to see how we can clone Mifare classic card.
+
+2
+00:00:07,600 --> 00:00:14,350
+So to clone Mifare classic card first we will crack the Mifare classic card and then we will clone it
+
+3
+00:00:14,350 --> 00:00:15,460
+to magic card.
+
+4
+00:00:17,420 --> 00:00:23,690
+So this is the same card which we used before in our previous video.
+
+5
+00:00:23,690 --> 00:00:26,420
+So let's just check out the Uid of this card.
+
+6
+00:00:26,660 --> 00:00:28,370
+So it's f.
+
+7
+00:00:30,380 --> 00:00:33,980
+14 a treat so that we get the Uuid.
+
+8
+00:00:34,220 --> 00:00:36,230
+Now we will note down this Uuid.
+
+9
+00:00:38,440 --> 00:00:42,640
+Over here so that we will use it later.
+
+10
+00:00:44,440 --> 00:00:51,250
+So I have no doubt this in the text editor and let's just check out all the keys.
+
+11
+00:00:51,760 --> 00:00:59,080
+So to check out all the keys, we use EMF and check command as we know.
+
+12
+00:01:00,210 --> 00:01:03,210
+And it's a classic one card.
+
+13
+00:01:05,220 --> 00:01:14,220
+And over here last time, what we did is we emulated all the keys into our emulator memory.
+
+14
+00:01:14,700 --> 00:01:21,030
+This time we are going to dump all the keys in a text file or a binary file.
+
+15
+00:01:21,030 --> 00:01:27,900
+You can say so to dump all the files into binary file, we have to use the command.
+
+16
+00:01:29,770 --> 00:01:31,150
+And let's just hit enter.
+
+17
+00:01:32,110 --> 00:01:35,320
+So all the files are dumped into bin file.
+
+18
+00:01:37,070 --> 00:01:45,260
+And over here, as you can see in sector five, Key A and B are unknown.
+
+19
+00:01:45,590 --> 00:01:48,800
+Other than that, all the keys are dumped into bin file.
+
+20
+00:01:49,040 --> 00:01:55,630
+And from now on, we know how to get the unknown keys through a nested attack.
+
+21
+00:01:55,640 --> 00:01:57,770
+So let's just run the nested attack.
+
+22
+00:01:58,750 --> 00:01:59,970
+Zfmf.
+
+23
+00:02:01,530 --> 00:02:02,310
+Nested.
+
+24
+00:02:04,480 --> 00:02:09,370
+And we are going to run it on one card with all the unknown factors.
+
+25
+00:02:09,370 --> 00:02:17,680
+And this time we are also going to dump the nested attack keys into a dump file.
+
+26
+00:02:18,250 --> 00:02:20,410
+So it will also create a bin file.
+
+27
+00:02:20,440 --> 00:02:21,130
+That's it.
+
+28
+00:02:21,310 --> 00:02:23,590
+Basically it will dump into the same bin file.
+
+29
+00:02:23,590 --> 00:02:25,630
+So let's just hit enter.
+
+30
+00:02:29,930 --> 00:02:31,480
+So you might get this error.
+
+31
+00:02:31,490 --> 00:02:35,690
+Sometimes all you have to do is you have to remove the card and replace it.
+
+32
+00:02:37,400 --> 00:02:39,980
+So now it's able to find all the keys.
+
+33
+00:02:44,200 --> 00:02:52,360
+As you can see it, Sector five keys are also found now and all the keys are now dumped into dump keys
+
+34
+00:02:52,360 --> 00:02:53,860
+dot bin file.
+
+35
+00:02:54,870 --> 00:03:01,320
+So by doing this, we have just dumped all the keys in the dumb keys file.
+
+36
+00:03:02,350 --> 00:03:06,580
+What we have to do is we have to also dump all the blocks data.
+
+37
+00:03:07,230 --> 00:03:12,250
+So to dump all the blocks data, what we have to do is we just have to run the dump command.
+
+38
+00:03:12,270 --> 00:03:12,900
+So it's.
+
+39
+00:03:15,050 --> 00:03:16,240
+And it's dump.
+
+40
+00:03:18,520 --> 00:03:25,110
+It's going to read all the blocks data and then it's going to write into a dump data dot bin file.
+
+41
+00:03:31,580 --> 00:03:36,840
+So, as you can see, dumped 64 blocks to file dump data dot bin.
+
+42
+00:03:36,860 --> 00:03:40,160
+So it's just created a dump data dot bin file.
+
+43
+00:03:40,490 --> 00:03:47,480
+Now we can load this file into a magic card, but before loading this file, what we have to do is we
+
+44
+00:03:47,480 --> 00:03:50,390
+have to convert this file to Elf format.
+
+45
+00:03:51,150 --> 00:03:55,090
+Now, we cannot load Ben file into magic card.
+
+46
+00:03:55,210 --> 00:03:59,080
+So to convert it into Elf format, first we have to exit.
+
+47
+00:04:01,050 --> 00:04:10,470
+And in the same client folder, there's another Python script which you have to run with Python keyword
+
+48
+00:04:10,710 --> 00:04:18,000
+and the script is pgm3 underscore MFD2ML.
+
+49
+00:04:18,660 --> 00:04:25,650
+So this is the script which you have to run and you have to provide the dump data dot bin file.
+
+50
+00:04:26,770 --> 00:04:31,990
+And then you have to provide the name of the file, which whatever name you want to give.
+
+51
+00:04:33,060 --> 00:04:34,470
+So I'm going to give.
+
+52
+00:04:41,210 --> 00:04:46,970
+Test file five and you have to give extension.
+
+53
+00:04:51,760 --> 00:04:53,260
+So let's just run it.
+
+54
+00:04:55,040 --> 00:04:59,300
+So test file five dot yaml file is created.
+
+55
+00:04:59,330 --> 00:05:03,860
+So what we have to do is we have to load this file into Proxmox three.
+
+56
+00:05:03,890 --> 00:05:07,610
+So let's just run proxmox three again.
+
+57
+00:05:16,270 --> 00:05:18,460
+So it's saying invalid serial port.
+
+58
+00:05:18,460 --> 00:05:21,430
+So all you have to do is you have to.
+
+59
+00:05:23,620 --> 00:05:25,030
+First disconnect.
+
+60
+00:05:28,360 --> 00:05:29,830
+And then exit.
+
+61
+00:05:29,830 --> 00:05:32,110
+And then you have to reconnect.
+
+62
+00:05:40,070 --> 00:05:41,960
+And then we'll run the same command.
+
+63
+00:05:41,960 --> 00:05:43,250
+So it's connected now.
+
+64
+00:05:43,250 --> 00:05:44,720
+So it happens sometime.
+
+65
+00:05:44,720 --> 00:05:47,630
+You just have to disconnect and reconnect.
+
+66
+00:05:47,630 --> 00:05:48,740
+Proxima three.
+
+67
+00:05:49,790 --> 00:05:56,060
+So let's just remove our previous card and let's just place the magic card on Proxmox three.
+
+68
+00:05:56,480 --> 00:06:01,580
+And first, let's just check out the Uuid of this card.
+
+69
+00:06:07,330 --> 00:06:08,770
+It's 14 a.
+
+70
+00:06:10,520 --> 00:06:13,340
+So as you can see, it's showing us the dummy.
+
+71
+00:06:15,030 --> 00:06:16,020
+Of this card.
+
+72
+00:06:17,410 --> 00:06:20,950
+So we will also check out all the blogs.
+
+73
+00:06:21,970 --> 00:06:22,450
+Give.
+
+74
+00:06:22,810 --> 00:06:27,640
+So to check out all the block keys, we have to run the check command.
+
+75
+00:06:28,510 --> 00:06:30,700
+And we can run check command with.
+
+76
+00:06:32,100 --> 00:06:33,030
+The option.
+
+77
+00:06:35,560 --> 00:06:41,530
+So as you can see, it's on the transport configuration because we can see all the keys.
+
+78
+00:06:42,100 --> 00:06:46,630
+Key A's and B's are showing in a transport mode.
+
+79
+00:06:46,900 --> 00:06:49,850
+So there's nothing changed in this card.
+
+80
+00:06:49,870 --> 00:06:54,670
+So what we are going to do is we are going to clone our previous card on this card.
+
+81
+00:06:55,600 --> 00:06:58,130
+So we already converted our file.
+
+82
+00:06:58,150 --> 00:07:03,520
+All we have to do is we have to run EMF and C load.
+
+83
+00:07:08,920 --> 00:07:09,760
+See load.
+
+84
+00:07:09,910 --> 00:07:14,440
+This is the command and we just have to provide the file name.
+
+85
+00:07:14,440 --> 00:07:17,110
+So the file name is test file.
+
+86
+00:07:18,110 --> 00:07:22,460
+Five and we just have to give the file name without extension.
+
+87
+00:07:22,460 --> 00:07:23,840
+So we will not type.
+
+88
+00:07:24,470 --> 00:07:27,680
+We will just provide the file name and let's just hit enter.
+
+89
+00:07:32,200 --> 00:07:35,080
+Okay, so the file is loaded into our magic card.
+
+90
+00:07:35,110 --> 00:07:36,660
+As we can see it over here.
+
+91
+00:07:36,670 --> 00:07:39,310
+So now let's just check out the.
+
+92
+00:07:40,520 --> 00:07:42,140
+The key is one more time.
+
+93
+00:07:42,380 --> 00:07:45,260
+So we will run f f.
+
+94
+00:07:46,200 --> 00:07:47,100
+Check command.
+
+95
+00:07:48,910 --> 00:07:53,170
+And we will run this command and execute all the keys in emulator.
+
+96
+00:07:55,820 --> 00:08:02,330
+So as you can see, Sector five is unknown as it was unknown in our actual card.
+
+97
+00:08:02,750 --> 00:08:07,280
+So we can do nested attack and check out the keys on this card as well.
+
+98
+00:08:08,090 --> 00:08:12,110
+We know the keys, but still we will do the attack and check out the keys.
+
+99
+00:08:17,450 --> 00:08:25,040
+For valid keys found and it has the same keys and it will contain the same data as the original Mifare
+
+100
+00:08:25,040 --> 00:08:25,670
+card.
+
+101
+00:08:26,730 --> 00:08:29,160
+So this is how you copy Mifare Classic card.
+
+102
+00:08:29,190 --> 00:08:31,560
+Now, let's just check out one more thing.
+
+103
+00:08:32,309 --> 00:08:34,770
+Let's just check out the UI of this card.
+
+104
+00:08:44,510 --> 00:08:47,470
+So the Uuid is also updated of this card.
+
+105
+00:08:47,480 --> 00:08:47,930
+Right.
+
+106
+00:08:47,930 --> 00:08:54,920
+But if the Uuid is sometime the Uuid is not updated in magic cards, so there is a command to just update
+
+107
+00:08:54,920 --> 00:08:56,360
+the Uuid as well.
+
+108
+00:08:57,760 --> 00:08:59,710
+Which we can see it over here.
+
+109
+00:09:01,670 --> 00:09:06,360
+There's a command C set Uid and we can provide the Uid into it.
+
+110
+00:09:06,380 --> 00:09:09,320
+So let's just run this command as well.
+
+111
+00:09:11,590 --> 00:09:13,470
+C set uid.
+
+112
+00:09:16,050 --> 00:09:21,540
+And we have to provide the Uid with without space.
+
+113
+00:09:21,630 --> 00:09:23,460
+So this is the actual Uid.
+
+114
+00:09:25,320 --> 00:09:25,680
+Right.
+
+115
+00:09:25,680 --> 00:09:34,320
+So let's just remove the space and let's just copy it and paste it over here and let's just hit enter.
+
+116
+00:09:35,950 --> 00:09:38,120
+So the Uuid is updated, as you can see.
+
+117
+00:09:38,140 --> 00:09:40,780
+Now let's just check out the Uuid one more time.
+
+118
+00:09:43,200 --> 00:09:45,780
+For its routing the correct Uid as well.
+
+119
+00:09:45,790 --> 00:09:46,240
+Right.
+
+120
+00:09:46,870 --> 00:09:50,530
+So this is how you create clone of any mifare classic card.
+
+121
+00:09:50,530 --> 00:09:54,720
+And then we can use this clone in place of actual card.
+
+122
+00:09:54,730 --> 00:09:58,270
+So these are few vulnerabilities in mifare classic card.
+
+123
+00:09:58,270 --> 00:10:02,470
+And and I already told you how to overcome these vulnerabilities.
+
+124
+00:10:02,710 --> 00:10:08,440
+You can change all the keys whenever you are updating or programming mifare classic cards.
+
+125
+00:10:08,440 --> 00:10:14,950
+You have to change the keys of all the sector trailers Key A and key B of all the sector trailers so
+
+126
+00:10:14,950 --> 00:10:16,480
+that your card is secure.
+

@@ -1,0 +1,88 @@
+1
+00:00:01,310 --> 00:00:05,720
+So in this quick video, we are going to see how we can install Arduino IDE.
+
+2
+00:00:06,740 --> 00:00:10,250
+You can install Arduino IDE by going on this link.
+
+3
+00:00:10,280 --> 00:00:16,490
+The link will be provided in the resources file as well, and you can download Arduino IDE according
+
+4
+00:00:16,520 --> 00:00:17,900
+to your environment.
+
+5
+00:00:17,900 --> 00:00:25,700
+Like I'm using Windows so I can download Windows form of Arduino IDE and similarly there is Mac OS and
+
+6
+00:00:25,700 --> 00:00:27,170
+Linux versions as well.
+
+7
+00:00:27,910 --> 00:00:32,680
+White, so I have already downloaded Ardino and installed it.
+
+8
+00:00:32,890 --> 00:00:35,770
+It's quite simple, so let me open it.
+
+9
+00:00:35,890 --> 00:00:37,960
+You can install it with few clicks.
+
+10
+00:00:40,020 --> 00:00:48,420
+So after installing Arduino ID, all you have to do is you have to go into sketch and include libraries
+
+11
+00:00:48,630 --> 00:00:50,400
+and manage libraries.
+
+12
+00:00:50,550 --> 00:00:51,150
+Right?
+
+13
+00:00:51,750 --> 00:01:02,580
+So we are going to install library for RC 5 to 2 module which we are going to use for mifare classic
+
+14
+00:01:02,580 --> 00:01:03,240
+cards.
+
+15
+00:01:03,510 --> 00:01:03,990
+Right.
+
+16
+00:01:03,990 --> 00:01:08,010
+So all you have to do is you have to type mf RC.
+
+17
+00:01:09,620 --> 00:01:13,670
+5 to 2 and you will find these libraries, right?
+
+18
+00:01:14,960 --> 00:01:19,610
+And I have already installed these libraries, as you can see over here.
+
+19
+00:01:21,750 --> 00:01:25,350
+So you can see these libraries are installed, right?
+
+20
+00:01:25,350 --> 00:01:29,700
+So all you have to do is you have to install this libraries and you are done.
+
+21
+00:01:30,330 --> 00:01:36,870
+And in the next video we are going to see how we can find Uuid of Mifare classic cards using Arduino,
+
+22
+00:01:36,870 --> 00:01:41,400
+Uno and RC 5 to 2 module.
+

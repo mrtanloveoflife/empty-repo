@@ -1,0 +1,88 @@
+1
+00:00:00,810 --> 00:00:10,020
+So now we are going to create our first practical project and we are going to get the Uuid of classic
+
+2
+00:00:10,020 --> 00:00:10,680
+cards.
+
+3
+00:00:10,680 --> 00:00:18,480
+So the things we need to create this project is Arduino Uno and we need RC five five to module that
+
+4
+00:00:18,480 --> 00:00:19,200
+is over here.
+
+5
+00:00:19,200 --> 00:00:20,160
+You can see it.
+
+6
+00:00:20,160 --> 00:00:23,430
+And then we also need four pin.
+
+7
+00:00:23,430 --> 00:00:27,180
+So this is the Led which has four pins.
+
+8
+00:00:27,180 --> 00:00:29,610
+So you need this led as well.
+
+9
+00:00:29,610 --> 00:00:35,010
+And then we need breadboard jumper wire for the next project.
+
+10
+00:00:35,010 --> 00:00:36,360
+We also need Buzzer.
+
+11
+00:00:36,360 --> 00:00:38,550
+So I have also included buzzer into it.
+
+12
+00:00:38,550 --> 00:00:40,980
+And then we need Mifare classic cards.
+
+13
+00:00:41,130 --> 00:00:44,910
+So these are the hardware requirements for this project, right?
+
+14
+00:00:44,910 --> 00:00:51,060
+So in this project we are going to get the Uuid of Mifare classic cards and then we are going to create
+
+15
+00:00:51,150 --> 00:00:58,980
+a simple, valid Uid program in which we are going to get the valid cards and invalid cards.
+
+16
+00:00:58,980 --> 00:00:59,310
+Right?
+
+17
+00:00:59,310 --> 00:01:04,629
+So this is the next project we are going to see and we are going to use the same hardware in the coming
+
+18
+00:01:04,629 --> 00:01:05,830
+up project as well.
+
+19
+00:01:05,830 --> 00:01:08,980
+So for now these are the requirements.
+
+20
+00:01:08,980 --> 00:01:15,220
+So you if you want to follow up, make sure you have all these hardwares with you.
+
+21
+00:01:15,220 --> 00:01:15,760
+Right?
+
+22
+00:01:15,760 --> 00:01:19,690
+So we are going to create the hardware in the next video.
+

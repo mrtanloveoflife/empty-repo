@@ -1,0 +1,104 @@
+1
+00:00:01,310 --> 00:00:03,110
+Quick overview of Arduino.
+
+2
+00:00:03,290 --> 00:00:07,100
+So Arduino is a prerequisite for this course.
+
+3
+00:00:07,100 --> 00:00:09,980
+The knowledge of Arduino is prerequisite for this course.
+
+4
+00:00:09,980 --> 00:00:14,810
+So in this video, we are going to see a quick overview of Arduino.
+
+5
+00:00:14,810 --> 00:00:20,660
+So Arduino is an open source hardware, and it is a single board microcontroller.
+
+6
+00:00:20,660 --> 00:00:26,780
+And the best part of Arduino is we can use different modules and sensors with it, right?
+
+7
+00:00:26,780 --> 00:00:33,710
+So let's say your project needs some type of temperature recording, so you can use a sensor for temperature
+
+8
+00:00:33,710 --> 00:00:40,490
+and you can attach some sensor of temperature with Arduino board and you can achieve your goal easily,
+
+9
+00:00:40,490 --> 00:00:41,060
+right?
+
+10
+00:00:41,390 --> 00:00:46,190
+Similarly, if you want to record some type of pressure, there is a sensor for pressure as well.
+
+11
+00:00:46,730 --> 00:00:50,720
+But in our case, we need to do work with RFID.
+
+12
+00:00:50,750 --> 00:00:53,570
+So we are going to use a module for RFID.
+
+13
+00:00:54,200 --> 00:00:57,830
+The module is known as RC 522.
+
+14
+00:00:58,430 --> 00:01:03,870
+This is the module which we are going to use with Arduino board and we are going to attach this module
+
+15
+00:01:03,870 --> 00:01:06,660
+with Arduino board and do our goals right.
+
+16
+00:01:06,660 --> 00:01:10,350
+So we are going to use Arduino Uno.
+
+17
+00:01:10,800 --> 00:01:13,290
+There are different versions of Arduino as well.
+
+18
+00:01:13,580 --> 00:01:19,260
+Arduino Uno is one of the most famous version of Arduino, but there is Arduino Mega as well.
+
+19
+00:01:19,300 --> 00:01:22,050
+Arduino Nano, Arduino Micro Mini.
+
+20
+00:01:22,260 --> 00:01:25,350
+So these are different versions of Arduino boards as well, right?
+
+21
+00:01:25,350 --> 00:01:33,650
+So we are going to use Arduino board for few of our lectures in future and we are going to use RC 5
+
+22
+00:01:33,650 --> 00:01:39,360
+to 2 module with it to do the goals, right?
+
+23
+00:01:39,360 --> 00:01:42,180
+So this is the quick overview of Arduino.
+
+24
+00:01:42,540 --> 00:01:48,360
+And if you don't know about Arduino, I would suggest that you should watch few tutorials of Arduino
+
+25
+00:01:48,390 --> 00:01:52,500
+or just go ahead of few videos of Arduino on YouTube.
+
+26
+00:01:52,500 --> 00:01:56,490
+So you will get a quick overview of how Arduino board works, right?
+

@@ -1,0 +1,244 @@
+1
+00:00:01,690 --> 00:00:05,200
+So now we are going to set up Mark three on Kali Linux.
+
+2
+00:00:05,200 --> 00:00:09,550
+So Kali Linux is an operating system for vulnerability testing.
+
+3
+00:00:09,910 --> 00:00:13,000
+You can install Kali Linux very easily.
+
+4
+00:00:13,240 --> 00:00:14,680
+Let me show it to you.
+
+5
+00:00:14,800 --> 00:00:23,230
+So all you have to do is you have to go to this link and you have to download torrent of this VMware
+
+6
+00:00:23,260 --> 00:00:25,900
+or VirtualBox, whatever software you want to use.
+
+7
+00:00:25,930 --> 00:00:31,150
+These are the two software which I use for creating virtual machines.
+
+8
+00:00:31,150 --> 00:00:37,570
+I'm using VMware, so you just have to download this torrent file and you can easily install Kali Linux,
+
+9
+00:00:37,570 --> 00:00:37,960
+right?
+
+10
+00:00:37,960 --> 00:00:39,580
+So it's quite easy to install.
+
+11
+00:00:39,580 --> 00:00:42,130
+I'm not going to show you how to install Kali Linux.
+
+12
+00:00:42,610 --> 00:00:48,460
+It's fairly simple, so I'll start on a fresh installation of Kali Linux.
+
+13
+00:00:48,580 --> 00:00:51,340
+So this is the fresh installation.
+
+14
+00:00:51,520 --> 00:00:53,920
+So let me open the terminal over here.
+
+15
+00:00:58,470 --> 00:01:05,190
+So this is the link, which is the documentation of Mark three.
+
+16
+00:01:05,550 --> 00:01:08,380
+You can go through this documentation as well.
+
+17
+00:01:08,400 --> 00:01:13,450
+So I'm going to show you how to install the tools of Mark three on Kali Linux.
+
+18
+00:01:13,470 --> 00:01:18,660
+So first of all, you have to download all the dependencies, the packages.
+
+19
+00:01:18,900 --> 00:01:22,290
+So you just have to copy all the packages as shown over here.
+
+20
+00:01:22,590 --> 00:01:28,260
+I'll copy and all you have to do is paste in your terminal and hit enter.
+
+21
+00:01:30,960 --> 00:01:32,700
+And it will ask you to install.
+
+22
+00:01:32,820 --> 00:01:33,780
+You just have to do.
+
+23
+00:01:33,810 --> 00:01:34,320
+Yes.
+
+24
+00:01:36,230 --> 00:01:38,450
+And it might take a few minutes to install.
+
+25
+00:01:38,450 --> 00:01:40,400
+It depends on your internet connection.
+
+26
+00:01:45,200 --> 00:01:47,720
+So all the dependencies are now installed.
+
+27
+00:01:48,500 --> 00:01:50,200
+So let's just proceed.
+
+28
+00:01:50,210 --> 00:01:58,400
+By the way, sometimes you might have to run this packages commands more than once because sometimes
+
+29
+00:01:58,400 --> 00:02:02,880
+it gives you an error on the first run or after some libraries.
+
+30
+00:02:02,900 --> 00:02:09,199
+So make sure if you get some error, you run this package, install command more than once.
+
+31
+00:02:10,310 --> 00:02:12,030
+So let's just proceed.
+
+32
+00:02:12,050 --> 00:02:19,580
+So now what we have to do is we have to do git clone of Proxmox three packages, so let's just copy
+
+33
+00:02:19,580 --> 00:02:20,030
+it.
+
+34
+00:02:23,020 --> 00:02:24,710
+And let's just face it.
+
+35
+00:02:24,730 --> 00:02:27,220
+So let me make the terminal a little.
+
+36
+00:02:28,440 --> 00:02:30,780
+Bigger so you can see it more clearly.
+
+37
+00:02:38,140 --> 00:02:41,950
+Let's just clear out and let's just do get clone.
+
+38
+00:02:43,310 --> 00:02:45,390
+Uh, from GitHub.
+
+39
+00:02:45,410 --> 00:02:50,090
+So these are the tools for Proxmox three.
+
+40
+00:02:52,900 --> 00:02:57,250
+Again, it might take a few minutes to install or to download.
+
+41
+00:02:57,760 --> 00:02:59,620
+It depends on your internet connection.
+
+42
+00:03:23,240 --> 00:03:23,570
+All right.
+
+43
+00:03:23,570 --> 00:03:25,340
+So Proxmox is also downloaded.
+
+44
+00:03:25,340 --> 00:03:27,320
+So let's just go into this directory.
+
+45
+00:03:27,740 --> 00:03:28,940
+Proxmox three.
+
+46
+00:03:29,540 --> 00:03:33,320
+And what we have to do is first we have to compile all these files.
+
+47
+00:03:33,350 --> 00:03:36,230
+So to compile, we have to use make command.
+
+48
+00:03:36,800 --> 00:03:42,070
+So we have to use make claim and then we have to make it all.
+
+49
+00:03:42,080 --> 00:03:45,980
+So we use make all and let's just hit enter.
+
+50
+00:03:49,750 --> 00:03:53,280
+So now it's compiling all the files for Proxmox three.
+
+51
+00:04:25,960 --> 00:04:27,820
+So the first compilation is done.
+
+52
+00:04:27,850 --> 00:04:32,770
+Now what we have to do is we have to go into the clients directory in the same folder.
+
+53
+00:04:32,770 --> 00:04:34,720
+So we are in Proxmox three now.
+
+54
+00:04:34,720 --> 00:04:38,830
+We will go to clients in the same directory, right?
+
+55
+00:04:38,920 --> 00:04:44,500
+So clients is in Mach three and then we have to make one more compile.
+
+56
+00:04:44,500 --> 00:04:52,780
+So we will just do Mac over here and it will compile all the files for Mach three for execution.
+
+57
+00:04:53,200 --> 00:04:53,550
+Right?
+
+58
+00:04:53,560 --> 00:05:02,350
+So now after this compilation, you will get this Mach three execution file, which we will run later
+
+59
+00:05:02,350 --> 00:05:06,640
+when we will plug our Mach three.
+
+60
+00:05:06,730 --> 00:05:09,040
+So that's all for this video.
+
+61
+00:05:09,040 --> 00:05:14,620
+In the next video, we are going to see how to update the firmware of Mach three.
+

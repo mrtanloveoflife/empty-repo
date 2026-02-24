@@ -1,0 +1,68 @@
+1
+00:00:07,900 --> 00:00:15,490
+RF were first invented by Russian spy Harry Stockman, even though radio frequency identification or
+
+2
+00:00:15,490 --> 00:00:19,340
+RFID for short is largely unknown in public.
+
+3
+00:00:19,360 --> 00:00:25,660
+It is being currently used by Walmart, McDonald's, Amazon and even American Army.
+
+4
+00:00:26,020 --> 00:00:30,430
+There are endless industries in which RFID can play an important part.
+
+5
+00:00:30,760 --> 00:00:35,230
+So in this course, we are going to see how to program RFID tags.
+
+6
+00:00:35,350 --> 00:00:39,670
+We will start this course by understanding what RFID is.
+
+7
+00:00:39,910 --> 00:00:48,340
+Then we will program RFID, mifare classic cards using one, two, two, in which we will see what are
+
+8
+00:00:48,340 --> 00:00:51,970
+data blocks, what are value blocks and sector trailer.
+
+9
+00:00:52,210 --> 00:00:56,740
+Then we will program the same card using eight microcontroller.
+
+10
+00:00:57,430 --> 00:01:05,379
+After learning how to program RFID tags, we will see the security of RFID cards and we will start with
+
+11
+00:01:05,379 --> 00:01:10,340
+offensive security and try to crack RFID tags using prox mark three.
+
+12
+00:01:11,240 --> 00:01:15,320
+We will see how to crack Mifare cards without knowing the actual key.
+
+13
+00:01:15,740 --> 00:01:19,760
+We will also see how to clone Mifare cards on magic cards.
+
+14
+00:01:20,000 --> 00:01:26,780
+Then we will look how to make RFID cards fully secure and how to overcome such type of attacks.
+
+15
+00:01:27,620 --> 00:01:34,850
+At the end, we are also going to do a real world practical example of RFID tags with correct market
+
+16
+00:01:34,850 --> 00:01:35,630
+standards.
+
+17
+00:01:35,870 --> 00:01:36,770
+Thank you.
+

@@ -1,0 +1,260 @@
+1
+00:00:01,359 --> 00:00:08,710
+So this course is totally based on hands on training of programming and practical demonstration of RFID
+
+2
+00:00:08,740 --> 00:00:09,340
+tags.
+
+3
+00:00:09,350 --> 00:00:13,810
+But this section is specifically based on RFID theory.
+
+4
+00:00:13,810 --> 00:00:20,260
+And trust me, this theory is really important and it will create the base for our coming lectures.
+
+5
+00:00:20,260 --> 00:00:26,020
+So we will start with the basics and see what RFID is.
+
+6
+00:00:27,220 --> 00:00:34,870
+So RFID works on radio frequency principle, and it consists of two main components the RFID tag and
+
+7
+00:00:34,870 --> 00:00:36,160
+the RFID reader.
+
+8
+00:00:37,380 --> 00:00:41,640
+RFID reader continuously sends radio frequency waves.
+
+9
+00:00:41,640 --> 00:00:48,750
+And whenever the tag is in the range of this RFID reader it sends.
+
+10
+00:00:48,930 --> 00:00:58,710
+Whenever the tag hits the frequency signals so the reader gets its feedback and then the communication
+
+11
+00:00:58,710 --> 00:01:02,730
+starts and we will see all those things in really detail.
+
+12
+00:01:02,730 --> 00:01:07,470
+It's just a high level overview of what RFID system is, right?
+
+13
+00:01:07,500 --> 00:01:12,150
+You don't have to worry about if you don't understand anything in this lecture.
+
+14
+00:01:12,150 --> 00:01:18,120
+It's just a high level overview of RFID system and what are the components in RFID system.
+
+15
+00:01:18,120 --> 00:01:25,680
+We will get into complete detail of how RFID tags work and how the reader works and what type of reader
+
+16
+00:01:25,680 --> 00:01:26,700
+we are going to use.
+
+17
+00:01:26,700 --> 00:01:32,460
+We are going to cover each and everything in the coming lectures and types of RFID frequencies.
+
+18
+00:01:32,460 --> 00:01:42,060
+There are three basic types of RFID frequency the low frequency Lf, which operates in one 25kHz and
+
+19
+00:01:42,060 --> 00:01:43,890
+one 34kHz.
+
+20
+00:01:44,100 --> 00:01:50,220
+And then there is high frequency which operates in 13.56MHz.
+
+21
+00:01:50,220 --> 00:01:57,720
+And then there is ultra high frequency UHF, which operates on 860 and nine 60MHz.
+
+22
+00:01:57,720 --> 00:02:03,510
+And it depends on the country you are surrounded and the laws of that country.
+
+23
+00:02:03,510 --> 00:02:03,960
+Right?
+
+24
+00:02:03,960 --> 00:02:10,380
+So the range of Lf is in between 10 to 8 to ten centimeters.
+
+25
+00:02:10,380 --> 00:02:16,380
+And you you have to touch the reader with the tag to read low frequency.
+
+26
+00:02:16,380 --> 00:02:24,750
+And then there is high frequency and its range is around one meter and then there is ultra high frequency.
+
+27
+00:02:24,750 --> 00:02:28,950
+It range around 10m to 15m.
+
+28
+00:02:28,950 --> 00:02:35,190
+So in this course our main focus will be high frequency tags and we will see how high frequency tags
+
+29
+00:02:35,190 --> 00:02:39,220
+work and what type of high frequency readers are available in the market.
+
+30
+00:02:40,600 --> 00:02:47,590
+We are not starting with low frequency because low frequency consists of very less security or there
+
+31
+00:02:47,590 --> 00:02:48,820
+is no security.
+
+32
+00:02:49,900 --> 00:02:55,300
+So we will start with high frequency and once you will understand how high frequency works, it will
+
+33
+00:02:55,300 --> 00:02:59,680
+be very easy for you to program low frequency tags as well.
+
+34
+00:02:59,890 --> 00:03:08,080
+And we will not cover ultra high frequency as well because ultra high frequency tags are similar based
+
+35
+00:03:08,080 --> 00:03:15,790
+on high frequency, but ultra high frequency tags are expensive and their readers are also very expensive.
+
+36
+00:03:15,820 --> 00:03:19,360
+So our main focus will be high frequency tags.
+
+37
+00:03:19,360 --> 00:03:25,240
+And trust me, if you understand how high frequency tags work, it will be very easy for you to program
+
+38
+00:03:25,240 --> 00:03:28,480
+low frequency tags as well as ultra high frequency tags.
+
+39
+00:03:28,630 --> 00:03:36,160
+So we will see how high frequency tags work and what are the standards of high frequency and what are
+
+40
+00:03:36,160 --> 00:03:39,490
+the what what is the structure of high frequency tags?
+
+41
+00:03:39,520 --> 00:03:42,160
+We will see all those things in very detail.
+
+42
+00:03:42,730 --> 00:03:45,580
+And then there is applications of RFID.
+
+43
+00:03:45,850 --> 00:03:51,490
+There are whole lot of applications of RFID, starting with access control.
+
+44
+00:03:51,490 --> 00:03:53,410
+That is the basic of RFID.
+
+45
+00:03:53,410 --> 00:03:59,590
+And and we will create one practical tool of access control as well using RFID.
+
+46
+00:04:00,340 --> 00:04:08,650
+And we are going to see both the the standard way of creating the access control tool and what are the
+
+47
+00:04:08,650 --> 00:04:10,360
+bad standards in the market.
+
+48
+00:04:10,390 --> 00:04:13,930
+We are going to see both the things in our coming lectures.
+
+49
+00:04:13,930 --> 00:04:21,339
+And once you understand how access control work on RFID, tracking, library books, grocery store items
+
+50
+00:04:21,339 --> 00:04:24,190
+and tracking animal is a piece of cake.
+
+51
+00:04:24,730 --> 00:04:28,690
+We are also going to see transportation and logistics use of RFID tags.
+
+52
+00:04:28,690 --> 00:04:35,680
+So our main focus will be on access control and how a access control works in RFID.
+
+53
+00:04:36,550 --> 00:04:40,540
+We are going to program and see the tools which we are going to use this.
+
+54
+00:04:40,540 --> 00:04:42,610
+This will be our main focus, right?
+
+55
+00:04:43,030 --> 00:04:47,140
+Because in access control you see a actual potential of RFID.
+
+56
+00:04:47,680 --> 00:04:50,410
+So this is what RFID is.
+
+57
+00:04:50,440 --> 00:04:54,130
+RFID is based on radio frequency, as I told you.
+
+58
+00:04:54,130 --> 00:04:59,020
+And there are two main components of RFID, the RFID reader and the RFID tag.
+
+59
+00:04:59,020 --> 00:05:05,020
+We are going to see what tags we are going to use and what are the types of RFID reader that's coming
+
+60
+00:05:05,020 --> 00:05:07,390
+in in the coming lectures.
+
+61
+00:05:07,390 --> 00:05:14,530
+So and we have also seen what type of frequencies are available in the market for RFID.
+
+62
+00:05:15,570 --> 00:05:19,200
+And our main focus will be frequency, as I told you.
+
+63
+00:05:19,790 --> 00:05:21,470
+And the applications of RFID.
+
+64
+00:05:21,680 --> 00:05:24,560
+So this is coming in our coming lectures.
+
+65
+00:05:24,560 --> 00:05:25,520
+So stay tuned.
+

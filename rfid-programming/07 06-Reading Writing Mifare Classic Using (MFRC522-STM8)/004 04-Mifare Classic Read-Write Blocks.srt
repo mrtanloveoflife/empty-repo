@@ -1,0 +1,552 @@
+1
+00:00:01,850 --> 00:00:10,130
+So in this video, we are going to see how to read and write data blocks using this MFC and STM eight
+
+2
+00:00:10,130 --> 00:00:11,180
+microcontroller.
+
+3
+00:00:11,180 --> 00:00:17,180
+So first thing you have to do is you have to select the correct port, which you can easily see in this
+
+4
+00:00:17,180 --> 00:00:18,170
+select box.
+
+5
+00:00:18,170 --> 00:00:26,000
+So let's just open and you have to click on State Select Normal over here, right?
+
+6
+00:00:26,000 --> 00:00:31,490
+So you have to click on normal, so all the other options will be activated after it.
+
+7
+00:00:32,189 --> 00:00:35,220
+So all you have to do is first, let's just check out the Uid.
+
+8
+00:00:36,500 --> 00:00:38,150
+So we can do read ID.
+
+9
+00:00:38,900 --> 00:00:39,650
+ID read.
+
+10
+00:00:42,900 --> 00:00:44,790
+And you might have to click at two times.
+
+11
+00:00:45,690 --> 00:00:45,960
+Right.
+
+12
+00:00:45,960 --> 00:00:48,960
+So over here you can see it's saying serial number.
+
+13
+00:00:48,960 --> 00:00:51,210
+So serial number is same as Uid.
+
+14
+00:00:53,070 --> 00:00:55,620
+So this is the Uuid of the card.
+
+15
+00:00:55,620 --> 00:00:57,000
+And we can.
+
+16
+00:00:59,950 --> 00:01:03,520
+Confirm it by looking at the data block zero.
+
+17
+00:01:03,550 --> 00:01:08,760
+So over here you can see the password or key A is same.
+
+18
+00:01:08,770 --> 00:01:16,840
+So key A is f, f, f, f, f f, which is the default configuration in transport mode because each
+
+19
+00:01:16,870 --> 00:01:22,630
+method card which we get from any seller, it always comes with the transport configuration.
+
+20
+00:01:22,630 --> 00:01:25,720
+And in transport configuration, this is the default key.
+
+21
+00:01:26,890 --> 00:01:29,170
+So let's just do read data.
+
+22
+00:01:33,800 --> 00:01:40,550
+So you can see the first four bytes are exactly similar to the four bytes of Uid.
+
+23
+00:01:40,730 --> 00:01:45,410
+So the first four bytes of Uid are from block zero.
+
+24
+00:01:46,280 --> 00:01:47,300
+Of Sector Zero.
+
+25
+00:01:48,320 --> 00:01:51,230
+So this is the one thing.
+
+26
+00:01:51,230 --> 00:01:56,510
+And the other data which you are, which you can see over here is the manufacturer's data.
+
+27
+00:01:56,840 --> 00:02:05,150
+So we usually don't use that data for the card manufacturers, so we don't use this block.
+
+28
+00:02:05,450 --> 00:02:11,420
+We just get the Uid from the block and we utilize this Uid if we need it in some purpose.
+
+29
+00:02:11,900 --> 00:02:14,540
+So this is what the Uid is.
+
+30
+00:02:14,570 --> 00:02:16,940
+Now let's just read some other block.
+
+31
+00:02:17,570 --> 00:02:20,060
+Let's just read data block one.
+
+32
+00:02:23,920 --> 00:02:30,790
+And you can see data block one contains all the zeros because in transport configuration, all the data
+
+33
+00:02:30,790 --> 00:02:32,450
+blocks are in zero.
+
+34
+00:02:32,470 --> 00:02:35,440
+So there is no data or there is only zero.
+
+35
+00:02:35,680 --> 00:02:37,690
+So we can write our own data as well.
+
+36
+00:02:38,640 --> 00:02:42,570
+So we will see how to write data in a moment using this tool.
+
+37
+00:02:42,960 --> 00:02:46,640
+So over here there are few other commands as well.
+
+38
+00:02:46,650 --> 00:02:50,700
+Request and call, which is anti-collision and then select.
+
+39
+00:02:50,730 --> 00:02:54,780
+These three commands are exactly equal to read.
+
+40
+00:02:55,200 --> 00:02:57,360
+So we can press ID rate.
+
+41
+00:02:57,600 --> 00:02:59,190
+It will do the same task.
+
+42
+00:02:59,190 --> 00:03:06,060
+It will perform all these three task using this command, but we can do it separately as well.
+
+43
+00:03:06,060 --> 00:03:10,590
+So we can do request and then anti-collision and then select.
+
+44
+00:03:11,280 --> 00:03:13,950
+So this is what this card is doing.
+
+45
+00:03:18,750 --> 00:03:24,960
+So this is how we get the ID Uuid and this is how we read the block.
+
+46
+00:03:25,320 --> 00:03:27,030
+We can read any block.
+
+47
+00:03:27,060 --> 00:03:28,830
+Let's just say block five.
+
+48
+00:03:32,550 --> 00:03:34,350
+You might have to click it two times.
+
+49
+00:03:35,310 --> 00:03:37,580
+So it's not able to read Block five.
+
+50
+00:03:37,590 --> 00:03:40,970
+And the reason is we have changed the Uuid.
+
+51
+00:03:41,340 --> 00:03:48,900
+Sorry, we have changed the key A and key B of block five because Block five is in Sector one and we
+
+52
+00:03:48,900 --> 00:03:52,350
+have modified sector one in our previous section.
+
+53
+00:03:53,420 --> 00:03:57,860
+When we were playing with this card in 1 to 2 U.S..
+
+54
+00:03:57,860 --> 00:03:58,280
+Right.
+
+55
+00:03:58,280 --> 00:04:00,230
+So we have updated this section.
+
+56
+00:04:00,260 --> 00:04:06,260
+You can also keep the data sheet open or the memory structure open, so it will help you a lot while
+
+57
+00:04:06,260 --> 00:04:07,940
+doing the programming.
+
+58
+00:04:09,250 --> 00:04:13,510
+So this is the memory structure of one mifare classic cards.
+
+59
+00:04:13,810 --> 00:04:18,790
+So over here you can see block five is in sector one.
+
+60
+00:04:18,790 --> 00:04:24,680
+And we I already told you that we have modified its sector trailer in 1 to 2.
+
+61
+00:04:26,030 --> 00:04:26,930
+So.
+
+62
+00:04:28,010 --> 00:04:33,650
+Let me put the correct key, which we have modified in 1 to 2 U.S..
+
+63
+00:04:33,950 --> 00:04:35,810
+So the correct key is.
+
+64
+00:04:38,650 --> 00:04:39,480
+A.
+
+65
+00:04:41,610 --> 00:04:47,730
+So now let's just try to read a block five, which is in.
+
+66
+00:04:49,230 --> 00:04:52,950
+Uh, sector one, as I told you.
+
+67
+00:04:52,980 --> 00:04:54,990
+So let's just try to read this block.
+
+68
+00:04:57,440 --> 00:04:58,670
+The dusky.
+
+69
+00:05:02,600 --> 00:05:11,510
+So you can see the read data blocks is success and we can only see data in hexadecimal over here in
+
+70
+00:05:11,510 --> 00:05:17,210
+in 1 to 2 you as there was an option to see the data in SRC format as well.
+
+71
+00:05:17,240 --> 00:05:19,100
+But this is not a big issue.
+
+72
+00:05:19,130 --> 00:05:20,540
+You can just copy this.
+
+73
+00:05:21,790 --> 00:05:28,240
+And you can open any hex converter and you can paste it over here.
+
+74
+00:05:29,660 --> 00:05:31,040
+And you can see the message.
+
+75
+00:05:31,310 --> 00:05:33,140
+So this is my message one.
+
+76
+00:05:33,500 --> 00:05:37,320
+You can see it exactly what it was written in.
+
+77
+00:05:38,120 --> 00:05:42,200
+So this is how you convert a hexa to SQ.
+
+78
+00:05:42,530 --> 00:05:44,420
+And this is how you read data.
+
+79
+00:05:44,720 --> 00:05:48,440
+Now let's just go into some new block.
+
+80
+00:05:48,470 --> 00:05:50,660
+So let me modify the keys over here.
+
+81
+00:05:51,470 --> 00:05:57,710
+By the way, this software only accepts capital letters, so make sure you use capital letters.
+
+82
+00:05:58,920 --> 00:06:02,190
+And let's just try to use.
+
+83
+00:06:04,840 --> 00:06:07,360
+Block 16in sector four.
+
+84
+00:06:07,600 --> 00:06:10,720
+So let's just start with block 16 in sector four.
+
+85
+00:06:11,020 --> 00:06:12,250
+So.
+
+86
+00:06:15,490 --> 00:06:20,020
+We have to write 16 over here and we can read data.
+
+87
+00:06:20,650 --> 00:06:28,390
+By the way, in the in 1 to 2 view the data address blocks were in hexadecimal.
+
+88
+00:06:28,390 --> 00:06:30,730
+So you have to give address in hexadecimal.
+
+89
+00:06:30,760 --> 00:06:31,240
+Right.
+
+90
+00:06:31,510 --> 00:06:38,770
+But in this software, the you can directly give address block in decimal.
+
+91
+00:06:38,890 --> 00:06:41,140
+You don't need to put hexadecimal over here.
+
+92
+00:06:41,140 --> 00:06:41,530
+Right?
+
+93
+00:06:41,530 --> 00:06:47,260
+So you just you can just use 16 as a data block and you just have to do read data.
+
+94
+00:06:47,770 --> 00:06:48,400
+Data read.
+
+95
+00:06:49,610 --> 00:06:52,610
+And you can see the data block is empty.
+
+96
+00:06:52,850 --> 00:06:56,030
+So let's just write this data.
+
+97
+00:06:56,060 --> 00:07:00,540
+The same data over here as well.
+
+98
+00:07:00,560 --> 00:07:03,170
+So all you have to do is data write.
+
+99
+00:07:06,440 --> 00:07:08,210
+So it will write this data, right?
+
+100
+00:07:08,210 --> 00:07:13,370
+And we can do data read again and you can see the change data.
+
+101
+00:07:13,370 --> 00:07:17,810
+So whatever data you want to write, let's just suppose you want to write.
+
+102
+00:07:17,930 --> 00:07:19,430
+This is my message.
+
+103
+00:07:21,950 --> 00:07:22,340
+Uh.
+
+104
+00:07:23,030 --> 00:07:24,110
+One, two, three.
+
+105
+00:07:24,350 --> 00:07:24,980
+Over here.
+
+106
+00:07:24,980 --> 00:07:25,790
+I have to.
+
+107
+00:07:27,560 --> 00:07:29,180
+Let's just open another.
+
+108
+00:07:30,240 --> 00:07:32,250
+Uh sk2.
+
+109
+00:07:32,280 --> 00:07:33,240
+Hexa converter.
+
+110
+00:07:35,650 --> 00:07:38,600
+So over here there is another converter which we can use.
+
+111
+00:07:38,620 --> 00:07:39,580
+So.
+
+112
+00:07:46,670 --> 00:07:48,590
+Let's just try to write this data.
+
+113
+00:07:49,400 --> 00:07:54,200
+So this is the hexadecimal, which you have to write it over here.
+
+114
+00:07:57,410 --> 00:07:58,670
+454.
+
+115
+00:08:01,410 --> 00:08:02,490
+68.
+
+116
+00:08:05,090 --> 00:08:06,290
+69.
+
+117
+00:08:10,720 --> 00:08:11,770
+73.
+
+118
+00:08:13,770 --> 00:08:16,770
+2069.
+
+119
+00:08:18,700 --> 00:08:19,720
+73.
+
+120
+00:08:20,910 --> 00:08:21,570
+20.
+
+121
+00:08:23,370 --> 00:08:24,300
+60.
+
+122
+00:08:26,970 --> 00:08:28,320
+So it should capital.
+
+123
+00:08:33,340 --> 00:08:33,640
+So.
+
+124
+00:08:36,059 --> 00:08:37,080
+79.
+
+125
+00:08:41,340 --> 00:08:44,070
+2031.
+
+126
+00:08:45,450 --> 00:08:46,320
+32.
+
+127
+00:08:47,970 --> 00:08:49,230
+Again, 60.
+
+128
+00:08:54,610 --> 00:08:56,080
+And 73.
+
+129
+00:09:00,020 --> 00:09:01,310
+And 67.
+
+130
+00:09:02,160 --> 00:09:04,830
+So we'll write this data on block 16.
+
+131
+00:09:06,510 --> 00:09:08,070
+And we will do right data.
+
+132
+00:09:10,460 --> 00:09:13,490
+So this data is written successfully and we can do read data.
+
+133
+00:09:16,970 --> 00:09:25,730
+So this is how you read and write data using this tool on MFC 5 to 2 module, which is with STM eight
+
+134
+00:09:25,760 --> 00:09:26,510
+microcontroller.
+
+135
+00:09:26,510 --> 00:09:26,800
+Right.
+
+136
+00:09:26,810 --> 00:09:30,380
+So this is how you write data on this microcontroller.
+
+137
+00:09:31,160 --> 00:09:36,470
+And in the next video we are going to see how to modify the keys in sector trailer.
+
+138
+00:09:36,470 --> 00:09:38,720
+So it's also very simple.
+

@@ -1,0 +1,500 @@
+1
+00:00:00,740 --> 00:00:07,160
+So as you know, for now, each sector has a sector trailer, and sector trailer is a block through
+
+2
+00:00:07,160 --> 00:00:10,060
+which you can access data, right?
+
+3
+00:00:10,070 --> 00:00:18,710
+So access conditions are stored in sector trailer, the key A and key B and the access bits.
+
+4
+00:00:18,740 --> 00:00:21,650
+All these things are in sector trailer, right?
+
+5
+00:00:21,650 --> 00:00:27,140
+So right now we will see the access condition of data blocks through sector trailer.
+
+6
+00:00:27,770 --> 00:00:34,340
+So over here you can see C1, C2, C3 these are access bits.
+
+7
+00:00:34,370 --> 00:00:41,090
+Now I told you in my previous videos there are four access bits in each sector trailer, but we use
+
+8
+00:00:41,090 --> 00:00:42,680
+only three access bits.
+
+9
+00:00:42,680 --> 00:00:51,890
+The first three access bits C1, c2, c3 are the name given for for just for reference right now, but
+
+10
+00:00:51,890 --> 00:00:53,930
+we only use the first three bits.
+
+11
+00:00:54,110 --> 00:01:04,170
+So suppose the access bits are 000 in in any sector trailer, the three access bits, the first three
+
+12
+00:01:04,170 --> 00:01:06,210
+access bits are 000.
+
+13
+00:01:06,240 --> 00:01:12,030
+Now what you can do if the access bits are 000.
+
+14
+00:01:12,030 --> 00:01:14,370
+So over here is the access condition.
+
+15
+00:01:14,370 --> 00:01:17,460
+Now this is this access condition is for data block.
+
+16
+00:01:17,490 --> 00:01:23,730
+Similarly, we will see the access condition of sector trailer as well with the access bits.
+
+17
+00:01:24,660 --> 00:01:25,050
+Right.
+
+18
+00:01:25,050 --> 00:01:32,610
+So this access bit controls the access condition of data blocks as well as access condition of sector
+
+19
+00:01:32,970 --> 00:01:33,570
+as well.
+
+20
+00:01:33,720 --> 00:01:37,230
+So over here you can see the first three bits are zero.
+
+21
+00:01:37,230 --> 00:01:45,630
+So if the first three bits are zero, we can read data block with key A or key B, and we can write
+
+22
+00:01:45,630 --> 00:01:53,700
+data block any data block in a specific sector trailer with key A and key B, and we can increment the
+
+23
+00:01:53,700 --> 00:02:01,110
+data block with key A or key B, and we can also decrement data with key A or key B, right?
+
+24
+00:02:01,110 --> 00:02:03,240
+So this is the Or symbol over here.
+
+25
+00:02:03,240 --> 00:02:09,479
+So we can read either with key, key A or key B, both will work over here just fine.
+
+26
+00:02:09,479 --> 00:02:13,890
+And we can write with key A or key B that will also work fine.
+
+27
+00:02:13,890 --> 00:02:20,670
+And increment and decrement are the special operations which are used in value blocks.
+
+28
+00:02:20,700 --> 00:02:23,400
+Now value blocks are also data blocks.
+
+29
+00:02:23,400 --> 00:02:29,770
+We will go into value blocks in our next video, but just remember that value blocks are related to
+
+30
+00:02:29,770 --> 00:02:36,520
+integers and in integers, either you can increment the integer or you can decrement the integer.
+
+31
+00:02:37,300 --> 00:02:42,460
+So that is the concept for the value blocks, which we will go through the concept in further detail
+
+32
+00:02:42,460 --> 00:02:43,330
+in our next video.
+
+33
+00:02:43,330 --> 00:02:49,750
+But right now, just remember that we can also increment with key A or key B and we can decrement with
+
+34
+00:02:49,780 --> 00:02:52,480
+key A or key B as well, right?
+
+35
+00:02:52,510 --> 00:02:54,490
+If the condition is 000.
+
+36
+00:02:55,970 --> 00:02:59,750
+Now, this condition is also known as transport configuration.
+
+37
+00:02:59,780 --> 00:03:04,920
+Transport configuration is a default configuration on which your card comes.
+
+38
+00:03:04,940 --> 00:03:09,860
+So whenever you purchase a new card, it will be on a transport configuration.
+
+39
+00:03:10,130 --> 00:03:13,010
+And so you can easily read or write data.
+
+40
+00:03:14,820 --> 00:03:20,430
+Now the second condition is 010 when the middle bit is on one.
+
+41
+00:03:20,670 --> 00:03:24,120
+You can read with key A or key B.
+
+42
+00:03:25,500 --> 00:03:31,740
+You can read any data block with key A or key B, but you can never write.
+
+43
+00:03:32,390 --> 00:03:37,670
+If the condition access condition is this and you can never increment and you can never decrement.
+
+44
+00:03:38,000 --> 00:03:47,120
+Similarly, if the access bits are 100, you can read with key A or key B, but you can only write with
+
+45
+00:03:47,150 --> 00:03:50,540
+key B and you can never increment or never decrement.
+
+46
+00:03:51,810 --> 00:04:02,700
+If the access bits are 110, then you can read with key A or key B and you can write with key B and
+
+47
+00:04:02,700 --> 00:04:07,560
+you can increment with key B and you can decrement with key A or key B.
+
+48
+00:04:07,980 --> 00:04:16,050
+Similarly, if the access bits are 001, you can read with key A or key B, but you can never write,
+
+49
+00:04:16,079 --> 00:04:20,820
+never increment, and you can decrement with key A or key B.
+
+50
+00:04:22,650 --> 00:04:31,020
+Similarly, if the excess bits are 011, you can only read with key B and you can write with key B and
+
+51
+00:04:31,020 --> 00:04:33,030
+never increment and never decrement.
+
+52
+00:04:33,630 --> 00:04:42,420
+And if the excess bits are 101, you can read with key B Never write, never increment or never decrement.
+
+53
+00:04:43,800 --> 00:04:50,310
+Similarly, if the excess bits are 111 so you can do nothing on this access block.
+
+54
+00:04:50,340 --> 00:04:54,870
+You can never read, never write, never increment or never decrement.
+
+55
+00:04:54,870 --> 00:05:01,080
+This is a special case where you want to block certain data blocks and you never want to change that.
+
+56
+00:05:01,080 --> 00:05:04,530
+Block so you can apply this condition over there.
+
+57
+00:05:05,320 --> 00:05:08,950
+So this is the access condition for data block.
+
+58
+00:05:09,250 --> 00:05:12,730
+And now we will see the access condition for sector trailer.
+
+59
+00:05:13,150 --> 00:05:17,920
+So similarly, sector trailer is also controlled with access bits.
+
+60
+00:05:17,950 --> 00:05:20,860
+The first three access bit of any sector trailer.
+
+61
+00:05:20,890 --> 00:05:25,990
+So if the access bits are 000, you can never read.
+
+62
+00:05:26,200 --> 00:05:29,560
+Over here you can see that in key A you can never read.
+
+63
+00:05:30,860 --> 00:05:31,160
+Right.
+
+64
+00:05:31,160 --> 00:05:33,600
+So this is the condition for key.
+
+65
+00:05:33,800 --> 00:05:35,660
+So you can never read Qi.
+
+66
+00:05:36,530 --> 00:05:41,630
+So this Qi must be on on any reader.
+
+67
+00:05:41,870 --> 00:05:43,080
+This is this.
+
+68
+00:05:43,160 --> 00:05:45,680
+I'm just giving you just a concept right now.
+
+69
+00:05:45,680 --> 00:05:48,230
+But this concept will be clear in the future.
+
+70
+00:05:48,230 --> 00:05:48,560
+Videos.
+
+71
+00:05:48,560 --> 00:05:50,990
+But just it has come over here.
+
+72
+00:05:50,990 --> 00:05:57,800
+So I'm just giving you just a concept over here so you can not read Qi a in any case.
+
+73
+00:05:58,160 --> 00:05:58,760
+Right?
+
+74
+00:05:58,760 --> 00:06:05,570
+So Qi A must be on the reader as well as on the card, right?
+
+75
+00:06:05,570 --> 00:06:12,950
+So whenever we create any application and we want to read data or write data with Qi, Qi must be present
+
+76
+00:06:12,950 --> 00:06:14,270
+on the reader side.
+
+77
+00:06:15,090 --> 00:06:18,210
+So this concept will be much clearer in our future videos.
+
+78
+00:06:18,210 --> 00:06:21,780
+But right now, just you have to remember the access condition of Sector Trailer.
+
+79
+00:06:21,780 --> 00:06:24,570
+So let's just move into our sector trailer.
+
+80
+00:06:24,570 --> 00:06:28,710
+So, so if the access bits are 000.
+
+81
+00:06:28,710 --> 00:06:29,190
+Right?
+
+82
+00:06:29,340 --> 00:06:31,080
+So you can read.
+
+83
+00:06:31,500 --> 00:06:36,060
+Sorry, you can never read key, but you can write key A Right.
+
+84
+00:06:36,060 --> 00:06:45,630
+So if the access bits are 000, you can never read key A but you can write key and you can access access
+
+85
+00:06:45,630 --> 00:06:50,040
+bits with key A But you can never write.
+
+86
+00:06:50,810 --> 00:06:54,320
+Exhibits on condition of 000.
+
+87
+00:06:54,500 --> 00:06:54,950
+Right.
+
+88
+00:06:55,040 --> 00:06:58,970
+And you can read key with key as well as.
+
+89
+00:06:58,970 --> 00:06:59,480
+Right.
+
+90
+00:06:59,510 --> 00:07:00,710
+Key B with key.
+
+91
+00:07:01,370 --> 00:07:01,760
+Right.
+
+92
+00:07:04,010 --> 00:07:12,410
+So in the next condition, if the condition is 010, you can still never read Kia and never ride Kia.
+
+93
+00:07:13,130 --> 00:07:21,590
+But you can access access with Kia and never write on access bits on this condition.
+
+94
+00:07:21,620 --> 00:07:25,700
+You can read B as well and you can never write on KB.
+
+95
+00:07:26,590 --> 00:07:28,420
+When the condition is 010.
+
+96
+00:07:28,780 --> 00:07:38,050
+If the condition is 100, then you can never read key as before, but you can write with key B on key
+
+97
+00:07:38,050 --> 00:07:46,600
+A and you can access access bit with key A or key B, You can use any of these keys, but you can never
+
+98
+00:07:46,600 --> 00:07:49,960
+write on access bits and you can never read key B.
+
+99
+00:07:50,890 --> 00:07:53,230
+And you can write with key on.
+
+100
+00:07:54,640 --> 00:07:54,870
+Right.
+
+101
+00:07:54,880 --> 00:07:58,930
+So these concepts are a little complicated, but this chart will help you a lot.
+
+102
+00:07:58,960 --> 00:08:06,330
+So you have to just remember this chart and whenever the condition is one one excess bits are 110.
+
+103
+00:08:06,340 --> 00:08:07,630
+You can never read key.
+
+104
+00:08:07,930 --> 00:08:09,490
+You can never write key.
+
+105
+00:08:09,730 --> 00:08:12,100
+You can use excess bits.
+
+106
+00:08:12,130 --> 00:08:19,810
+You can use key or key to access access bits, but you can never write on excess bits, you can never
+
+107
+00:08:19,810 --> 00:08:26,810
+read on key or you can never write on key B If the condition is 001, you can never write on key.
+
+108
+00:08:27,220 --> 00:08:29,590
+You can read key.
+
+109
+00:08:30,580 --> 00:08:32,530
+Sorry, you can never read key.
+
+110
+00:08:33,799 --> 00:08:39,950
+But you can write Kia with Kia and you can access access built with Kia.
+
+111
+00:08:39,980 --> 00:08:42,679
+You can also write access bits with Kia.
+
+112
+00:08:42,770 --> 00:08:50,180
+You can write so you can read key with Kia and you can also write key with Kia over here.
+
+113
+00:08:51,300 --> 00:08:55,710
+And when the excess bits are 011 you can never read.
+
+114
+00:08:56,490 --> 00:09:05,100
+You can write key with key B, you can access excess bits with key A or key B and you can write excess
+
+115
+00:09:05,100 --> 00:09:05,320
+bit.
+
+116
+00:09:05,340 --> 00:09:12,240
+With key B, you can never read key B and you can write with key B similarly.
+
+117
+00:09:12,240 --> 00:09:14,010
+101.
+
+118
+00:09:14,790 --> 00:09:17,180
+And one one 1 in 1, one one.
+
+119
+00:09:17,190 --> 00:09:18,210
+You can never read.
+
+120
+00:09:18,780 --> 00:09:27,450
+You can never write a you can access access bits with key A or key B, but you can never write, never
+
+121
+00:09:27,450 --> 00:09:28,110
+read.
+
+122
+00:09:28,440 --> 00:09:32,400
+So you have to go through this table more than once.
+
+123
+00:09:32,760 --> 00:09:39,020
+There are two conditions access conditions, one for a data block and one for sector trailer.
+
+124
+00:09:39,030 --> 00:09:43,830
+So you have to master these things before proceeding into further videos.
+
+125
+00:09:44,430 --> 00:09:47,730
+So just remember these concepts for the future videos.
+

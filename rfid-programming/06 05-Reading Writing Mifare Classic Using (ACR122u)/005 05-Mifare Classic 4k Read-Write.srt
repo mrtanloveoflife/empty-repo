@@ -1,0 +1,320 @@
+1
+00:00:02,180 --> 00:00:10,430
+So now we have seen how to create, read and update classic one cards.
+
+2
+00:00:10,880 --> 00:00:15,560
+We will see how to do update on Mifare Classic 4K cards.
+
+3
+00:00:15,590 --> 00:00:21,940
+Although both cards are very similar and the only difference is the memory size.
+
+4
+00:00:21,950 --> 00:00:23,000
+So.
+
+5
+00:00:24,300 --> 00:00:29,940
+Uh, let's just open our PDF for Mifare classic 4k cards as well.
+
+6
+00:00:30,240 --> 00:00:32,689
+So this is our PDF for 4k card.
+
+7
+00:00:32,700 --> 00:00:34,910
+Let me open it over here.
+
+8
+00:00:34,990 --> 00:00:37,010
+So let me make it a little zoom.
+
+9
+00:00:37,020 --> 00:00:43,540
+So the only difference with classic one and 4K cards is the memory size.
+
+10
+00:00:43,560 --> 00:00:47,610
+So over here you can see there are, uh.
+
+11
+00:00:48,740 --> 00:00:56,180
+63 address blocks in one K and in a classic 4k.
+
+12
+00:00:57,470 --> 00:00:59,690
+There are 255 address blocks.
+
+13
+00:01:01,900 --> 00:01:03,610
+All right, so.
+
+14
+00:01:04,920 --> 00:01:15,030
+We will write and from block 31 or sorry, 32 till 40.
+
+15
+00:01:15,860 --> 00:01:16,880
+Or 39.
+
+16
+00:01:16,910 --> 00:01:19,430
+All the blocks contains 16.
+
+17
+00:01:19,490 --> 00:01:21,740
+All the sectors contains 16 blocks.
+
+18
+00:01:22,760 --> 00:01:28,670
+Before that, all the blocks are same as the classic one card.
+
+19
+00:01:29,920 --> 00:01:34,510
+So we will pick any any block and we will write data.
+
+20
+00:01:35,050 --> 00:01:39,340
+So let's just pick some block from.
+
+21
+00:01:41,390 --> 00:01:45,710
+Let's just choose sector 32 and address 128.
+
+22
+00:01:45,740 --> 00:01:51,770
+Now, let's let me remind one more time this address is in hexadecimal.
+
+23
+00:01:51,800 --> 00:01:53,860
+Sorry, this address is in decimal.
+
+24
+00:01:53,870 --> 00:01:56,980
+You have to convert this address into hexadecimal.
+
+25
+00:01:56,990 --> 00:02:00,740
+So let's just convert 128 into hexadecimal.
+
+26
+00:02:04,890 --> 00:02:09,270
+So 128 is equal to 80 in hexadecimal.
+
+27
+00:02:10,370 --> 00:02:21,470
+And let's just check what's 255 so 255 is F, so 128 is 80.
+
+28
+00:02:21,500 --> 00:02:26,660
+So we will just, uh, write some data on this card.
+
+29
+00:02:28,500 --> 00:02:31,560
+So let me remove my one card first.
+
+30
+00:02:33,220 --> 00:02:35,440
+And let me play for Cape Cod.
+
+31
+00:02:40,480 --> 00:02:44,980
+So let's just do our connection one more time.
+
+32
+00:02:52,180 --> 00:02:55,150
+And let's just read that data to get the.
+
+33
+00:02:55,960 --> 00:03:02,650
+So you can see the over here and let's just do get HDR and.
+
+34
+00:03:03,580 --> 00:03:10,870
+4K card also comes with the default transport configuration, as you can see.
+
+35
+00:03:11,080 --> 00:03:18,410
+And over here you can see my classic 4K written and let's just authenticate block zero, you know,
+
+36
+00:03:18,430 --> 00:03:19,530
+just check the Uid.
+
+37
+00:03:22,500 --> 00:03:27,720
+So let's just do authenticate blog zero Read Block zero.
+
+38
+00:03:28,800 --> 00:03:30,720
+And over here you can compare the.
+
+39
+00:03:33,410 --> 00:03:35,270
+It's the same over here.
+
+40
+00:03:35,900 --> 00:03:41,890
+So Block Zero contains the Uuid and the manufacturers data, as we discussed previously.
+
+41
+00:03:41,900 --> 00:03:48,860
+So now we have to write some data on block 80, which is 128 in hexadecimal.
+
+42
+00:03:48,860 --> 00:03:50,510
+So let's just authenticate.
+
+43
+00:03:50,510 --> 00:03:51,710
+Block 80.
+
+44
+00:03:54,420 --> 00:04:01,050
+With key zero or key A, which is the default key and saying authentication success.
+
+45
+00:04:01,050 --> 00:04:02,430
+Let's just read data.
+
+46
+00:04:04,110 --> 00:04:05,370
+And all the zeros.
+
+47
+00:04:05,370 --> 00:04:07,440
+We can write any data over here.
+
+48
+00:04:22,290 --> 00:04:23,820
+Write some simple data.
+
+49
+00:04:24,700 --> 00:04:25,780
+And let's just do.
+
+50
+00:04:25,810 --> 00:04:26,500
+Okay?
+
+51
+00:04:28,470 --> 00:04:29,960
+Write binary block success.
+
+52
+00:04:29,970 --> 00:04:31,590
+Let's just read this data.
+
+53
+00:04:33,140 --> 00:04:34,210
+And ski.
+
+54
+00:04:34,790 --> 00:04:38,030
+So you can see some data, some sample data.
+
+55
+00:04:38,030 --> 00:04:38,420
+Right.
+
+56
+00:04:38,420 --> 00:04:40,970
+So this is how you read, right?
+
+57
+00:04:40,970 --> 00:04:42,710
+4K cards as well.
+
+58
+00:04:42,710 --> 00:04:45,890
+So if you have 4K cards, you can use 4K cards.
+
+59
+00:04:45,890 --> 00:04:48,590
+And if you have one card, you can use one cards.
+
+60
+00:04:48,620 --> 00:04:49,940
+Both cards are similar.
+
+61
+00:04:49,970 --> 00:04:52,550
+The only difference is the memory size.
+
+62
+00:04:52,910 --> 00:04:55,730
+The memory size of 4K is bigger than one K.
+
+63
+00:04:56,120 --> 00:05:01,820
+It depends on your application and it depends on client requirement, what type of card you want to
+
+64
+00:05:01,820 --> 00:05:02,450
+use.
+
+65
+00:05:02,960 --> 00:05:12,200
+But for technical purpose, both the cards are similar as far as considering reading, writing and updating
+
+66
+00:05:12,200 --> 00:05:12,830
+the keys.
+
+67
+00:05:12,830 --> 00:05:14,900
+This card is similar to one K card.
+
+68
+00:05:14,900 --> 00:05:15,200
+Right?
+
+69
+00:05:15,200 --> 00:05:21,200
+So I'll I'm not going to repeat all the things which I have done for the one K card.
+
+70
+00:05:21,350 --> 00:05:26,720
+As a practice, you can do all the things on 4k cards as well, right?
+
+71
+00:05:26,720 --> 00:05:34,800
+So this is how you read, write, update the keys and write data and create value blocks in classic
+
+72
+00:05:34,800 --> 00:05:42,600
+cards in the next video or in the next section, we are going to see how to read, write and update
+
+73
+00:05:42,600 --> 00:05:46,950
+data and how to update the keys as well and create the value blocks.
+
+74
+00:05:46,950 --> 00:05:47,820
+All these things.
+
+75
+00:05:47,820 --> 00:05:57,600
+We are going to see how to do these things using the RC module with Stm8 microcontrollers.
+
+76
+00:05:57,600 --> 00:06:00,660
+So MF RC 5 to 2 two module.
+
+77
+00:06:00,990 --> 00:06:08,910
+There is a special module from IC station which we are going to use in our next section that that has
+
+78
+00:06:08,910 --> 00:06:17,610
+a built in microcontroller with the RC 5 to 2 chip and the microcontroller chip are on the same board.
+
+79
+00:06:17,640 --> 00:06:26,370
+We are going to use that module and we will see all these operations on that board and see how to update
+
+80
+00:06:26,560 --> 00:06:28,350
+a classic card using that board.
+

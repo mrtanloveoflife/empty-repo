@@ -1,0 +1,260 @@
+1
+00:00:00,800 --> 00:00:07,760
+So in our previous video, we have seen how to create data blocks and how to write data blocks.
+
+2
+00:00:07,880 --> 00:00:15,020
+And we have also seen how to update sector trailers and how to update key A and key B, So now we are
+
+3
+00:00:15,020 --> 00:00:22,880
+going to see how to create value blocks and value blocks are also data blocks, but these are special
+
+4
+00:00:22,880 --> 00:00:23,960
+type of blocks.
+
+5
+00:00:24,320 --> 00:00:31,430
+The value blocks are special type of blocks, which contains numbers and we can do increment operations
+
+6
+00:00:31,430 --> 00:00:35,680
+on those numbers and we can do decrement operation on those numbers, right?
+
+7
+00:00:35,690 --> 00:00:43,250
+So suppose the number is ten and we want to do increment of ten, we can do just by one command, we
+
+8
+00:00:43,250 --> 00:00:48,950
+can do increment by ten and it will update the number and we can do the decrement as well.
+
+9
+00:00:49,190 --> 00:00:54,140
+So again, it depends on your requirement what you want to do.
+
+10
+00:00:54,470 --> 00:00:58,550
+You can do either increment or decrement operations on value blocks.
+
+11
+00:00:58,820 --> 00:01:01,910
+So now we are going to do create value block first.
+
+12
+00:01:01,910 --> 00:01:04,640
+So let's just make our connection again.
+
+13
+00:01:05,700 --> 00:01:08,700
+And let's just read data.
+
+14
+00:01:08,790 --> 00:01:16,740
+So this is our same card which we are using throughout our exercise, and let's just do get ETR.
+
+15
+00:01:19,330 --> 00:01:23,470
+And we will authenticate Sector one.
+
+16
+00:01:23,470 --> 00:01:28,840
+And from the previous video, as you know, we have updated the keys of sector one.
+
+17
+00:01:28,990 --> 00:01:33,910
+So we are going to authenticate with the new updated key.
+
+18
+00:01:34,990 --> 00:01:39,360
+And we will authenticate block six of Sector one.
+
+19
+00:01:39,370 --> 00:01:43,330
+So block six is in sector one.
+
+20
+00:01:43,810 --> 00:01:48,580
+As you can see, the address of block six is in sector one.
+
+21
+00:01:50,890 --> 00:01:55,350
+So let's just authenticate and authentication success.
+
+22
+00:01:55,360 --> 00:01:56,590
+Let's just read.
+
+23
+00:01:58,260 --> 00:02:00,360
+And Reid is also success.
+
+24
+00:02:00,390 --> 00:02:05,670
+All the data in block six is just 000, which is our default configuration.
+
+25
+00:02:06,540 --> 00:02:11,520
+And let's just do right value to create a value block.
+
+26
+00:02:12,030 --> 00:02:16,200
+And we are going to create value block on block six.
+
+27
+00:02:17,790 --> 00:02:21,180
+And let's just provide a default value.
+
+28
+00:02:21,420 --> 00:02:24,180
+So you can provide any default value.
+
+29
+00:02:24,210 --> 00:02:26,370
+I'm going to start with 100.
+
+30
+00:02:28,640 --> 00:02:29,780
+And let's just do.
+
+31
+00:02:29,780 --> 00:02:30,500
+Okay?
+
+32
+00:02:32,490 --> 00:02:34,860
+So the value block is created.
+
+33
+00:02:34,950 --> 00:02:41,250
+Now let's just read data in hexadecimal format for for a moment on block six.
+
+34
+00:02:43,760 --> 00:02:45,680
+So over here, you can see.
+
+35
+00:02:46,630 --> 00:02:49,020
+The data in hexadecimal format.
+
+36
+00:02:49,030 --> 00:02:51,340
+So the first four bytes.
+
+37
+00:02:52,110 --> 00:02:58,350
+Is the data, the number which we have created through our value block.
+
+38
+00:02:58,770 --> 00:03:03,690
+And the next four byte is the complement of the same data.
+
+39
+00:03:05,460 --> 00:03:08,070
+Then again, the same number is repeated.
+
+40
+00:03:08,070 --> 00:03:10,650
+And then again there is a complement.
+
+41
+00:03:12,490 --> 00:03:12,940
+Right.
+
+42
+00:03:12,940 --> 00:03:22,990
+So this is how value blocks are created and this is the format and this is the standard which Mifare
+
+43
+00:03:22,990 --> 00:03:25,450
+classic card provides to create a value block.
+
+44
+00:03:26,610 --> 00:03:26,930
+Like.
+
+45
+00:03:26,970 --> 00:03:34,320
+So now we are going to read value block from read value.
+
+46
+00:03:35,400 --> 00:03:38,640
+And block number six is our value block.
+
+47
+00:03:39,950 --> 00:03:41,920
+So read value is 100.
+
+48
+00:03:41,930 --> 00:03:45,140
+So we have written 100 and reading it successfully.
+
+49
+00:03:45,170 --> 00:03:48,230
+Now let's just do increment operation on this block.
+
+50
+00:03:49,500 --> 00:03:51,780
+So Block six is our value block.
+
+51
+00:03:51,780 --> 00:03:57,960
+We have to provide this block each time, and let's just do increment by 20.
+
+52
+00:04:00,020 --> 00:04:00,890
+And let's just do.
+
+53
+00:04:00,890 --> 00:04:01,530
+Okay?
+
+54
+00:04:02,790 --> 00:04:07,890
+You can see increment value 20 and increment value success message.
+
+55
+00:04:07,890 --> 00:04:11,370
+And let's just read the value again on block six.
+
+56
+00:04:13,740 --> 00:04:15,800
+So the new value is 120.
+
+57
+00:04:16,680 --> 00:04:19,019
+So this is how you do increment operation.
+
+58
+00:04:19,019 --> 00:04:20,730
+Let's just do one more increment.
+
+59
+00:04:22,160 --> 00:04:26,750
+We'll do increment by ten and the block number is six.
+
+60
+00:04:29,190 --> 00:04:30,930
+And let's just read the value.
+
+61
+00:04:35,920 --> 00:04:37,840
+And the new value is 130.
+
+62
+00:04:37,990 --> 00:04:45,730
+Now let's just do one decrement operation as well on block six and we will decrement by 50.
+
+63
+00:04:46,060 --> 00:04:52,060
+And let's just do okay and decrement value success and let's just read the value.
+
+64
+00:04:55,730 --> 00:04:57,230
+And the new value is 80.
+
+65
+00:04:57,380 --> 00:05:05,390
+So this is how you create value blocks and do increment and decrement operations on value blocks.
+

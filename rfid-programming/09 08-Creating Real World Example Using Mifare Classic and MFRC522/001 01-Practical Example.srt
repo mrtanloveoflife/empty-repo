@@ -1,0 +1,116 @@
+1
+00:00:01,819 --> 00:00:07,820
+So now that we have seen how to program Mifare classic cards and we have also seen how to secure these
+
+2
+00:00:07,820 --> 00:00:11,750
+cards and how to find vulnerabilities using prox.
+
+3
+00:00:11,750 --> 00:00:18,560
+Mark three Now we are going to see a practical demonstration using Mifare classic card, and we are
+
+4
+00:00:18,560 --> 00:00:23,180
+using the same sketch as before in our earlier videos.
+
+5
+00:00:23,180 --> 00:00:24,980
+But we have changed the code.
+
+6
+00:00:25,100 --> 00:00:30,320
+So let's just go through the example first and then we will go through the code as well.
+
+7
+00:00:31,040 --> 00:00:34,850
+So over here you can see the practical example of the sketch.
+
+8
+00:00:34,880 --> 00:00:38,960
+And let's just place Mifare classic card over here.
+
+9
+00:00:42,690 --> 00:00:49,210
+And as you can see, it's reading the Uuid as well as name and the position, right?
+
+10
+00:00:49,230 --> 00:00:51,510
+So let's just try another card.
+
+11
+00:00:55,170 --> 00:00:55,530
+Right.
+
+12
+00:00:55,560 --> 00:01:00,120
+So this is the practical example of Mifare classic card.
+
+13
+00:01:00,120 --> 00:01:06,720
+And we are using block to store the data, the position data and the name data.
+
+14
+00:01:06,720 --> 00:01:12,030
+And we will go through the code once after after this example.
+
+15
+00:01:12,030 --> 00:01:13,110
+So.
+
+16
+00:01:14,030 --> 00:01:14,510
+Over here.
+
+17
+00:01:14,510 --> 00:01:17,090
+You can notice the Uuid of this card.
+
+18
+00:01:18,250 --> 00:01:20,770
+And I have a magic card as well.
+
+19
+00:01:21,130 --> 00:01:25,000
+And I have also cloned the ID of this card.
+
+20
+00:01:25,270 --> 00:01:29,170
+And I'm going to place this card on the module.
+
+21
+00:01:32,990 --> 00:01:35,900
+So as you can see, the Uuid is same.
+
+22
+00:01:37,220 --> 00:01:39,380
+So as you can see, the same.
+
+23
+00:01:39,380 --> 00:01:44,840
+But still we are not able to login or validate this card.
+
+24
+00:01:44,870 --> 00:01:47,780
+Have a look at the valid card one more time.
+
+25
+00:01:49,010 --> 00:01:54,380
+So the Uid is same, but still this card is invalid.
+
+26
+00:01:54,770 --> 00:01:56,150
+Have a look at one more time.
+
+27
+00:02:00,430 --> 00:02:02,290
+And this is the valid card.
+
+28
+00:02:05,680 --> 00:02:10,270
+And we are getting the name and position using this card.
+
+29
+00:02:11,670 --> 00:02:15,330
+So now we will go through the code of this example in our next video.
+

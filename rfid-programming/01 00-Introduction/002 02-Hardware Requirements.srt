@@ -1,0 +1,144 @@
+1
+00:00:00,890 --> 00:00:05,060
+So now we are going to see the hardware requirement for this complete course.
+
+2
+00:00:05,090 --> 00:00:09,620
+So we need RFID cards because this course is based on RFID.
+
+3
+00:00:09,770 --> 00:00:15,020
+So we need RFID cards and we are going to use mifare classic cards.
+
+4
+00:00:15,020 --> 00:00:18,590
+And there are multiple types of mifare classic cards.
+
+5
+00:00:18,620 --> 00:00:21,720
+There are multiple categories of Mifare classic cards.
+
+6
+00:00:21,740 --> 00:00:27,850
+So the particular category which we are going to use is one, K, four, K or EV1.
+
+7
+00:00:27,860 --> 00:00:31,430
+You can use any of these cards for the complete course.
+
+8
+00:00:31,700 --> 00:00:36,050
+So we need Mifare classic cards and we need magic cards.
+
+9
+00:00:36,440 --> 00:00:41,900
+So Mifare classic cards has a Uid which is not changeable.
+
+10
+00:00:42,350 --> 00:00:48,770
+So uid is just like an ID which is not changeable, but magic cards are the special type of mifare classic
+
+11
+00:00:48,770 --> 00:00:51,830
+cards in which the Uid is changeable.
+
+12
+00:00:51,830 --> 00:00:57,200
+So we are going to use both of these cards and both of these cards are required for this course.
+
+13
+00:00:59,520 --> 00:01:07,170
+Another thing which is required for this course is ACR 1 to 2, and this is a tool through which we
+
+14
+00:01:07,170 --> 00:01:09,520
+are going to program our Mifare classic card.
+
+15
+00:01:09,540 --> 00:01:11,880
+So you need this tool as well.
+
+16
+00:01:13,530 --> 00:01:21,240
+And if you are not able to purchase this tool, we are going to program a classic card using this MFC
+
+17
+00:01:21,450 --> 00:01:29,880
+5 to 2 module with STM eight microcontroller, and we are going to see all the programming which we
+
+18
+00:01:29,880 --> 00:01:38,210
+did with ACR 1 to 2 with this RC, 5 to 2 with STM microcontroller as well.
+
+19
+00:01:38,220 --> 00:01:44,520
+So we need this microcontroller and to operate on this microcontroller, we need two things.
+
+20
+00:01:44,850 --> 00:01:54,540
+We need STM eight and STM 32 USB and we also need USB two cable, which you can see it over here and
+
+21
+00:01:54,540 --> 00:01:56,640
+we need few jumper wires, right?
+
+22
+00:01:56,820 --> 00:01:59,220
+So these are the two tools.
+
+23
+00:01:59,220 --> 00:02:03,990
+Either you can use ACR 1 to 2 you or you can use this.
+
+24
+00:02:05,010 --> 00:02:09,750
+Uh, Mark 5222 with Stm8 microcontroller.
+
+25
+00:02:10,380 --> 00:02:15,270
+We are going to see all the programming with both of these tools.
+
+26
+00:02:17,400 --> 00:02:23,880
+The other thing which you need is prox Mach three and we need prox Mach three to test the vulnerability
+
+27
+00:02:23,880 --> 00:02:29,580
+of classic cars and we will try to crack Mifare classic card using this prox Mach three.
+
+28
+00:02:29,820 --> 00:02:34,530
+And we are also going to see how to clone method cards using the same tool.
+
+29
+00:02:35,900 --> 00:02:37,820
+The other hardware requirements are.
+
+30
+00:02:37,850 --> 00:02:42,380
+Arduino Uno RC 522 Module OLED.
+
+31
+00:02:42,680 --> 00:02:45,400
+We need breadboard jumper wires and Buzzer.
+
+32
+00:02:45,440 --> 00:02:49,400
+So these tools are required to do our practical.
+
+33
+00:02:50,060 --> 00:02:57,110
+Project in which we are going to show a practical demonstration of industry standard project.
+
+34
+00:02:57,470 --> 00:03:01,430
+In which we utilize the full potential of RFID cards.
+
+35
+00:03:01,430 --> 00:03:07,370
+And we will try to see how we can use the RFID tags in real industries.
+
+36
+00:03:07,910 --> 00:03:11,090
+So these are the few hardware requirements for this course.
+

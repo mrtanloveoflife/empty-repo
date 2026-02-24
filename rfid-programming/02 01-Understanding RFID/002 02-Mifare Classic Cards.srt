@@ -1,0 +1,68 @@
+1
+00:00:00,920 --> 00:00:10,010
+So now we are going to start with the frequency, which is the RFID high frequency and the card we are
+
+2
+00:00:10,010 --> 00:00:17,840
+going to use or the tag we are going to use in frequency is known as Mifare Classic, And the tag which
+
+3
+00:00:17,840 --> 00:00:22,340
+I am going to use is Mifare classic one K memory size, right?
+
+4
+00:00:22,340 --> 00:00:26,090
+You can use 4k as well as EV1 tag as well.
+
+5
+00:00:26,660 --> 00:00:34,730
+If you are going to use Mifare classic EV1 tag, make sure its Mifare classic EV1, not ultralight EV1
+
+6
+00:00:34,730 --> 00:00:36,680
+because these are two different tags.
+
+7
+00:00:36,680 --> 00:00:37,220
+Right?
+
+8
+00:00:37,220 --> 00:00:44,930
+So what I'm going to use is Mifare classic one Memory cards in Mifare classic cards.
+
+9
+00:00:45,350 --> 00:00:48,920
+The tags have Uid of four bytes.
+
+10
+00:00:49,700 --> 00:00:50,180
+Right.
+
+11
+00:00:50,180 --> 00:00:56,360
+So these four bytes are unique as well as not changeable, right?
+
+12
+00:00:56,360 --> 00:01:03,260
+So any any of these tags which you are going to use like the 4k, one K or EV1, Mifare classic, all
+
+13
+00:01:03,260 --> 00:01:09,200
+these tags contain 4k byte uid, which is unique and not changeable.
+
+14
+00:01:09,200 --> 00:01:09,680
+Right?
+
+15
+00:01:09,680 --> 00:01:18,500
+So in the next video we are going to see how we can find this four byte Uid using Arduino and we are
+
+16
+00:01:18,500 --> 00:01:23,870
+going to use a module with Arduino known as RC 5 to 2.
+
+17
+00:01:23,900 --> 00:01:26,900
+So we are going to see all this in the coming video.
+

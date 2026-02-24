@@ -1,0 +1,588 @@
+1
+00:00:01,609 --> 00:00:05,270
+So now we are going to go through the code of our final example.
+
+2
+00:00:06,250 --> 00:00:08,820
+And we are using the same sketch as before.
+
+3
+00:00:08,830 --> 00:00:12,160
+So this is the same sketch which we used in our earlier example.
+
+4
+00:00:12,160 --> 00:00:17,430
+So I'm not going to go through this sketch again, but you can use the same sketch.
+
+5
+00:00:17,440 --> 00:00:19,180
+The only difference is the code.
+
+6
+00:00:19,180 --> 00:00:20,800
+So we will go through the code.
+
+7
+00:00:22,730 --> 00:00:26,960
+So over here you can see the code in Arduino IDE.
+
+8
+00:00:27,140 --> 00:00:29,420
+So we are including the libraries first.
+
+9
+00:00:29,450 --> 00:00:31,940
+Let's just also include the line numbers.
+
+10
+00:00:32,610 --> 00:00:35,340
+So you can go and file preferences.
+
+11
+00:00:35,520 --> 00:00:38,040
+And over here you can tick display line numbers.
+
+12
+00:00:38,040 --> 00:00:39,390
+So it will display the line numbers.
+
+13
+00:00:39,390 --> 00:00:41,700
+So it will make you easy to understand the code.
+
+14
+00:00:42,930 --> 00:00:44,610
+Or to program the code as well.
+
+15
+00:00:46,360 --> 00:00:49,660
+So first we are including the libraries as before.
+
+16
+00:00:50,170 --> 00:00:56,830
+We are using the same libraries, so we are using libraries which are adafruit libraries, and we are
+
+17
+00:00:56,830 --> 00:01:01,360
+also including the MFC 5222 module library.
+
+18
+00:01:01,720 --> 00:01:12,820
+And over here we are initializing the the Led and our MFC 552 module and we are also creating few string
+
+19
+00:01:12,820 --> 00:01:15,190
+variables which we will use in our example.
+
+20
+00:01:15,190 --> 00:01:22,750
+Right now we are also initializing the buzzer over here and in setup function we are initializing the
+
+21
+00:01:22,750 --> 00:01:24,250
+serial communication, right?
+
+22
+00:01:24,250 --> 00:01:28,930
+So you can see all the data in the serial monitor as well.
+
+23
+00:01:28,930 --> 00:01:29,470
+Right.
+
+24
+00:01:29,740 --> 00:01:31,690
+Let me place a card on.
+
+25
+00:01:32,710 --> 00:01:38,140
+Our module so you can get the data on serial monitor as well.
+
+26
+00:01:39,130 --> 00:01:48,250
+So as you can see, all the data which we are getting in our LCD, we can also see that data on on our
+
+27
+00:01:48,250 --> 00:01:49,450
+serial monitor as well.
+
+28
+00:01:49,450 --> 00:01:52,750
+And we are also able to see the complete sector.
+
+29
+00:01:54,060 --> 00:01:55,560
+In serial monitor, Right.
+
+30
+00:01:56,550 --> 00:02:03,240
+So it helps us debug the code and it also helps us understanding the code as well.
+
+31
+00:02:03,330 --> 00:02:07,950
+So this is why I'm also displaying all the data in serial monitor as well.
+
+32
+00:02:07,950 --> 00:02:09,600
+So it will help you a lot.
+
+33
+00:02:14,510 --> 00:02:20,870
+So over here we initializing the serial monitor and then we are initializing the screen and we are printing
+
+34
+00:02:20,900 --> 00:02:26,480
+RF ID log at the beginning or at the initialization time.
+
+35
+00:02:27,820 --> 00:02:29,860
+And then we are defining the key.
+
+36
+00:02:30,250 --> 00:02:35,650
+So to define the key, we have to define key in a byte format.
+
+37
+00:02:35,800 --> 00:02:41,440
+So we have to start with zero and till five.
+
+38
+00:02:41,470 --> 00:02:47,840
+So altogether six bytes and this is key A as I have also mentioned in the comment.
+
+39
+00:02:47,860 --> 00:02:56,860
+So we are defining key A first and we are just using key A so there is no point to define key B, we
+
+40
+00:02:56,860 --> 00:03:02,590
+are initializing and we are authenticating all the blocks or all the sectors using key A.
+
+41
+00:03:04,180 --> 00:03:07,690
+Then we are initializing the buzzer as before.
+
+42
+00:03:07,780 --> 00:03:11,950
+Then we are printing some comments on serial monitor.
+
+43
+00:03:12,040 --> 00:03:16,690
+After that there is a main loop function in main loop function.
+
+44
+00:03:16,720 --> 00:03:21,880
+First, we are checking if any card is present on the module or not.
+
+45
+00:03:21,910 --> 00:03:26,020
+If card is present, then we are checking the card over here.
+
+46
+00:03:26,820 --> 00:03:34,800
+Then there is a function get which is getting the Uid of the card and we are checking that Uid against
+
+47
+00:03:34,800 --> 00:03:36,990
+our variable which we have defined over here.
+
+48
+00:03:36,990 --> 00:03:37,440
+Right?
+
+49
+00:03:37,440 --> 00:03:47,610
+So if they are not equal then we are clearing out the ID log data and we are clearing out the Uid from
+
+50
+00:03:47,610 --> 00:03:48,360
+the screen.
+
+51
+00:03:48,360 --> 00:03:56,970
+So clear data function is used to clear the screen, basically all the data on the screen, right?
+
+52
+00:03:57,090 --> 00:04:05,010
+So there are three main functions, or you can say two main functions, clear data and print data.
+
+53
+00:04:05,010 --> 00:04:12,180
+So clear data is to print the sorry cleared the data on the screen and print data is used to print the
+
+54
+00:04:12,180 --> 00:04:15,630
+data on the screen, the which you are using.
+
+55
+00:04:16,079 --> 00:04:18,600
+And then there is a get function.
+
+56
+00:04:18,720 --> 00:04:25,260
+Get function is quite similar as before, so it's just using the same code.
+
+57
+00:04:25,290 --> 00:04:32,470
+The only difference over here is that we have now using the same code in function format, right?
+
+58
+00:04:32,470 --> 00:04:38,320
+So we are using the same code is the same loop code which we use before and we are just displaying the
+
+59
+00:04:38,320 --> 00:04:38,770
+Uid.
+
+60
+00:04:41,250 --> 00:04:41,820
+Right.
+
+61
+00:04:42,390 --> 00:04:50,850
+Then there is some data and we are checking the data and printing the data on serial monitor.
+
+62
+00:04:51,630 --> 00:04:57,540
+As I have shown you before and after that, we are checking the compatibility of card.
+
+63
+00:04:57,750 --> 00:05:04,590
+So right now this code will only work on Mifare Classic one, K4K and Mayfair mini cards.
+
+64
+00:05:04,590 --> 00:05:05,010
+Right.
+
+65
+00:05:05,340 --> 00:05:08,940
+So over here I'm checking PC type.
+
+66
+00:05:08,940 --> 00:05:14,910
+So this is to check the type of card, what card has been placed on the module.
+
+67
+00:05:14,910 --> 00:05:21,480
+So if some other card is placed other than mifare classic 1K4K or mini, it will display this message
+
+68
+00:05:21,480 --> 00:05:22,740
+on the serial monitor.
+
+69
+00:05:23,760 --> 00:05:26,220
+Then there is our actual code.
+
+70
+00:05:26,260 --> 00:05:26,640
+Right.
+
+71
+00:05:26,640 --> 00:05:32,900
+So we have programmed our Mifare classic cards using sector nine, right?
+
+72
+00:05:32,910 --> 00:05:42,180
+For this particular example, we have used sector nine of classic cards and block 3637 and sector trailer
+
+73
+00:05:42,180 --> 00:05:43,620
+block, which is 39.
+
+74
+00:05:44,010 --> 00:05:47,310
+So we are using only sector nine in this example.
+
+75
+00:05:47,310 --> 00:05:52,190
+So first you have to program your Mifare classic card using our previous examples.
+
+76
+00:05:52,200 --> 00:05:58,500
+As I have shown you in our earlier videos, how to program classic cards So you have to program mifare
+
+77
+00:05:58,500 --> 00:06:05,370
+classic cards on Sector nine and you have to use block 36 and 37.
+
+78
+00:06:06,400 --> 00:06:08,290
+And for sector trailer.
+
+79
+00:06:08,290 --> 00:06:11,110
+We have defined this key on our card.
+
+80
+00:06:11,110 --> 00:06:16,930
+So we are using the same key key over here as well to authenticate the cards.
+
+81
+00:06:17,960 --> 00:06:22,160
+So over here we have defined all the byte variables.
+
+82
+00:06:22,550 --> 00:06:29,510
+So we are using sector nine, name block, position, block and trailer block.
+
+83
+00:06:29,540 --> 00:06:31,460
+These are the variables which we are using.
+
+84
+00:06:31,460 --> 00:06:37,520
+So 36 is a name block 37 is the position block and 39 is a sector trailer block.
+
+85
+00:06:38,510 --> 00:06:40,190
+So this is our data.
+
+86
+00:06:41,690 --> 00:06:47,870
+And then we are also defining buffer variable and we are also checking the size of our buffer.
+
+87
+00:06:48,230 --> 00:06:55,700
+After that, we are authenticating using key A, so we are printing, authenticating, using serial
+
+88
+00:06:55,700 --> 00:06:57,290
+A on serial monitor.
+
+89
+00:06:57,530 --> 00:07:00,620
+Then we are checking the status code of card.
+
+90
+00:07:00,770 --> 00:07:01,880
+Then we are.
+
+91
+00:07:02,180 --> 00:07:07,940
+Then over here in authentication we are using the authentication key.
+
+92
+00:07:07,970 --> 00:07:08,930
+A function.
+
+93
+00:07:09,720 --> 00:07:14,640
+And we are also passing sector trailer block, which is 39.
+
+94
+00:07:14,640 --> 00:07:21,390
+And you can check it on the structure of memory as well, which I have also provided in the resources
+
+95
+00:07:21,390 --> 00:07:21,840
+file.
+
+96
+00:07:21,870 --> 00:07:24,450
+So we are using Sector nine.
+
+97
+00:07:26,420 --> 00:07:30,530
+Over here you can see Sector nine and Sector nine.
+
+98
+00:07:30,920 --> 00:07:35,570
+The sector trailer block of sector nine is on 39.
+
+99
+00:07:37,000 --> 00:07:41,770
+That's why we are using 39 over here, the sector trailer block.
+
+100
+00:07:42,070 --> 00:07:48,490
+Then we are passing the key, which we have defined in our setup function as before and after that we
+
+101
+00:07:48,490 --> 00:07:49,540
+are passing the Uid.
+
+102
+00:07:49,960 --> 00:07:54,730
+Then over here we are checking the status and we are comparing the status.
+
+103
+00:07:54,760 --> 00:07:55,530
+Okay.
+
+104
+00:07:55,540 --> 00:08:04,390
+If it's not equal to okay, then we are printing the authentication field error on serial monitor and
+
+105
+00:08:04,390 --> 00:08:11,440
+we are clearing out all the data from our LCD and we are printing invalid only on our.
+
+106
+00:08:12,910 --> 00:08:16,690
+And then there is also beep the buzzer sound.
+
+107
+00:08:17,680 --> 00:08:21,640
+As if the code is equal to the status.
+
+108
+00:08:21,670 --> 00:08:22,180
+Okay.
+
+109
+00:08:22,210 --> 00:08:23,710
+Over here, you can see.
+
+110
+00:08:23,710 --> 00:08:26,980
+Then we are also clearing out the previous data.
+
+111
+00:08:28,510 --> 00:08:32,679
+And we are also clearing out the invalid data which we printed.
+
+112
+00:08:32,679 --> 00:08:35,020
+And then we are also beeping the buzzer.
+
+113
+00:08:35,350 --> 00:08:41,169
+Then we are printing the current sector, which I have shown you in the monitor.
+
+114
+00:08:41,440 --> 00:08:42,100
+Right.
+
+115
+00:08:42,100 --> 00:08:44,650
+So this is how we are validating the card.
+
+116
+00:08:46,210 --> 00:08:47,170
+After validation.
+
+117
+00:08:47,170 --> 00:08:51,850
+We are reading data from the blog and printing the data on our lead.
+
+118
+00:08:52,180 --> 00:08:59,440
+So over here you can see read data from the blog and we are printing comments on our monitor.
+
+119
+00:08:59,590 --> 00:08:59,920
+Right.
+
+120
+00:08:59,920 --> 00:09:04,690
+So we are using a name block first to print the name.
+
+121
+00:09:04,690 --> 00:09:10,990
+So in 36, block 36, we have stored names in our classic cards, right?
+
+122
+00:09:11,020 --> 00:09:12,700
+So over here you can see.
+
+123
+00:09:14,350 --> 00:09:21,520
+We are first checking the status and we are reading, we are using read function and we are passing
+
+124
+00:09:21,520 --> 00:09:24,660
+the block number buffer and the buffer size.
+
+125
+00:09:24,670 --> 00:09:25,230
+Right.
+
+126
+00:09:25,240 --> 00:09:34,300
+So it will display okay status or it will throw an error If the status is not equal to okay, we will
+
+127
+00:09:34,300 --> 00:09:39,100
+print a read field and we will also print the error code.
+
+128
+00:09:40,660 --> 00:09:43,780
+Otherwise if the status is okay.
+
+129
+00:09:45,680 --> 00:09:50,000
+Then we are printing the buffer data using over here.
+
+130
+00:09:50,000 --> 00:09:54,200
+You can see them byte error function on our serial monitor.
+
+131
+00:09:54,200 --> 00:09:56,420
+So it will dump the data on serial monitor.
+
+132
+00:09:56,420 --> 00:10:05,450
+Right after that, we are printing the same data using using dump byte array string function and this
+
+133
+00:10:05,450 --> 00:10:07,250
+will print the data on our.
+
+134
+00:10:10,020 --> 00:10:11,160
+So this is the function.
+
+135
+00:10:11,160 --> 00:10:12,570
+It's quite simple function.
+
+136
+00:10:12,570 --> 00:10:14,970
+We are just converting the hex values.
+
+137
+00:10:15,870 --> 00:10:17,010
+In characters.
+
+138
+00:10:17,010 --> 00:10:20,430
+So it will get all the hex values from our card.
+
+139
+00:10:20,430 --> 00:10:26,550
+And then we are just converting those hex values and we are just getting the string value out of hex
+
+140
+00:10:26,760 --> 00:10:28,620
+and we are just printing the name.
+
+141
+00:10:29,100 --> 00:10:33,780
+Similarly, the same code is used for position, block and position block.
+
+142
+00:10:33,780 --> 00:10:36,060
+We are using block 37.
+
+143
+00:10:37,360 --> 00:10:42,550
+So it will use the same code, the same code, and it will display the position as well.
+
+144
+00:10:43,610 --> 00:10:46,850
+After there is a halt function to stop reading the data from the card.
+
+145
+00:10:47,030 --> 00:10:49,610
+So this is the code of our final example.
+
+146
+00:10:49,790 --> 00:10:56,120
+I have provided this code in the resources file and I have also mentioned the comments in the code file,
+
+147
+00:10:56,120 --> 00:10:59,270
+so it will help you understand code more easily.
+

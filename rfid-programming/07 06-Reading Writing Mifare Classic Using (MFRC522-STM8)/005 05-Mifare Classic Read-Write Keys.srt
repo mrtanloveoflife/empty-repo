@@ -1,0 +1,372 @@
+1
+00:00:01,370 --> 00:00:09,770
+So now that we know how to create data block using this software, next we are going to see how to edit
+
+2
+00:00:09,770 --> 00:00:15,140
+or how to update a sector trailer or the key A or key B.
+
+3
+00:00:16,430 --> 00:00:20,360
+So to update key A or key B, it's quite simple.
+
+4
+00:00:20,480 --> 00:00:27,470
+You just need to know the sector number or the sector trailer number in each sector.
+
+5
+00:00:27,800 --> 00:00:32,720
+So if you want to update sector eight, sector nine or whatever sector you want to update, let's suppose
+
+6
+00:00:32,720 --> 00:00:33,720
+you want to update.
+
+7
+00:00:33,740 --> 00:00:37,400
+Let's just go a little down and let's just suppose you want to update.
+
+8
+00:00:38,390 --> 00:00:45,800
+Sector 13 and in sector 13, the sector trailer block is 55.
+
+9
+00:00:45,850 --> 00:00:46,170
+Right.
+
+10
+00:00:46,190 --> 00:00:47,930
+So you have to remember that.
+
+11
+00:00:49,570 --> 00:00:52,360
+In Sector 13, The sector trailer block is 55.
+
+12
+00:00:52,390 --> 00:00:57,100
+You can see it over here and you can enter 55 over here.
+
+13
+00:00:57,220 --> 00:01:01,410
+And this tool reads decimal to decimal, right?
+
+14
+00:01:01,420 --> 00:01:05,340
+So you don't need to update decimal to hex, right?
+
+15
+00:01:05,379 --> 00:01:09,060
+Like we were doing in ACR 1 to 2 as before.
+
+16
+00:01:09,070 --> 00:01:15,610
+So we were updating this address address block into hexadecimal.
+
+17
+00:01:15,610 --> 00:01:22,220
+So we were converting this address block in hexadecimal first, and then we were entering into ACR 1
+
+18
+00:01:22,220 --> 00:01:23,310
+to 2 Usdc.
+
+19
+00:01:24,130 --> 00:01:30,070
+But over here, this software accepts decimal number, so you just need to enter the decimal number.
+
+20
+00:01:30,890 --> 00:01:35,660
+So let's just first read the data on 55 block.
+
+21
+00:01:45,080 --> 00:01:45,440
+All right.
+
+22
+00:01:45,440 --> 00:01:47,990
+So as you can see, it's a sector trailer block.
+
+23
+00:01:47,990 --> 00:01:54,560
+And we know this by knowing the key B and the excess bits over here.
+
+24
+00:01:54,560 --> 00:02:00,290
+And we also know that the first key A is not visible, right?
+
+25
+00:02:00,290 --> 00:02:02,930
+So it's not readable in any case.
+
+26
+00:02:04,090 --> 00:02:10,870
+So it's a sector trailer block Now, if you want to update a sector trailer block, all you have to
+
+27
+00:02:10,870 --> 00:02:12,640
+do is you have to enter data.
+
+28
+00:02:13,330 --> 00:02:16,630
+Similarly where we enter the data for updating the data.
+
+29
+00:02:16,630 --> 00:02:17,140
+Block right?
+
+30
+00:02:17,140 --> 00:02:25,060
+So we have to enter the same data or the data which we want to update over the same data transmission.
+
+31
+00:02:25,060 --> 00:02:25,990
+Block Right.
+
+32
+00:02:25,990 --> 00:02:33,880
+So let's just do it so we will not enter 000 because as we know, key is not visible, but we have to
+
+33
+00:02:33,880 --> 00:02:35,560
+enter the correct key, right?
+
+34
+00:02:35,560 --> 00:02:37,720
+So it's six time F.
+
+35
+00:02:38,980 --> 00:02:40,630
+So let me enter it over here.
+
+36
+00:02:42,590 --> 00:02:50,090
+And make sure you use caps lock, because this software only works in capital letters.
+
+37
+00:02:50,710 --> 00:02:51,370
+So.
+
+38
+00:02:57,930 --> 00:02:58,260
+Right.
+
+39
+00:02:58,740 --> 00:02:59,640
+Four time.
+
+40
+00:02:59,670 --> 00:03:00,750
+Five time.
+
+41
+00:03:02,330 --> 00:03:03,500
+And the sixth time.
+
+42
+00:03:03,500 --> 00:03:04,400
+So it's key.
+
+43
+00:03:05,180 --> 00:03:11,290
+Now we have to enter the axis beds, which are these four beds.
+
+44
+00:03:11,300 --> 00:03:12,970
+So it's starting from F.
+
+45
+00:03:14,270 --> 00:03:15,230
+Zero seven.
+
+46
+00:03:17,380 --> 00:03:18,250
+Eight zero.
+
+47
+00:03:19,430 --> 00:03:20,060
+Six.
+
+48
+00:03:20,060 --> 00:03:20,540
+Nine.
+
+49
+00:03:20,570 --> 00:03:20,890
+Right.
+
+50
+00:03:20,930 --> 00:03:27,530
+And then f, f, f, f, f, f and f f, Right.
+
+51
+00:03:27,530 --> 00:03:32,510
+So this is the structure of transportation mode.
+
+52
+00:03:33,230 --> 00:03:37,940
+So we are just going to, you know, first do in the transportation mode and we will not change the
+
+53
+00:03:37,940 --> 00:03:39,710
+keys just to check.
+
+54
+00:03:39,710 --> 00:03:40,250
+Right?
+
+55
+00:03:40,250 --> 00:03:43,460
+So let's just do data, right?
+
+56
+00:03:44,230 --> 00:03:46,570
+So as you can see, data is written successfully.
+
+57
+00:03:46,570 --> 00:03:48,250
+Let's just read this data.
+
+58
+00:03:52,080 --> 00:03:57,960
+And we are able to read the data same as it is we were reading before because we haven't changed anything
+
+59
+00:03:57,960 --> 00:03:59,340
+in our keys, Right.
+
+60
+00:03:59,520 --> 00:04:04,980
+So let's just update key A so we will change the first two bytes of key A.
+
+61
+00:04:08,150 --> 00:04:13,520
+So we have updated the key a the first two bytes and let's just do data right?
+
+62
+00:04:18,029 --> 00:04:19,709
+And data is written successfully.
+
+63
+00:04:19,740 --> 00:04:21,959
+Now, let's just try to read this data.
+
+64
+00:04:25,320 --> 00:04:28,800
+And over here you can see authentication falling.
+
+65
+00:04:28,980 --> 00:04:32,430
+That means we are not able to read data.
+
+66
+00:04:32,550 --> 00:04:32,900
+Right?
+
+67
+00:04:32,910 --> 00:04:40,890
+And this is the case because we haven't changed the key over here, because each time when we do any
+
+68
+00:04:40,890 --> 00:04:43,410
+operation, we first have to authenticate.
+
+69
+00:04:43,680 --> 00:04:51,300
+So each time we first authenticate, then whatever operation we want to do, either we have to update,
+
+70
+00:04:51,300 --> 00:04:54,910
+delete any data or change the access bit.
+
+71
+00:04:54,930 --> 00:04:55,920
+All all the things.
+
+72
+00:04:55,920 --> 00:05:02,370
+First we have to do is authenticate with key A or key B, and that depends on the access bits, right?
+
+73
+00:05:02,370 --> 00:05:07,260
+So we are in a transportation mode right now, but we have changed the key.
+
+74
+00:05:07,680 --> 00:05:12,810
+So let's just update the keys over here and we will authenticate with the new key.
+
+75
+00:05:13,720 --> 00:05:15,070
+And do read data.
+
+76
+00:05:18,520 --> 00:05:24,820
+And now we are able to read data, but we are not able to read Key A and I have told you the reason
+
+77
+00:05:24,850 --> 00:05:32,260
+we are not able to read Key A in any case, whether we change the access bits, there are certain cases
+
+78
+00:05:32,260 --> 00:05:37,510
+in which key B is also not readable and access bits are not readable.
+
+79
+00:05:37,510 --> 00:05:43,510
+You can see all those conditions in the access bits table, which we have discussed before.
+
+80
+00:05:44,720 --> 00:05:49,430
+So we have updated and you can see the result.
+
+81
+00:05:49,460 --> 00:05:51,920
+Now let's just update key B as well.
+
+82
+00:05:53,410 --> 00:05:55,630
+So we will update KB over here.
+
+83
+00:05:55,990 --> 00:05:58,630
+We'll change the first two bits of KB as well.
+
+84
+00:05:58,660 --> 00:05:59,710
+First two bytes.
+
+85
+00:06:00,820 --> 00:06:02,890
+And let's just do data, right?
+
+86
+00:06:04,050 --> 00:06:08,100
+So data is written successfully and let's just do data read again.
+
+87
+00:06:10,620 --> 00:06:12,300
+And over here you can see the.
+
+88
+00:06:13,890 --> 00:06:17,430
+Kibby is changed and Kibbee is because visible we can change.
+
+89
+00:06:17,640 --> 00:06:21,980
+C The visible change in the log description over here, right?
+
+90
+00:06:21,990 --> 00:06:26,180
+So this is how you change and modify sector trailer.
+
+91
+00:06:26,190 --> 00:06:31,800
+Just need to remember the sector number and then you can modify the sector block as well.
+
+92
+00:06:31,920 --> 00:06:38,790
+In the next video, we are going to see how to modify value blocks and how to do increment and decrement
+
+93
+00:06:38,790 --> 00:06:40,410
+operation on value blocks.
+

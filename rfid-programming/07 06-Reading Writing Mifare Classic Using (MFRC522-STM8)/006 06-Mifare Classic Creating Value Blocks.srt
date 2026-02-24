@@ -1,0 +1,280 @@
+1
+00:00:00,700 --> 00:00:07,810
+So in this video, we are going to create value blocks and we will start value block creation on block
+
+2
+00:00:07,810 --> 00:00:11,570
+61, which is in Sector 15.
+
+3
+00:00:11,590 --> 00:00:12,970
+Over here you can see it.
+
+4
+00:00:13,210 --> 00:00:18,250
+So let's just create a value block on Block 61.
+
+5
+00:00:19,030 --> 00:00:22,930
+We have to type 61 and let's just do data read first.
+
+6
+00:00:28,090 --> 00:00:34,210
+So over here, you can see there are zeros in this block.
+
+7
+00:00:34,210 --> 00:00:37,570
+So let's just create this block in value block.
+
+8
+00:00:37,690 --> 00:00:44,290
+So to create value block, what you have to do is you have to press these four buttons in sequence,
+
+9
+00:00:44,290 --> 00:00:44,500
+right?
+
+10
+00:00:44,500 --> 00:00:45,690
+The first four buttons.
+
+11
+00:00:45,700 --> 00:00:53,290
+So first you have to do request, then interpolation, then select and then authenticate.
+
+12
+00:00:53,290 --> 00:00:56,350
+So you will see authentication success message over here.
+
+13
+00:00:56,380 --> 00:01:03,520
+Right after that, what you have to do is you can either create value block or you can read data as
+
+14
+00:01:03,520 --> 00:01:04,450
+you were doing before.
+
+15
+00:01:04,450 --> 00:01:05,800
+So let's just create value.
+
+16
+00:01:05,800 --> 00:01:07,630
+Block value, right?
+
+17
+00:01:07,720 --> 00:01:09,130
+So we will create value.
+
+18
+00:01:09,130 --> 00:01:11,380
+Block Starting with 100.
+
+19
+00:01:12,170 --> 00:01:13,910
+And we will do well, right?
+
+20
+00:01:15,930 --> 00:01:18,960
+And you can see value, right value, success.
+
+21
+00:01:19,230 --> 00:01:21,270
+So let's just read value.
+
+22
+00:01:22,890 --> 00:01:24,840
+And the read value is 100.
+
+23
+00:01:25,410 --> 00:01:28,040
+So this is how you create value blocks.
+
+24
+00:01:28,050 --> 00:01:31,010
+Now let's just try to read this data in hexadecimal.
+
+25
+00:01:31,020 --> 00:01:35,160
+So we will do data read so it will read all the 16 bytes.
+
+26
+00:01:35,960 --> 00:01:36,950
+In this block.
+
+27
+00:01:39,220 --> 00:01:41,710
+So here you can see the 16 bytes.
+
+28
+00:01:41,720 --> 00:01:48,530
+So the first four bytes is our value, which we have written, which is in 100.
+
+29
+00:01:48,550 --> 00:01:52,030
+So these four bytes are dedicated to this value, right?
+
+30
+00:01:52,540 --> 00:01:58,000
+After that, the next four byte is the complement of the first four bytes.
+
+31
+00:01:58,540 --> 00:02:03,310
+These four bytes, the first four bytes, it's a complement, right?
+
+32
+00:02:03,310 --> 00:02:05,950
+So it's a complement of these first four bytes.
+
+33
+00:02:06,400 --> 00:02:12,490
+After that, after the complement, the first four bytes are again repeated over here.
+
+34
+00:02:13,750 --> 00:02:17,020
+So it's creating the backup over here as a backup.
+
+35
+00:02:17,260 --> 00:02:20,140
+So it's repeating the first four bytes over here as well.
+
+36
+00:02:20,410 --> 00:02:25,780
+Then last four bytes is the complement of the of this complement, right?
+
+37
+00:02:26,080 --> 00:02:28,210
+The middle four bytes.
+
+38
+00:02:28,390 --> 00:02:33,040
+So this is the structure of value block, which makes a classic follows, right?
+
+39
+00:02:33,100 --> 00:02:38,020
+So this is the standard way in which a classic card creates value.
+
+40
+00:02:38,020 --> 00:02:38,440
+Block.
+
+41
+00:02:39,070 --> 00:02:41,860
+And we cannot change this standard, right?
+
+42
+00:02:41,890 --> 00:02:45,670
+This is the way we program value blocks in classic card.
+
+43
+00:02:46,210 --> 00:02:54,220
+So now what we will do is we will do again request and anti-collision then select and then authenticate,
+
+44
+00:02:54,220 --> 00:02:58,690
+and then we will do value read one more time.
+
+45
+00:02:59,050 --> 00:03:02,980
+And we can perform increment and decrement operations as well.
+
+46
+00:03:03,010 --> 00:03:09,160
+So let's just do increment operation and we will do increment increase by 30.
+
+47
+00:03:09,370 --> 00:03:10,540
+So let's just do it.
+
+48
+00:03:11,020 --> 00:03:13,310
+And you can see value increase success.
+
+49
+00:03:13,310 --> 00:03:17,060
+And then and let's just read this value one more time.
+
+50
+00:03:17,930 --> 00:03:21,260
+To the next value after the increment.
+
+51
+00:03:21,290 --> 00:03:26,030
+We got 130 plus 100 plus 30 is 130.
+
+52
+00:03:26,220 --> 00:03:26,560
+Right.
+
+53
+00:03:26,570 --> 00:03:27,780
+So this is 130.
+
+54
+00:03:27,800 --> 00:03:29,000
+Over here, the correct value.
+
+55
+00:03:29,030 --> 00:03:31,100
+Let's just do one more increment of.
+
+56
+00:03:31,920 --> 00:03:32,370
+Then.
+
+57
+00:03:34,410 --> 00:03:34,650
+Right.
+
+58
+00:03:34,800 --> 00:03:36,570
+So the value read will show.
+
+59
+00:03:36,570 --> 00:03:37,500
+140.
+
+60
+00:03:38,020 --> 00:03:38,160
+Right.
+
+61
+00:03:38,340 --> 00:03:39,880
+So it's showing the correct value.
+
+62
+00:03:39,900 --> 00:03:43,630
+Now we can do decrement operations in a similar manner.
+
+63
+00:03:43,650 --> 00:03:45,840
+So what you have to do is you have to provide.
+
+64
+00:03:46,730 --> 00:03:48,890
+The number which you want to decrement.
+
+65
+00:03:49,190 --> 00:03:54,290
+Let's suppose we want to decrement 25 and we type value 25 over here.
+
+66
+00:03:54,290 --> 00:03:55,910
+And let's just do decrease.
+
+67
+00:03:56,910 --> 00:03:58,980
+Value, decreased success.
+
+68
+00:03:58,980 --> 00:04:01,410
+And let's just do value read one more time.
+
+69
+00:04:02,340 --> 00:04:04,740
+So the new value is 115.
+
+70
+00:04:04,770 --> 00:04:15,720
+So this is how value blocks are created using this RC 522 software which we used with STM eight microcontroller.
+

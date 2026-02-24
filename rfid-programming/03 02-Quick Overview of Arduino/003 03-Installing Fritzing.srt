@@ -1,0 +1,156 @@
+1
+00:00:02,969 --> 00:00:08,100
+Another tool which is recommended but not required is known as Fritzing.
+
+2
+00:00:08,340 --> 00:00:10,650
+This tool will help you a lot.
+
+3
+00:00:10,740 --> 00:00:14,630
+Creating the visual diagram of your project, basically.
+
+4
+00:00:14,640 --> 00:00:19,230
+So whatever project you are creating first, you can create its diagram.
+
+5
+00:00:19,230 --> 00:00:28,020
+So this diagram will help you create your easily create your jumper wires during your practical work
+
+6
+00:00:28,440 --> 00:00:31,470
+with your breadboard and Arduino Uno.
+
+7
+00:00:31,470 --> 00:00:31,830
+Right?
+
+8
+00:00:31,830 --> 00:00:36,330
+So this tool will help you a lot by creating visual diagram.
+
+9
+00:00:36,330 --> 00:00:43,290
+You can refer to this diagram when you will be creating the practical thing with your Arduino, Right?
+
+10
+00:00:43,290 --> 00:00:49,230
+So all the things which you are doing with jumper wires and the module you are using, you can refer
+
+11
+00:00:49,230 --> 00:00:52,290
+to this diagram first and then you can create your tool, right?
+
+12
+00:00:52,290 --> 00:00:55,500
+So this is the tool which we are going to use.
+
+13
+00:00:55,500 --> 00:00:58,500
+So I have already downloaded this tool.
+
+14
+00:00:58,500 --> 00:01:00,930
+This tool provides a zip folder.
+
+15
+00:01:01,850 --> 00:01:07,880
+So let's just go into that folder and let's just extract it.
+
+16
+00:01:10,980 --> 00:01:13,050
+So you don't need to install this tool.
+
+17
+00:01:13,050 --> 00:01:14,790
+You can just start it right away.
+
+18
+00:01:17,850 --> 00:01:21,890
+And when the tool first starts, it will ask you to update.
+
+19
+00:01:21,900 --> 00:01:26,130
+So you will you have to update this tool with all the components in it.
+
+20
+00:01:31,980 --> 00:01:34,020
+So we can start this tool.
+
+21
+00:01:35,560 --> 00:01:35,910
+Right.
+
+22
+00:01:35,940 --> 00:01:37,830
+So this is the pride board.
+
+23
+00:01:38,550 --> 00:01:40,140
+And we can.
+
+24
+00:01:43,090 --> 00:01:46,210
+Place ardino over here.
+
+25
+00:01:46,900 --> 00:01:52,090
+And the tool which we are going to use is known as RC 5 to 2.
+
+26
+00:01:52,150 --> 00:01:56,650
+Now, if you search RC 5 to 2, you will not find that tool.
+
+27
+00:01:57,310 --> 00:02:05,140
+What you have to do is you have to go into mine and then you have to click that small button over here
+
+28
+00:02:05,140 --> 00:02:07,450
+and click on import.
+
+29
+00:02:10,370 --> 00:02:18,310
+And you can find this RC 5 to 2 diagram which we have created in your resources file.
+
+30
+00:02:18,320 --> 00:02:27,260
+So all you have to do is you have to import this diagram and then you can use this diagram, right?
+
+31
+00:02:27,260 --> 00:02:32,090
+So this is the diagram which we are going to use RC 5 to 2
+
+32
+00:02:36,170 --> 00:02:42,050
+and we can create our connection with it, as you can see over here.
+
+33
+00:02:42,050 --> 00:02:50,600
+So after creating the connection, you can save the file as PNG or export the file as PNG or Jpeg,
+
+34
+00:02:50,600 --> 00:02:57,200
+whatever format you prefer, and you can refer to this diagram when you will be creating this actual
+
+35
+00:02:57,230 --> 00:02:59,750
+tool using jumper wires and breadboards.
+
+36
+00:02:59,750 --> 00:03:08,900
+So this diagram will help you a lot because uh, doing practically is little difficult, so you should
+
+37
+00:03:09,000 --> 00:03:12,450
+know what wire you are placing where.
+
+38
+00:03:12,450 --> 00:03:16,140
+So this diagram will help you a lot, right?
+
+39
+00:03:16,140 --> 00:03:19,890
+So you can save the diagram and share it whatever you want to do.
+
