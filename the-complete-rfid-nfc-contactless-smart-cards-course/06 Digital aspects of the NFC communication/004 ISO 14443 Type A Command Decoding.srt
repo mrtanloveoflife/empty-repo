@@ -1,0 +1,460 @@
+1
+00:00:01,040 --> 00:00:07,760
+Hello again and welcome to this new session about type A command decoding.
+
+2
+00:00:08,810 --> 00:00:18,890
+So decoding an ISO 14,443 type A command involves analyzing and interpreting the structure of the command
+
+3
+00:00:18,890 --> 00:00:27,110
+as it's transmitted between the reader, which we call also proximity coupling device or PCD, and the
+
+4
+00:00:27,110 --> 00:00:31,730
+card which we call also proximity integrated circuit card or Pic.
+
+5
+00:00:33,020 --> 00:00:43,460
+ISO 14,443 type A is the standard protocol used for near field communication, NFC and proximity cards.
+
+6
+00:00:44,570 --> 00:00:50,600
+So here is a breakdown through this presentation of how the decoding process works.
+
+7
+00:00:55,580 --> 00:00:58,430
+So what about the command structure.
+
+8
+00:00:58,760 --> 00:01:01,740
+So an ISO 14 443.
+
+9
+00:01:01,770 --> 00:01:07,590
+Type A command typically includes these elements.
+
+10
+00:01:08,190 --> 00:01:11,940
+So first of all we have SOV.
+
+11
+00:01:11,970 --> 00:01:16,440
+Start of frame which marks the beginning of the frame.
+
+12
+00:01:17,130 --> 00:01:20,490
+Then the second part is the command.
+
+13
+00:01:20,850 --> 00:01:26,490
+So the command or the instruction byte identifies the type of command.
+
+14
+00:01:26,520 --> 00:01:29,340
+For example request a wake up.
+
+15
+00:01:29,370 --> 00:01:33,570
+A select Anti-collision, etc. etc..
+
+16
+00:01:34,290 --> 00:01:39,300
+Then the third thing is the data field or payload.
+
+17
+00:01:39,480 --> 00:01:48,210
+So payload or data field carries additional data required for the command such as parameters or addresses.
+
+18
+00:01:48,600 --> 00:01:53,580
+Then which is a very important parameter in a command.
+
+19
+00:01:53,610 --> 00:01:58,290
+It's the CRC which is the cyclic redundancy check.
+
+20
+00:01:58,470 --> 00:02:06,030
+So CRC is composed by two bytes, which are used for error detection.
+
+21
+00:02:06,180 --> 00:02:15,450
+Crcs ensure data integrity and are crucial for verifying that the transmitted data has not been altered.
+
+22
+00:02:16,320 --> 00:02:23,010
+And finally, which is the fifth part of the command is the EOF, which is the end of frame.
+
+23
+00:02:23,010 --> 00:02:25,800
+So we have a start of frame and the end of frame.
+
+24
+00:02:25,890 --> 00:02:33,870
+The end of frame marks the end of the frame, which is very obvious regarding the command structure.
+
+25
+00:02:40,260 --> 00:02:45,060
+Then we have the Manchester encoding, the low level decoding.
+
+26
+00:02:45,600 --> 00:02:54,450
+So ISO 14,443 type A uses modified Miller encoding at 106 kilobit per second.
+
+27
+00:02:55,620 --> 00:03:05,200
+In this form of encoding, we have Uh, one bit, which is represented by a transition in the middle
+
+28
+00:03:05,200 --> 00:03:13,390
+of the bit period and a zero bit, which has no transition in the middle, but has transitions at the
+
+29
+00:03:13,390 --> 00:03:15,940
+beginning and end of each bit period.
+
+30
+00:03:16,660 --> 00:03:21,130
+So as you can see here, here's what corresponds to one bit.
+
+31
+00:03:21,130 --> 00:03:23,620
+And here what corresponds to the zero bit.
+
+32
+00:03:23,710 --> 00:03:31,600
+So as you can see here for the one we have a transition in the middle of the bit period.
+
+33
+00:03:31,990 --> 00:03:32,980
+Here is the middle.
+
+34
+00:03:32,980 --> 00:03:35,560
+So this is the middle of the bit period.
+
+35
+00:03:37,330 --> 00:03:46,420
+For the zero we have the transition not in the middle but at the beginning and end of each bit period.
+
+36
+00:03:52,720 --> 00:04:01,060
+So this bit level encoding allows the receiver to decode the signal even if it's received asynchronously.
+
+37
+00:04:01,060 --> 00:04:01,130
+Synchronously.
+
+38
+00:04:03,680 --> 00:04:04,580
+Then?
+
+39
+00:04:05,150 --> 00:04:07,670
+How is the decode of the frame?
+
+40
+00:04:07,880 --> 00:04:14,300
+So once the signal has been demodulated, the decoding process follows these steps.
+
+41
+00:04:14,690 --> 00:04:21,769
+First step is the frame synchronization synchronization, which identifies the soft start of frame and
+
+42
+00:04:21,800 --> 00:04:27,020
+EOF, and the frame to detect where each frame starts and ends.
+
+43
+00:04:28,040 --> 00:04:36,380
+Second step is the bit sampling, which converts the modulated waveform into bits according to the modified
+
+44
+00:04:36,380 --> 00:04:38,390
+Miller encoding rules.
+
+45
+00:04:39,500 --> 00:04:47,750
+Third step is the byte level assembly, which assemble bits into bytes, typically eight bits per byte,
+
+46
+00:04:47,780 --> 00:04:51,800
+starting from the SOV and ending at the EOF.
+
+47
+00:04:52,820 --> 00:05:01,010
+The fourth step is the CRC verification, which calculate and check the CRC to ensure the data integrity
+
+48
+00:05:01,010 --> 00:05:02,000
+of the frame.
+
+49
+00:05:02,690 --> 00:05:07,640
+And then the last step is the command interpretation.
+
+50
+00:05:08,630 --> 00:05:14,090
+It interprets the command byte to understand which action is being requested.
+
+51
+00:05:14,450 --> 00:05:18,890
+The reader interprets it according to the protocol specifications.
+
+52
+00:05:18,890 --> 00:05:23,690
+For example, request A for polling and select for card selection.
+
+53
+00:05:29,090 --> 00:05:36,410
+So as an example, let's work on the request a decoding rec a decoding.
+
+54
+00:05:38,630 --> 00:05:42,020
+So request A which is the request command.
+
+55
+00:05:42,020 --> 00:05:47,780
+Type A is used by the reader to detect cards in its field.
+
+56
+00:05:47,810 --> 00:05:54,020
+It's a short frame and typically one byte which is 26.
+
+57
+00:05:56,990 --> 00:06:01,740
+After decoding the waveform and identifying the request a command.
+
+58
+00:06:01,770 --> 00:06:08,250
+The ICC responds with an atca answer to request type A if it's in the field and active.
+
+59
+00:06:08,820 --> 00:06:18,660
+So let's walk through decoding a request A to see how the bits are interpreted in the ISO 14,443 type
+
+60
+00:06:18,690 --> 00:06:19,860
+A communication.
+
+61
+00:06:25,410 --> 00:06:30,060
+So here are the steps to decode request a.
+
+62
+00:06:30,390 --> 00:06:33,450
+The first step is receiving the frame.
+
+63
+00:06:33,750 --> 00:06:39,960
+The reader or the PCD sends out the request a command as a single byte.
+
+64
+00:06:47,160 --> 00:06:51,180
+Then we have the second step which is the modulated signal.
+
+65
+00:06:51,780 --> 00:06:54,150
+Modified Miller encoding.
+
+66
+00:06:54,480 --> 00:07:06,450
+So ISO 14,443 type A at 106kbps, uses modified Miller encoding, where one is represented by a transition
+
+67
+00:07:06,450 --> 00:07:12,210
+in the middle of the bit period, and zero is represented without transition in the middle, but a transition
+
+68
+00:07:12,210 --> 00:07:14,070
+at the beginning of the bit period.
+
+69
+00:07:14,400 --> 00:07:20,100
+So to send 26 we convert it to binary as you can see here.
+
+70
+00:07:20,100 --> 00:07:26,520
+So in binary it's 00100110.
+
+71
+00:07:27,900 --> 00:07:35,040
+The third step is the bit by bit analysis of the of the 26 bytes of the request a.
+
+72
+00:07:38,280 --> 00:07:47,130
+So the bit sequence from MSB to LSB is 0010 and then 0110.
+
+73
+00:07:53,550 --> 00:07:57,990
+So as we can see here we have the different transition of the request a.
+
+74
+00:07:59,940 --> 00:08:07,150
+So as we said we have the the representation is 00100110.
+
+75
+00:08:08,170 --> 00:08:09,940
+So as you can see here.
+
+76
+00:08:12,910 --> 00:08:20,920
+The first one is the the first presentation corresponds to zero.
+
+77
+00:08:22,090 --> 00:08:25,720
+Then we have another zero again.
+
+78
+00:08:26,740 --> 00:08:28,840
+Then from this point.
+
+79
+00:08:30,940 --> 00:08:33,370
+We go we do the transition.
+
+80
+00:08:33,370 --> 00:08:36,159
+And it represents a one bit.
+
+81
+00:08:36,190 --> 00:08:37,510
+It's sorry it's not clear.
+
+82
+00:08:37,510 --> 00:08:42,760
+But you can see here 001000110.
+
+83
+00:08:46,300 --> 00:08:54,460
+So as we have said before, the first part, which is a zero, we have the transition at the start.
+
+84
+00:08:56,080 --> 00:08:57,880
+No transition in the middle.
+
+85
+00:08:59,830 --> 00:09:08,540
+Then The second bit is a zero where the transition at the start, no transition in the middle.
+
+86
+00:09:13,460 --> 00:09:21,530
+Then we have the bit one where we have transition in the middle of the bit period.
+
+87
+00:09:22,820 --> 00:09:27,950
+Then we have a zero again because the transition is at the start, no transition in the middle.
+
+88
+00:09:33,230 --> 00:09:35,570
+And so on and so on and so on.
+
+89
+00:09:35,570 --> 00:09:37,790
+All the same with the same principle.
+
+90
+00:09:45,200 --> 00:09:50,720
+So then if we go back again we have the fifth step is interpreting the command.
+
+91
+00:09:51,200 --> 00:10:00,680
+After decoding the bits, the receiver assembles them back into the command byte according to ISO 14,443
+
+92
+00:10:01,160 --> 00:10:06,620
+26 correspond to the request a command used to poll for any cards in range.
+
+93
+00:10:15,860 --> 00:10:21,740
+So the fifth step is the response, which is the answer to request a atca.
+
+94
+00:10:21,770 --> 00:10:29,240
+So if a card is present in the field, it responds with an Atca, which includes the card type and other
+
+95
+00:10:29,240 --> 00:10:31,580
+information about its capabilities.
+
+96
+00:10:43,730 --> 00:10:44,870
+And here.
+
+97
+00:10:44,870 --> 00:10:47,720
+Here is a summary of the request a decoding.
+
+98
+00:10:47,720 --> 00:10:49,970
+I will let you have a look at it.
+
+99
+00:10:54,260 --> 00:10:58,880
+Then as an example we will talk about the anti-collision decoding.
+
+100
+00:10:59,120 --> 00:11:08,790
+So the anti-collision phase in ISO 14,443, type A involves sending a select command, which contains
+
+101
+00:11:08,820 --> 00:11:14,580
+a series of bytes including part of the card's Uuid, which is the unique identifier.
+
+102
+00:11:14,730 --> 00:11:18,540
+The encoding follows the modified Miller encoding rules.
+
+103
+00:11:19,050 --> 00:11:24,450
+To illustrate this, we will encode an example select command such as.
+
+104
+00:11:26,460 --> 00:11:30,090
+So command 9320.
+
+105
+00:11:32,670 --> 00:11:41,850
+So the first part is the 93 which select cascade level one and 93 is fixed for the first level of Anticollision.
+
+106
+00:11:41,940 --> 00:11:52,320
+Then we have the 20 byte which is the nvb the number of valid bits by indicating two complete bytes,
+
+107
+00:11:52,350 --> 00:11:56,280
+Uuid bits are sent in subsequent frames.
+
+108
+00:12:00,750 --> 00:12:03,300
+So how we encode these bytes.
+
+109
+00:12:03,870 --> 00:12:17,280
+So let's break it down and encode 9320 which is presented by the binary 100100110010 and 0000, which
+
+110
+00:12:17,280 --> 00:12:19,590
+uses the modified mirror encoding.
+
+111
+00:12:22,350 --> 00:12:30,600
+So regarding this picture about the modified Miller encoding, each bit is represented by a specific
+
+112
+00:12:30,600 --> 00:12:33,810
+signal level transition, as you have seen before.
+
+113
+00:12:33,840 --> 00:12:41,010
+So the bit one represents a transition which occurs in the middle of the bit period.
+
+114
+00:12:42,060 --> 00:12:53,880
+Regarding the bit zero, transition occurs at the start of the bit period, with no further transition
+
+115
+00:12:53,880 --> 00:12:54,720
+in the middle.
+

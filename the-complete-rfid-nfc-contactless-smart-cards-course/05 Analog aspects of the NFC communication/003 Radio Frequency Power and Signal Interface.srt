@@ -1,0 +1,516 @@
+1
+00:00:01,650 --> 00:00:02,190
+Hello.
+
+2
+00:00:02,190 --> 00:00:07,110
+So here we will be talking about radio frequency, power and signal interface.
+
+3
+00:00:07,860 --> 00:00:14,520
+Contactless cards do not require any electrical connection between the smart card and the reader, or
+
+4
+00:00:14,520 --> 00:00:18,420
+the card terminal to transmit power and data over a short distance.
+
+5
+00:00:18,990 --> 00:00:24,930
+The methods used for transmitting power and data with contactless cards are not new.
+
+6
+00:00:25,290 --> 00:00:31,800
+They have been generally known for many years in the world of radio frequency identification, like
+
+7
+00:00:31,800 --> 00:00:38,610
+RFID system, which are used in a wide variety of applications such as animal and plants, and transponders
+
+8
+00:00:38,610 --> 00:00:41,730
+for electronic multi-start systems in vehicles.
+
+9
+00:00:42,600 --> 00:00:49,200
+To facilitate understanding these methods, they can be classified according to diverse parameters.
+
+10
+00:00:49,260 --> 00:00:55,080
+One approach is to classify them according to the method used to transmit power and data.
+
+11
+00:00:55,560 --> 00:00:59,610
+The most used method are radio waves or microwaves.
+
+12
+00:00:59,610 --> 00:01:03,540
+Optical transmission capacity, stiff coupling and inductive coupling.
+
+13
+00:01:04,349 --> 00:01:11,190
+Just as with contact smart cards, the system with contactless cards consists of at least two components
+
+14
+00:01:11,400 --> 00:01:16,230
+a card and a compatible terminal, so pick and the compatible reader.
+
+15
+00:01:16,470 --> 00:01:22,770
+The terminal or the reader can act as a reader of or a reader or writer according to the technology
+
+16
+00:01:22,770 --> 00:01:29,610
+used as a rule, the terminal includes an additional interface for communication with the background
+
+17
+00:01:29,610 --> 00:01:30,150
+system.
+
+18
+00:01:30,150 --> 00:01:35,250
+So as you can see in this picture here we will have the terminal and the contactless smart card, which
+
+19
+00:01:35,250 --> 00:01:36,690
+is which is the pack.
+
+20
+00:01:37,440 --> 00:01:44,880
+The following four functions are necessary to allow a contactless card to communicate with the terminal.
+
+21
+00:01:45,330 --> 00:01:54,840
+Power transmission to the card for powering the integrated circuit clock signal transmission data transmission
+
+22
+00:01:54,840 --> 00:01:59,550
+to the card, and then data transmission from the card, which presents the answer.
+
+23
+00:02:06,680 --> 00:02:12,350
+So as we said earlier, the inductive coupling is the key of any communication between the reader and
+
+24
+00:02:12,350 --> 00:02:12,830
+the card.
+
+25
+00:02:13,370 --> 00:02:19,910
+In fact, all cards that employ inductive coupling work on the same principle, regardless of their
+
+26
+00:02:19,910 --> 00:02:21,410
+range or power consumption.
+
+27
+00:02:21,950 --> 00:02:29,960
+One or more coils are incorporated in the card body to act as coupling components for power and data
+
+28
+00:02:29,960 --> 00:02:33,380
+transmission, along with one or more chips.
+
+29
+00:02:34,130 --> 00:02:39,380
+A variety of methods are commonly used to produce the coil and connect the coil to the chip.
+
+30
+00:02:47,660 --> 00:02:50,150
+So about power transmission.
+
+31
+00:02:50,150 --> 00:02:54,110
+In fact, contactless smart cards are always operated passively.
+
+32
+00:02:54,110 --> 00:02:59,240
+This means that all the power necessary for the operation of the chip in the card must be transmitted
+
+33
+00:02:59,240 --> 00:03:00,890
+from the terminal to the card.
+
+34
+00:03:01,820 --> 00:03:08,300
+This is done using the principle of a loosely coupled transformer, as illustrated in this picture.
+
+35
+00:03:08,300 --> 00:03:17,420
+The transformer coil belonging to the terminal is used to generate a strong high frequency electromagnetic
+
+36
+00:03:17,420 --> 00:03:18,050
+field.
+
+37
+00:03:18,170 --> 00:03:27,290
+The frequency is most used for this purpose are are lower sorry than 135kHz and 1350 six megahertz.
+
+38
+00:03:27,380 --> 00:03:33,950
+This means that the wavelength of the electromagnetic field is several times larger than the distance
+
+39
+00:03:33,950 --> 00:03:35,810
+between the card and the terminal.
+
+40
+00:03:36,020 --> 00:03:45,080
+This allows the loosely coupled transformer model to be used if a contactless card is brought into the
+
+41
+00:03:45,080 --> 00:03:51,470
+vicinity of the terminal, part of the magnetic field passes through the coil of the card, which causes
+
+42
+00:03:51,470 --> 00:03:54,740
+an AC voltage to be generated in the coil.
+
+43
+00:03:54,740 --> 00:04:00,410
+This voltage is rectified and used to power the chip.
+
+44
+00:04:01,610 --> 00:04:07,310
+So here on the left we have the terminal and the right we have the smart card, which and one of the
+
+45
+00:04:07,310 --> 00:04:09,350
+components of the smart card is the chip.
+
+46
+00:04:10,860 --> 00:04:17,070
+The coupling between the terminal coil and the card coil is very weak, so the efficiency of this arrangement
+
+47
+00:04:17,070 --> 00:04:18,000
+is very low.
+
+48
+00:04:19,079 --> 00:04:19,980
+Consequently.
+
+49
+00:04:19,980 --> 00:04:26,730
+Consequently, a very strong current must flow in the terminal coil in order to generate the necessary
+
+50
+00:04:27,360 --> 00:04:28,440
+field strength.
+
+51
+00:04:28,920 --> 00:04:35,430
+This is achieved by connecting a capacitor kBT in parallel with the coil light.
+
+52
+00:04:35,460 --> 00:04:40,380
+As you can see in the picture, with the capacitance chosen such that the resonance frequency of the
+
+53
+00:04:40,380 --> 00:04:46,980
+circuit formed by the coil and the capacitor matched the frequency of the signal used to transmit power
+
+54
+00:04:46,980 --> 00:04:57,030
+to the card coil LC and capacitor C1 in the card also form a resonant circuit with the same resonance
+
+55
+00:04:57,030 --> 00:04:57,750
+frequency.
+
+56
+00:04:59,380 --> 00:05:05,920
+The voltage and usage in the card is proportional to the signal frequency, the number of turns in coil
+
+57
+00:05:05,920 --> 00:05:08,620
+RLC, and the area enclosed by the coil.
+
+58
+00:05:09,190 --> 00:05:13,060
+This means that the number of turns needed for the coil drops.
+
+59
+00:05:13,600 --> 00:05:15,640
+With increasing the signal frequency.
+
+60
+00:05:16,240 --> 00:05:25,450
+At 125kHz, it's 100 to 1000 turns, while at 1350 six megahertz it's only 3 to 10.
+
+61
+00:05:31,190 --> 00:05:38,060
+So all known digital modulation methods can be used for transmitting data from the terminal to the card,
+
+62
+00:05:38,060 --> 00:05:41,480
+or from the reader to the card, or from PC to PC.
+
+63
+00:05:42,230 --> 00:05:49,520
+The most commonly used methods are amplitude shift keying, ask frequency shift keying, FSK, and phase
+
+64
+00:05:49,520 --> 00:05:50,180
+shift keying.
+
+65
+00:05:50,420 --> 00:05:56,540
+PSK, Ask, and PSK are most often used since they are especially easy to demodulate.
+
+66
+00:06:03,150 --> 00:06:11,490
+So contactless RF smart cards operating at 1350 six megahertz are powered and communicate with the reader
+
+67
+00:06:11,490 --> 00:06:14,880
+via inductive coupling of the reader antenna to the card antenna.
+
+68
+00:06:15,630 --> 00:06:19,890
+Two loop antennas effectively form a transformer.
+
+69
+00:06:21,360 --> 00:06:22,410
+Alternating.
+
+70
+00:06:22,410 --> 00:06:28,260
+An alternating magnetic field is produced by sinusoidal current flowing through the reader antenna loop.
+
+71
+00:06:28,830 --> 00:06:35,490
+When the card enters this alternating magnetic field, an alternating current AC is induced in the current
+
+72
+00:06:35,490 --> 00:06:36,480
+loop antenna.
+
+73
+00:06:36,900 --> 00:06:44,910
+The Pic integrated circuit contains a rectifier and power regulator to convert the the AC to direct
+
+74
+00:06:44,940 --> 00:06:47,670
+to direct current to power the integrated circuit.
+
+75
+00:06:47,670 --> 00:06:55,410
+So this part is, as we have seen earlier and as I said before, the 1350 six megahertz is the frequency
+
+76
+00:06:55,410 --> 00:06:58,650
+that characterizes the NFC technology.
+
+77
+00:07:10,550 --> 00:07:18,140
+So, as I said, when the card enters the alternating magnetic field, an alternating current is induced
+
+78
+00:07:18,140 --> 00:07:19,400
+in the card loop antenna.
+
+79
+00:07:19,730 --> 00:07:27,980
+The Pic integrated circuit contains a rectifier and power regulator to convert the AC to direct current
+
+80
+00:07:27,980 --> 00:07:29,780
+to power the integrated circuit.
+
+81
+00:07:31,400 --> 00:07:38,930
+As we said, for the communication between from PCD to Pic, we use the modulation of the carrier and
+
+82
+00:07:38,930 --> 00:07:39,500
+the other way.
+
+83
+00:07:39,500 --> 00:07:43,190
+From PSC to PCD, we use the load modulation technique.
+
+84
+00:07:47,360 --> 00:07:53,000
+So the carrier frequency and power transfer are one of the analog characteristics of the communication
+
+85
+00:07:53,000 --> 00:07:55,130
+between the PCD and the PCC.
+
+86
+00:07:56,210 --> 00:08:04,400
+The carrier frequency, which characterizes by FC of an RFID system, as defined by the ISO 14 443,
+
+87
+00:08:04,400 --> 00:08:08,780
+is 1350 six megahertz plus -seven kilohertz.
+
+88
+00:08:08,870 --> 00:08:16,550
+The carrier is used to supply power to the PCC via transformer coupling and the resulting induced voltage.
+
+89
+00:08:16,790 --> 00:08:22,010
+The modulation of the carrier signal allows the PCD to transmit information to the PCC.
+
+90
+00:08:22,850 --> 00:08:27,470
+So from PCD to PAC, we use the modulation of the carrier.
+
+91
+00:08:29,060 --> 00:08:37,159
+The PCD or a reader shall generate a field of at least h mean and not exceeding h max at manufacturer
+
+92
+00:08:37,159 --> 00:08:39,470
+specified positions or operating volume.
+
+93
+00:08:40,789 --> 00:08:45,080
+The PAC shall operate as intended continuously between H, min, and max.
+
+94
+00:08:45,080 --> 00:08:51,200
+This includes all PAC requirements defined in the standard and processing of the manufacturer specified
+
+95
+00:08:51,200 --> 00:08:52,130
+set of commands.
+
+96
+00:08:52,970 --> 00:08:57,710
+The values of H, min, and max are the following for each class.
+
+97
+00:08:58,010 --> 00:09:01,580
+As you can see here in this table we have a niche mean and h max.
+
+98
+00:09:01,580 --> 00:09:05,780
+For example, for class one is from 1.5 to 7.5.
+
+99
+00:09:05,930 --> 00:09:11,330
+For class three it's from 1.5 to 8 point 5 ampere/m, the same as class two.
+
+100
+00:09:11,780 --> 00:09:18,260
+And then in the end from for class six, it's from 4.5A/m to 18 ampere/m.
+
+101
+00:09:18,470 --> 00:09:25,370
+As we have seen earlier, when we go higher in the number of the class, we go lower on the size of
+
+102
+00:09:25,370 --> 00:09:27,860
+the antenna, the dimensions of the antenna.
+
+103
+00:09:28,790 --> 00:09:35,390
+In fact, a card, for example, in a class one card, an ID one card based on the ISO standard, it
+
+104
+00:09:35,390 --> 00:09:37,370
+should work from h mean to h max.
+
+105
+00:09:37,370 --> 00:09:40,550
+So from one 5 ampere/m to 7.5A/m.
+
+106
+00:09:40,550 --> 00:09:50,720
+But usually the manufacturer fabricate this card to be able to support or to boot by a field value lower
+
+107
+00:09:50,720 --> 00:09:55,130
+than 1.5 can be 0.8 0.51A/m.
+
+108
+00:10:02,170 --> 00:10:07,750
+So let's think is the communication speed or let's say the bit rate.
+
+109
+00:10:07,750 --> 00:10:10,750
+When you have a look in the standard you don't find the word speed.
+
+110
+00:10:10,750 --> 00:10:12,640
+It's mostly bit rate.
+
+111
+00:10:12,640 --> 00:10:20,470
+So the bit rate when communication is being initialized is is 106kbps, which corresponds to the quotient
+
+112
+00:10:20,470 --> 00:10:22,060
+fc divided by 128.
+
+113
+00:10:22,060 --> 00:10:25,720
+So 1350 six megahertz divided by 128.
+
+114
+00:10:26,140 --> 00:10:29,770
+After initialization, the following bit rates are available.
+
+115
+00:10:29,770 --> 00:10:37,120
+Depending on the pick function, it means that the first part of the communication before we start exchanging
+
+116
+00:10:37,120 --> 00:10:39,790
+information is done at 106 kilobit per second.
+
+117
+00:10:39,790 --> 00:10:46,660
+Whatever the type of the communication, type A or type B, there is specific, specific response that
+
+118
+00:10:46,660 --> 00:10:51,970
+gives us information about the bitrates or the speeds supported by the pack or the card.
+
+119
+00:10:51,970 --> 00:10:58,150
+And there is a specific protocol that the PCD and the pack perform to agree on a specific bitrate.
+
+120
+00:10:58,150 --> 00:10:59,830
+To continue the communication with.
+
+121
+00:11:00,370 --> 00:11:04,600
+So here, in fact, in the ISO standard we have seven values of the speed.
+
+122
+00:11:05,380 --> 00:11:13,510
+Basically the communication between a reader and a car start always at 106 at 106, until we reach the
+
+123
+00:11:13,510 --> 00:11:17,560
+exchange of information, until we reach the exchange of I blocks.
+
+124
+00:11:18,310 --> 00:11:26,620
+So first we have 106 kilobit per second, 212 kilobit per second, for 24 kilobit per second and eight
+
+125
+00:11:26,620 --> 00:11:27,820
+48 kilobit per second.
+
+126
+00:11:27,850 --> 00:11:31,180
+These are the normal bit rates in the standard.
+
+127
+00:11:31,180 --> 00:11:32,710
+You will find them in this way.
+
+128
+00:11:33,640 --> 00:11:44,470
+Then we have the higher speeds which are called very high baud rate, which are 1.7mbps, 3.4mbps and
+
+129
+00:11:44,470 --> 00:11:46,120
+6.8mbps.
+

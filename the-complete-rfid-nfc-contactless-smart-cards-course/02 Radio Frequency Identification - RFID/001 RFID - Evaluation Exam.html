@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 70, "questions": [{"_class": "assessment", "id": 89417493, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What does RFID stand for?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["RFID stands for Radio Frequency Identification, a technology used to identify and track objects using radio waves.", "", "", ""], "answers": ["<p>Radio-Frequency Identification</p>", "<p>Radio-Frequency Information Device</p>", "<p>Radio-Frequency Interface</p>", "<p>Radio-Frequency Integration Device</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What does RFID stand for?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89417509, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is a key component of an RFID system?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID Reader</p>", "<p>RFID Tag</p>", "<p>RFID Antenna</p>", "<p>All of the above</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following is a key component of an RFID system?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89417521, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What type of RFID tag requires a battery to function?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>Passive RFID Tag</p>", "<p>Active RFID Tag</p>", "<p>Semi-Passive RFID Tag</p>", "<p>None of the above</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What type of RFID tag requires a battery to function?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89417525, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical frequency range for RFID systems used in contactless payment cards?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>125 kHz</p>", "<p>13.56 MHz</p>", "<p>433 MHz</p>", "<p>2.45 GHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the typical frequency range for RFID systems used in contactless payment cards?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89417533, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which RFID technology is most commonly used in supply chain management?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>Low-Frequency RFID</p>", "<p>High-Frequency RFID</p>", "<p>Ultra-High-Frequency RFID</p>", "<p>Microwave RFID</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which RFID technology is most commonly used in supply chain management?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89805251, "assessment_type": "multiple-choice", "prompt": {"question": "<p>RFID operates using which type of technology?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>Infrared</p>", "<p>Radio waves</p>", "<p>Magnetic fields</p>", "<p>Sound waves</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "RFID operates using which type of technology?", "related_lectures": []}, {"_class": "assessment", "id": 89805257, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following applications uses RFID?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>Contactless payment systems</p>", "<p>Warehouse inventory tracking</p>", "<p>Animal identification</p>", "<p>All of the above</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following applications uses RFID?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89805353, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which part of the RFID system generates the electromagnetic field to communicate with tags?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID tag</p>", "<p>RFID reader</p>", "<p>Antenna</p>", "<p>Microprocessor</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which part of the RFID system generates the electromagnetic field to communicate with tags?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 89805361, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is a characteristic of active RFID tags?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>They do not have an internal battery</p>", "<p>They are less expensive than passive RFID tags</p>", "<p>They have a longer range compared to passive RFID tags</p>", "<p>They cannot store data</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is a characteristic of active RFID tags?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 89805369, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the primary security concern with RFID systems?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>Battery life of active tags</p>", "<p>Signal interference</p>", "<p>Unauthorized reading of RFID tags</p>", "<p>Difficulty in scanning multiple tags</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the primary security concern with RFID systems?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 89805377, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which method can be used to prevent unauthorized reading of RFID tags?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>Using RFID blockers</p>", "<p>Encrypting the data stored on the tag</p>", "<p>Placing the tag in a Faraday cage</p>", "<p>All of the above</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which method can be used to prevent unauthorized reading of RFID tags?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 89805387, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following technologies is most similar to RFID?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>GPS</p>", "<p>QR codes</p>", "<p>Bluetooth</p>", "<p>Wi-Fi</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following technologies is most similar to RFID?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 89849227, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is RFID anti-collision technology?</strong></p>", "relatedLectureIds": ["43040256"], "feedbacks": ["", "", "", ""], "answers": ["<p>Technology that prevents RFID tags from crashing into each other</p>", "<p>A system to avoid interference from other radio frequencies</p>", "<p>Technology that allows multiple tags to be read simultaneously without interference</p>", "<p>A system to block unauthorized readers</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is RFID anti-collision technology?", "related_lectures": [{"_class": "lecture", "id": 43040256, "title": "Advanced Presentation of a Full Type A Communication", "created": "2024-03-28T14:06:30Z", "is_published": true, "asset": {"_class": "asset", "id": 56913690, "asset_type": "Video", "title": "Advanced Presentation of a Full Type A Communication.mp4", "created": "2024-05-30T20:22:35Z"}, "object_index": 20, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040256"}]}, {"_class": "assessment", "id": 89849237, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is an advantage of RFID-enabled smart shelves in retail?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>They can provide real-time stock updates</p>", "<p>They require manual counting</p>", "<p>They reduce the need for price labels</p>", "<p>They prevent theft automatically</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which of the following is an advantage of RFID-enabled smart shelves in retail?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747665, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID tags can be read through obstacles such as plastic and wood.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID tags can be read through obstacles such as plastic and wood.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747699, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Passive RFID tags have a longer read range compared to active RFID tags.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Passive RFID tags have a longer read range compared to active RFID tags.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747703, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID technology is used in contactless payment systems to speed up transactions.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID technology is used in contactless payment systems to speed up transactions.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747707, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID tags contain a power source and can transmit signals without external assistance.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "RFID tags contain a power source and can transmit signals without external assistance.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747711, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID is commonly used for animal tracking and identification.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID is commonly used for animal tracking and identification.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92747817, "assessment_type": "multiple-choice", "prompt": {"question": "<p>RFID can be used for real-time location systems (RTLS) to track the movement of objects or people within a specific area.</p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID can be used for real-time location systems (RTLS) to track the movement of objects or people within a specific area.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92748009, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Active RFID tags are used in applications where continuous data logging is required, such as in temperature-sensitive shipments.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Active RFID tags are used in applications where continuous data logging is required, such as in temperature-sensitive shipments.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92748013, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID can be integrated with the Internet of Things (IoT) to provide real-time tracking of assets.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID can be integrated with the Internet of Things (IoT) to provide real-time tracking of assets.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92748139, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID systems can work in environments where barcodes are unreadable, such as in dirty or rugged conditions.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "RFID systems can work in environments where barcodes are unreadable, such as in dirty or rugged conditions.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92748173, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>NFC (Near Field Communication) is a subset of RFID technology.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "NFC (Near Field Communication) is a subset of RFID technology.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92749275, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Passive RFID tags do not require a battery to function</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True </p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Passive RFID tags do not require a battery to function", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 92749283, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID technology only works when there is direct line of sight between the reader and the tag.</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "RFID technology only works when there is direct line of sight between the reader and the tag.", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 98217747, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which component is NOT part of an RFID system?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID tag</p>", "<p>Reader</p>", "<p>Antenna</p>", "<p>Barcode scanner</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which component is NOT part of an RFID system?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 98217751, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What type of memory is commonly used in RFID tags?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>RAM</p>", "<p>ROM</p>", "<p>EEPROM</p>", "<p>DRAM</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What type of memory is commonly used in RFID tags?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 98217757, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the primary purpose of an RFID reader?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "", ""], "answers": ["<p>Write data to an RFID tag</p>", "<p>Power the RFID system</p>", "<p>Receive and interpret data from RFID tags</p>", "<p>Encrypt RFID signals</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the primary purpose of an RFID reader?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 98217763, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which RFID tag type is most suitable for long-range applications?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "", ""], "answers": ["<p>Passive</p>", "<p>Active</p>", "<p>Semi-passive</p>", "<p>Low-frequency</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which RFID tag type is most suitable for long-range applications?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 100400431, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is NOT a component of an RFID system?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "Barcodes are a separate identification technology. RFID systems consist of tags, readers, and antennas."], "answers": ["<p>Tag</p>", "<p>Reader</p>", "<p>Barcode</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is NOT a component of an RFID system?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400451, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What type of energy is used in RFID systems to communicate?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "RFID systems use radio waves to transmit data between tags and readers.", ""], "answers": ["<p>Sound waves</p>", "<p>Radio waves</p>", "<p>Infrared waves</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What type of energy is used in RFID systems to communicate?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400459, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is a type of RFID tag?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["", "", "RFID tags can be active (with a battery) or passive (without a battery)."], "answers": ["<p>Active</p>", "<p>Passive</p>", "<p>Both A and B</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is a type of RFID tag?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 100400469, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the main difference between active and passive RFID tags?</strong></p>", "relatedLectureIds": ["39578560"], "feedbacks": ["Active tags have a built-in power source, while passive tags rely on the reader to power them.", "", ""], "answers": ["<p>Active tags have a battery, passive tags do not.</p>", "<p>Passive tags are reusable, active tags are not.</p>", "<p>Active tags are smaller than passive tags.</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the main difference between active and passive RFID tags?", "related_lectures": [{"_class": "lecture", "id": 39578560, "title": "Advanced Technical Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:25Z", "is_published": true, "asset": {"_class": "asset", "id": 54677920, "asset_type": "Video", "title": "Advanced Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T15:09:39Z"}, "object_index": 5, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578560"}]}, {"_class": "assessment", "id": 100400485, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What frequency range is typically used in Ultra-High Frequency (UHF) RFID systems?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "UHF RFID systems operate in the 860-960 MHz range, providing longer read ranges."], "answers": ["<p>125-134 kHz</p>", "<p>13.56 MHz</p>", "<p>860-960 MHz</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What frequency range is typically used in Ultra-High Frequency (UHF) RFID systems?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400631, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which company is known for implementing RFID in retail supply chains?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", ""], "answers": ["<p>Amazon</p>", "<p>Walmart</p>", "<p>Tesla</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which company is known for implementing RFID in retail supply chains?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400645, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which application uses RFID to manage livestock?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", ""], "answers": ["<p>Toll collection</p>", "<p>Asset tracking</p>", "<p>Animal identification</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which application uses RFID to manage livestock?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400665, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is a key benefit of using RFID over barcodes?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "Unlike barcodes, RFID tags can store more data and do not require line-of-sight scanning.", ""], "answers": ["<p>RFID requires line-of-sight scanning</p>", "<p>RFID can store more data</p>", "<p>RFID tags are cheaper</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is a key benefit of using RFID over barcodes?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400673, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which ISO standard is related to high-frequency RFID?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "ISO 14443 and ISO 15693 are standards for high-frequency RFID systems."], "answers": ["<p>ISO 14443</p>", "<p>ISO 15693</p>", "<p>Both ISO14443 and ISO15693</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which ISO standard is related to high-frequency RFID?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}, {"_class": "assessment", "id": 100400675, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical frequency range of Low Frequency (LF) RFID systems?</strong></p>", "relatedLectureIds": ["39578558"], "feedbacks": ["", "", "LF RFID systems operate in the 125-134 kHz range and are commonly used for animal tracking."], "answers": ["<p>13.56 MHz</p>", "<p>860-960 MHz</p>", "<p>125-134 kHz</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the typical frequency range of Low Frequency (LF) RFID systems?", "related_lectures": [{"_class": "lecture", "id": 39578558, "title": "Introduction to Radio Frequency Identification", "created": "2023-08-28T10:08:01Z", "is_published": true, "asset": {"_class": "asset", "id": 54676406, "asset_type": "Video", "title": "Introduction to Radio Frequency Identification.mp4", "created": "2024-02-15T14:05:28Z"}, "object_index": 4, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/39578558"}]}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+1
+00:00:00,700 --> 00:00:06,880
+Hello again in this new section about the digital aspects of the NFC communication.
+
+2
+00:00:07,630 --> 00:00:14,380
+So through the section I will present the different digital aspects of the NFC communication between
+
+3
+00:00:14,380 --> 00:00:15,940
+the PAC and the PCD.
+
+4
+00:00:16,180 --> 00:00:18,910
+I mean between a card and a reader.
+
+5
+00:00:19,900 --> 00:00:26,260
+In fact, in this first presentation of this section, I will talk about the progress of a type A communication.
+
+6
+00:00:27,010 --> 00:00:36,130
+As you have seen before, the ISO 14,443 presents two different types of communication type A and type
+
+7
+00:00:36,160 --> 00:00:36,490
+B.
+
+8
+00:00:36,760 --> 00:00:43,060
+When we talk about digital aspects, we talk about comments from the reader and answers from the cards.
+
+9
+00:00:43,450 --> 00:00:51,880
+So we talk about bytes, we talk about timings, we talk about returns of each and form of each command
+
+10
+00:00:51,880 --> 00:00:52,990
+and each answer.
+
+11
+00:00:52,990 --> 00:00:55,180
+We talk about exchange of information.
+
+12
+00:00:55,180 --> 00:01:04,030
+We talk about uh, uh, responses and comments that give us information about the speed, the timings,
+
+13
+00:01:04,030 --> 00:01:06,460
+the UID, etc., etc..
+
+14
+00:01:09,890 --> 00:01:15,320
+So first of all, here is an example of the sequence of a type A communication.
+
+15
+00:01:15,350 --> 00:01:19,400
+So first of all the first state is the power of state.
+
+16
+00:01:19,970 --> 00:01:27,170
+So when we don't have a card and we don't in the field and we don't have the field activated, so then
+
+17
+00:01:27,170 --> 00:01:33,440
+when we activate the field and we put the card into the field, we pass to the idle state.
+
+18
+00:01:34,100 --> 00:01:37,310
+So this is the second state of the communication of the sequence.
+
+19
+00:01:37,610 --> 00:01:42,650
+Then once done we will we will send the first command.
+
+20
+00:01:42,650 --> 00:01:45,050
+It's a request a or a wake up a.
+
+21
+00:01:45,050 --> 00:01:50,990
+We will go through these type these commands and this answer in the next presentation.
+
+22
+00:01:52,860 --> 00:02:01,200
+So when we are in the idle state, the reader will send a first command, which is a request A or A
+
+23
+00:02:01,200 --> 00:02:05,310
+wake up, a req, a WPA.
+
+24
+00:02:05,610 --> 00:02:10,530
+Then the answer to this command will be the atca the answer from the card.
+
+25
+00:02:11,009 --> 00:02:16,860
+Once done, the card will go to the ready state inside the ready state.
+
+26
+00:02:16,890 --> 00:02:21,000
+We will do the phenomenon called the phenomenon of anti-collision.
+
+27
+00:02:21,360 --> 00:02:28,560
+It's the phenomenon that we will will be applied or will be very useful when we have many cards into
+
+28
+00:02:28,560 --> 00:02:29,250
+the field.
+
+29
+00:02:29,880 --> 00:02:35,460
+Once done, the reader will send the select command in order to select the card.
+
+30
+00:02:36,060 --> 00:02:39,360
+The answer to this select command will be the sack.
+
+31
+00:02:39,390 --> 00:02:41,070
+Select acknowledgment.
+
+32
+00:02:42,120 --> 00:02:50,070
+Once done, the card will move to the active state and then the reader will send the Arete's command
+
+33
+00:02:50,070 --> 00:02:56,850
+request to answer to select and the answer for that from the card will be ATS answer to select.
+
+34
+00:02:57,420 --> 00:03:03,090
+And in the end we will have the protocol state, which is the protocol.
+
+35
+00:03:03,090 --> 00:03:06,870
+We will perform the PS command and the PS response.
+
+36
+00:03:06,870 --> 00:03:14,580
+And this command response will be the protocol exchange, where we will select the speed that we will
+
+37
+00:03:14,580 --> 00:03:16,770
+use for the rest of the communication.
+
+38
+00:03:17,520 --> 00:03:23,850
+So as we have seen before, there are several for normal types of bitrates.
+
+39
+00:03:23,850 --> 00:03:29,910
+For values of the speed 106, 212 for 24 and 848.
+
+40
+00:03:30,030 --> 00:03:36,600
+The choice of this speed will be done inside this protocol state.
+
+41
+00:03:39,570 --> 00:03:45,090
+So here I'm presenting from through this table the communication sequence.
+
+42
+00:03:45,750 --> 00:03:49,830
+So as I said the first stage is the power of here.
+
+43
+00:03:49,830 --> 00:03:53,070
+The card is not powered by a reader operating field.
+
+44
+00:03:53,640 --> 00:03:59,610
+Second we have the idle state where the card is powered and waiting for commands.
+
+45
+00:03:59,610 --> 00:04:01,530
+Request a or wake up a.
+
+46
+00:04:02,130 --> 00:04:07,590
+Third, we have the ready state where the Anti-collision method should be applied.
+
+47
+00:04:08,190 --> 00:04:15,750
+Fourth, we have the active state where the card should be ready to accept the protocol activation command
+
+48
+00:04:15,780 --> 00:04:19,050
+or ATS request to answer to select.
+
+49
+00:04:19,410 --> 00:04:27,150
+And finally, the protocol state, which is the protocol negotiation and the data block transmission
+
+50
+00:04:27,150 --> 00:04:28,560
+may be performed.
+
+51
+00:04:32,640 --> 00:04:36,120
+So here is an example of a communication sequence.
+
+52
+00:04:36,120 --> 00:04:39,150
+So as I said first of all we have the power of state.
+
+53
+00:04:39,990 --> 00:04:41,850
+Then we will activate the field.
+
+54
+00:04:42,180 --> 00:04:46,050
+The card will be in the idle state.
+
+55
+00:04:46,170 --> 00:04:52,350
+Once done we will send a request A or a wake up A, so the card will move to the ready state.
+
+56
+00:04:52,350 --> 00:04:55,620
+Inside the ready state, we will perform the Anti-collision.
+
+57
+00:04:56,130 --> 00:04:59,580
+Once done, the reader will send the select command.
+
+58
+00:04:59,580 --> 00:05:05,520
+So the card will go to the active state and then the.
+
+59
+00:05:05,820 --> 00:05:12,870
+The reader will send the ATS request to answer to select, and after that, the card will go into the
+
+60
+00:05:12,870 --> 00:05:19,800
+protocol state where we will perform the the speed negotiation and the block transmissions.
+

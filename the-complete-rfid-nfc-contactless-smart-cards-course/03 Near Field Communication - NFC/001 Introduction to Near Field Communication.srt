@@ -1,0 +1,316 @@
+1
+00:00:01,010 --> 00:00:09,890
+So in this third session I will be presenting the NFC technology, the near field communication technology.
+
+2
+00:00:15,110 --> 00:00:20,180
+So welcome to the exciting world of near-field communication, or NFC for short.
+
+3
+00:00:20,210 --> 00:00:26,450
+This cutting edge technology is revolutionizing the way we interact with our devices and the world around
+
+4
+00:00:26,450 --> 00:00:26,900
+us.
+
+5
+00:00:28,280 --> 00:00:35,420
+At its core, NFC is a wireless communication technology that allows two devices to communicate with
+
+6
+00:00:35,420 --> 00:00:38,600
+each other when they are brought into close proximity.
+
+7
+00:00:39,290 --> 00:00:46,220
+This means that you can use your smartphone to make payments, access secure areas, and transfer data
+
+8
+00:00:46,220 --> 00:00:49,490
+without ever having to physically touch another device.
+
+9
+00:00:50,240 --> 00:00:51,410
+Pretty cool right?
+
+10
+00:01:01,290 --> 00:01:06,960
+As I said before, it's a wireless communication technology that allows devices to communicate with
+
+11
+00:01:06,960 --> 00:01:10,410
+each other over very short distances.
+
+12
+00:01:11,760 --> 00:01:20,670
+It's a type of radio frequency identification RFID technology that can be used for a wide range of applications,
+
+13
+00:01:20,670 --> 00:01:24,060
+from contactless payments to public transportation.
+
+14
+00:01:25,440 --> 00:01:29,040
+I will detail the relation RFID, NFC in the next session.
+
+15
+00:01:30,480 --> 00:01:38,190
+So NFC is becoming increasingly important in modern technology because it offers a fast, secure and
+
+16
+00:01:38,190 --> 00:01:41,430
+convenient way to transmit information between devices.
+
+17
+00:01:42,660 --> 00:01:49,980
+Unlike other wireless communication methods such as Bluetooth and Wi-Fi, NFC requires very little power
+
+18
+00:01:49,980 --> 00:01:53,820
+and can be used even when the devices are not connected to the internet.
+
+19
+00:01:54,900 --> 00:02:02,580
+This makes it ideal for use in situations where speed and convenience are essential, such as mobile
+
+20
+00:02:02,580 --> 00:02:05,100
+payments and access control systems.
+
+21
+00:02:06,270 --> 00:02:13,530
+So what characterizes the NFC technology is that so wireless, easy to use and secure way of communication.
+
+22
+00:02:27,250 --> 00:02:30,100
+So what are the NFC communication methods?
+
+23
+00:02:31,360 --> 00:02:38,170
+NFC devices are unique in that they can change their mode of operation to be in reader or writer mode,
+
+24
+00:02:38,440 --> 00:02:40,990
+peer to peer mode, or card emulation mode.
+
+25
+00:02:41,980 --> 00:02:51,940
+The different operating modes are based on the ISO 18,092, NFC, IP, and ISO 14,443 contactless smart
+
+26
+00:02:51,940 --> 00:02:52,930
+card standards.
+
+27
+00:02:56,190 --> 00:02:58,140
+In the card emulation mode.
+
+28
+00:02:58,140 --> 00:03:03,240
+The NFC device works just like a regular passive RFID smart card.
+
+29
+00:03:04,260 --> 00:03:10,950
+Because of this, the NFC enabled mobile phones can be used for contactless payments, ticketing and
+
+30
+00:03:10,950 --> 00:03:18,120
+access control, and a lot of the existing infrastructure and processes can be reused in this mode.
+
+31
+00:03:18,120 --> 00:03:23,700
+The devices do not have to be powered, as the card emulation does not require support from the processor
+
+32
+00:03:24,420 --> 00:03:29,760
+or the US and will, if enabled, work when the phone is out of battery.
+
+33
+00:03:33,470 --> 00:03:35,930
+In the reader or writer mode.
+
+34
+00:03:35,960 --> 00:03:39,680
+The NFC device is capable of reading NFC tags.
+
+35
+00:03:40,340 --> 00:03:45,350
+The tag can contain various data, including a message or URL.
+
+36
+00:03:45,680 --> 00:03:51,500
+This option can be utilized for advertising, much the same as 2D barcodes.
+
+37
+00:03:51,770 --> 00:03:59,240
+Poster or flyer can be scanned by an NFC phone, and the customer is taken to a website, advertisement
+
+38
+00:03:59,240 --> 00:04:00,830
+coupon or a like.
+
+39
+00:04:04,610 --> 00:04:09,860
+In the peer to peer mode, two NFC devices can exchange data.
+
+40
+00:04:10,070 --> 00:04:15,710
+For example, it can be used for setting up a Bluetooth connection by just tapping the devices.
+
+41
+00:04:15,920 --> 00:04:22,610
+It can also be used for exchanging contacts like virtual business cards and digital photos.
+
+42
+00:04:28,180 --> 00:04:31,450
+So what are the advantages of this technology?
+
+43
+00:04:31,990 --> 00:04:35,710
+NFC has several advantages over Bluetooth and Wi-Fi.
+
+44
+00:04:36,460 --> 00:04:40,660
+Firstly, it's much faster than Bluetooth when it comes to data transfer.
+
+45
+00:04:41,440 --> 00:04:47,740
+With NFC, you can transfer data at a rate of up to 848 Kilobit per second.
+
+46
+00:04:49,020 --> 00:04:55,170
+When I say kilobit per second, I mean I'm talking about the bit rate, the speed of communication.
+
+47
+00:04:55,170 --> 00:04:57,240
+This is the unit that we will be using.
+
+48
+00:04:58,020 --> 00:05:05,910
+So with NFC, you can transfer data at a rate of up to 848 kilobit per second, which is about four
+
+49
+00:05:05,910 --> 00:05:07,410
+times faster than Bluetooth.
+
+50
+00:05:08,130 --> 00:05:12,510
+I will present the different bit rates supported by NFC devices in the fourth section.
+
+51
+00:05:13,530 --> 00:05:18,480
+Secondly, NFC is more secure than both Wi-Fi and Bluetooth.
+
+52
+00:05:19,140 --> 00:05:25,740
+This is because NFC requires close proximity between devices, making it harder for hackers to intercept
+
+53
+00:05:25,740 --> 00:05:27,270
+the data being transferred.
+
+54
+00:05:27,720 --> 00:05:32,760
+Finally, NFC is more energy efficient than Wi-Fi and Bluetooth.
+
+55
+00:05:33,180 --> 00:05:39,600
+This means that devices using NFC have longer battery life compared to those using Wi-Fi or Bluetooth.
+
+56
+00:05:44,390 --> 00:05:49,220
+Real world examples of NFC's advantages can be seen in mobile payments.
+
+57
+00:05:50,150 --> 00:05:56,720
+NFC enabled smartphones can be used to make quick and secure transactions at various merchants.
+
+58
+00:05:57,410 --> 00:06:04,070
+This technology has made it easier and more convenient for consumers to make purchases without having
+
+59
+00:06:04,070 --> 00:06:05,720
+to carry cash or cards.
+
+60
+00:06:06,200 --> 00:06:08,930
+Another example is access control systems.
+
+61
+00:06:09,590 --> 00:06:16,730
+NFC enabled ID cards can be used to grant access to restricted areas, making it more secure and efficient
+
+62
+00:06:16,730 --> 00:06:18,770
+than traditional key based systems.
+
+63
+00:06:25,420 --> 00:06:28,000
+So what about the future of this technology?
+
+64
+00:06:28,180 --> 00:06:32,530
+As we look to the future, the potential of NFC is truly limitless.
+
+65
+00:06:33,040 --> 00:06:40,750
+With advancements in technology and increasing adoption rates, NFC has the potential to revolutionize
+
+66
+00:06:40,750 --> 00:06:43,450
+the way we interact with the world around us.
+
+67
+00:06:44,260 --> 00:06:50,050
+Imagine a world where your smartphone can unlock your front door, pay for your morning coffee, and
+
+68
+00:06:50,050 --> 00:06:52,750
+even start your car all with just a tap.
+
+69
+00:06:52,930 --> 00:06:59,410
+This is the kind of future that NFC is paving the way for, and it's an exciting time to be a part of
+
+70
+00:06:59,410 --> 00:07:01,600
+this rapidly evolving industry.
+
+71
+00:07:06,890 --> 00:07:11,150
+So here is the summary of this presentation.
+
+72
+00:07:11,150 --> 00:07:16,430
+In fact, NFC is a wireless communication technology that allows two devices to communicate with each
+
+73
+00:07:16,430 --> 00:07:19,190
+other when they are brought into close proximity.
+
+74
+00:07:21,120 --> 00:07:27,300
+It's a type of radio frequency identification technology that can be used for a wide range of applications,
+
+75
+00:07:27,300 --> 00:07:30,870
+from contactless payments to public transportation.
+
+76
+00:07:31,260 --> 00:07:38,010
+There are three modes of operation mode to be in read or writer mode, peer to peer mode, or card emulation
+
+77
+00:07:38,010 --> 00:07:38,490
+mode.
+
+78
+00:07:39,030 --> 00:07:45,510
+NFC has several advantages over Bluetooth and Wi-Fi, and NFC has the potential to revolutionize the
+
+79
+00:07:45,510 --> 00:07:47,700
+way we interact with the world around us.
+

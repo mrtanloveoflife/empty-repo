@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 60, "questions": [{"_class": "assessment", "id": 100104721, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What does RFID stand for?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Radio-Frequency Identification</p>", "<p>Radio-Frequency Information Device</p>", "<p>Radio-Frequency Interface</p>", "<p>Radio-Frequency Integration Device</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What does RFID stand for?", "related_lectures": []}, {"_class": "assessment", "id": 100104723, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is a key component of an RFID system?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID Reader</p>", "<p>RFID Tag</p>", "<p>RFID Antenna</p>", "<p>All of the above</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following is a key component of an RFID system?", "related_lectures": []}, {"_class": "assessment", "id": 100104725, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><u-blank data-order=\"0\"></u-blank>RFID Tag requires a battery to function.</p>", "relatedLectureIds": [], "links": []}, "correct_response": ["Active"], "section": "", "question_plain": "__RFID Tag requires a battery to function.", "related_lectures": []}, {"_class": "assessment", "id": 100104813, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How many layers for ISO14443</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", "<p>We have 4 layers in ISO14443:</p><p>ISO14443-1, ISO14443-2, ISO14443-3, ISO14443-4</p><p>ISO14443-1 and ISO14443-2 presents the analog aspects of the communication</p><p>ISO14443-3 and ISO14443-4 presents the digital aspects of the communication</p>"], "answers": ["<p>1</p>", "<p>2</p>", "<p>3</p>", "<p>4</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "How many layers for ISO14443", "related_lectures": []}, {"_class": "assessment", "id": 100104727, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical frequency range for RFID systems used in contactless payment cards?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>125 kHz</p>", "<p>13.56 MHz</p>", "<p>433 MHz</p>", "<p>2.45 GHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the typical frequency range for RFID systems used in contactless payment cards?", "related_lectures": []}, {"_class": "assessment", "id": 100104729, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What does NFC stand for?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Near Field Communication</p>", "<p>Network Field Communication</p>", "<p>Near Frequency Communication</p>", "<p>Network Frequency Communication</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What does NFC stand for?", "related_lectures": []}, {"_class": "assessment", "id": 100104809, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The value fc/128 of the bitrate (speed) of the communication is equal to:</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>fc/128 = 106 kbit/s</p><p>fc/64 = 212 kbit/s</p><p>fc/32 = 424 kbit/s</p><p>fc/16 = 848 kbit/s</p>", "", ""], "answers": ["<p>60 kbit/s</p>", "<p>106 kbit/s</p>", "<p>212 kbit/s</p>", "<p>424 kbit/s</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "The value fc/128 of the bitrate (speed) of the communication is equal to:", "related_lectures": []}, {"_class": "assessment", "id": 100104731, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Passive RFID tags do not require a battery to function.</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Passive RFID tags do not require a battery to function.", "related_lectures": []}, {"_class": "assessment", "id": 100104733, "assessment_type": "multiple-choice", "prompt": {"question": "<p>RFID operates using which type of technology?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Infrared</p>", "<p>Radio waves</p>", "<p>Magnetic fields</p>", "<p>Sound waves</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "RFID operates using which type of technology?", "related_lectures": []}, {"_class": "assessment", "id": 100104811, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the maximum value of the field (Hmax) supported by a class 2 antenna?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>There are 6 classes of the antenna.</p><p>For each antenna class, there is a corresponding field range.</p><p>For example, for class 1 antenna, the field range is 1.5 to 7.5 A/m</p><p>For class 2 antenna, the field range is 1.5 to 8.5 A/m</p>", "", ""], "answers": ["<p>7.5 A/m</p>", "<p>8.5 A/m</p>", "<p>12 A/m</p>", "<p>14 A/m</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the maximum value of the field (Hmax) supported by a class 2 antenna?", "related_lectures": []}, {"_class": "assessment", "id": 100104735, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Active RFID tags have a longer read range compared to passive tags.</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Active RFID tags have a longer read range compared to passive tags.", "related_lectures": []}, {"_class": "assessment", "id": 100104737, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p>RFID <u-blank data-order=\"0\"></u-blank> generates the electromagnetic field to communicate with tags.</p>", "relatedLectureIds": [], "links": []}, "correct_response": ["Readers"], "section": "", "question_plain": "RFID __ generates the electromagnetic field to communicate with tags.", "related_lectures": []}, {"_class": "assessment", "id": 100104739, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which frequency band is typically used for long-range RFID applications like toll collection?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Low Frequency (LF)</p>", "<p>High Frequency (HF)</p>", "<p>Ultra High Frequency (UHF)</p>", "<p>Microwave</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which frequency band is typically used for long-range RFID applications like toll collection?", "related_lectures": []}, {"_class": "assessment", "id": 100104741, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How does RFID differ from barcode technology?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID requires line of sight, while barcodes do not</p>", "<p>RFID can scan multiple items at once, while barcodes are scanned one at a time</p>", "<p>Barcodes have longer read ranges than RFID</p>", "<p>RFID technology is older than barcode technology</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "How does RFID differ from barcode technology?", "related_lectures": []}, {"_class": "assessment", "id": 100104743, "assessment_type": "multiple-choice", "prompt": {"question": "<p>NFC (Near Field Communication) is a subset of RFID technology.</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "NFC (Near Field Communication) is a subset of RFID technology.", "related_lectures": []}, {"_class": "assessment", "id": 100104745, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following technologies is most similar to RFID?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>GPS</p>", "<p>QR codes</p>", "<p>Bluetooth</p>", "<p>Wi-Fi</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following technologies is most similar to RFID?", "related_lectures": []}, {"_class": "assessment", "id": 100104747, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is RFID anti-collision technology?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Technology that prevents RFID tags from crashing into each other</p>", "<p>A system to avoid interference from other radio frequencies</p>", "<p>Technology that allows multiple tags to be read simultaneously without interference</p>", "<p>A system to block unauthorized readers</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is RFID anti-collision technology?", "related_lectures": []}, {"_class": "assessment", "id": 100104749, "assessment_type": "multi-select", "prompt": {"question": "<p><strong>Which part of ISO 14443 specifies the protocol for communication between contactless cards and readers?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>ISO 14443-A</p>", "<p>ISO 14443-B</p>", "<p>ISO 14443-C</p>", "<p>ISO 14443-D</p>"]}, "correct_response": ["a", "b"], "section": "", "question_plain": "Which part of ISO 14443 specifies the protocol for communication between contactless cards and readers?", "related_lectures": []}, {"_class": "assessment", "id": 100104751, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>ISO 14443 is commonly used in which of the following applications?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Long-range vehicle tracking</p>", "<p>Contactless payment systems</p>", "<p>GPS navigation</p>", "<p>Satellite communications</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "ISO 14443 is commonly used in which of the following applications?", "related_lectures": []}, {"_class": "assessment", "id": 100104753, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong><u-blank data-order=\"0\"></u-blank> centimeters is the maximum communication range of ISO 14443 cards.</strong></p>", "relatedLectureIds": [], "links": []}, "correct_response": ["10"], "section": "", "question_plain": "__ centimeters is the maximum communication range of ISO 14443 cards.", "related_lectures": []}, {"_class": "assessment", "id": 100104841, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p>A <strong><u-blank data-order=\"0\"></u-blank> </strong> is the reader or initiator of the communication, while a PICC (Proximity Integrated Circuit Card) is the passive device that responds to the reader\u2019s signals. The <strong><u-blank data-order=\"1\"></u-blank> </strong> generates an electromagnetic field to power and communicate with the PICC.</p>", "relatedLectureIds": [], "links": []}, "correct_response": ["PCD", "PCD"], "section": "", "question_plain": "A __  is the reader or initiator of the communication, while a PICC (Proximity Integrated Circuit Card) is the passive device that responds to the reader\u2019s signals. The __  generates an electromagnetic field to power and communicate with the PICC.", "related_lectures": []}, {"_class": "assessment", "id": 100104843, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong>Load <u-blank data-order=\"0\"></u-blank> is a technique used in NFC communication where the passive device (PICC) changes the load on the electromagnetic field generated by the active device (PCD) to transfer data. This modulation is detected by the reader as changes in the field.</strong></p>", "relatedLectureIds": [], "links": []}, "correct_response": ["modulation"], "section": "", "question_plain": "Load __ is a technique used in NFC communication where the passive device (PICC) changes the load on the electromagnetic field generated by the active device (PCD) to transfer data. This modulation is detected by the reader as changes in the field.", "related_lectures": []}, {"_class": "assessment", "id": 100104845, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong><u-blank data-order=\"0\"></u-blank> is a consortium that defines global standards for secure payment transactions, including contactless and NFC payments. It ensures interoperability and security across different payment systems and devices by establishing specifications for contactless cards and readers.</strong></p>", "relatedLectureIds": [], "links": []}, "correct_response": ["EMVCo"], "section": "", "question_plain": "__ is a consortium that defines global standards for secure payment transactions, including contactless and NFC payments. It ensures interoperability and security across different payment systems and devices by establishing specifications for contactless cards and readers.", "related_lectures": []}, {"_class": "assessment", "id": 100104847, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In NFC communication, what is the purpose of modulation?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>Modulation in NFC communication involves encoding information onto a carrier signal to facilitate data transmission between devices.</p>", ""], "answers": ["<p>To establish a secure connection between devices</p>", "<p>To transfer energy to the PICC</p>", "<p>To encode information onto a carrier signal</p>", "<p>To perform error correction</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "In NFC communication, what is the purpose of modulation?", "related_lectures": []}, {"_class": "assessment", "id": 100104849, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical Q Factor range for an RFID antenna?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>The Q Factor (Quality Factor) measures the efficiency of an RFID antenna. A typical range for RFID antennas is between 30 and 50, indicating how well the antenna stores energy.</p>", ""], "answers": ["<p>1-5</p>", "<p>10-20</p>", "<p>30-50</p>", "<p>100-200</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the typical Q Factor range for an RFID antenna?", "related_lectures": []}, {"_class": "assessment", "id": 100104851, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which NFC operating mode enables peer-to-peer communication?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>Peer-to-Peer Mode allows two NFC-enabled devices to exchange data directly, enabling functions such as file transfers and mobile payments.</p>", ""], "answers": ["<p>Card Emulation Mode</p>", "<p>Reader/Writer Mode</p>", "<p>Peer-to-Peer Mode</p>", "<p>Secure Element Mode</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which NFC operating mode enables peer-to-peer communication?", "related_lectures": []}, {"_class": "assessment", "id": 100104853, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is a key feature of an EMV contactless transaction?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>EMV contactless transactions use dynamic data authentication to enhance security and prevent fraud by ensuring that transaction data cannot be reused.</p>", ""], "answers": ["<p>Requires a physical PIN entry</p>", "<p>Uses a magnetic stripe for data storage</p>", "<p>Utilizes dynamic data authentication </p>", "<p>Requires direct contact with the card reader</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is a key feature of an EMV contactless transaction?", "related_lectures": []}, {"_class": "assessment", "id": 100104855, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which type of coupling is primarily used in NFC communication?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>NFC communication relies on magnetic coupling between the antennas of the PCD and the PICC to transfer energy and data.</p>", "", ""], "answers": ["<p>Electric coupling</p>", "<p>Magnetic coupling</p>", "<p>Optical coupling</p>", "<p>Capacitive coupling</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which type of coupling is primarily used in NFC communication?", "related_lectures": []}, {"_class": "assessment", "id": 100104857, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the main purpose of the Q Factor in an RFID system?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>The Q Factor measures how efficiently an RFID system stores and transfers energy, impacting the system's range and performance.</p>", "", ""], "answers": ["<p>To determine the size of the antenna</p>", "<p>To measure the energy efficiency of the system</p>", "<p>To calculate the data transmission rate</p>", "<p>To establish the communication protocol</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the main purpose of the Q Factor in an RFID system?", "related_lectures": []}, {"_class": "assessment", "id": 100104755, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>ISO 14443 specifies the physical characteristics and the data transmission protocol for contactless smart cards.</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "ISO 14443 specifies the physical characteristics and the data transmission protocol for contactless smart cards.", "related_lectures": []}, {"_class": "assessment", "id": 100104757, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong>The <u-blank data-order=\"0\"></u-blank> of 13.56 MHz is used in ISO 14443 because it provides a good balance between read range and data transfer speed, and it is widely accepted and standardized for short-range contactless communication.</strong></p>", "relatedLectureIds": [], "links": []}, "correct_response": ["frequency"], "section": "", "question_plain": "The __ of 13.56 MHz is used in ISO 14443 because it provides a good balance between read range and data transfer speed, and it is widely accepted and standardized for short-range contactless communication.", "related_lectures": []}, {"_class": "assessment", "id": 100104759, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In terms of data transmission, NFC cards typically use which encoding method?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Manchester encoding</p>", "<p>ASK (Amplitude Shift Keying)</p>", "<p>FSK (Frequency Shift Keying)</p>", "<p>BPSK (Binary Phase Shift Keying)</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "In terms of data transmission, NFC cards typically use which encoding method?", "related_lectures": []}, {"_class": "assessment", "id": 100104761, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which technology is most often used in combination with NFC for contactless payments?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>RFID tags</p>", "<p>EMV (Europay, Mastercard, and Visa)</p>", "<p>Bluetooth Low Energy</p>", "<p>Wi-Fi Direct</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which technology is most often used in combination with NFC for contactless payments?", "related_lectures": []}, {"_class": "assessment", "id": 100104763, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What type of data is typically stored on an NFC card for public transportation?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Personal identification numbers (PINs)</p>", "<p>Authentication certificates</p>", "<p>Ticketing or balance information</p>", "<p>Contact information</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What type of data is typically stored on an NFC card for public transportation?", "related_lectures": []}, {"_class": "assessment", "id": 100104765, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In an NFC transaction, which party usually initiates the communication?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>The NFC card</p>", "<p>The NFC reader</p>", "<p>A third-party system</p>", "<p>Both devices simultaneously</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In an NFC transaction, which party usually initiates the communication?", "related_lectures": []}, {"_class": "assessment", "id": 100104767, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong>The role of the Secure Element (SE) in NFC mobile payment systems is to <u-blank data-order=\"0\"></u-blank>&nbsp; sensitive data and manage secure transactions.</strong></p>", "relatedLectureIds": [], "links": []}, "correct_response": ["protect"], "section": "", "question_plain": "The role of the Secure Element (SE) in NFC mobile payment systems is to __&nbsp; sensitive data and manage secure transactions.", "related_lectures": []}, {"_class": "assessment", "id": 100104769, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following NFC standards defines the communication protocols for mobile payments?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>ISO/IEC 14443</p>", "<p>IEEE 802.11</p>", "<p>ISO/IEC 18092</p>", "<p>ISO/IEC 15693</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which of the following NFC standards defines the communication protocols for mobile payments?", "related_lectures": []}, {"_class": "assessment", "id": 100104771, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the definition of resonance frequency?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>The frequency at which a system oscillates with maximum amplitude</p>", "<p>The highest frequency a system can handle before failure</p>", "<p>The frequency at which a system starts to lose energy</p>", "<p>The frequency at which a system completely stops oscillating</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the definition of resonance frequency?", "related_lectures": []}, {"_class": "assessment", "id": 100104773, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is an example of resonance in a physical system?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>A car engine's RPM</p>", "<p>The natural frequency of a swinging pendulum</p>", "<p>The frequency of a radio signal</p>", "<p>The speed of a moving vehicle</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which of the following is an example of resonance in a physical system?", "related_lectures": []}, {"_class": "assessment", "id": 100104775, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In electronics, what component is typically used to adjust the resonance frequency of a circuit?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Resistor</p>", "<p>Capacitor</p>", "<p>Inductor</p>", "<p>Diode</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In electronics, what component is typically used to adjust the resonance frequency of a circuit?", "related_lectures": []}, {"_class": "assessment", "id": 100104777, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What Card's answer gives the information about the bit rates supported in each direction?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>ATQA</p>", "<p>Anticollision Response</p>", "<p>SAK</p>", "<p>ATS</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "What Card's answer gives the information about the bit rates supported in each direction?", "related_lectures": []}, {"_class": "assessment", "id": 100104779, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What block of communication is here to convey positive or negative acknowledgements</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", ""], "answers": ["<p>I-Block</p>", "<p>S-Block</p>", "<p>R-Block</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What block of communication is here to convey positive or negative acknowledgements", "related_lectures": []}, {"_class": "assessment", "id": 100104781, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the PICC operating field for class 1?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Between 1.5 A/m and 6.5 A/m</p>", "<p>Between 1.5 A/m and 7.5 A/m</p>", "<p>Between 1.5 A/m and 8.5 A/m</p>", "<p>Between 1.5 A/m and 9.5 A/m</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the PICC operating field for class 1?", "related_lectures": []}, {"_class": "assessment", "id": 100104783, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the primary purpose of EMVCo?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>To develop mobile phone technologies</p>", "<p>To create and maintain standards for secure payment transactions</p>", "<p>To manage global banking operations</p>", "<p>To regulate international trade</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the primary purpose of EMVCo?", "related_lectures": []}, {"_class": "assessment", "id": 100104785, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following companies is NOT a founding member of EMVCo?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", "<p>American Express is not a founding member of EMVCo, though it does use EMV standards.</p>"], "answers": ["<p>Europay</p>", "<p>MasterCard</p>", "<p>Visa</p>", "<p>American Express</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following companies is NOT a founding member of EMVCo?", "related_lectures": []}, {"_class": "assessment", "id": 100104815, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What block of communication is here to convey an information?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", ""], "answers": ["<p>I-Block</p>", "<p>R-Block</p>", "<p>S-Block</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What block of communication is here to convey an information?", "related_lectures": []}, {"_class": "assessment", "id": 100104787, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is one key feature of EMV chip technology?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Magnetic stripe encoding</p>", "<p>Contactless payment capability</p>", "<p>Secure data storage and encryption</p>", "<p>Voice recognition</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is one key feature of EMV chip technology?", "related_lectures": []}, {"_class": "assessment", "id": 100104789, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p><strong><u-blank data-order=\"0\"></u-blank> replaces sensitive card details with a unique identifier or token, which is used in place of actual card information during transactions. This protects card data from being exposed or intercepted, thus reducing the risk of data breaches and fraud.</strong></p>", "relatedLectureIds": [], "links": [], "explanation": "<p><strong>Tokenization replaces sensitive card details with a unique identifier or token, which is used in place of actual card information during transactions. This protects card data from being exposed or intercepted, thus reducing the risk of data breaches and fraud.</strong></p>"}, "correct_response": ["Tokenization"], "section": "", "question_plain": "__ replaces sensitive card details with a unique identifier or token, which is used in place of actual card information during transactions. This protects card data from being exposed or intercepted, thus reducing the risk of data breaches and fraud.", "related_lectures": []}, {"_class": "assessment", "id": 100104791, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>EMVCo's specifications cover multiple payment technologies. Which one of the following is NOT under EMVCo's scope?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Contact Chip</p>", "<p>Near Field Communication (NFC)</p>", "<p>QR Codes</p>", "<p>Digital Wallets</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "EMVCo's specifications cover multiple payment technologies. Which one of the following is NOT under EMVCo's scope?", "related_lectures": []}, {"_class": "assessment", "id": 100104793, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is a resonance frequency?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>The frequency at which a system experiences minimal oscillations</p>", "<p>The frequency at which a system experiences maximum oscillations</p>", "<p>The frequency at which a system experiences no oscillations</p>", "<p>The frequency at which damping is maximum</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is a resonance frequency?", "related_lectures": []}, {"_class": "assessment", "id": 100104795, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In a series RLC circuit, resonance occurs when:</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>The impedance of the circuit is maximum</p>", "<p>The inductive reactance equals the capacitive reactance</p>", "<p>The resistance equals the inductance</p>", "<p>The voltage across the resistor is zero</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In a series RLC circuit, resonance occurs when:", "related_lectures": []}, {"_class": "assessment", "id": 100104797, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following is true at resonance frequency in an LC circuit?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>The current leads the voltage by 90\u00b0</p>", "<p>The current lags the voltage by 90\u00b0</p>", "<p>The impedance of the circuit is purely resistive</p>", "<p>The circuit is not oscillating</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is true at resonance frequency in an LC circuit?", "related_lectures": []}, {"_class": "assessment", "id": 100104799, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The resonance frequency (f\u2080) of a simple LC circuit is given by the formula:</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>f0\u200b=1/2\u03c0Square(LC)\u200b&nbsp; &nbsp;</p>", "<p>f0\u200b=L/2\u03c0C</p>", "<p>f0\u200b=2\u03c0Square(LC)\u200b</p>", "<p>f0\u200b=C/2\u03c0L</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The resonance frequency (f\u2080) of a simple LC circuit is given by the formula:", "related_lectures": []}, {"_class": "assessment", "id": 100104801, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following systems can exhibit resonance?</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Electrical circuits</p>", "<p>Mechanical systems</p>", "<p>Optical systems</p>", "<p>All of the above</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following systems can exhibit resonance?", "related_lectures": []}, {"_class": "assessment", "id": 100104803, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the right order of these PICC states</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>POWER OFF - IDLE - READY - ACTIVE - PROTOCOL</p>", "<p>POWER OFF - IDLE - ACTIVE - PROTOCOL - READY</p>", "<p>IDLE - POWER OFF - ACTIVE - PROTOCOL - READY</p>", "<p>PROTOCOL - IDLE - POWER OFF - ACTIVE - READY</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the right order of these PICC states", "related_lectures": []}, {"_class": "assessment", "id": 100104805, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which block of communication is responsible of conveying information</p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>R-BLOCK</p>", "<p>S-BLOCK</p>", "<p>S-DESELECT</p>", "<p>I-BLOCK</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which block of communication is responsible of conveying information", "related_lectures": []}, {"_class": "assessment", "id": 100104807, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In an NFC system, what does \u201canti-collision\u201d technology help prevent?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Data corruption from power surges</p>", "<p>Interference from Bluetooth devices</p>", "<p>Multiple NFC cards responding simultaneously</p>", "<p>Signal loss from Wi-Fi networks</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "In an NFC system, what does \u201canti-collision\u201d technology help prevent?", "related_lectures": []}, {"_class": "assessment", "id": 100104817, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p>A contactless smartcard is a smartcard that uses <u-blank data-order=\"0\"></u-blank> coupling to communicate with its coupler</p>", "relatedLectureIds": [], "links": []}, "correct_response": ["inductive"], "section": "", "question_plain": "A contactless smartcard is a smartcard that uses __ coupling to communicate with its coupler", "related_lectures": []}, {"_class": "assessment", "id": 100104819, "assessment_type": "fill-in-the-blanks", "prompt": {"question": "<p>The bit rate when communication is being initialized is <u-blank data-order=\"0\"></u-blank> kbit/s, which corresponds to the quotient fc/128.</p>", "relatedLectureIds": [], "links": []}, "correct_response": ["106"], "section": "", "question_plain": "The bit rate when communication is being initialized is __ kbit/s, which corresponds to the quotient fc/128.", "related_lectures": []}, {"_class": "assessment", "id": 100104821, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What does EMVCo stand for?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Electronic Mastercard Visa Corporation</p>", "<p>Europay, Mastercard, and Visa Company</p>", "<p>Europay Mastercard Visa Cooperation</p>", "<p>Electronic Merchants Visa Coalition</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What does EMVCo stand for?", "related_lectures": []}, {"_class": "assessment", "id": 100104823, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>EMVCo's specifications cover multiple payment technologies. Which one of the following is NOT under EMVCo's scope?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", ""], "answers": ["<p>Contact Chip</p>", "<p>Digital Wallets</p>", "<p>Near Field Communication (NFC)</p>", "<p>QR Codes</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "EMVCo's specifications cover multiple payment technologies. Which one of the following is NOT under EMVCo's scope?", "related_lectures": []}, {"_class": "assessment", "id": 100104825, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following is true about NFC technology?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>NFC (Near Field Communication) enables two-way communication between devices within a short range (typically 4 cm or less).</p>", ""], "answers": ["<p>It operates over a long range of up to 10 meters.</p>", "<p>It uses Bluetooth technology for communication.</p>", "<p>It allows two-way communication between devices within close proximity.</p>", "<p>It is primarily used for long-distance identification.</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is true about NFC technology?", "related_lectures": []}, {"_class": "assessment", "id": 100104827, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In RFID systems, what does the term \"PCD\" stand for?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>PCD stands for Proximity Coupling Device, which acts as the reader in RFID systems.</p>", ""], "answers": ["<p>Passive Contactless Device</p>", "<p>Personal Communication Device</p>", "<p>Proximity Coupling Device</p>", "<p>Power Control Device</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "In RFID systems, what does the term \"PCD\" stand for?", "related_lectures": []}, {"_class": "assessment", "id": 100104829, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical operating frequency of an EMVCo-compliant contactless card?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>EMVCo contactless cards typically operate at a frequency of 13.56 MHz, which is the standard for NFC and RFID communication.</p>", ""], "answers": ["<p>125 kHz</p>", "<p>2.4 GHz</p>", "<p>13.56 MHz</p>", "<p>9 MHz</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the typical operating frequency of an EMVCo-compliant contactless card?", "related_lectures": []}, {"_class": "assessment", "id": 100104831, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the primary function of a PICC in contactless communication?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>A PICC (Proximity Integrated Circuit Card) is a passive card that responds to signals from a PCD (reader) when in proximity.</p>", ""], "answers": ["<p>To transmit power to the PCD</p>", "<p>To initiate the communication with the reader</p>", "<p>To act as a passive card that responds to the reader\u2019s signals</p>", "<p>To encrypt the communication channel</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the primary function of a PICC in contactless communication?", "related_lectures": []}, {"_class": "assessment", "id": 100104833, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the Q factor in resonance frequency systems?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "", "<p>The Q factor (Quality factor) represents the efficiency of the resonance system and is the ratio of energy stored to energy lost per cycle.</p>"], "answers": ["<p>The resistance of the system</p>", "<p>The frequency of the signal</p>", "<p>The distance between devices</p>", "<p>The ratio of energy stored to energy lost per cycle</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "What is the Q factor in resonance frequency systems?", "related_lectures": []}, {"_class": "assessment", "id": 100104835, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>RFID systems always require a battery to operate.</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>Passive RFID systems do not require a battery and are powered by the electromagnetic field of the reader.</p>"], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "RFID systems always require a battery to operate.", "related_lectures": []}, {"_class": "assessment", "id": 100104837, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The resonance frequency in a contactless communication system must match between the reader and the card for optimal communication.</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["<p>Matching the resonance frequency ensures efficient energy transfer and reliable communication between the reader and the card.</p>", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The resonance frequency in a contactless communication system must match between the reader and the card for optimal communication.", "related_lectures": []}, {"_class": "assessment", "id": 100104839, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Increasing the Q factor of a system will decrease the system's bandwidth.</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["<p>The Q factor and bandwidth are inversely related. A higher Q factor results in a narrower bandwidth.</p>", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Increasing the Q factor of a system will decrease the system's bandwidth.", "related_lectures": []}, {"_class": "assessment", "id": 100104859, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which type of communication method does EMVCo contactless technology primarily use?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>EMVCo contactless technology primarily uses NFC to enable secure transactions between contactless cards and terminals.</p>", ""], "answers": ["<p>Wi-Fi</p>", "<p>Infrared</p>", "<p>Near Field Communication</p>", "<p>Bluetooth</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which type of communication method does EMVCo contactless technology primarily use?", "related_lectures": []}, {"_class": "assessment", "id": 100104861, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>In NFC terminology, which device initiates communication?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "<p>The PCD (Proximity Coupling Device) is the active device that initiates communication in an NFC system.</p>", "", ""], "answers": ["<p>PICC</p>", "<p>PCD</p>", "<p>Antenna</p>", "<p>Transponder</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In NFC terminology, which device initiates communication?", "related_lectures": []}, {"_class": "assessment", "id": 100104863, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following best defines resonance frequency?</strong></p>", "relatedLectureIds": [], "links": [], "feedbacks": ["", "", "<p>Resonance frequency is the frequency at which a system naturally oscillates with the greatest amplitude due to minimal impedance.</p>", ""], "answers": ["<p>The frequency at which the system consumes the most power</p>", "<p>The frequency at which the system's impedance is highest</p>", "<p>The frequency at which a system oscillates with maximum amplitude</p>", "<p>The frequency at which data transmission speed is maximized</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following best defines resonance frequency?", "related_lectures": []}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

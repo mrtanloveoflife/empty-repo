@@ -1,0 +1,584 @@
+1
+00:00:00,960 --> 00:00:01,530
+So again.
+
+2
+00:00:01,800 --> 00:00:07,320
+So here in this new section we will be talking about how to design an antenna.
+
+3
+00:00:07,980 --> 00:00:15,090
+Through this section we'll go through all the steps that we need to follow in order to design an antenna.
+
+4
+00:00:20,480 --> 00:00:29,840
+So first of all, we'll go through a small introduction that will present for us the phenomenon of resonance.
+
+5
+00:00:29,960 --> 00:00:33,680
+Then we'll be talking about the CART physical model.
+
+6
+00:00:33,680 --> 00:00:37,340
+And finally we'll present the antenna design.
+
+7
+00:00:38,510 --> 00:00:40,820
+So first of all, the introduction.
+
+8
+00:00:42,390 --> 00:00:47,400
+So first of all, here we need to understand the phenomenon of resonance.
+
+9
+00:00:47,670 --> 00:00:53,790
+So when we talk about resonance we talk about resonance of an electrical circuit.
+
+10
+00:00:53,790 --> 00:01:03,270
+Because an NFC card, which is composed by an antenna and the chip presents an electrical circuit.
+
+11
+00:01:04,620 --> 00:01:10,200
+Then we will try to understand the RF parameters needed for HF cards.
+
+12
+00:01:10,560 --> 00:01:17,640
+So for high frequency cards, which means for NFC cards, then we will learn about the purpose and methods
+
+13
+00:01:17,640 --> 00:01:19,110
+of antenna design.
+
+14
+00:01:19,830 --> 00:01:25,410
+After that, we will identify all the steps to be followed to design an antenna.
+
+15
+00:01:25,950 --> 00:01:31,200
+And finally we'll execute the right tests to validate the best solution.
+
+16
+00:01:33,290 --> 00:01:41,540
+So first of all, mechanical resonance is the tendency of a mechanical system to respond at greater
+
+17
+00:01:41,540 --> 00:01:48,530
+amplitude when the frequency of its oscillations matches the system's natural vibration frequency than
+
+18
+00:01:48,530 --> 00:01:49,610
+other frequencies.
+
+19
+00:01:50,540 --> 00:01:54,860
+This causes the system to oscillate with larger amplitude.
+
+20
+00:01:54,950 --> 00:01:58,700
+Then, when the force is applied at other frequencies.
+
+21
+00:02:00,910 --> 00:02:10,870
+For example, here a swing can be considered as a mechanical system where we have a phenomenon of resonance.
+
+22
+00:02:11,890 --> 00:02:13,780
+And the resonance frequency.
+
+23
+00:02:14,230 --> 00:02:21,520
+When you talk about resonance, we talk about resonance frequency which is presented by f0 equal one
+
+24
+00:02:21,520 --> 00:02:28,750
+divided by two multiplied by p multiplied by root square of l divided by g.
+
+25
+00:02:32,880 --> 00:02:34,800
+Then which is more important?
+
+26
+00:02:34,800 --> 00:02:36,690
+The resonance in electronic.
+
+27
+00:02:36,780 --> 00:02:43,500
+So in electrical circuit the resonance occurs because the collapsing magnetic field of the inductor
+
+28
+00:02:43,680 --> 00:02:47,340
+generates an electric current that charges the capacitor.
+
+29
+00:02:47,580 --> 00:02:55,200
+And then the discharging capacitor provides an electric current that builds the magnetic field in the
+
+30
+00:02:55,200 --> 00:02:55,770
+inductor.
+
+31
+00:02:56,250 --> 00:02:58,500
+So here we say the inductor.
+
+32
+00:02:58,500 --> 00:03:01,500
+We have the L which is a symbol of the inductor.
+
+33
+00:03:01,500 --> 00:03:07,560
+And when we have a current that passes through the inductor we have a magnetic field that generates.
+
+34
+00:03:08,910 --> 00:03:16,980
+So here for this system which is an RLC here we don't have the R, we don't have the the resistance.
+
+35
+00:03:16,980 --> 00:03:20,610
+But here it looks like an RLC circuit.
+
+36
+00:03:20,610 --> 00:03:27,750
+So the formula for the resonant frequency for this circuit is F0 equal one divided by two multiplied
+
+37
+00:03:27,750 --> 00:03:32,010
+by p multiplied by root square of l divided by c.
+
+38
+00:03:37,180 --> 00:03:40,240
+So what about the pick components?
+
+39
+00:03:40,240 --> 00:03:43,600
+So what about the contactless card components.
+
+40
+00:03:43,720 --> 00:03:50,110
+So a pick is composed by an inlay which is composed by an antenna.
+
+41
+00:03:50,110 --> 00:03:51,220
+And the chip.
+
+42
+00:03:52,420 --> 00:03:59,590
+So the antenna is the current loop or where we have the phenomenon of inductive inductive coupling is
+
+43
+00:03:59,590 --> 00:04:04,690
+generated and the chip is presented by a memory or a microprocessor.
+
+44
+00:04:07,680 --> 00:04:10,470
+Let's say also an integrated circuit.
+
+45
+00:04:10,650 --> 00:04:12,870
+So as you can see here in the picture.
+
+46
+00:04:12,870 --> 00:04:18,089
+So the antenna part we have the resistance and the inductance and the chip parts.
+
+47
+00:04:18,089 --> 00:04:19,560
+We have the capacitance.
+
+48
+00:04:22,490 --> 00:04:26,510
+So then we will talk about the cart physical model.
+
+49
+00:04:28,190 --> 00:04:35,660
+So as we said earlier, an NFC card or a contactless card or a pack is composed by an antenna and the
+
+50
+00:04:35,660 --> 00:04:36,230
+chip.
+
+51
+00:04:37,820 --> 00:04:43,040
+So the antenna is presented by an antenna inductance and an antenna resistance.
+
+52
+00:04:43,610 --> 00:04:47,210
+When the chip is presented by a chip input capacitance.
+
+53
+00:04:47,720 --> 00:04:50,330
+And here where the chip is activated.
+
+54
+00:04:51,890 --> 00:05:00,500
+So a pic when we put it into the field can be considered as an RLC circuit.
+
+55
+00:05:00,980 --> 00:05:05,840
+R for resistance, L for inductance and C for capacitance.
+
+56
+00:05:11,320 --> 00:05:18,580
+So when we have the phenomenon of resonance, the impedance of the inductance is equal to the impedance
+
+57
+00:05:18,580 --> 00:05:25,780
+of the capacitance, which give us that two multiplied by p multiplied by f0 multiplied by L is equal
+
+58
+00:05:25,780 --> 00:05:35,020
+to one divided by two multiplied by p multiplied by f0 multiplied by c, which means that f0 the resonance
+
+59
+00:05:35,020 --> 00:05:42,790
+frequency is equal to one divided by two multiplied by p multiplied by root square of l multiplied by
+
+60
+00:05:42,820 --> 00:05:43,090
+c.
+
+61
+00:05:45,160 --> 00:05:47,980
+And by the way, the current.
+
+62
+00:05:50,350 --> 00:06:00,340
+In the inductor, the inductance of the antenna element is equal to the maximum of the current of the
+
+63
+00:06:00,340 --> 00:06:02,080
+inductance of the antenna.
+
+64
+00:06:02,200 --> 00:06:04,690
+When we are in the resonance frequency.
+
+65
+00:06:06,890 --> 00:06:10,430
+So for example here we have a spice simulation.
+
+66
+00:06:11,330 --> 00:06:21,650
+So for example when we have the inductance of the of the of the antenna is equal to five micro Henry.
+
+67
+00:06:22,070 --> 00:06:31,970
+And when the capacitance is equal to 30 picofarad we have the resonance frequency equal to 1290 nine
+
+68
+00:06:31,970 --> 00:06:32,690
+megahertz.
+
+69
+00:06:34,940 --> 00:06:42,560
+And by the way when we talk about NFC system we talk about a frequency of 1350 six megahertz.
+
+70
+00:06:42,560 --> 00:06:45,110
+So this is the range the reference.
+
+71
+00:06:48,660 --> 00:06:55,740
+So regarding the RLC circuits, we have something that calls the bandwidth, which is the range frequency
+
+72
+00:06:55,740 --> 00:07:02,820
+where power dissipated is superior to half, which is presented by -three decibels of the full power.
+
+73
+00:07:04,530 --> 00:07:06,690
+So this is our bandwidth.
+
+74
+00:07:07,530 --> 00:07:16,620
+So we take we draw a line on -three decibels and then we extract F2 and f1.
+
+75
+00:07:16,920 --> 00:07:21,510
+So our bandwidth if is f2 minus by minus f1.
+
+76
+00:07:22,440 --> 00:07:30,300
+So then a very important parameter regarding the RLC circuits is the q factor, which is a factor that
+
+77
+00:07:30,300 --> 00:07:33,450
+determines the efficiency of an RC circuit.
+
+78
+00:07:34,140 --> 00:07:41,040
+And the formula for that is that q equal to f zero resonance frequency divided by the bandwidth, which
+
+79
+00:07:41,040 --> 00:07:48,900
+is also equal to the resistance multiplied by the root square of the capacitance divided by the inductance.
+
+80
+00:07:51,370 --> 00:07:54,430
+So now we will talk about the antenna design.
+
+81
+00:07:55,420 --> 00:08:00,460
+So for the antenna design we have four steps that we need to follow.
+
+82
+00:08:02,410 --> 00:08:12,430
+So first of all regarding the the integrated circuit parameters we need to get the data sheet the input
+
+83
+00:08:12,430 --> 00:08:14,860
+capacitance and the tuning frequency.
+
+84
+00:08:15,700 --> 00:08:25,570
+So when we get an integrated circuit which is included in the chip part, and when we get the data sheet,
+
+85
+00:08:26,080 --> 00:08:32,770
+and to check the data sheet of the integrated circuit, we need to verify the input capacitance and
+
+86
+00:08:32,770 --> 00:08:33,970
+the tuning frequency.
+
+87
+00:08:34,240 --> 00:08:37,780
+Then we will define the antenna definition.
+
+88
+00:08:38,620 --> 00:08:42,010
+So first of all we need to define the format.
+
+89
+00:08:42,010 --> 00:08:49,450
+If it's an ID one card, an ID two card, ID three, etc., etc. so ID one card means a class one card
+
+90
+00:08:49,450 --> 00:08:50,050
+for example.
+
+91
+00:08:50,260 --> 00:08:53,200
+Then we need also to define the technology.
+
+92
+00:08:53,200 --> 00:08:59,590
+And finally the targeted inductance, the inductance that we need that we would like to have.
+
+93
+00:09:00,790 --> 00:09:03,670
+Third step is the antenna simulations.
+
+94
+00:09:04,150 --> 00:09:10,090
+So for the antenna we need to simulate the dimension of the antenna.
+
+95
+00:09:10,120 --> 00:09:19,540
+So we need to add the number of turns, the length the width the pitch etc. etc..
+
+96
+00:09:19,870 --> 00:09:24,130
+And finally we need to validate this antenna.
+
+97
+00:09:24,340 --> 00:09:28,660
+So we need to perform an inductance measurement.
+
+98
+00:09:28,750 --> 00:09:34,990
+We need to check that everything is fine of what we have, choose as an antenna and etc. etc..
+
+99
+00:09:35,890 --> 00:09:38,800
+Then we need to calculate the tuning frequency.
+
+100
+00:09:39,550 --> 00:09:46,990
+After that we need to check the loading effect, which means that the card doesn't, uh, doesn't have
+
+101
+00:09:46,990 --> 00:09:53,740
+a very high load, which doesn't decrease the field of the reader.
+
+102
+00:09:54,040 --> 00:10:01,090
+Then we need to check the mean, which is, uh, the the value, the lowest value of the field from
+
+103
+00:10:01,090 --> 00:10:03,790
+which the card start answering.
+
+104
+00:10:03,790 --> 00:10:10,840
+Because, for example, for a different type of classes for each card, as you have seen earlier, there
+
+105
+00:10:10,840 --> 00:10:11,920
+are different means.
+
+106
+00:10:11,920 --> 00:10:17,620
+For example, for a class one card h mean is equal to 1.5A/m.
+
+107
+00:10:17,770 --> 00:10:26,890
+So we need to check that our card can answer at at this h mean value of the field.
+
+108
+00:10:26,920 --> 00:10:30,190
+And finally we need to calculate the resonance frequency.
+
+109
+00:10:32,950 --> 00:10:42,190
+So after that for the antenna design, as we have said, the the integrated circuit vendor should provide
+
+110
+00:10:42,310 --> 00:10:49,780
+four parameters, which are the input capacitance, the antenna design recommendation, the antenna
+
+111
+00:10:49,780 --> 00:10:53,020
+format, and and the recommended tuning frequency.
+
+112
+00:10:59,150 --> 00:11:03,830
+After checking all of that, we can do the antenna definition.
+
+113
+00:11:04,310 --> 00:11:10,310
+So to define the antenna parameters we need to define the antenna shape as we have seen earlier, like
+
+114
+00:11:10,310 --> 00:11:17,690
+ID one, ID two or half, half the size, etc., etc. then we need to define the technology, for example
+
+115
+00:11:17,690 --> 00:11:23,930
+copper wire printing, PCB, etc. and finally the antenna impedance.
+
+116
+00:11:24,770 --> 00:11:27,680
+So we have the resonant frequency.
+
+117
+00:11:27,680 --> 00:11:31,700
+And through the resonant frequency we can calculate the inductance.
+
+118
+00:11:31,880 --> 00:11:38,030
+So as you have seen earlier, our resonance frequency f zero is equal to one divided by two multiplied
+
+119
+00:11:38,030 --> 00:11:47,960
+by p multiplied by root square of l multiplied by c, which gives us that uh, which gives us this formula
+
+120
+00:11:47,960 --> 00:11:49,670
+to calculate the inductance.
+
+121
+00:11:52,810 --> 00:11:57,850
+So after the antenna definition we need to simulate our antenna.
+
+122
+00:11:58,600 --> 00:12:03,310
+So first of all we need to simulate the antenna design to reach the targets.
+
+123
+00:12:03,370 --> 00:12:06,220
+Then we need to find the antenna dimensions.
+
+124
+00:12:06,610 --> 00:12:09,820
+Third step we need to find the physical parameters.
+
+125
+00:12:09,820 --> 00:12:12,430
+And finally choose a simulator to validate.
+
+126
+00:12:14,020 --> 00:12:25,330
+For example we have a simulated simulator provided by a website from St STMicroelectronics which is
+
+127
+00:12:25,330 --> 00:12:26,740
+for example this one.
+
+128
+00:12:26,770 --> 00:12:32,650
+So as you can hear, as you can see here in this website, we have different parameters that we can
+
+129
+00:12:32,650 --> 00:12:37,900
+play with until we get our value of the inductance.
+
+130
+00:12:37,930 --> 00:12:43,540
+For example here we can choose a random number of turns.
+
+131
+00:12:43,540 --> 00:12:46,150
+Then we can choose the antenna length.
+
+132
+00:12:46,180 --> 00:12:47,410
+For example let's say.
+
+133
+00:12:49,120 --> 00:12:50,440
+Uh, 50.
+
+134
+00:12:51,610 --> 00:12:53,470
+Then we have the antenna width.
+
+135
+00:12:53,680 --> 00:12:58,030
+Let's say let's keep it 45, for example.
+
+136
+00:12:58,030 --> 00:13:04,660
+Then for the conductor, we can play with the parameter width, spacing, thickness, etc., etc. and
+
+137
+00:13:04,660 --> 00:13:10,000
+then a very important parameter which is the thickness of the substrate.
+
+138
+00:13:10,240 --> 00:13:14,410
+So all these parameters give us an alternate result.
+
+139
+00:13:15,070 --> 00:13:20,200
+And the inductance for this is 1.1 micro Henry for example.
+
+140
+00:13:27,240 --> 00:13:27,840
+So.
+
+141
+00:13:27,840 --> 00:13:33,720
+And finally, for the antenna validation, we need to measure the inductance of the antenna.
+
+142
+00:13:33,930 --> 00:13:39,660
+And then we need to measure the tuning frequency of the integrated circuit plus the antenna.
+
+143
+00:13:39,660 --> 00:13:41,580
+So the whole group.
+
+144
+00:13:41,970 --> 00:13:46,560
+So which means the antenna plus the chip of the contactless cards.
+
+145
+00:13:49,390 --> 00:13:55,390
+And of course we need to choose the antennas with the resonance frequency following the integrated circuit
+
+146
+00:13:55,390 --> 00:13:56,260
+recommendation.
+

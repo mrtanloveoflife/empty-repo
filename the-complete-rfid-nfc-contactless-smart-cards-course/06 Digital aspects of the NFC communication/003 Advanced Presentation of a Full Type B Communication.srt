@@ -1,0 +1,152 @@
+1
+00:00:01,250 --> 00:00:05,090
+So here we will be talking about the type B communication.
+
+2
+00:00:05,689 --> 00:00:13,460
+It will be short as in fact there is no much difference between type B and type A only in some certain
+
+3
+00:00:13,460 --> 00:00:13,910
+commands.
+
+4
+00:00:13,910 --> 00:00:20,240
+In fact, the type B communication is much more shorter than the type A communication.
+
+5
+00:00:21,560 --> 00:00:27,530
+So in type B, the first command same thing as the type A is is request B.
+
+6
+00:00:28,340 --> 00:00:31,820
+This is the first command to be sent during the communication.
+
+7
+00:00:31,820 --> 00:00:38,150
+The B command is sent by the reader to generate the field for the card that supports the type B communication.
+
+8
+00:00:39,800 --> 00:00:44,030
+So it's almost the same thing as a type as the type A communication.
+
+9
+00:00:44,030 --> 00:00:49,850
+When we will send a request a but here we will be we will have more bytes.
+
+10
+00:00:50,150 --> 00:00:56,390
+So the answer to the request B will be an atcb answer to request b.
+
+11
+00:00:56,990 --> 00:01:01,160
+So as you can see here, we will have more bytes than the Atca.
+
+12
+00:01:01,730 --> 00:01:07,100
+In fact, this is the first answer to be sent by the car to the reader in a type B communication.
+
+13
+00:01:07,730 --> 00:01:15,920
+All the cards in the idle state will respond with 80 KB to the Recv command from the Atcb.
+
+14
+00:01:15,950 --> 00:01:19,580
+We can retrieve the bit rate supported by the card.
+
+15
+00:01:20,330 --> 00:01:24,950
+Also, if the card supports different bit rates for each direction or not.
+
+16
+00:01:25,610 --> 00:01:32,690
+If the card is compliant with ISO 14,443 four or not, and also the PW pie.
+
+17
+00:01:33,860 --> 00:01:42,290
+In fact, in the type A communication we can extract extract the bit rate supported by the card through
+
+18
+00:01:42,290 --> 00:01:46,970
+the ATS, which is the forced response.
+
+19
+00:01:46,970 --> 00:01:52,340
+However, in type B communication we can extract this information through the first response by the
+
+20
+00:01:52,340 --> 00:01:55,910
+card, which is the answer to request b Atcb.
+
+21
+00:01:56,960 --> 00:02:00,500
+Then the reader will send the Attrib command.
+
+22
+00:02:01,190 --> 00:02:05,990
+This Attrib command will select a single card from from the field.
+
+23
+00:02:07,070 --> 00:02:12,080
+It will also send the bit rate that will continue the communication with.
+
+24
+00:02:12,080 --> 00:02:17,780
+In a type A, we select the bit rate for the communication in the PES.
+
+25
+00:02:18,800 --> 00:02:24,710
+However, in the in the type B communication, it will be done in the second command sent by the reader,
+
+26
+00:02:24,710 --> 00:02:26,210
+which is the Attrib command.
+
+27
+00:02:28,430 --> 00:02:32,900
+Then the response to the Attrib command will be the Attrib response.
+
+28
+00:02:33,050 --> 00:02:37,250
+In fact, this is the answer that the Cod sends to the Attrib command.
+
+29
+00:02:38,030 --> 00:02:48,350
+Same thing as the for type A from the request A to the response.
+
+30
+00:02:48,350 --> 00:02:56,120
+All the communication will be done in 106kbps, which is FC divided 128.
+
+31
+00:02:56,330 --> 00:03:05,930
+However, in type B, all these five first command in type A will be commanded will be converted only
+
+32
+00:03:05,930 --> 00:03:07,550
+to two commands.
+
+33
+00:03:08,180 --> 00:03:14,720
+Request B and Attrib command and the answer will be 80 KB and Attrib response.
+
+34
+00:03:18,050 --> 00:03:19,370
+Same thing.
+
+35
+00:03:19,370 --> 00:03:26,660
+Request B Atcb Attrib command and Attrib response will be done at only at 106kbps.
+
+36
+00:03:26,690 --> 00:03:30,260
+And then we will start exchanging the information.
+
+37
+00:03:30,260 --> 00:03:33,920
+We will start sending I blocks, R blocks, S blocks.
+
+38
+00:03:33,920 --> 00:03:37,010
+Same exact same thing as the type A communication.
+

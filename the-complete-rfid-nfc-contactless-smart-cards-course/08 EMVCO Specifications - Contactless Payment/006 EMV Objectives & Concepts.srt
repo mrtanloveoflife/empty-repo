@@ -1,0 +1,700 @@
+1
+00:00:02,060 --> 00:00:05,810
+Hello and welcome to this new session about Emvco.
+
+2
+00:00:05,840 --> 00:00:07,970
+Objectives and concepts.
+
+3
+00:00:10,640 --> 00:00:18,800
+The EMV standard established by Emvco defines the interaction between payment cards and terminals for
+
+4
+00:00:18,800 --> 00:00:26,240
+secure transactions to enable universal acceptance of chip cards for credit and debit.
+
+5
+00:00:26,870 --> 00:00:34,160
+EMV defines minimum functionality in order to get interoperability between card and terminal.
+
+6
+00:00:35,360 --> 00:00:39,050
+Each entity involved has specific objectives.
+
+7
+00:00:42,020 --> 00:00:50,090
+So that's why the first part about this presentation we will talk about the EMV objectives.
+
+8
+00:00:52,010 --> 00:00:56,750
+So there are several actors involved in EMV communication.
+
+9
+00:00:57,020 --> 00:00:59,720
+These actors are.
+
+10
+00:00:59,730 --> 00:01:00,210
+Issuer.
+
+11
+00:01:00,210 --> 00:01:00,930
+Bank.
+
+12
+00:01:01,380 --> 00:01:02,010
+Acquirer.
+
+13
+00:01:02,010 --> 00:01:02,790
+Bank.
+
+14
+00:01:03,120 --> 00:01:06,990
+Personal personalization or card customization.
+
+15
+00:01:07,590 --> 00:01:12,750
+Card reader or terminal and card holders or users.
+
+16
+00:01:15,540 --> 00:01:19,470
+So first of all we will talk about issuer bank objectives.
+
+17
+00:01:20,460 --> 00:01:23,580
+So the first point is card security.
+
+18
+00:01:25,020 --> 00:01:33,240
+In fact it ensures that issued cards are secure, preventing cloning, fraud and unauthorized use.
+
+19
+00:01:33,540 --> 00:01:36,390
+Second, we have personalization.
+
+20
+00:01:36,570 --> 00:01:45,030
+It configure the card with the necessary data, for example cryptographic keys and application data.
+
+21
+00:01:45,930 --> 00:01:50,340
+We do this configuration to make it functional for EMV transaction.
+
+22
+00:01:51,600 --> 00:01:54,450
+Third point is transaction authorization.
+
+23
+00:01:54,780 --> 00:02:03,040
+It maintains control over whether transactions are approved or declined based on risk management and
+
+24
+00:02:03,040 --> 00:02:13,960
+cardholder authentication, and last data integrity, which ensures data sent from the car to the bank
+
+25
+00:02:13,960 --> 00:02:18,400
+remains intact and unaltered during transmission.
+
+26
+00:02:22,840 --> 00:02:30,130
+The second point about objectives we have is acquire bank objectives.
+
+27
+00:02:30,460 --> 00:02:34,420
+So first of all we have transaction acceptance.
+
+28
+00:02:34,810 --> 00:02:42,370
+It enables merchants to process transactions transactions securely by managing the connection between
+
+29
+00:02:42,370 --> 00:02:45,130
+the payment terminal and the issuer bank.
+
+30
+00:02:46,030 --> 00:02:55,180
+Second is compliance, which ensures that all terminals and infrastructure are compliant with EMV standards
+
+31
+00:02:55,180 --> 00:03:01,720
+for secure data transmission and encryption, then we have fraud detection.
+
+32
+00:03:02,890 --> 00:03:10,240
+It collaborates with the issuer bank to implement mechanisms for identifying and preventing fraudulent
+
+33
+00:03:10,270 --> 00:03:11,260
+transactions.
+
+34
+00:03:13,300 --> 00:03:21,040
+And finally settlement facilitate the proper settlement of funds from the issuer bank to the merchant's
+
+35
+00:03:21,040 --> 00:03:21,850
+account.
+
+36
+00:03:25,300 --> 00:03:29,500
+The third objective is the personalization objectives.
+
+37
+00:03:30,700 --> 00:03:38,200
+So cardholder data programming personalize each card with a unique account number, cryptographic keys,
+
+38
+00:03:38,200 --> 00:03:40,300
+and issuer specific applications.
+
+39
+00:03:41,230 --> 00:03:49,450
+Then we have security setup implement encryption and authentication methods such as Pin or biometric
+
+40
+00:03:49,450 --> 00:03:53,140
+verification to secure cardholder identity.
+
+41
+00:03:53,950 --> 00:04:02,540
+Third, we have application loading, which install necessary EMV applications for processing credit,
+
+42
+00:04:02,570 --> 00:04:05,180
+debit or other forms of payment.
+
+43
+00:04:06,350 --> 00:04:14,510
+And finally compatibility, which ensures that the card can communicate with EMV compliant readers across
+
+44
+00:04:14,510 --> 00:04:16,490
+different regions and networks.
+
+45
+00:04:18,920 --> 00:04:21,230
+Then we have card objectives.
+
+46
+00:04:23,030 --> 00:04:30,140
+So first of all, regarding card objectives objectives, we have secure payment which store cryptographic
+
+47
+00:04:30,140 --> 00:04:35,870
+information that authenticates the card during transactions, ensuring secure communication with the
+
+48
+00:04:35,870 --> 00:04:36,470
+terminal.
+
+49
+00:04:37,250 --> 00:04:46,160
+Second, cardholder verification which support various verification methods, Pin signature, etc. to
+
+50
+00:04:46,190 --> 00:04:47,480
+authenticate the user.
+
+51
+00:04:49,190 --> 00:04:57,720
+Third point is the interoperability IT function correctly across a wide range of terminals globally
+
+52
+00:04:57,720 --> 00:05:00,120
+by adhering to the EMV standards.
+
+53
+00:05:00,750 --> 00:05:07,830
+And finally, transaction integrity, which ensures transaction data is not modified or intercepted
+
+54
+00:05:07,830 --> 00:05:10,110
+during the payment process.
+
+55
+00:05:16,530 --> 00:05:20,220
+The first point here is the reader objectives.
+
+56
+00:05:20,730 --> 00:05:23,790
+So first we have transaction authorization.
+
+57
+00:05:24,090 --> 00:05:31,020
+It facilitates communication between the card and the acquirer bank ensuring data is correctly transmitted
+
+58
+00:05:31,020 --> 00:05:32,190
+for authorization.
+
+59
+00:05:34,350 --> 00:05:43,050
+Then we have secure environment provides a secure environment for data exchange to prevent skimming
+
+60
+00:05:43,050 --> 00:05:47,040
+or unauthorized access to sensitive cardholder data.
+
+61
+00:05:48,900 --> 00:05:53,190
+Third is compliance with EMV specifications.
+
+62
+00:05:53,550 --> 00:06:01,270
+It ensures the terminal meets EMV standards, allowing it to accept chip based cards securely.
+
+63
+00:06:01,840 --> 00:06:09,550
+Finally, you have cardholder verification, which supports Pin entry and other verification methods
+
+64
+00:06:09,550 --> 00:06:12,790
+to authenticate the cardholder during the transaction.
+
+65
+00:06:15,610 --> 00:06:21,940
+The last objective here is the user objectives or cardholder objectives.
+
+66
+00:06:21,940 --> 00:06:29,680
+So first we have security trust that their card provides enhanced protection against fraud, such as
+
+67
+00:06:29,680 --> 00:06:34,360
+preventing unauthorized transactions through secure chip technology.
+
+68
+00:06:34,570 --> 00:06:42,580
+Second is convenience easily complete transactions using contact or contactless EMV enabled cards with
+
+69
+00:06:42,580 --> 00:06:46,360
+minimal friction, for example pin entry or tap to pay.
+
+70
+00:06:47,500 --> 00:06:55,690
+The third key here is the interoperability, so use the card across multiple countries and terminals
+
+71
+00:06:55,690 --> 00:07:03,880
+that comply with the EMV standard, ensuring board usability and finally authentication control, which
+
+72
+00:07:03,880 --> 00:07:07,900
+we verify their identity securely during transactions.
+
+73
+00:07:07,930 --> 00:07:16,480
+Protecting against misuse if the card is lost or stolen, for example through pins or biometrics.
+
+74
+00:07:17,710 --> 00:07:26,050
+So each entity here plays a key role in making the EMV ecosystem secure and efficient, working together
+
+75
+00:07:26,050 --> 00:07:30,610
+to ensure the integrity, authenticity, and convenience of payment transactions.
+
+76
+00:07:39,400 --> 00:07:41,890
+So what about EMV concepts?
+
+77
+00:07:42,250 --> 00:07:50,830
+EMV concepts refer to various components and ideas that are essential to understanding how the EMV standard
+
+78
+00:07:50,830 --> 00:07:53,180
+works Artworks within the payment ecosystem.
+
+79
+00:07:54,200 --> 00:08:02,300
+These concepts cover the technical, functional and security aspects of EMV, making it a robust framework
+
+80
+00:08:02,300 --> 00:08:06,560
+for secure and interoperable card based transactions.
+
+81
+00:08:07,340 --> 00:08:09,860
+So here are the key EMV concepts.
+
+82
+00:08:10,010 --> 00:08:19,700
+First, we have Integrated Circuit Card ICC, commonly referred to as a chip card.
+
+83
+00:08:19,730 --> 00:08:27,410
+The ICC is a smart card embedded with a microchip that stores data securely and performs cryptographic
+
+84
+00:08:27,410 --> 00:08:29,510
+functions, as you have seen before.
+
+85
+00:08:30,320 --> 00:08:38,270
+Its function is that, unlike magnetic stripe cards, ICS generate dynamic data for each transaction,
+
+86
+00:08:38,299 --> 00:08:41,419
+making them more secure and harder to clone.
+
+87
+00:08:43,280 --> 00:08:47,600
+Second, we have contact and contactless transactions.
+
+88
+00:08:48,830 --> 00:08:55,710
+So contact involves inserting the chip card into a terminal for the entire duration of the transaction.
+
+89
+00:08:56,910 --> 00:09:00,600
+The card and terminal communicate through physical contact.
+
+90
+00:09:01,830 --> 00:09:09,600
+However, contactless involves tapping or waving the card near a terminal equipped with near-field communication
+
+91
+00:09:09,600 --> 00:09:10,350
+technology.
+
+92
+00:09:11,160 --> 00:09:19,050
+NFC technology it allows for quicker transactions as the card does not need to be physically inserted.
+
+93
+00:09:20,040 --> 00:09:24,510
+Then we have cardholder verification method CVM.
+
+94
+00:09:25,830 --> 00:09:33,210
+So this method are the methods used to verify the identity of the cardholder during a transaction.
+
+95
+00:09:34,830 --> 00:09:45,300
+The types are Pin personal identification number signature mostly phased out in some regions, and biometrics
+
+96
+00:09:45,300 --> 00:09:49,390
+for example fingerprint face recognition for mobile payments.
+
+97
+00:09:49,870 --> 00:09:55,720
+The purpose is that it ensures that the person using the card is the legitimate card holder.
+
+98
+00:09:57,490 --> 00:10:00,940
+The fourth point here is cryptography.
+
+99
+00:10:10,090 --> 00:10:15,910
+So cryptography is the process of using algorithms to encode and decode that.
+
+100
+00:10:16,630 --> 00:10:22,960
+Its role in EMV is that EMV uses cryptographic algorithm to secure transactions.
+
+101
+00:10:23,290 --> 00:10:30,670
+Each transaction creates dynamic data, ensuring that the information cannot be reused by fraudsters.
+
+102
+00:10:32,950 --> 00:10:40,780
+The key management is that EMV relies on symmetric and asymmetric keys to authenticate transactions,
+
+103
+00:10:40,780 --> 00:10:45,820
+secure holder secure cardholder data, and protect against fraud.
+
+104
+00:10:53,510 --> 00:10:57,110
+After that we have offline data authentication.
+
+105
+00:10:58,370 --> 00:11:05,000
+So authentication performed by the terminal without contacting the issuer's host system is the offline
+
+106
+00:11:05,000 --> 00:11:06,380
+data authentication.
+
+107
+00:11:08,300 --> 00:11:10,100
+The types of this.
+
+108
+00:11:10,400 --> 00:11:13,040
+We have static data authentication.
+
+109
+00:11:13,040 --> 00:11:18,200
+The card contains a preloaded cryptographic signature used for verification.
+
+110
+00:11:18,950 --> 00:11:28,160
+Then we have dynamic data authentication more secure than SDA as it uses dynamically generated cryptographic
+
+111
+00:11:28,160 --> 00:11:30,680
+values for each transaction.
+
+112
+00:11:31,970 --> 00:11:40,160
+The purpose of the offline data authentication is that it allows for card authentication in environments
+
+113
+00:11:40,160 --> 00:11:43,490
+where online connectivity is not always available.
+
+114
+00:11:45,350 --> 00:11:48,860
+The sixth point here is transaction flow.
+
+115
+00:11:50,720 --> 00:11:57,110
+So when a card is inserted or tapped, the terminal selects the appropriate payment application.
+
+116
+00:11:57,140 --> 00:11:59,750
+For example credit or debit from the card.
+
+117
+00:12:02,150 --> 00:12:09,080
+The initiation here is that the terminal initiates the transaction requesting necessary data from the
+
+118
+00:12:09,080 --> 00:12:09,530
+card.
+
+119
+00:12:19,700 --> 00:12:23,060
+The seventh step here is the personalization.
+
+120
+00:12:23,990 --> 00:12:31,280
+The personalization is the process of loading an EMV card with a specific data and cryptographic keys
+
+121
+00:12:31,310 --> 00:12:32,900
+needed for transaction.
+
+122
+00:12:33,500 --> 00:12:40,550
+Its role is that personalization makes each card unique to its holder by embedding account details,
+
+123
+00:12:40,580 --> 00:12:43,340
+security keys, and issuer specific data.
+
+124
+00:12:45,110 --> 00:12:47,010
+Then we have authorization.
+
+125
+00:12:47,970 --> 00:12:51,210
+We have two types online and offline authorization.
+
+126
+00:12:51,510 --> 00:12:58,320
+Regarding online authorization, the terminal communicates with the issuing banks server to authenticate
+
+127
+00:12:58,320 --> 00:12:59,220
+the transaction.
+
+128
+00:12:59,970 --> 00:13:05,760
+The card generates a cryptographic value which is verified by the issuer.
+
+129
+00:13:06,540 --> 00:13:13,200
+Regarding the offline authorization, transactions are authorized by the terminal without contacting
+
+130
+00:13:13,200 --> 00:13:14,610
+the issuer server.
+
+131
+00:13:14,640 --> 00:13:18,000
+Often used in locations with limited connectivity.
+
+132
+00:13:19,410 --> 00:13:24,330
+The card generates an application cryptogram for offline validation.
+
+133
+00:13:25,140 --> 00:13:27,120
+Then we have tokenization.
+
+134
+00:13:27,570 --> 00:13:34,770
+So tokenization is a process where sensitive card details like the primary account number are replaced
+
+135
+00:13:34,770 --> 00:13:37,710
+with a unique temporary token for a transaction.
+
+136
+00:13:38,610 --> 00:13:44,280
+Its role is that it enhances security, especially for mobile and online payments.
+
+137
+00:13:44,280 --> 00:13:48,940
+By ensuring that the actual card details are not exposed during the transaction.
+
+138
+00:13:51,400 --> 00:13:53,860
+The 10th point here is the EMV kernel.
+
+139
+00:13:54,910 --> 00:14:01,210
+So the NV kernel is the software within a payment terminal that processes EMV transactions.
+
+140
+00:14:01,600 --> 00:14:08,320
+Its function is that the kernel facilitates communication between the card and the term, ensuring that
+
+141
+00:14:08,350 --> 00:14:13,600
+EMV transactions comply with the security and data exchange protocols.
+
+142
+00:14:15,370 --> 00:14:19,450
+After that, we have application identifier a ID.
+
+143
+00:14:24,040 --> 00:14:31,540
+So the ID is a unique string of data that identifies a specific payment application on an NV card.
+
+144
+00:14:31,570 --> 00:14:39,160
+Its role is that the terminal uses the ID to select the correct application on the card, allowing for
+
+145
+00:14:39,160 --> 00:14:41,620
+multiple applications on one card.
+
+146
+00:14:50,120 --> 00:14:52,400
+Then we have risk management.
+
+147
+00:14:52,940 --> 00:15:00,830
+So with the risk management is the processes carried out by the terminal to determine whether to authorize
+
+148
+00:15:00,830 --> 00:15:04,850
+decline or send a transaction online for further processing.
+
+149
+00:15:06,980 --> 00:15:10,880
+The elements of this process are three.
+
+150
+00:15:10,880 --> 00:15:13,070
+So first of all we have floor limit.
+
+151
+00:15:14,930 --> 00:15:19,130
+Floor limit is the maximum transaction value that can be approved offline.
+
+152
+00:15:19,160 --> 00:15:27,500
+Then we have the velocity check limits the number of transactions that can occur within a certain time
+
+153
+00:15:27,530 --> 00:15:28,100
+frame.
+
+154
+00:15:28,640 --> 00:15:31,250
+The third point is the exception file.
+
+155
+00:15:32,390 --> 00:15:39,500
+Terminals may check if the card is on an exception list, such as being reported, lost, or stolen.
+
+156
+00:15:40,850 --> 00:15:44,000
+Then we have the EMV tokenization framework.
+
+157
+00:15:44,690 --> 00:15:53,060
+So the EMV tokenization framework is a system introduced by Emvco to standardize how tokenized payments
+
+158
+00:15:53,780 --> 00:15:54,890
+are handled.
+
+159
+00:15:54,920 --> 00:16:03,530
+Its purpose is that it protects sensitive card data by ensuring that tokens can only be used within
+
+160
+00:16:03,530 --> 00:16:05,000
+specific parameters.
+
+161
+00:16:08,210 --> 00:16:13,220
+Last but not least, we have the Secure Remote Commerce S.r.c.
+
+162
+00:16:16,070 --> 00:16:23,240
+It's an EMV standard that streamlines e-commerce payments by offering a universal checkout process that
+
+163
+00:16:23,240 --> 00:16:26,600
+secures stores card details.
+
+164
+00:16:28,610 --> 00:16:31,520
+It's often referred to as click to pay.
+
+165
+00:16:31,550 --> 00:16:37,610
+It provides an easy, secure way to complete transactions without re-entering card details for each
+
+166
+00:16:37,610 --> 00:16:38,420
+per case.
+
+167
+00:16:39,560 --> 00:16:40,790
+Finally.
+
+168
+00:16:40,800 --> 00:16:42,510
+Card authentication.
+
+169
+00:16:44,160 --> 00:16:51,810
+So card authentication is the process of verifying that the card presented is legitimate.
+
+170
+00:16:52,470 --> 00:16:53,670
+We have two types.
+
+171
+00:16:53,670 --> 00:16:56,100
+The first one is static authentication.
+
+172
+00:16:57,900 --> 00:17:01,260
+It's using preconfigured data for validation.
+
+173
+00:17:01,800 --> 00:17:08,730
+Also we have dynamic authentication which is using dynamic transaction specific data for better security.
+
+174
+00:17:10,710 --> 00:17:21,089
+All these concepts together form the core framework of how the EMV system operates to deliver secure,
+
+175
+00:17:21,089 --> 00:17:25,200
+interoperable payment experiences globally.
+

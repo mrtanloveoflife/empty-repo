@@ -1,0 +1,352 @@
+1
+00:00:01,250 --> 00:00:05,990
+In this new session we will be talking about EMV card personalization.
+
+2
+00:00:06,980 --> 00:00:15,740
+So the EMV card personalization process involves encoding specific information into an EMV chip card
+
+3
+00:00:15,740 --> 00:00:18,500
+in a secure and structured manner.
+
+4
+00:00:18,770 --> 00:00:26,840
+This process ensures that the Cardholder's information security keys and other data are properly stored
+
+5
+00:00:26,840 --> 00:00:32,299
+on the chip, enabling the card to function securely during transactions.
+
+6
+00:00:38,510 --> 00:00:43,430
+So what's exactly this EMV card personalization process?
+
+7
+00:00:44,390 --> 00:00:47,090
+So first of all, we have data preparation.
+
+8
+00:00:47,120 --> 00:00:50,330
+This first step is divided in two parts.
+
+9
+00:00:50,660 --> 00:00:53,990
+The first part is cardholder information collection.
+
+10
+00:00:53,990 --> 00:01:02,620
+In fact, the issuer which is the bank, gathers the customer's personal and account data such as name,
+
+11
+00:01:02,800 --> 00:01:08,680
+pan, primary account number, expiration date, date, and service code.
+
+12
+00:01:09,520 --> 00:01:17,800
+Second is the encryption, so all sensitive data is encrypted before transmission to ensure it remains
+
+13
+00:01:17,800 --> 00:01:21,100
+secure during the personalization process.
+
+14
+00:01:22,570 --> 00:01:29,380
+In fact, keys for cryptographic operations, for example encryption or authentication, are generated
+
+15
+00:01:29,380 --> 00:01:30,400
+and prepared.
+
+16
+00:01:31,960 --> 00:01:35,710
+The second step is the key management and injection.
+
+17
+00:01:37,120 --> 00:01:39,250
+It is also divided in two parts.
+
+18
+00:01:39,250 --> 00:01:47,800
+The first part is cryptographic key generation, so unique keys are created for the card to enable secure
+
+19
+00:01:47,800 --> 00:01:51,310
+communication and transaction authentication.
+
+20
+00:01:53,140 --> 00:01:55,000
+Then we have the key injection.
+
+21
+00:01:55,000 --> 00:02:01,880
+So the cryptographic keys are securely injected into the card's chip during Personalization.
+
+22
+00:02:03,650 --> 00:02:12,830
+These keys are essential for various security functions, including Pin verification, card authentication,
+
+23
+00:02:12,830 --> 00:02:14,900
+and transaction signing.
+
+24
+00:02:16,610 --> 00:02:21,110
+The third step after that is chip personalization.
+
+25
+00:02:25,370 --> 00:02:30,560
+So the first step in chip personalization is the encoding the chip.
+
+26
+00:02:30,560 --> 00:02:37,940
+So the EMV chip is personalized with the cardholder's data and other required fields.
+
+27
+00:02:38,750 --> 00:02:49,370
+The chip stores the following cardholder data for example pan and name issuer specific data like data
+
+28
+00:02:49,370 --> 00:02:56,480
+fields specified by the issuing bank, for example, card method and issuer identification.
+
+29
+00:02:57,800 --> 00:03:03,340
+And finally, the keys which are cryptographic keys for securing transactions.
+
+30
+00:03:04,300 --> 00:03:06,850
+The second step is the application that.
+
+31
+00:03:07,090 --> 00:03:12,460
+So the EMV application for example Visa or Mastercard is loaded onto the chip.
+
+32
+00:03:14,470 --> 00:03:22,300
+The first step of the process is magnetic stripe personalization.
+
+33
+00:03:26,620 --> 00:03:33,580
+So encoding the magnetic stripe is the first step of the magnetic stripe personalization.
+
+34
+00:03:34,180 --> 00:03:44,050
+For backward compatibility, the card's magnetic stripe may also be encoded with basic account information.
+
+35
+00:03:44,440 --> 00:03:48,040
+This serves as a fallback if the chip cannot be read.
+
+36
+00:03:49,540 --> 00:03:53,380
+Then we have the cardholder specific data encoding.
+
+37
+00:03:54,190 --> 00:03:56,680
+It is also divided in two steps.
+
+38
+00:03:56,980 --> 00:03:59,590
+First is personalized elements.
+
+39
+00:03:59,620 --> 00:04:06,410
+Additional cardholder information like cardholder name and card expiration date are written into the
+
+40
+00:04:06,410 --> 00:04:09,290
+card and printed visibly on the card surface.
+
+41
+00:04:10,700 --> 00:04:12,950
+Then we have transaction counters.
+
+42
+00:04:13,100 --> 00:04:18,529
+In fact, certain fields such as application transaction counter are set up.
+
+43
+00:04:19,100 --> 00:04:24,890
+The ADC keeps track of the number of transactions the card has processed.
+
+44
+00:04:27,050 --> 00:04:34,430
+After that we have printing and visual personalization.
+
+45
+00:04:36,830 --> 00:04:46,970
+So regarding visual features, the Cardholder's name, card number, expiration date, and other visual
+
+46
+00:04:46,970 --> 00:04:50,270
+elements are printed in the card surface.
+
+47
+00:04:50,840 --> 00:04:59,390
+A feature like CVV card verification value and holographic security images are added to prevent fraud.
+
+48
+00:05:01,850 --> 00:05:07,150
+The seventh step is post personalization testing.
+
+49
+00:05:08,740 --> 00:05:12,280
+So first we have the quality control and verification.
+
+50
+00:05:12,310 --> 00:05:19,540
+In fact, the cart undergoes through testing to ensure that the personalization process was successful
+
+51
+00:05:19,540 --> 00:05:22,660
+and the cart is functioning as expected.
+
+52
+00:05:23,140 --> 00:05:32,260
+This includes reading the chip by verifying the data encoded in the chip, matches the personalization
+
+53
+00:05:32,260 --> 00:05:39,490
+specifications, and testing transactions by simulating a transaction to verify card authentication.
+
+54
+00:05:39,550 --> 00:05:43,330
+Cryptographic key functions and communication with the terminal.
+
+55
+00:05:44,290 --> 00:05:51,220
+The second step of the Post personalization testing is the data integrity check, which ensures that
+
+56
+00:05:51,220 --> 00:05:55,870
+no data was corrupted during the personalization process.
+
+57
+00:05:56,860 --> 00:06:04,490
+In fact, the issuer often performs final security checks to ensure the card meets the required security
+
+58
+00:06:04,520 --> 00:06:05,210
+standards.
+
+59
+00:06:06,740 --> 00:06:10,400
+And finally, the last step is the distribution.
+
+60
+00:06:12,170 --> 00:06:16,790
+So after successful testing, the card is issued to the card holder.
+
+61
+00:06:16,820 --> 00:06:21,650
+This can involve sending the card via mail or delivering it in person.
+
+62
+00:06:22,670 --> 00:06:28,580
+The card holder typically receives activation instructions to ensure secure use.
+
+63
+00:06:32,840 --> 00:06:38,180
+So these are the eight steps of the EMV card personalization process.
+
+64
+00:06:39,740 --> 00:06:45,530
+When we talk about personalization, we talk about input data and output data.
+
+65
+00:06:46,310 --> 00:06:56,570
+So for example we have here the different six datas that we will exchange during the personalization.
+
+66
+00:06:56,840 --> 00:07:03,610
+So for the visual data we have issuer identification number card type issuer Ensure keys.
+
+67
+00:07:04,030 --> 00:07:11,830
+Then for the cardholder data, we have cardholder name, account number, expiration date and personalization
+
+68
+00:07:11,830 --> 00:07:12,670
+settings.
+
+69
+00:07:12,700 --> 00:07:20,110
+Then for the security data we have the Pin, the card verification value, the cryptographic keys and
+
+70
+00:07:20,110 --> 00:07:20,950
+track data.
+
+71
+00:07:22,600 --> 00:07:29,320
+After that, for the EMV profile data, we have the application identifier, the cardholder verification
+
+72
+00:07:29,320 --> 00:07:31,600
+method, and the transaction counters.
+
+73
+00:07:32,110 --> 00:07:39,130
+Then we have the issuer scripts and finally prediction data like card design data, embossing data and
+
+74
+00:07:39,130 --> 00:07:40,030
+printing data.
+
+75
+00:07:43,630 --> 00:07:45,550
+Then we have the output data.
+
+76
+00:07:49,300 --> 00:07:55,660
+So for the personalized card we have the EMV chip data, magnetic stripe data and contactless data.
+
+77
+00:07:56,110 --> 00:08:03,610
+Then for the cryptographic we have card authentication, key signature data and issuer certificates.
+
+78
+00:08:04,320 --> 00:08:12,150
+Then for verification, you have the CVV and the CVC or the Pin and the Pin offset for audit and tracking
+
+79
+00:08:12,150 --> 00:08:12,510
+data.
+
+80
+00:08:12,510 --> 00:08:18,060
+We have personalization logs, personalization, validation data and transaction counters.
+
+81
+00:08:18,450 --> 00:08:24,960
+And finally, for cardholder delivered deliverables, we have card carrier and Pin mailer.
+
+82
+00:08:29,310 --> 00:08:32,429
+In fact, it's very important.
+
+83
+00:08:33,179 --> 00:08:36,030
+The card personalization is very important.
+
+84
+00:08:36,030 --> 00:08:42,659
+In fact, the EMV card personalization process is critical to ensuring the security and functionality
+
+85
+00:08:42,659 --> 00:08:50,730
+of EMV cards by securely encoding sensitive data, embedding cryptographic keys, and conducting Post
+
+86
+00:08:50,730 --> 00:08:52,260
+personalization tests.
+
+87
+00:08:53,430 --> 00:09:00,690
+This process helps protect against fraud and ensures that the card can be used safely across global
+
+88
+00:09:00,690 --> 00:09:01,800
+payment systems.
+

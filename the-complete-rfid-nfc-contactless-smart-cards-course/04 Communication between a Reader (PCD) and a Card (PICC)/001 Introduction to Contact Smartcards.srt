@@ -1,0 +1,480 @@
+1
+00:00:01,030 --> 00:00:02,170
+Hello again!
+
+2
+00:00:02,170 --> 00:00:07,960
+In this new section, communication between a reader and a cart.
+
+3
+00:00:17,400 --> 00:00:19,560
+So what's a smart card?
+
+4
+00:00:19,590 --> 00:00:30,420
+According to ISO 7816, a smart card, chip card, or integrated circuit card, IC is any pocket sized
+
+5
+00:00:30,420 --> 00:00:33,210
+card that has embedded integrated circuits.
+
+6
+00:00:34,140 --> 00:00:41,160
+This is a very open definition, which obviously would cover not only the objects you would spontaneously
+
+7
+00:00:41,160 --> 00:00:47,460
+name smart card, but also the SD card of your digital camera or mobile phone.
+
+8
+00:00:49,590 --> 00:00:55,890
+The cartridges of the gaming console you use to play with as a child, and possibly a flat USB flash
+
+9
+00:00:55,890 --> 00:00:56,430
+drive.
+
+10
+00:00:57,060 --> 00:01:04,319
+Actually, all of these are pocket sized cards that has embedded integrated circuits as well, but they
+
+11
+00:01:04,319 --> 00:01:05,700
+are no smart cards.
+
+12
+00:01:07,800 --> 00:01:17,910
+At first, let's circumscribe the subject to what the engineers and the industry have standardized under
+
+13
+00:01:17,910 --> 00:01:20,040
+the technical name Smart card.
+
+14
+00:01:21,300 --> 00:01:29,190
+An AC card having a standardized size, featuring a standardized electrical interface, implementing
+
+15
+00:01:29,190 --> 00:01:36,540
+a standardized protocol, and finally exposing standardized software interfaces.
+
+16
+00:01:37,560 --> 00:01:45,270
+All these standards are grouped in the ISO 7816 cluster entitled identification cards.
+
+17
+00:01:45,270 --> 00:01:47,280
+Integrated circuit cards.
+
+18
+00:01:59,490 --> 00:02:04,050
+So what about form factor and electrical interface?
+
+19
+00:02:04,230 --> 00:02:14,400
+ISO 7816 says the form factor of a smart card must be id1, as defined in ISO 7878 ten.
+
+20
+00:02:14,970 --> 00:02:23,730
+For example, the credit card size we all know is as the one that you are seeing here in this first
+
+21
+00:02:23,730 --> 00:02:24,390
+part.
+
+22
+00:02:26,710 --> 00:02:33,070
+A few smaller form factors have been introduced year after year by mobile phones manufacturers and are
+
+23
+00:02:33,070 --> 00:02:34,450
+now widely adopted.
+
+24
+00:02:35,080 --> 00:02:43,660
+For example, we have the two F mini SIM for the mobile phone manufacturer, which has also been adopted
+
+25
+00:02:43,660 --> 00:02:47,710
+by the smartcard industry for security Coprocessors.
+
+26
+00:02:47,740 --> 00:02:51,790
+Sam under the name ID 000.
+
+27
+00:02:52,060 --> 00:02:56,020
+Then we have three F, which is a micro SIM.
+
+28
+00:02:56,500 --> 00:02:59,620
+And then we have the four F, which is a nano SIM.
+
+29
+00:02:59,920 --> 00:03:03,370
+Which are that are used only in smartphones.
+
+30
+00:03:08,300 --> 00:03:17,000
+So the card communicates with the external world using a set of physical contacts, which also provides
+
+31
+00:03:17,000 --> 00:03:18,590
+power and clock.
+
+32
+00:03:19,430 --> 00:03:25,040
+I will not go deep into details concerning only the engineers working on the electrical interface,
+
+33
+00:03:25,040 --> 00:03:27,830
+but there are three facts worth noticing.
+
+34
+00:03:28,670 --> 00:03:30,650
+There are three power classes.
+
+35
+00:03:30,680 --> 00:03:33,980
+Class A stands for VCC equal five volts.
+
+36
+00:03:34,220 --> 00:03:38,750
+Class B, which stands for VCC, equals 3.3V.
+
+37
+00:03:39,230 --> 00:03:43,160
+And class C for VCC equal 1.8V.
+
+38
+00:03:44,180 --> 00:03:51,560
+A general purpose smart card reader is responsible for powering the card with increasing voltages until
+
+39
+00:03:51,560 --> 00:03:53,090
+the card comes to life.
+
+40
+00:03:54,110 --> 00:04:00,800
+A reader that is designed to always read the same card or the same card family could be optimized to
+
+41
+00:04:00,800 --> 00:04:03,320
+support only a single power class.
+
+42
+00:04:05,780 --> 00:04:14,330
+As you can see, contact S, C4, C6, and C8 were required in the 80s because the IC technology of
+
+43
+00:04:14,330 --> 00:04:22,280
+the time required a higher voltage when programming for like erase or write the memories than when reading
+
+44
+00:04:22,280 --> 00:04:22,820
+them.
+
+45
+00:04:26,450 --> 00:04:32,870
+These contacts have been deprecated in the 90s, but are now gaining new rules.
+
+46
+00:04:32,960 --> 00:04:41,180
+Some cars may implement USB on C4 and See8, and in some NFC enabled smartphones.
+
+47
+00:04:41,180 --> 00:04:47,150
+C6 is a direct link between the SIM card chip and the NFC contactless front end.
+
+48
+00:04:47,960 --> 00:04:54,170
+In early generation cards, CLK was the unique lock.
+
+49
+00:04:54,170 --> 00:04:58,820
+So when I say CLK, I mean clock was the unique clock source for the chip's processor.
+
+50
+00:04:59,390 --> 00:05:06,890
+Nowadays, most cards have an internal clock source, yet the clock line is still required to clock
+
+51
+00:05:06,890 --> 00:05:08,510
+the serial communication.
+
+52
+00:05:08,930 --> 00:05:15,470
+The reader must supply a constant clock signal, as you may know.
+
+53
+00:05:20,970 --> 00:05:24,120
+So what about the protocol of communication?
+
+54
+00:05:24,120 --> 00:05:32,850
+So ISO 7816 dash three specifies that the card implements as an asynchronous serial transport protocol
+
+55
+00:05:32,850 --> 00:05:35,490
+over the input or output pin.
+
+56
+00:05:35,790 --> 00:05:39,510
+The bit rate is defined as a division of the input clock.
+
+57
+00:05:40,500 --> 00:05:48,090
+The smart card protocol must put an emphasis on the error detection and recovery schemes in order to
+
+58
+00:05:48,090 --> 00:05:55,650
+improve the overall reliability of the link, because dirty or even damaged contacts are the cause of
+
+59
+00:05:55,650 --> 00:05:57,600
+frequent communication errors.
+
+60
+00:05:58,110 --> 00:06:00,540
+Actually, in fact, there are two protocols.
+
+61
+00:06:00,660 --> 00:06:03,900
+T equals zero is a character oriented protocol.
+
+62
+00:06:04,620 --> 00:06:07,830
+Error detection and recovery takes place after every byte.
+
+63
+00:06:08,220 --> 00:06:11,820
+Here we are talking about parity bit plus acknowledgement.
+
+64
+00:06:12,000 --> 00:06:18,540
+This is a legacy of the early 80s, a slow protocol yet usable even in harsh conditions.
+
+65
+00:06:18,720 --> 00:06:23,820
+Then we have the protocol T equal one, which is a block oriented protocol.
+
+66
+00:06:24,180 --> 00:06:29,970
+In fact, the blocks are 16 to 20 5 to 256 bytes long.
+
+67
+00:06:30,450 --> 00:06:37,380
+It's lots faster than t equals zero in the nominal situation where no communication error ever occurs.
+
+68
+00:06:37,410 --> 00:06:43,350
+But on the other hand, the error recovery process takes more time.
+
+69
+00:06:44,310 --> 00:06:52,350
+So since there is only one signal input or output pin shared by both input and output lines, both protocols
+
+70
+00:06:52,350 --> 00:06:53,790
+are half duplex.
+
+71
+00:06:53,790 --> 00:06:57,930
+The communication uses a command or response model.
+
+72
+00:06:58,320 --> 00:07:04,290
+The reader sends down a command, and the card must provide its response in a given time frame.
+
+73
+00:07:04,590 --> 00:07:11,760
+The only exception to this half duplex scheme is the initial power up and reset sequence, when the
+
+74
+00:07:11,760 --> 00:07:14,640
+card sends its first message spontaneously.
+
+75
+00:07:14,760 --> 00:07:21,870
+This message is the card's answer to reset or enter the ATR contains all the technical information the
+
+76
+00:07:21,870 --> 00:07:23,550
+reader needs to operate the card.
+
+77
+00:07:23,970 --> 00:07:30,000
+The protocol the card supports, the maximum bit rate and the expected timings.
+
+78
+00:07:30,000 --> 00:07:38,490
+For example, the ATR also conveys a few free bytes, like for example, max 15 bytes named historical
+
+79
+00:07:38,490 --> 00:07:44,820
+bytes that the developer of the software running in the car's microcontroller may use to expose some
+
+80
+00:07:44,820 --> 00:07:46,560
+information or metadata.
+
+81
+00:07:47,310 --> 00:07:51,510
+In a way, the ATR is a fingerprint of the card family.
+
+82
+00:07:52,260 --> 00:07:59,190
+The ATR allows a card aware application to determine whether a card that has just been inserted in the
+
+83
+00:07:59,190 --> 00:08:05,610
+reader is possibly the one card that the application was waiting for, or could be ignored.
+
+84
+00:08:10,890 --> 00:08:17,490
+So when we talk about communication between a reader or a card, I mean between a reader and a card
+
+85
+00:08:17,490 --> 00:08:21,750
+in contactless or contact technology, we will.
+
+86
+00:08:21,750 --> 00:08:23,610
+We talk about comments and answers.
+
+87
+00:08:24,030 --> 00:08:25,680
+So what about the comments?
+
+88
+00:08:25,680 --> 00:08:34,500
+In fact, the ISO 7816 dash four specifies that the comments Apdu starts with A44 byte header.
+
+89
+00:08:35,280 --> 00:08:44,100
+First byte is named class or CLA as, and it's intended to directly route the comment to one of the
+
+90
+00:08:44,100 --> 00:08:48,690
+cards applications or to control a secure communication channel.
+
+91
+00:08:49,890 --> 00:08:58,560
+Second byte is named instruction or INS, and identifies the command that has to be executed by the
+
+92
+00:08:58,560 --> 00:08:59,700
+cards application.
+
+93
+00:09:01,380 --> 00:09:06,240
+Third and fourth bytes are named parameters or p1 and p2.
+
+94
+00:09:06,270 --> 00:09:09,090
+They convert the parameter to the instruction.
+
+95
+00:09:09,240 --> 00:09:15,660
+It could be a combination of flags or a 16 bit number depending on the instruction.
+
+96
+00:09:15,870 --> 00:09:19,470
+So after the header comes the optional data field.
+
+97
+00:09:19,980 --> 00:09:23,640
+The length of the data is specified by the LC field.
+
+98
+00:09:24,300 --> 00:09:26,610
+LC field means the length of the command.
+
+99
+00:09:27,120 --> 00:09:29,370
+There are two kinds of epidius.
+
+100
+00:09:29,400 --> 00:09:33,930
+Short epidius are limited to 254.
+
+101
+00:09:37,060 --> 00:09:49,420
+Byte of data with width length on one byte extended up ideas go up to 64 kilo bit of data with length
+
+102
+00:09:49,420 --> 00:09:50,830
+on three bytes.
+
+103
+00:09:50,830 --> 00:09:58,870
+So the earlier I said 254 bytes, but I meant 254 kilo bit of data on one byte.
+
+104
+00:09:58,930 --> 00:10:06,520
+This is for the short use and the extended APD use go up to 64 kilo bit of that with length on three
+
+105
+00:10:06,520 --> 00:10:07,060
+bytes.
+
+106
+00:10:08,590 --> 00:10:15,370
+Then the CPU is terminated by an optional length.
+
+107
+00:10:16,030 --> 00:10:19,960
+It tells the card how many bytes the caller is waiting for.
+
+108
+00:10:21,010 --> 00:10:27,010
+Symmetrical symmetrical symmetrical length could be on 1 or 3 bytes.
+
+109
+00:10:28,870 --> 00:10:30,520
+Then we have the responses.
+
+110
+00:10:30,520 --> 00:10:34,480
+In fact, the response APD has no header and no length field.
+
+111
+00:10:35,140 --> 00:10:37,480
+It conveys an optional data field.
+
+112
+00:10:37,510 --> 00:10:41,800
+If this field is present, its length must be consistent with.
+
+113
+00:10:41,830 --> 00:10:49,510
+With length, it's terminated by a two byte status word status word one and status word two.
+
+114
+00:10:49,990 --> 00:10:55,780
+The status word tell tells whether the instruction has been correctly executed or not.
+
+115
+00:10:58,780 --> 00:11:05,170
+So, for example, when we have the perfect communication, when we have a when when the card would
+
+116
+00:11:05,170 --> 00:11:14,110
+like to say to the reader that I perfectly received the command, the status word will be 90 000 90
+
+117
+00:11:14,110 --> 00:11:17,230
+000 means we have no problem of communication.
+
+118
+00:11:17,620 --> 00:11:25,240
+For example, we have an another type of status word which can be six, eight, 82.
+
+119
+00:11:25,420 --> 00:11:30,910
+These two bytes means that there is a problem of communication that the cards is not able to understand
+
+120
+00:11:30,910 --> 00:11:31,600
+the command.
+

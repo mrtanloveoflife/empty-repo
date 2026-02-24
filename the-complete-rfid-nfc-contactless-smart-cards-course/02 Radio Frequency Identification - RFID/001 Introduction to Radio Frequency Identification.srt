@@ -1,0 +1,596 @@
+1
+00:00:01,230 --> 00:00:08,370
+So I'm going to start this training with the presentation of the RFID technology, which is the source
+
+2
+00:00:08,370 --> 00:00:11,490
+and origin of many inventions of last decades.
+
+3
+00:00:13,080 --> 00:00:21,300
+RFID stands for radio Frequency identification, which is a technology used for many applications like
+
+4
+00:00:21,300 --> 00:00:28,230
+identifying, processing and exchanging information by radio waves between one or more remote elements
+
+5
+00:00:28,230 --> 00:00:34,830
+like tagging animals, car keys to open the car remotely, bag tags, passport readers, and many other
+
+6
+00:00:34,830 --> 00:00:35,670
+applications.
+
+7
+00:00:36,720 --> 00:00:42,840
+It works by attaching a small chip to an object, which can then be read by a scanner or reader.
+
+8
+00:00:43,590 --> 00:00:51,630
+So the purpose of the RFID technology is to make our life easier and faster while performing daily tasks.
+
+9
+00:00:56,540 --> 00:00:57,770
+For sure.
+
+10
+00:00:57,770 --> 00:01:05,180
+It's a better word when you can track inventory levels in real time, locate lost luggage at the airport,
+
+11
+00:01:05,180 --> 00:01:08,210
+or even monitor the health of patients remotely.
+
+12
+00:01:09,890 --> 00:01:13,820
+RFID technology makes all this possible and more.
+
+13
+00:01:13,910 --> 00:01:18,410
+With its ability to automate processes and provide real time data.
+
+14
+00:01:18,740 --> 00:01:24,260
+RFID is revolutionizing the way we do business and improving our daily lives.
+
+15
+00:01:28,110 --> 00:01:32,310
+So how this technology works in general.
+
+16
+00:01:32,310 --> 00:01:39,090
+This rapidly growing technology transmits information wirelessly through the use of radio waves.
+
+17
+00:01:39,600 --> 00:01:43,080
+RFID requires using a device known as a reader.
+
+18
+00:01:43,290 --> 00:01:47,610
+The reader is needed to retrieve any data stored on the RFID tag.
+
+19
+00:01:48,390 --> 00:01:54,210
+A standard RFID tag has a microchip that can contain as much as two gigabytes of information.
+
+20
+00:01:55,350 --> 00:02:00,210
+Some of the chips used in this technology are smaller than a grain of sand.
+
+21
+00:02:00,780 --> 00:02:06,510
+The reader device contains an antenna and a small chip to transmit information via the radio frequency
+
+22
+00:02:06,510 --> 00:02:07,980
+electromagnetic field.
+
+23
+00:02:08,310 --> 00:02:13,560
+The reader is responsible for picking up identifying information like the unique serial number from
+
+24
+00:02:13,560 --> 00:02:14,580
+package tags.
+
+25
+00:02:15,090 --> 00:02:21,450
+The information is picked up via the antenna, which emits radio signals and receives signals back from
+
+26
+00:02:21,450 --> 00:02:22,470
+package tags.
+
+27
+00:02:23,400 --> 00:02:28,920
+These signals are then transmitted in digital format to the appropriate computer system.
+
+28
+00:02:30,150 --> 00:02:33,600
+What I have just said is a little bit complicated to understand.
+
+29
+00:02:33,600 --> 00:02:38,730
+If we don't go through a step by step technical explanation, and that's what I'm going to do through
+
+30
+00:02:38,730 --> 00:02:44,100
+the third section, which will present the communication between a reader, which is also called PCD,
+
+31
+00:02:44,370 --> 00:02:47,280
+and the contactless card, which is also called PAC.
+
+32
+00:02:48,390 --> 00:02:55,380
+The technology behind RFID is complicated, but its benefits in terms of tracking and inventory management
+
+33
+00:02:55,380 --> 00:02:58,680
+makes it a valuable tool for many industries.
+
+34
+00:03:04,330 --> 00:03:05,830
+About applications.
+
+35
+00:03:06,160 --> 00:03:09,760
+There are many applications supported by RFID.
+
+36
+00:03:09,820 --> 00:03:13,030
+For example, in the retail industry.
+
+37
+00:03:13,270 --> 00:03:17,590
+RFID technology is used to track inventory and reduce theft.
+
+38
+00:03:17,740 --> 00:03:24,700
+By using RFID tags on products, retailers can quickly and accurately monitor their stock levels and
+
+39
+00:03:24,700 --> 00:03:26,620
+prevent loss due to theft.
+
+40
+00:03:27,490 --> 00:03:33,940
+This is not only saves time, but also improves customer satisfaction by ensuring that products are
+
+41
+00:03:33,940 --> 00:03:34,990
+always in stock.
+
+42
+00:03:37,290 --> 00:03:38,730
+In health care.
+
+43
+00:03:39,150 --> 00:03:44,460
+RFID technology is used to improve patient safety and streamline processes.
+
+44
+00:03:45,090 --> 00:03:50,940
+RFID tags can be attached to patient wristbands to ensure that they receive the correct medication and
+
+45
+00:03:50,940 --> 00:03:51,510
+treatment.
+
+46
+00:03:52,500 --> 00:03:59,550
+Additionally, RFID technology can be used to track medical equipment and supplies, reducing the risks
+
+47
+00:03:59,550 --> 00:04:02,580
+of errors and improving efficiency.
+
+48
+00:04:12,350 --> 00:04:19,610
+When we talk about RFID systems or RLC circuits, the term of frequency is always showing up, and you
+
+49
+00:04:19,610 --> 00:04:22,670
+can even say that it's one of the basics of this technology.
+
+50
+00:04:23,390 --> 00:04:30,260
+In fact, RFID system can be broken down by the frequency band within which they operate.
+
+51
+00:04:31,370 --> 00:04:35,270
+They are often characterized by their operating frequency.
+
+52
+00:04:35,270 --> 00:04:43,070
+Band frequency refers to the size of the radio waves used to communicate between system components.
+
+53
+00:04:44,210 --> 00:04:50,030
+RFID systems throughout the world operate in low frequency, high frequency, and ultra high frequency
+
+54
+00:04:50,030 --> 00:04:50,750
+bands.
+
+55
+00:04:50,810 --> 00:04:53,060
+Some people call higher frequency.
+
+56
+00:04:53,060 --> 00:04:54,350
+Super high frequency.
+
+57
+00:04:54,680 --> 00:05:01,580
+Radio waves behave differently at each of these frequencies, and there are advantages and disadvantages
+
+58
+00:05:01,580 --> 00:05:04,070
+associated with using each frequency band.
+
+59
+00:05:04,790 --> 00:05:16,250
+To start the low frequency band, I mean the Lf band covers frequencies from 30kHz to 135kHz.
+
+60
+00:05:16,760 --> 00:05:24,500
+Typically, Lf rid systems operate at 125kHz.
+
+61
+00:05:25,250 --> 00:05:33,560
+This frequency band provides a short read range of ten centimeter and has lower read speed than the
+
+62
+00:05:33,560 --> 00:05:34,640
+higher frequencies.
+
+63
+00:05:36,450 --> 00:05:42,660
+Then the high frequency band runs from 3 to 30MHz.
+
+64
+00:05:42,900 --> 00:05:51,930
+Most HF RFID systems operate at 1350 six megahertz, with read ranges between 10cm and 1m.
+
+65
+00:05:53,040 --> 00:05:56,010
+And here we are talking about NFC systems.
+
+66
+00:05:56,790 --> 00:06:03,300
+HF systems I mean high frequency systems experience moderate sensitivity to interference.
+
+67
+00:06:05,250 --> 00:06:05,820
+HF.
+
+68
+00:06:05,820 --> 00:06:10,560
+RFID is commonly used for ticketing, payment, and data transfer applications.
+
+69
+00:06:14,020 --> 00:06:23,290
+There are several HF RFID standards in place, such as the ISO 15,693 standard for tracking items,
+
+70
+00:06:23,290 --> 00:06:28,120
+and ISO 18,092 standards for near-field communication.
+
+71
+00:06:28,150 --> 00:06:34,330
+NFC, a short range technology that is commonly used for data exchange between devices.
+
+72
+00:06:35,470 --> 00:06:40,600
+Other high frequency standards, which is very important as it will be the one that we are going to
+
+73
+00:06:40,600 --> 00:06:51,010
+talk about, is the ISO 14,443 type A and ISO 14 443 type B, and also ISO 14,443 standards for Mifare
+
+74
+00:06:51,010 --> 00:06:55,540
+technology, which used in smart cards and proximity cards.
+
+75
+00:06:57,430 --> 00:07:00,490
+NFC is best described as a subset of RFID.
+
+76
+00:07:01,360 --> 00:07:06,520
+NFC devices operate at the same frequency as high frequency RFID readers and tags.
+
+77
+00:07:07,450 --> 00:07:09,250
+1350 six megahertz.
+
+78
+00:07:10,030 --> 00:07:17,290
+But unlike RFID devices and tags, NFC does not have a range from 25m to 100m.
+
+79
+00:07:20,670 --> 00:07:27,150
+Instead, NFC takes advantage of the short read range limitation of its radio frequency.
+
+80
+00:07:27,150 --> 00:07:34,860
+Because NFC devices must be in close proximity to each other no more than a few centimeters apart.
+
+81
+00:07:34,980 --> 00:07:41,880
+NFC has become the top choice for secure communication between consumer devices such as smartphones.
+
+82
+00:07:43,680 --> 00:07:49,170
+Radio frequency identification a contactless one way communication method at varying distances.
+
+83
+00:07:49,200 --> 00:07:55,800
+NFC, which is near-field communication, allows for two way communication and requires action by the
+
+84
+00:07:55,800 --> 00:07:56,160
+user.
+
+85
+00:07:57,120 --> 00:08:03,090
+By the way, in some parts of this training, I'm going to present and detail every aspect defined in
+
+86
+00:08:03,090 --> 00:08:08,760
+the ISO 14,443 standard, which is the Qi standard at the basis of contactless communication.
+
+87
+00:08:09,540 --> 00:08:16,590
+Then after this ranges of frequency, we have the ultra high frequency band, which covers the range
+
+88
+00:08:16,590 --> 00:08:19,530
+from 300MHz to 3GHz.
+
+89
+00:08:20,670 --> 00:08:27,600
+Ultra high frequency RFID is used in a wide variety of applications, ranging from retail inventory
+
+90
+00:08:27,600 --> 00:08:31,350
+management to pharmaceutical to wireless device configuration.
+
+91
+00:08:31,890 --> 00:08:38,549
+Active RFID systems typically operate in the ultra high frequency band and offer a range of up to 100m.
+
+92
+00:08:38,730 --> 00:08:47,790
+In general, active tags are used on large objects such as real cards, big reusable containers, and
+
+93
+00:08:47,790 --> 00:08:50,670
+other assets that need to be tracked over long distance.
+
+94
+00:08:56,780 --> 00:09:05,180
+So there are three types of RFID systems active systems, passive systems, and battery assisted passive
+
+95
+00:09:05,180 --> 00:09:05,870
+systems.
+
+96
+00:09:05,870 --> 00:09:07,820
+Be I mean VIP systems.
+
+97
+00:09:08,870 --> 00:09:11,360
+Regarding the active RFID systems.
+
+98
+00:09:11,660 --> 00:09:16,430
+In fact, in active RFID systems, tags have their own transmitter and power source.
+
+99
+00:09:17,120 --> 00:09:19,760
+Usually the power source is a battery.
+
+100
+00:09:20,720 --> 00:09:26,570
+In fact, active tags broadcast their own signal to transmit the information stored on their microchips.
+
+101
+00:09:27,470 --> 00:09:35,180
+Active RFID systems typically operate in the ultra high frequency band and offer a range of up to 100m.
+
+102
+00:09:36,500 --> 00:09:42,860
+In general, active tags are used on large objects such as real cars.
+
+103
+00:09:43,550 --> 00:09:45,260
+Big usable containers.
+
+104
+00:09:46,370 --> 00:09:51,530
+There are two main types of active tags transponders and beacons.
+
+105
+00:09:53,900 --> 00:10:00,350
+Transponders are woken up when they receive a radio signal from a reader, and then power on and respond
+
+106
+00:10:00,350 --> 00:10:02,120
+by transmitting a signal back.
+
+107
+00:10:02,630 --> 00:10:08,960
+Because transponders do not actively radiate radio waves until they receive a reader signal, they conserve
+
+108
+00:10:08,960 --> 00:10:09,920
+battery life.
+
+109
+00:10:11,420 --> 00:10:14,690
+Beacons are often used in real time locating systems.
+
+110
+00:10:14,720 --> 00:10:19,730
+Rtls in order to track the precise location of an asset continuously.
+
+111
+00:10:19,970 --> 00:10:24,230
+Unlike transponders, beacons are not powered on by the reader's signal.
+
+112
+00:10:24,260 --> 00:10:27,710
+Instead, they emit signals at preset intervals.
+
+113
+00:10:31,000 --> 00:10:36,730
+Depending on the level of locating accuracy required, beacons can be set to emit signals every few
+
+114
+00:10:36,730 --> 00:10:37,990
+seconds or once a day.
+
+115
+00:10:38,710 --> 00:10:44,440
+Each beacons signal is received by a reader antenna that are positioned around the perimeter of the
+
+116
+00:10:44,440 --> 00:10:48,730
+area being monitored, and communicates the tags, information, and position.
+
+117
+00:10:49,960 --> 00:10:52,810
+Then we have the passive RFID systems.
+
+118
+00:10:52,960 --> 00:10:58,780
+In passive RFID systems, the reader and reader antenna send a radio signal to the tag.
+
+119
+00:10:58,810 --> 00:11:04,420
+The RFID tag then uses the transmitted signal to power on and reflect energy back to the reader.
+
+120
+00:11:06,010 --> 00:11:12,220
+Passive RFID systems can operate in the low frequency, high frequency, or ultra high frequency radio
+
+121
+00:11:12,220 --> 00:11:12,880
+bands.
+
+122
+00:11:13,090 --> 00:11:19,840
+As passive system range are limited by the power of tags backscatter, they are typically less than
+
+123
+00:11:19,840 --> 00:11:20,380
+ten metres.
+
+124
+00:11:20,380 --> 00:11:25,450
+By the way, when I say backscatter, I mean the radio signal reflected from the tag back to the reader.
+
+125
+00:11:26,620 --> 00:11:32,410
+Because passive tags do not require a power source or transmitter and only require a tag chip and antenna,
+
+126
+00:11:32,830 --> 00:11:36,700
+they are cheaper, smaller, and easier to manufacture than active tags.
+
+127
+00:11:38,380 --> 00:11:45,310
+Passive tags can be packaged in many different ways depending on the specific RFID application requirements.
+
+128
+00:11:45,490 --> 00:11:51,670
+For instance, they may be mounted on a substrate or sandwiched between an adhesive layer and a paper
+
+129
+00:11:51,670 --> 00:11:53,920
+label to create smart RFID labels.
+
+130
+00:11:54,400 --> 00:12:01,210
+Passive tags may also be embedded in a variety of devices or packages to make the tag resistant to extreme
+
+131
+00:12:01,210 --> 00:12:03,700
+temperature or harsh cleaning chemicals.
+
+132
+00:12:07,450 --> 00:12:12,910
+So the third type of the systems is battery assisted passive systems.
+
+133
+00:12:12,940 --> 00:12:21,430
+A battery assisted passive RFID tag is a type of passive tag which is incorporating a crucial active
+
+134
+00:12:21,430 --> 00:12:22,120
+tag feature.
+
+135
+00:12:22,120 --> 00:12:28,300
+While most passive RFID tags use the energy from the RFID reader signal to power on tags, chip and
+
+136
+00:12:28,300 --> 00:12:29,680
+backscatter to the reader.
+
+137
+00:12:29,800 --> 00:12:37,690
+BRP tags use an integrated power source, usually a battery, to power on the chip, so all of the captured
+
+138
+00:12:37,690 --> 00:12:40,330
+energy from the reader can be used for backscatter.
+
+139
+00:12:40,960 --> 00:12:45,670
+Unlike transponders, BRP tags do not have their own transmitter.
+
+140
+00:12:50,720 --> 00:12:51,620
+And here we are.
+
+141
+00:12:51,620 --> 00:12:54,080
+We have the summary of our first training.
+
+142
+00:12:54,500 --> 00:13:01,250
+So RFID is a technology for identifying, processing and exchanging information by radio waves between
+
+143
+00:13:01,250 --> 00:13:03,080
+one or more remote elements.
+
+144
+00:13:03,110 --> 00:13:09,170
+It's a wireless communication between a reader and a card or tag that uses electromagnetic coupling.
+
+145
+00:13:10,130 --> 00:13:17,420
+RFID systems can operate in Lf low frequency, high frequency, and ultra high frequency NFC.
+
+146
+00:13:17,690 --> 00:13:21,650
+A subset of RFID operates at 1350 six megahertz.
+
+147
+00:13:23,170 --> 00:13:29,500
+The ISO 14,143 standard is the one that defines the communication protocols of communication.
+
+148
+00:13:33,870 --> 00:13:41,610
+Active RFID systems have their own transmitter and power source and passive RFID system, where the
+
+149
+00:13:41,610 --> 00:13:44,430
+reader antenna sends a radio signal to the tag.
+

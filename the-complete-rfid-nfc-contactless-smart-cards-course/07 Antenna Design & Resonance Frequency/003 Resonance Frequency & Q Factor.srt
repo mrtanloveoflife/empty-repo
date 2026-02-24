@@ -1,0 +1,1248 @@
+1
+00:00:01,609 --> 00:00:08,540
+Hello and welcome to this new session of the module Antenna Design and Resonance Frequency.
+
+2
+00:00:08,840 --> 00:00:16,190
+In this presentation we will be talking about exploration of resonance and quality factors in oscillatory
+
+3
+00:00:16,190 --> 00:00:16,850
+systems.
+
+4
+00:00:17,480 --> 00:00:24,920
+In fact, resonance frequency is a very important phenomenon in relation with the NFC field.
+
+5
+00:00:24,920 --> 00:00:33,290
+Because when we design the antennas of the NFC cards or the picks, we try to have a resonance frequency
+
+6
+00:00:33,290 --> 00:00:40,400
+around 1350 six megahertz, which is the resonant frequency that characterizes the NFC field.
+
+7
+00:00:40,670 --> 00:00:45,470
+This resonance frequency can be higher or lower than 1350 six megahertz.
+
+8
+00:00:45,470 --> 00:00:52,190
+And these different values can have some effects toward the communication with the reader.
+
+9
+00:00:57,170 --> 00:00:59,780
+So first of all, here is the summary.
+
+10
+00:01:00,670 --> 00:01:04,060
+We will be starting by an introduction to resonance frequency.
+
+11
+00:01:04,090 --> 00:01:08,620
+Then we will be talking about some basic concepts of resonance frequency.
+
+12
+00:01:08,650 --> 00:01:14,140
+After that, we will be talking about resonance in electrical and mechanical systems.
+
+13
+00:01:14,140 --> 00:01:17,770
+And then we will pass to talk about the Q factor.
+
+14
+00:01:17,800 --> 00:01:22,690
+Then I will be presenting the Q factor in electrical and mechanical systems.
+
+15
+00:01:22,690 --> 00:01:28,990
+And after that we will see the different relationships between resonance frequency and q factor.
+
+16
+00:01:29,020 --> 00:01:35,830
+Then the resonance frequency and the PC which is the chord, and then the Q factor and the PC.
+
+17
+00:01:40,660 --> 00:01:45,970
+So first of all this is the introduction to resonance frequency.
+
+18
+00:01:46,960 --> 00:01:53,950
+But before we talk about the examples, you should know that resonance frequency is a physical phenomenon
+
+19
+00:01:53,950 --> 00:02:02,520
+that occurs when an object or system vibrates at its natural frequency due to an external force.
+
+20
+00:02:03,840 --> 00:02:12,570
+At this frequency, the object absorbs energy efficiently, causing it to oscillate with maximum amplitude.
+
+21
+00:02:13,170 --> 00:02:18,750
+In simple terms, resonance is like pushing a child on a swing.
+
+22
+00:02:19,800 --> 00:02:28,230
+If you push at just the right moment, the swing goes higher with very little effort.
+
+23
+00:02:29,430 --> 00:02:37,860
+So resonance is a powerful concept seen across nature, physics and engineering, and it can have both
+
+24
+00:02:37,860 --> 00:02:40,380
+constructive and destructive effects.
+
+25
+00:02:45,720 --> 00:02:49,110
+So then let's talk about these examples.
+
+26
+00:02:49,140 --> 00:02:56,370
+So first of all we have the famous Tacoma Narrows Bridge collapse in 1940.
+
+27
+00:02:57,150 --> 00:03:04,540
+In fact, the bridge collapsed due to wind induced resonance, where the wind's frequency matched the
+
+28
+00:03:04,540 --> 00:03:06,400
+bridge's natural frequency.
+
+29
+00:03:07,120 --> 00:03:15,340
+So, as I said, the wind's frequency matched exactly the bridge's natural frequency, and this caused
+
+30
+00:03:15,340 --> 00:03:18,190
+the structure to oscillate violently.
+
+31
+00:03:19,630 --> 00:03:24,430
+Then we have an example of wine glass shattering with sound.
+
+32
+00:03:25,150 --> 00:03:33,100
+So, for example, a single or a sound source producing a node that matches the glass's natural frequency
+
+33
+00:03:33,130 --> 00:03:36,640
+can cause it to resonant and break.
+
+34
+00:03:37,000 --> 00:03:41,050
+A third example is resonance in musical instruments.
+
+35
+00:03:42,250 --> 00:03:51,550
+For example, instruments like guitar, strings, drums, and tuning forks resonate at specific frequencies
+
+36
+00:03:51,550 --> 00:03:52,960
+to produce sound.
+
+37
+00:03:54,610 --> 00:03:58,450
+The fourth example is a child on a swing.
+
+38
+00:03:58,690 --> 00:04:05,070
+So when you push a swing at its natural frequency, it reaches greater heights.
+
+39
+00:04:06,840 --> 00:04:15,720
+For example, when we push a child, the child can go, can move back and forth, and if we push this
+
+40
+00:04:15,720 --> 00:04:20,130
+swing at it at its natural frequency, it reaches greater heights.
+
+41
+00:04:21,149 --> 00:04:24,030
+The fifth example is the MRI machines.
+
+42
+00:04:24,060 --> 00:04:32,580
+So in medical imaging, magnetic resonance imaging uses the resonance frequency of atoms in the body
+
+43
+00:04:32,580 --> 00:04:34,620
+to generate clear images.
+
+44
+00:04:35,340 --> 00:04:40,950
+And finally we have the example of resonance in buildings during earthquakes.
+
+45
+00:04:41,700 --> 00:04:49,290
+For example, if the frequency of earthquake vibrations matches a building's natural frequency, it
+
+46
+00:04:49,290 --> 00:04:52,170
+can cause severe structural damage.
+
+47
+00:05:01,100 --> 00:05:04,100
+So what about some basic concepts.
+
+48
+00:05:05,150 --> 00:05:13,430
+So the basic concepts of resonance frequency revolve around the idea of natural vibrations in objects
+
+49
+00:05:13,430 --> 00:05:14,240
+or systems.
+
+50
+00:05:14,900 --> 00:05:16,520
+So here is an overview.
+
+51
+00:05:16,760 --> 00:05:20,060
+First of all we have the natural frequency.
+
+52
+00:05:21,080 --> 00:05:27,830
+Every object or system has a natural frequency at which it tends to vibrate when disturbed.
+
+53
+00:05:28,130 --> 00:05:35,360
+For example, as I said before, a guitar string vibrates at a specific pitch when plucked.
+
+54
+00:05:36,230 --> 00:05:39,230
+Then we have the resonance.
+
+55
+00:05:39,350 --> 00:05:47,900
+So the resonance occurs when an external force matches the natural frequency of an object, amplifying
+
+56
+00:05:47,900 --> 00:05:48,980
+its vibration.
+
+57
+00:05:50,690 --> 00:05:55,340
+So at resonance, energy is transferred most efficiently.
+
+58
+00:05:59,830 --> 00:06:05,020
+Then we have the amplitude increase at resonance.
+
+59
+00:06:05,050 --> 00:06:11,140
+The amplitude of vibration increases significantly compared to other frequencies.
+
+60
+00:06:12,550 --> 00:06:19,600
+For example, let's imagine a resonance curve shows a peak at the resonance frequency where amplitude
+
+61
+00:06:19,600 --> 00:06:20,500
+is highest.
+
+62
+00:06:21,610 --> 00:06:26,650
+The fourth concept is the driving force and damping.
+
+63
+00:06:27,100 --> 00:06:31,180
+So a driving force is the external force causing vibration.
+
+64
+00:06:31,180 --> 00:06:36,460
+For example, it can be a wind sound or mechanical input.
+
+65
+00:06:37,360 --> 00:06:45,250
+Then we have the damping which refers to energy dissipation which reduces the amplitude of vibrations
+
+66
+00:06:45,250 --> 00:06:46,300
+over time.
+
+67
+00:06:47,500 --> 00:06:52,180
+And then the damping effect or resonance is the high.
+
+68
+00:06:52,210 --> 00:06:54,730
+Damping reduces the sharpness of resonance.
+
+69
+00:06:55,960 --> 00:06:59,660
+The fifth concept is the resonance in different systems.
+
+70
+00:07:00,830 --> 00:07:08,390
+So resonance can occur in mechanical systems, for example like bridges, swings or car suspensions.
+
+71
+00:07:09,230 --> 00:07:14,510
+It can occur also in acoustic systems like musical instruments or speakers.
+
+72
+00:07:14,720 --> 00:07:21,920
+Then we have the electrical systems like circuits with inductors and capacitors and this part which
+
+73
+00:07:21,920 --> 00:07:24,440
+characterize an NFC card.
+
+74
+00:07:24,500 --> 00:07:31,730
+And finally we have the atomic or molecular systems like MRI scanners and chemical reactions.
+
+75
+00:07:33,290 --> 00:07:39,020
+And then the final concept which is the constructive and destructive destructive effects.
+
+76
+00:07:39,050 --> 00:07:46,730
+So regarding the constructive effect it enhances sound in musical instrument or precise imaging in MRI
+
+77
+00:07:46,760 --> 00:07:47,570
+machines.
+
+78
+00:07:47,960 --> 00:07:54,950
+However, the destructive effect is a structural failure in buildings or bridges during earthquakes.
+
+79
+00:07:55,580 --> 00:07:59,890
+So these are the different basic concepts of resonance frequency.
+
+80
+00:08:03,130 --> 00:08:13,180
+So first of all, for any mathematical or physical phenomenon, there is a mathematical formula related
+
+81
+00:08:13,180 --> 00:08:13,780
+to it.
+
+82
+00:08:15,340 --> 00:08:20,530
+So for example here on the left we have for a simple harmonic oscillator.
+
+83
+00:08:21,550 --> 00:08:30,160
+So fr which is the resonance frequency is equal to one divided by £0.02 multiplied by square k divided
+
+84
+00:08:30,160 --> 00:08:39,039
+by m, where fr is the resonance frequency, k is the spring constant and m is the mass.
+
+85
+00:08:39,880 --> 00:08:42,340
+Then for a pendulum.
+
+86
+00:08:42,760 --> 00:08:50,710
+So the resonance frequency is equal to one divided by two multiplied by p and all multiplied by square
+
+87
+00:08:50,740 --> 00:08:59,400
+j divided by l, where j is acceleration due to gravity, and L is the length of the pendulum.
+
+88
+00:09:07,710 --> 00:09:11,520
+So what about resonance in electrical system?
+
+89
+00:09:11,520 --> 00:09:16,830
+Which is the best way to describe resonance in an NFC card?
+
+90
+00:09:17,520 --> 00:09:22,920
+So resonance in electrical systems occurs when the inductive reactance.
+
+91
+00:09:22,950 --> 00:09:29,010
+Reactance which is x L and capacitive reactance x c.
+
+92
+00:09:29,160 --> 00:09:35,160
+When I talk about inductive reactance I'm talking about the inductance and the capacitive reactance.
+
+93
+00:09:35,160 --> 00:09:36,840
+I'm talking about the capacitor.
+
+94
+00:09:37,080 --> 00:09:46,050
+So resonance occurs when the inductive reactance XL and capacitive reactance XC of a circuit are equal
+
+95
+00:09:46,050 --> 00:09:51,960
+in magnitude but opposite in phase, causing them to cancel each other out.
+
+96
+00:09:52,410 --> 00:10:00,350
+Thus, this results in the circuit having a purely resistive impedance at a specific frequency, which
+
+97
+00:10:00,350 --> 00:10:02,030
+is called the resonance frequency.
+
+98
+00:10:03,680 --> 00:10:10,550
+So first we will start by presenting the types of resonance in electrical system.
+
+99
+00:10:10,580 --> 00:10:17,810
+So first of all we have the series resonance like this one here.
+
+100
+00:10:17,810 --> 00:10:19,610
+This is a series circuit.
+
+101
+00:10:19,850 --> 00:10:25,190
+As you can see the capacitance the inductance and the resistance are in in series.
+
+102
+00:10:26,150 --> 00:10:33,590
+So the series resonance occurs in a series RLC circuit.
+
+103
+00:10:34,190 --> 00:10:40,310
+When I say RLC circuit I mean resistor inductor capacitor connected in series.
+
+104
+00:10:40,340 --> 00:10:53,000
+At resonance the inductive here and capacitive reactance cancel out because XL is equal to XC minimizing
+
+105
+00:10:53,030 --> 00:10:55,490
+impedance and maximizing current.
+
+106
+00:10:56,700 --> 00:10:57,270
+form.
+
+107
+00:10:57,420 --> 00:11:04,440
+For some examples of applications, we have the filters, tuning circuits and frequency selective networks.
+
+108
+00:11:05,190 --> 00:11:13,320
+Then the second type is the parallel resonance, which occurs in a parallel RLC circuit like this one.
+
+109
+00:11:13,380 --> 00:11:18,780
+As you can see, the resistance the capacitor and the inductance are in parallel.
+
+110
+00:11:20,160 --> 00:11:30,870
+So at resonance the current through the inductor and capacitor cancels out and the circuit behaves as
+
+111
+00:11:30,870 --> 00:11:32,970
+if it has infinite impedance.
+
+112
+00:11:35,010 --> 00:11:39,090
+For some applications we have voltage amplification and oscillators.
+
+113
+00:11:54,560 --> 00:12:02,870
+So when we talk about resonance frequency in electrical system, there is a formula that that represents
+
+114
+00:12:02,870 --> 00:12:03,350
+it.
+
+115
+00:12:04,070 --> 00:12:15,440
+So which is fr is equal to one divided by £0.02 square LC where fr is the resonance frequency, L is
+
+116
+00:12:15,440 --> 00:12:20,600
+an inductance in Henry and the C is a capacitance in farad.
+
+117
+00:12:23,720 --> 00:12:28,550
+The third point is that is the characteristics of electrical resonance.
+
+118
+00:12:29,750 --> 00:12:31,520
+We have three points here.
+
+119
+00:12:31,850 --> 00:12:34,910
+The first point is the energy exchange.
+
+120
+00:12:35,510 --> 00:12:43,190
+Because energy oscillates between the magnetic field in the inductor and the electric field in the capacitor.
+
+121
+00:12:43,520 --> 00:12:50,600
+The second point is the voltage or current amplification, where resonance can cause large voltage or
+
+122
+00:12:50,600 --> 00:12:52,250
+current peaks in the circuit.
+
+123
+00:12:52,640 --> 00:13:00,940
+And the third one is the selective frequency, where resonance allows circuits to selectively amplify
+
+124
+00:13:00,970 --> 00:13:04,060
+or respond to signals of a specific frequency.
+
+125
+00:13:06,430 --> 00:13:09,070
+And the fourth point here is the examples.
+
+126
+00:13:09,070 --> 00:13:16,390
+In electrical systems we can have radio tuners, filters like low pass, high pass, band pass, and
+
+127
+00:13:16,390 --> 00:13:19,780
+band stop filters that use resonance principle.
+
+128
+00:13:20,020 --> 00:13:27,670
+Third example is the oscillators and the fourth one is the power system, where resonance in power systems
+
+129
+00:13:27,670 --> 00:13:32,650
+can cause voltage or current surges, potentially damaging equipment.
+
+130
+00:13:39,010 --> 00:13:43,240
+So after that we have resonance in mechanical system.
+
+131
+00:13:44,680 --> 00:13:52,690
+This is not very much related to the NFC aspect, but it's good to know because it has many relation
+
+132
+00:13:52,720 --> 00:13:54,870
+with the resonance in electrical system.
+
+133
+00:13:56,190 --> 00:13:57,600
+So first of all.
+
+134
+00:13:57,630 --> 00:14:05,220
+Resonance in mechanical systems occurs when an external periodic force matches the natural frequency
+
+135
+00:14:05,220 --> 00:14:09,870
+of a system, causing the system to oscillate with maximum amplitude.
+
+136
+00:14:10,650 --> 00:14:17,070
+This happens because energy is efficiently transferred to the system at its natural frequency.
+
+137
+00:14:18,810 --> 00:14:21,870
+So what are the key concepts of mechanical resonance?
+
+138
+00:14:21,900 --> 00:14:28,380
+First of all, we have the natural frequency, where every mechanical system, for example a pendulum
+
+139
+00:14:28,380 --> 00:14:33,840
+or a bridge, has a natural frequency at which it tends to vibrate when disturbed.
+
+140
+00:14:34,320 --> 00:14:40,980
+This depends on the system's properties, such as mass, stiffness, and damping.
+
+141
+00:14:41,700 --> 00:14:49,680
+The second concept is a driving force where an external periodic force can be applied to a system that
+
+142
+00:14:49,680 --> 00:14:51,360
+can drive its oscillation.
+
+143
+00:14:51,810 --> 00:14:56,030
+If the driving force matches the system's natural frequency.
+
+144
+00:14:56,060 --> 00:14:57,680
+Resonance occurs.
+
+145
+00:14:58,790 --> 00:15:01,790
+The third concept here is the amplification.
+
+146
+00:15:02,480 --> 00:15:06,890
+At resonance, the amplitude of vibration increases dramatically.
+
+147
+00:15:07,100 --> 00:15:11,660
+Because a system absorbs energy efficiently from the external force.
+
+148
+00:15:12,680 --> 00:15:15,320
+And the final concept is the damping.
+
+149
+00:15:15,320 --> 00:15:21,650
+Same thing as the electrical because damping reduces the amplitude of oscillations by dissipation energy.
+
+150
+00:15:22,070 --> 00:15:29,990
+For example, heat or friction, low damping leads to sharp resonance, while high damping makes resonance
+
+151
+00:15:29,990 --> 00:15:31,250
+less pronounced.
+
+152
+00:15:33,620 --> 00:15:36,860
+So then same thing as electrical system.
+
+153
+00:15:36,860 --> 00:15:40,550
+We have also here a mathematical representation.
+
+154
+00:15:40,970 --> 00:15:47,780
+In fact, the natural frequency of n of a simple mechanical system, such as a mass spring system,
+
+155
+00:15:47,780 --> 00:15:56,610
+is given by f n equal to one divided by £0.02 multiplied by square K divided by M, where k is a spring
+
+156
+00:15:56,610 --> 00:15:58,650
+constant and m is the mass.
+
+157
+00:16:04,110 --> 00:16:07,590
+Same thing as electrical we have in musical system.
+
+158
+00:16:07,590 --> 00:16:09,270
+We have also some application that can.
+
+159
+00:16:09,300 --> 00:16:11,130
+Describe these systems.
+
+160
+00:16:11,520 --> 00:16:18,150
+For example in engineering vibration isolation and damping in cars, airplanes and machinery.
+
+161
+00:16:18,690 --> 00:16:24,390
+A second example is a medical medical devices ultrasound.
+
+162
+00:16:24,390 --> 00:16:29,160
+For example, ultrasound imaging relies on the resonance of sound waves in tissues.
+
+163
+00:16:30,150 --> 00:16:36,420
+And the third example is the energy systems, where resonance mechanical systems like pendulums are
+
+164
+00:16:36,420 --> 00:16:38,670
+used in clock and oscillators.
+
+165
+00:16:47,250 --> 00:16:54,440
+As we have presented the resonance frequency, there is a very important factor that is related to it.
+
+166
+00:16:54,440 --> 00:16:59,570
+And that can also describe the antenna of an NFC card, which is the Q factor.
+
+167
+00:17:02,120 --> 00:17:05,000
+So first of all, what is the Q factor.
+
+168
+00:17:05,180 --> 00:17:12,920
+The q factor or quality factor is a measure used in various fields, including physics, engineering,
+
+169
+00:17:12,920 --> 00:17:19,760
+and signal processing to describe the damping of a system's oscillation or the sharpness of its resonance.
+
+170
+00:17:20,900 --> 00:17:29,390
+It quantifies the efficiency of a resonator, oscillator, or filter, indicating how well it can sustain
+
+171
+00:17:29,420 --> 00:17:31,040
+oscillations over time.
+
+172
+00:17:31,730 --> 00:17:40,430
+In simple terms, the Q factor tells us how selective a system is at resonating at a particular frequency.
+
+173
+00:17:41,510 --> 00:17:48,980
+A high Q factor means the system oscillates with minimal energy loss, and the resonance is sharp and
+
+174
+00:17:48,980 --> 00:17:49,490
+narrow.
+
+175
+00:17:50,390 --> 00:17:56,560
+A low Q factor, on the other hand, indicates a broad resonance and significant energy dissipation.
+
+176
+00:17:56,950 --> 00:18:02,320
+So, in fact, high Q factor can have some advantages and disadvantages.
+
+177
+00:18:02,320 --> 00:18:04,510
+And the same thing for a low Q factor.
+
+178
+00:18:04,540 --> 00:18:07,690
+It can have also advantages and disadvantages.
+
+179
+00:18:08,710 --> 00:18:15,550
+This is what we are going to see in relation with the PC or the NFC contactless card.
+
+180
+00:18:21,760 --> 00:18:30,970
+So in different contexts, for example, in electronics, the Q factor refers to the sharpness of the
+
+181
+00:18:30,970 --> 00:18:36,220
+resonance of a circuit, often in relation to filters and detectors or capacitors.
+
+182
+00:18:37,750 --> 00:18:45,160
+A high Q factor implies a narrow bandwidth, making it useful for timing.
+
+183
+00:18:47,200 --> 00:18:49,870
+And such as in radio frequencies.
+
+184
+00:18:51,130 --> 00:18:52,740
+In mechanical systems.
+
+185
+00:18:52,740 --> 00:19:01,110
+It's used to describe how quickly a system loses energy, such as in vibrating objects or damping oscillators.
+
+186
+00:19:02,520 --> 00:19:10,320
+And finally, in signal processing, the q factor can refer to the bandwidth of a filter in relation
+
+187
+00:19:10,320 --> 00:19:11,910
+to its center frequency.
+
+188
+00:19:13,890 --> 00:19:22,470
+In general, a higher Q factor suggests better performance, especially for applications requiring precise
+
+189
+00:19:22,470 --> 00:19:30,660
+frequency selection or minimal energy loss, while a lower Q factor indicates more broad spectrum behavior
+
+190
+00:19:30,660 --> 00:19:32,520
+with quicker energy dissipation.
+
+191
+00:20:04,090 --> 00:20:08,350
+So what about the Q factor in electrical systems.
+
+192
+00:20:08,350 --> 00:20:16,030
+So the Q factor in relation to electrical systems refers to the damping of an oscillatory or resonant
+
+193
+00:20:16,030 --> 00:20:21,040
+system, such as a resonant circuit, filter or mechanical oscillator.
+
+194
+00:20:22,420 --> 00:20:30,490
+It's a measure of how underdamped the system is, or how efficiently it stores and transfers energy
+
+195
+00:20:30,490 --> 00:20:32,110
+at its resonance frequency.
+
+196
+00:20:32,710 --> 00:20:40,270
+In electrical systems, the Q factor is typically used to characterize circuits like LC circuits that
+
+197
+00:20:40,270 --> 00:20:46,120
+contains inductance and capacitance, or RLC circuit that contains resistance, inductance, and capacitance.
+
+198
+00:20:47,200 --> 00:20:54,840
+So the Q factor is defined as q equal to the resonant frequency divided by the bandwidth.
+
+199
+00:20:55,140 --> 00:21:02,460
+The bandwidth is the delta of of frequencies in -three decibels.
+
+200
+00:21:04,230 --> 00:21:11,040
+So the resonance frequency is the frequency at which the system naturally oscillates, and the bandwidth
+
+201
+00:21:11,040 --> 00:21:19,830
+is the range of frequencies over which the system can effectively resonate, often measured between
+
+202
+00:21:19,830 --> 00:21:21,660
+the half power points.
+
+203
+00:21:24,990 --> 00:21:33,690
+So the key points here is that you have a high Q factor indicates a narrow bandwidth and low energy
+
+204
+00:21:33,690 --> 00:21:41,400
+loss, meaning the system resonates strongly at a signal frequency and maintains oscillations for a
+
+205
+00:21:41,400 --> 00:21:42,300
+longer time.
+
+206
+00:21:42,780 --> 00:21:46,200
+This is common in high quality filters or oscillators.
+
+207
+00:21:47,550 --> 00:21:55,340
+However, low Q factor Indicates a wide bandwidth with greater energy loss leading to a more dampened
+
+208
+00:21:55,340 --> 00:21:56,090
+response.
+
+209
+00:21:57,440 --> 00:22:03,890
+In simple terms, the Q factor reflects how sharp or broad the resonance is.
+
+210
+00:22:03,920 --> 00:22:07,730
+With higher Q indicating sharper, more efficient resonance.
+
+211
+00:22:18,320 --> 00:22:22,970
+So what about the relationship between resonance frequency and q factor?
+
+212
+00:22:24,080 --> 00:22:32,060
+The q factor, the q and the resonance frequency are closely related properties in systems that exhibit
+
+213
+00:22:32,060 --> 00:22:37,100
+resonance, such as electrical circuits, mechanical systems, and optical systems.
+
+214
+00:22:38,390 --> 00:22:40,250
+Here is how they are connected.
+
+215
+00:22:40,250 --> 00:22:49,930
+So first of all, the Q factor quantifies how underdamped a resonance system is and indicates the sharpness
+
+216
+00:22:49,930 --> 00:22:51,220
+of the resonance peak.
+
+217
+00:22:51,520 --> 00:22:57,610
+As we said, as I have said before, q is equal to fr divided by delta f.
+
+218
+00:22:59,410 --> 00:23:05,830
+So then the resonance frequency is the frequency at which the system naturally oscillates with a maximum
+
+219
+00:23:05,860 --> 00:23:08,950
+amplitude when driven by an external force.
+
+220
+00:23:13,840 --> 00:23:23,140
+So as I said before, in fact the relationship between Q and resonance is is presented by the fact that
+
+221
+00:23:23,140 --> 00:23:30,370
+if the q factor is high or low, for example, when the Q factor is high, as I said, it indicates
+
+222
+00:23:30,400 --> 00:23:32,860
+a narrow bandwidth and a sharp resonance peak.
+
+223
+00:23:34,480 --> 00:23:38,170
+And in this situation the resonance is more selective.
+
+224
+00:23:38,290 --> 00:23:45,550
+However, when we have a low Q factor, it corresponds to a broader bandwidth and a less sharp resonance
+
+225
+00:23:45,550 --> 00:23:46,180
+peak.
+
+226
+00:23:46,240 --> 00:23:52,010
+So the system dissipates energy faster, leading to less selectivity around the resonance frequency.
+
+227
+00:23:53,090 --> 00:23:58,430
+So this is how the relationship between both of them is defined.
+
+228
+00:23:58,850 --> 00:24:07,640
+And finally, in term of energy perspective, the Q factor also relates to the energy stored and dissipated
+
+229
+00:24:07,640 --> 00:24:08,420
+in the system.
+
+230
+00:24:10,100 --> 00:24:19,820
+So for example, Q is equal also to £0.02 multiplied by the energy stored divided by the energy dissipated
+
+231
+00:24:19,820 --> 00:24:20,660
+per cycle.
+
+232
+00:24:20,840 --> 00:24:28,910
+So systems with a high q factor store energy for longer periods relative to how quickly they lose it.
+
+233
+00:24:36,950 --> 00:24:45,440
+So for example, in electrical circuits, first of all, for an RLC circuit we have Q equal to one divided
+
+234
+00:24:45,440 --> 00:24:54,760
+by r multiplied by square l divided by C, and here the resonance frequency is fr equal to one divided
+
+235
+00:24:54,760 --> 00:24:58,270
+by £0.02 multiplied by square l c.
+
+236
+00:24:59,410 --> 00:25:05,770
+Here q and fr are interconnected through the circuit's inductance, capacitance and resistance.
+
+237
+00:25:07,660 --> 00:25:14,770
+So in summary the q factor describes how sharply defined the resonance frequency is and how effectively
+
+238
+00:25:14,770 --> 00:25:18,310
+the system sustains oscillations at resonance frequency.
+
+239
+00:25:19,330 --> 00:25:25,270
+The higher the q factor, the more precise the resonance and the lower the energy dissipation.
+
+240
+00:25:30,700 --> 00:25:39,190
+So here we arrive to the most important part, because I have done all of that, and this whole presentation
+
+241
+00:25:39,190 --> 00:25:40,900
+is related to the NFC field.
+
+242
+00:25:40,900 --> 00:25:45,700
+It's related to the contactless cards to the PC and the PCB.
+
+243
+00:25:45,730 --> 00:25:53,580
+The communication between the PC and the PCB PCD, and all of that is defined by the ISO 14,443 standard.
+
+244
+00:25:54,540 --> 00:26:06,390
+So in the context of ISO 14,443 cards, resonance frequency refers to the frequency at which the card's
+
+245
+00:26:06,390 --> 00:26:13,950
+antenna and associated components naturally oscillate most efficiently in response to electromagnetic
+
+246
+00:26:13,950 --> 00:26:15,420
+waves, as I said before.
+
+247
+00:26:15,450 --> 00:26:22,740
+The purpose is that when we try to design the antenna of the pack, we try to be the closest possible
+
+248
+00:26:22,740 --> 00:26:24,810
+to the 1350 six megahertz.
+
+249
+00:26:25,680 --> 00:26:33,540
+However, when we have a higher resonance frequency, this means that the card's antenna circuit is
+
+250
+00:26:33,540 --> 00:26:40,920
+tuned to resonance at frequency higher than the operating frequency, which is 1350 six megahertz for
+
+251
+00:26:40,920 --> 00:26:43,530
+ISO 14,443 cards.
+
+252
+00:26:44,880 --> 00:26:51,650
+This implicates that the card may perform Suboptimally at the standard operating frequency.
+
+253
+00:26:52,490 --> 00:27:00,620
+The response at 1350 six megahertz could be lower, so the response strength at 1350 six megahertz could
+
+254
+00:27:00,620 --> 00:27:01,280
+be lower.
+
+255
+00:27:02,210 --> 00:27:10,400
+Then the higher resonance frequency can lead to the tuning when operating in environments with significant
+
+256
+00:27:10,400 --> 00:27:12,260
+electromagnetic interference.
+
+257
+00:27:13,880 --> 00:27:23,390
+Then we can have a low resonance frequency, which means that the cards on tennis circuit is tuned to
+
+258
+00:27:23,420 --> 00:27:29,240
+resonate at a frequency lower than the operating frequency, which is 1350 six megahertz.
+
+259
+00:27:37,130 --> 00:27:46,040
+So a low resonance frequency can introduce similar to a high resonance frequency.
+
+260
+00:27:48,000 --> 00:27:52,290
+And it may result in weaker performance at 1350 six megahertz.
+
+261
+00:27:52,800 --> 00:28:01,290
+The card might require closer proximity to the reader for optimal performance, and it may still work,
+
+262
+00:28:01,290 --> 00:28:05,250
+but with reduced communication range and efficiency.
+
+263
+00:28:06,180 --> 00:28:16,950
+So the solution for that, or let's say the optimal tuning, is that for ISO 14,443 cards to function
+
+264
+00:28:16,950 --> 00:28:24,060
+efficiently, the resonance frequency of the card's LC circuit should be tuned close to or slightly
+
+265
+00:28:24,060 --> 00:28:26,970
+above 1350 six megahertz.
+
+266
+00:28:27,000 --> 00:28:34,680
+This ensures maximum energy transfer from the reader's field and strong and stable communication.
+
+267
+00:28:36,360 --> 00:28:43,290
+So here it's better that we have a resonance frequency slightly above 1350 six megahertz.
+
+268
+00:28:46,820 --> 00:28:52,760
+And finally we'll talk about the relationship between the Q factor and the PC.
+
+269
+00:28:53,600 --> 00:29:03,170
+So the Q factor of an ISO 14,443 card relates to how sharply the card's resonant circuit, typically
+
+270
+00:29:03,170 --> 00:29:10,680
+an LC circuit consisting of an inductor and capacitor resonates at its natural frequency of 1350 six
+
+271
+00:29:10,680 --> 00:29:11,240
+megahertz.
+
+272
+00:29:11,540 --> 00:29:19,370
+It indicates the efficiency of energy transfer and how well the card can respond to the reader's electromagnetic
+
+273
+00:29:19,370 --> 00:29:19,910
+field.
+
+274
+00:29:21,680 --> 00:29:28,520
+So when we have a high Q factor, it means that the resonance peak is sharp and narrow.
+
+275
+00:29:28,790 --> 00:29:33,920
+The card is highly efficient in absorbing energy at the resonant frequency.
+
+276
+00:29:35,420 --> 00:29:39,710
+So this implies that some advantages and disadvantages.
+
+277
+00:29:39,740 --> 00:29:45,380
+For the advantages, we will have stronger and more efficient coupling with the reader at the tuned
+
+278
+00:29:45,380 --> 00:29:51,340
+frequency, And also it will improve communication runs in a controlled environment.
+
+279
+00:29:52,120 --> 00:30:00,940
+However, regarding the the the disadvantages, it will be susceptible to detuning due to external factors
+
+280
+00:30:00,940 --> 00:30:04,480
+like nearby metallic objects or other RFID cards.
+
+281
+00:30:07,300 --> 00:30:14,050
+We will have a narrow operational operational bandwidth, making the card less tolerant to vibration
+
+282
+00:30:14,710 --> 00:30:18,130
+in the operating environment or reader frequency.
+
+283
+00:30:19,330 --> 00:30:28,480
+However, when we will have a low Q factor, it means that the resonance peak is broad, indicating
+
+284
+00:30:28,480 --> 00:30:32,590
+more damping and less energy stored in the circuit.
+
+285
+00:30:35,230 --> 00:30:39,970
+So this will introduce some advantages and disadvantages.
+
+286
+00:30:39,970 --> 00:30:48,420
+Also regarding the advantages broader operational bandwidth with making the card more robust against
+
+287
+00:30:48,420 --> 00:30:50,670
+the tuning or frequency vibration.
+
+288
+00:30:51,540 --> 00:30:56,880
+Also more stable operation in environments with interference or multiple cards.
+
+289
+00:30:57,750 --> 00:31:04,950
+However, regarding these advantages, reduced coupling efficiency and weaker communication range compared
+
+290
+00:31:04,950 --> 00:31:10,440
+to a high Q factor card, and also will have more energy loss in the resonance process.
+
+291
+00:31:13,170 --> 00:31:19,740
+So, to have some practical considerations for ISO 14,443 cards.
+
+292
+00:31:21,180 --> 00:31:28,260
+First of all, regarding the tuning of the Q factor, the the Q factor is typically adjusted during
+
+293
+00:31:28,260 --> 00:31:32,490
+design by selecting appropriate components in the car's antenna circuit.
+
+294
+00:31:33,390 --> 00:31:40,560
+A balance is struck to ensure sufficient range while maintaining robustness in diverse environments.
+
+295
+00:31:42,030 --> 00:31:44,760
+Second point is the standard compliance.
+
+296
+00:31:44,950 --> 00:31:55,240
+so ISO 14,443 cards are designed with a Q factor that ensures reliable operations at 1350 six megahertz,
+
+297
+00:31:55,240 --> 00:32:00,460
+without exceeding electromagnetic emissions limits set by standards.
+
+298
+00:32:01,750 --> 00:32:06,580
+After that, the third point is a typical use case preferences.
+
+299
+00:32:07,240 --> 00:32:15,580
+So high Q factor cards is ideal for controlled environments where range and performance are prioritized,
+
+300
+00:32:17,050 --> 00:32:23,770
+and a low Q factor cards is better for environments with high noise or interference, where robustness
+
+301
+00:32:23,770 --> 00:32:25,540
+and stability are crucial.
+
+302
+00:32:27,040 --> 00:32:34,150
+So the conclusion of all of that is that it's very important to make sure to design the antenna in the
+
+303
+00:32:34,150 --> 00:32:35,110
+best way.
+
+304
+00:32:35,230 --> 00:32:43,180
+We have to make sure to choose the best values for inductance, capacitance, and resistance to have
+
+305
+00:32:43,180 --> 00:32:46,500
+the best resonance frequency and the Q factor.
+
+306
+00:32:47,130 --> 00:32:54,780
+A high or a low resonance frequency can have advantages and disadvantages, and also the same thing
+
+307
+00:32:54,780 --> 00:32:55,950
+for Q factor.
+
+308
+00:32:56,070 --> 00:33:00,720
+High or low q factor can also have some advantages and disadvantages.
+
+309
+00:33:01,650 --> 00:33:12,150
+For me, I recommend to have also resonance frequency close to 1356 or slightly above 1350 six megahertz.
+
+310
+00:33:12,660 --> 00:33:17,400
+And regarding the Q factor, it should not be too low or too high.
+
+311
+00:33:18,150 --> 00:33:21,660
+And it can be around 20 or 30 or 40.
+
+312
+00:33:23,940 --> 00:33:27,180
+As a as a good value for the Q factor.
+

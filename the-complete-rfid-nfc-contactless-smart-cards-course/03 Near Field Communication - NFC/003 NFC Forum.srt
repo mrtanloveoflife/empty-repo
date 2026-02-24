@@ -1,0 +1,452 @@
+1
+00:00:00,930 --> 00:00:05,640
+So in this presentation we will be talking about NFC forum.
+
+2
+00:00:07,780 --> 00:00:15,190
+So NFC forum is a non-profit trade association that promotes the use of the near-field communication
+
+3
+00:00:15,190 --> 00:00:17,980
+technology, which is NFC.
+
+4
+00:00:18,520 --> 00:00:29,920
+The mission of the NFC forum is to encourage the use of NFC technology by first developing standards
+
+5
+00:00:29,920 --> 00:00:35,860
+based specification to ensure interoperability between devices and services.
+
+6
+00:00:36,790 --> 00:00:42,550
+Second, encouraging the development of products using the NFC forum.
+
+7
+00:00:42,550 --> 00:00:43,690
+Specifications.
+
+8
+00:00:44,990 --> 00:00:49,430
+Third globally, promoting NFC technology.
+
+9
+00:00:50,150 --> 00:00:57,620
+And finally ensuring that NFC equipment complies with NFC forum specifications.
+
+10
+00:01:01,770 --> 00:01:09,840
+Becoming a member of NFC forum grants you access to a community of experts in the field of near field
+
+11
+00:01:09,840 --> 00:01:11,370
+communication technology.
+
+12
+00:01:12,270 --> 00:01:20,790
+As a member, you will have exclusive access to the latest research, industry insights and networking
+
+13
+00:01:20,790 --> 00:01:26,250
+opportunities with other professionals who shares your passion for NFC.
+
+14
+00:01:27,780 --> 00:01:35,940
+In addition, membership provides you with the opportunity to contribute to the development of new standards
+
+15
+00:01:35,940 --> 00:01:39,660
+and technologies that will shape the future of NFC.
+
+16
+00:01:41,310 --> 00:01:48,360
+By working together with other members, you can help to create innovative solutions that will drive
+
+17
+00:01:48,390 --> 00:01:52,590
+growth and increase adoption of NFC technology worldwide.
+
+18
+00:01:53,280 --> 00:02:01,920
+For example, there are some sponsor members like Apple, Google and NXP, and others that shapes the
+
+19
+00:02:01,920 --> 00:02:06,240
+mission and direction of the organization at all levels for every market.
+
+20
+00:02:06,720 --> 00:02:13,860
+There are also principal members who hold a strategic level of leadership, participation and influence
+
+21
+00:02:13,860 --> 00:02:18,600
+on NFC forum deliverables and first party testing privileges.
+
+22
+00:02:20,820 --> 00:02:26,220
+For example, Mastercard, visa, Samsung, and honor.
+
+23
+00:02:32,670 --> 00:02:35,670
+What about NFC forum specifications?
+
+24
+00:02:36,060 --> 00:02:45,540
+In fact, there are five NFC forum specifications and the first one is an Ndef specification.
+
+25
+00:02:45,570 --> 00:02:54,690
+NFC data exchange format, which is a common format for data exchange between hardware and NFC forum
+
+26
+00:02:54,690 --> 00:02:56,070
+compatible tags.
+
+27
+00:02:56,220 --> 00:03:06,330
+It also contains the rules for constructing a valid Ndef message and the workable set of Ndef records.
+
+28
+00:03:06,900 --> 00:03:12,210
+The second one is RTD specification record type definition.
+
+29
+00:03:12,930 --> 00:03:20,130
+It ensures the interoperability of NFC technology across multiple hardware categories.
+
+30
+00:03:21,030 --> 00:03:24,840
+Then we have Smart Poster RTD specification.
+
+31
+00:03:25,590 --> 00:03:36,060
+This specification defines a type of record allowing to insert URLs, URLs, SMS, or telephone numbers
+
+32
+00:03:36,060 --> 00:03:39,000
+on NFC tag by titling them.
+
+33
+00:03:40,410 --> 00:03:44,310
+The fourth one is text RTD specification.
+
+34
+00:03:45,480 --> 00:03:46,440
+Record type.
+
+35
+00:03:46,440 --> 00:03:47,310
+Description.
+
+36
+00:03:48,870 --> 00:03:52,770
+Record type correspond to plain text data.
+
+37
+00:03:52,980 --> 00:04:01,410
+This specification corresponds to a general purpose text field used to add metadata to objects like
+
+38
+00:04:01,410 --> 00:04:04,110
+URLs, with a reduced footprint.
+
+39
+00:04:05,160 --> 00:04:08,610
+And then the last one you are I.
+
+40
+00:04:08,640 --> 00:04:13,200
+RTD specification uniform resource identifier.
+
+41
+00:04:13,680 --> 00:04:14,970
+Service record.
+
+42
+00:04:15,000 --> 00:04:15,270
+Type.
+
+43
+00:04:15,270 --> 00:04:16,079
+Description.
+
+44
+00:04:16,649 --> 00:04:28,290
+The URI RTD specification describes the record used with the Ndef specification to retrieve a URI Uniform
+
+45
+00:04:28,290 --> 00:04:29,700
+Resource Identifier.
+
+46
+00:04:30,780 --> 00:04:40,080
+This specification also allows URIs to be stored inside other NFC items such as smart posters.
+
+47
+00:04:48,500 --> 00:04:53,540
+So for NFC forum tags, there are different types.
+
+48
+00:04:54,020 --> 00:04:58,640
+In fact, the NFC forum organized tags in five types.
+
+49
+00:04:58,820 --> 00:05:01,550
+Each of them correspond to different tools.
+
+50
+00:05:02,210 --> 00:05:08,960
+I'm going here to show you the different characteristics of each type and the associated uses.
+
+51
+00:05:09,770 --> 00:05:13,430
+For example the first one NFC tags type one.
+
+52
+00:05:13,910 --> 00:05:19,430
+This type of tags can be can be read and write.
+
+53
+00:05:20,840 --> 00:05:25,850
+It operates under the norm ISO 14,443.
+
+54
+00:05:27,080 --> 00:05:31,550
+By the way, we will discuss later in detail about this standard.
+
+55
+00:05:31,580 --> 00:05:39,680
+The ISO 14,443 is a very important standard about contactless communication, and we need to detail
+
+56
+00:05:39,680 --> 00:05:41,810
+through this whole training.
+
+57
+00:05:43,310 --> 00:05:46,070
+So let's get back to the NFC tag type one.
+
+58
+00:05:46,070 --> 00:05:53,900
+So the protocol simplicity allow us to reduce the number of electronic components and thus to reduce
+
+59
+00:05:53,900 --> 00:05:55,190
+the cost of the tag.
+
+60
+00:05:56,060 --> 00:06:03,020
+In return the communication flow is limited and only the basic functionalities can be implemented.
+
+61
+00:06:04,010 --> 00:06:07,280
+Basic functionalities like read, write, lock.
+
+62
+00:06:08,090 --> 00:06:16,340
+The type one tags are used for some applications like business cards, pairing devices with Bluetooth
+
+63
+00:06:16,400 --> 00:06:20,180
+and reading a specific tag when more than one tag is present.
+
+64
+00:06:20,810 --> 00:06:23,390
+Then we have the NFC tags.
+
+65
+00:06:23,390 --> 00:06:24,230
+Type two.
+
+66
+00:06:24,920 --> 00:06:33,380
+This type of tags is compliant with NFC, the technology of communication type A, but by the way,
+
+67
+00:06:33,380 --> 00:06:36,470
+because in the contactless communication we have different types.
+
+68
+00:06:36,470 --> 00:06:42,050
+We have type A, type B, ISO 15 for the vicinity and felica.
+
+69
+00:06:43,520 --> 00:06:53,810
+So so this tag type two, it can operate on two modes read and write mode but also read only mode.
+
+70
+00:06:53,810 --> 00:06:57,950
+It operates under the norm ISO 14,443.
+
+71
+00:07:00,820 --> 00:07:04,480
+The NFC forum type two tag is the most popular type of tag.
+
+72
+00:07:04,510 --> 00:07:11,050
+It offers a solution to a wide range of needs and uses at affordable price.
+
+73
+00:07:11,380 --> 00:07:19,360
+The type two tags are faster than type one tags, and are used in applications where users need instant
+
+74
+00:07:19,360 --> 00:07:20,530
+communication.
+
+75
+00:07:21,970 --> 00:07:29,350
+The type two tags are used for some applications like low value transactions and De transit passes.
+
+76
+00:07:32,370 --> 00:07:34,680
+Then we have the NFC tags.
+
+77
+00:07:34,680 --> 00:07:35,520
+Type three.
+
+78
+00:07:36,240 --> 00:07:44,100
+This type of tags is compliant with NFC if it can read and write, but also read only.
+
+79
+00:07:44,400 --> 00:07:49,260
+It operates under the norm GIS 6319.
+
+80
+00:07:49,710 --> 00:07:57,360
+For this norm, the standard refers to the felica communication the Japanese communication Japanese
+
+81
+00:07:57,360 --> 00:07:58,230
+type of cards.
+
+82
+00:07:59,430 --> 00:08:05,220
+The type three NFC forum tags operates under a different norm than the other tags types.
+
+83
+00:08:05,880 --> 00:08:13,260
+This text components are more sophisticated than the two others, and this tag provides a lot of features,
+
+84
+00:08:13,260 --> 00:08:19,800
+for example identification and digital world and comes with a relatively high price.
+
+85
+00:08:20,700 --> 00:08:28,800
+The type three tags are used for some applications like transit tickets, e-money, electronic ID membership
+
+86
+00:08:28,800 --> 00:08:33,090
+cards, e-tickets, health care devices, and home electronics.
+
+87
+00:08:34,559 --> 00:08:37,440
+The fourth one we have NFC tags type four.
+
+88
+00:08:37,799 --> 00:08:41,220
+This type of tags is compliant with NFC and NFC.
+
+89
+00:08:41,820 --> 00:08:45,330
+It can read, write, and read only.
+
+90
+00:08:45,630 --> 00:08:50,940
+It operates under the standard ISO 14,443, four A and B.
+
+91
+00:08:52,990 --> 00:08:57,430
+The type four tag offers use, flexibility and wide memory.
+
+92
+00:08:57,430 --> 00:09:03,010
+The price of the stock is moderate to high depending on the amount of memory chosen.
+
+93
+00:09:03,370 --> 00:09:07,510
+Security is the most important features of this type of tag.
+
+94
+00:09:07,510 --> 00:09:10,330
+It allows you to realize through identification.
+
+95
+00:09:11,080 --> 00:09:17,560
+So the type four tags is the only type of tags that can support the needed level of security for ISO
+
+96
+00:09:17,560 --> 00:09:22,780
+7816, and it also allows modification of Ndef content.
+
+97
+00:09:23,380 --> 00:09:28,060
+This capability allows, for example, to answer to transit ticket application requirements.
+
+98
+00:09:29,260 --> 00:09:34,000
+Finally, we have the type five NFC tags.
+
+99
+00:09:34,390 --> 00:09:40,300
+This type of tags is compliant with NFC for vicinity, V for vicinity.
+
+100
+00:09:40,420 --> 00:09:42,850
+It can read, write, and read only.
+
+101
+00:09:42,850 --> 00:09:47,410
+It operates under the standard ISO 15,693.
+
+102
+00:09:48,670 --> 00:09:55,840
+It allows to transfer data between technology already supported by NFC forum, and the technical specification
+
+103
+00:09:55,840 --> 00:09:58,120
+of the ISO 15,693.
+
+104
+00:09:58,600 --> 00:10:05,860
+The reading distance is better than the one of other tags, and the tag that supports type five tag
+
+105
+00:10:05,860 --> 00:10:09,610
+will be able to support ISO 15,693 tags.
+
+106
+00:10:10,090 --> 00:10:17,980
+The type five tags are used for some applications like library books, products and packaging ticketing.
+
+107
+00:10:17,980 --> 00:10:23,950
+For example such ski passes and health care such like medication packaging.
+
+108
+00:10:27,250 --> 00:10:29,830
+And here, here we are in the summary.
+
+109
+00:10:29,830 --> 00:10:35,770
+So I just took four notes from what we have seen together in this presentation.
+
+110
+00:10:35,770 --> 00:10:42,160
+So NFC forum is an association that promotes the use of the NFC technology, became a member of NFC
+
+111
+00:10:42,160 --> 00:10:47,710
+forum, grants you access to a community of experts in the field of near-field communication technology.
+
+112
+00:10:48,250 --> 00:10:55,540
+NFC forum has five specifications and the NFC forum organized tags in five types, each of them corresponding
+
+113
+00:10:55,570 --> 00:10:57,250
+to different uses.
+

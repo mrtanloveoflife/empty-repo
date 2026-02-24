@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 70, "questions": [{"_class": "assessment", "id": 89804705, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the typical operating frequency of an NFC antenna?</p>", "relatedLectureIds": ["40971334"], "feedbacks": ["", "", "", ""], "answers": ["<p>125 kHz</p>", "<p>13.56 MHz</p>", "<p>2.45 GHz</p>", "<p>900 MHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the typical operating frequency of an NFC antenna?", "related_lectures": [{"_class": "lecture", "id": 40971334, "title": "Introduction to Near Field Communication", "created": "2023-11-22T22:48:28Z", "is_published": true, "asset": {"_class": "asset", "id": 54684462, "asset_type": "Video", "title": "Introduction to near field communication.mp4", "created": "2024-02-15T20:38:19Z"}, "object_index": 6, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/40971334"}]}, {"_class": "assessment", "id": 89804717, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following shapes is most commonly used in NFC antenna designs?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Circular</p>", "<p>Square</p>", "<p>Hexagonal</p>", "<p>Irregular</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which of the following shapes is most commonly used in NFC antenna designs?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804725, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Why is it important to match the NFC antenna inductance with the circuit?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>To minimize signal noise</p>", "<p>To improve communication distance</p>", "<p>To ensure maximum power transfer</p>", "<p>To reduce manufacturing cost</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Why is it important to match the NFC antenna inductance with the circuit?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804733, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which material is most commonly used for NFC antenna coils?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Copper</p>", "<p>Aluminum</p>", "<p>Iron</p>", "<p>Gold</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which material is most commonly used for NFC antenna coils?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804749, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What does the Quality Factor (Q) of an NFC antenna influence?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>The size of the antenna</p>", "<p>The power consumption</p>", "<p>The bandwidth and efficiency</p>", "<p>The physical appearance</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What does the Quality Factor (Q) of an NFC antenna influence?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804755, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How does increasing the number of coil turns in an NFC antenna affect its inductance?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Increases inductance</p>", "<p>Decreases inductance</p>", "<p>No effect</p>", "<p>Causes signal interference</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "How does increasing the number of coil turns in an NFC antenna affect its inductance?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804761, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Where should an NFC antenna typically be placed on a device for optimal performance?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>Near metal components</p>", "<p>Inside thick plastic casings</p>", "<p>On the outermost layer, away from other circuitry</p>", "<p>Close to the power source</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Where should an NFC antenna typically be placed on a device for optimal performance?", "related_lectures": []}, {"_class": "assessment", "id": 89804767, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What component is often used in conjunction with the NFC antenna to ensure proper tuning?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Resistor</p>", "<p>Capacitor</p>", "<p>Diode</p>", "<p>Transformer</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What component is often used in conjunction with the NFC antenna to ensure proper tuning?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804815, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How can you reduce the effect of metal interference on NFC antenna performance?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>Increase the power supply</p>", "<p>Add a ferrite sheet</p>", "<p>Decrease the antenna size</p>", "<p>Use a longer antenna wire</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "How can you reduce the effect of metal interference on NFC antenna performance?", "related_lectures": []}, {"_class": "assessment", "id": 89804821, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which software is often used for simulating NFC antenna performance?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Adobe Illustrator</p>", "<p>HFSS (High-Frequency Structure Simulator)</p>", "<p>AutoCAD</p>", "<p>MATLAB</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which software is often used for simulating NFC antenna performance?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804825, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the purpose of impedance matching in an NFC antenna system?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>To improve the antenna's visual appearance</p>", "<p>To minimize reflection and maximize energy transfer</p>", "<p>To reduce the size of the antenna</p>", "<p>To increase signal noise</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the purpose of impedance matching in an NFC antenna system?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804831, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How does the size of the NFC antenna affect the communication range?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Larger antennas always increase range</p>", "<p>Smaller antennas provide better efficiency</p>", "<p>Larger antennas typically improve the communication range</p>", "<p>The antenna size has no effect on range</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "How does the size of the NFC antenna affect the communication range?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804837, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What role does a capacitor play in an NFC antenna tuning circuit?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>It stabilizes the power supply</p>", "<p>It adjusts the resonant frequency</p>", "<p>It prevents signal loss</p>", "<p>It controls the voltage</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What role does a capacitor play in an NFC antenna tuning circuit?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804845, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How do you adjust the NFC antenna to resonate at the required 13.56 MHz frequency?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Increase the antenna length</p>", "<p>Modify the capacitance or inductance</p>", "<p>Decrease the power supply</p>", "<p>Use a thinner wire for the coil</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "How do you adjust the NFC antenna to resonate at the required 13.56 MHz frequency?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804851, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the primary function of ferrite material in NFC antenna design?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>To boost signal power</p>", "<p>To minimize interference from metal objects</p>", "<p>To increase the antenna size</p>", "<p>To improve aesthetics</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the primary function of ferrite material in NFC antenna design?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804897, "assessment_type": "multiple-choice", "prompt": {"question": "<p>In an NFC system, how is communication achieved between devices?</p>", "relatedLectureIds": ["43040194"], "feedbacks": ["", "", "", ""], "answers": ["<p>Through sound waves</p>", "<p>Through magnetic field coupling</p>", "<p>By direct electrical contact</p>", "<p>Using infrared signals</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In an NFC system, how is communication achieved between devices?", "related_lectures": [{"_class": "lecture", "id": 43040194, "title": "Communication between a PCD and a PICC", "created": "2024-03-28T14:03:43Z", "is_published": true, "asset": {"_class": "asset", "id": 56858944, "asset_type": "Video", "title": "Communication between a PCD and a PICC.mp4", "created": "2024-05-28T13:02:04Z"}, "object_index": 14, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040194"}]}, {"_class": "assessment", "id": 89804901, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the advantage of using a multi-layer PCB for NFC antennas?</p>", "relatedLectureIds": ["44020176"], "feedbacks": ["", "", "", ""], "answers": ["<p>Better heat dissipation</p>", "<p>Allows more compact designs and better performance tuning</p>", "<p>Higher manufacturing costs</p>", "<p>More resistance to physical damage</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the advantage of using a multi-layer PCB for NFC antennas?", "related_lectures": [{"_class": "lecture", "id": 44020176, "title": "Card Types", "created": "2024-05-29T13:34:04Z", "is_published": true, "asset": {"_class": "asset", "id": 56883522, "asset_type": "Video", "title": "Card Types.mp4", "created": "2024-05-29T13:34:33Z"}, "object_index": 13, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/44020176"}]}, {"_class": "assessment", "id": 89804905, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following is <strong>NOT</strong> a solution to mitigate the negative effects of metal on NFC antennas?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>Increase the antenna\u2019s size</p>", "<p>Use ferrite shielding</p>", "<p>Change the antenna\u2019s frequency</p>", "<p>Add more coil turns to the antenna</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following is NOT a solution to mitigate the negative effects of metal on NFC antennas?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}, {"_class": "assessment", "id": 89804911, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which environmental factor has the most significant impact on NFC antenna performance?</p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>Ambient temperature</p>", "<p>Humidity</p>", "<p>Proximity to metal objects</p>", "<p>Altitude</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which environmental factor has the most significant impact on NFC antenna performance?", "related_lectures": []}, {"_class": "assessment", "id": 89804921, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the relationship between field strength and communication range in NFC antennas?</p>", "relatedLectureIds": ["43040268"], "feedbacks": ["", "", "", ""], "answers": ["<p>The higher the field strength, the shorter the range</p>", "<p>Field strength has no effect on range</p>", "<p>The higher the field strength, the longer the range</p>", "<p>Increased field strength only affects data transfer speed</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the relationship between field strength and communication range in NFC antennas?", "related_lectures": [{"_class": "lecture", "id": 43040268, "title": "HF Antenna Validation for Cards", "created": "2024-03-28T14:07:04Z", "is_published": true, "asset": {"_class": "asset", "id": 57343240, "asset_type": "Video", "title": "HF Antenna Validation for Cards.mp4", "created": "2024-06-20T14:27:39Z"}, "object_index": 23, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040268"}]}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

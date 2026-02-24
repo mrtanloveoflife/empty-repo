@@ -1,0 +1,396 @@
+1
+00:00:01,589 --> 00:00:02,430
+Hello.
+
+2
+00:00:02,520 --> 00:00:09,480
+So in this module I will be presenting the definition of a proximity integrated circuit card, which
+
+3
+00:00:09,480 --> 00:00:18,000
+is the Pic and the definition of a proximity coupling device, which is the PCD and how the communication
+
+4
+00:00:18,000 --> 00:00:19,200
+between them works.
+
+5
+00:00:20,910 --> 00:00:24,630
+So first of all, let's talk about the pic.
+
+6
+00:00:25,470 --> 00:00:27,150
+So what's a pic?
+
+7
+00:00:27,600 --> 00:00:32,790
+So a pic is a pocket sized card that has embedded integrated circuits.
+
+8
+00:00:33,570 --> 00:00:40,230
+A contactless smart card is a smart card that uses inductive coupling to to communicate with the reader.
+
+9
+00:00:40,590 --> 00:00:48,990
+Inductive coupling is the technology behind NFC, near field communication, and short range RFID radio
+
+10
+00:00:48,990 --> 00:00:53,850
+frequency identification in the 1350 six megahertz radio band.
+
+11
+00:00:53,880 --> 00:00:55,080
+Proximity.
+
+12
+00:00:55,080 --> 00:01:02,340
+Contactless smart cards are defined by the ISO 14,443 set of international standards.
+
+13
+00:01:03,120 --> 00:01:07,320
+The ISO 14,443 is divided into four layers.
+
+14
+00:01:07,320 --> 00:01:15,180
+The upper layers, ISO 15,443 four, specifies the contactless transport protocol.
+
+15
+00:01:15,450 --> 00:01:17,730
+We will talk about this later.
+
+16
+00:01:18,030 --> 00:01:22,800
+Sometimes referred to T to to t equal CL.
+
+17
+00:01:22,890 --> 00:01:28,890
+The application layer that comes on top of the contactless protocol is supposed to be the very same
+
+18
+00:01:28,890 --> 00:01:35,790
+ISO 7816 four that comes on top of the t equals zero or t equal one transport protocol.
+
+19
+00:01:36,390 --> 00:01:44,760
+So when I talk about the ISO 14,443 and I say that it's divided into four layers, I first, I mean
+
+20
+00:01:44,760 --> 00:01:53,820
+there is a first one, ISO 14,443 one that will present the whole physical aspects of the car.
+
+21
+00:01:53,820 --> 00:01:58,590
+So like the type of glasses, the EMF test, we will get back to this later.
+
+22
+00:01:58,590 --> 00:02:02,490
+We will detail all of all of these instructions.
+
+23
+00:02:02,490 --> 00:02:10,199
+Then the ISO 14,440 3-2 presents the different characteristics about the contactless card.
+
+24
+00:02:10,199 --> 00:02:17,760
+Like the field that that should support the bit rate or the speed that should also support, etc. etc.
+
+25
+00:02:17,760 --> 00:02:25,410
+then we have the ISO 14,440 3-3 that present the the layer three of communication.
+
+26
+00:02:25,410 --> 00:02:30,900
+I mean the digital communication, the first comments and answers between the reader and the card.
+
+27
+00:02:30,900 --> 00:02:36,600
+And then, as I said, the ISO 14,440 3--4 that specifies.
+
+28
+00:02:37,990 --> 00:02:44,110
+The the transport protocol, the contactless transport protocol and also the exchange of information,
+
+29
+00:02:44,110 --> 00:02:45,280
+etc., etc..
+
+30
+00:02:45,280 --> 00:02:51,460
+So we'll talk about these four layers later in the during the the presentation.
+
+31
+00:02:53,000 --> 00:02:54,500
+So what's a PCD?
+
+32
+00:02:54,950 --> 00:03:02,540
+So PCD is a proximity coupling device, which is a card reader for proximity integrated circuit cards,
+
+33
+00:03:02,540 --> 00:03:04,070
+which are the Pic.
+
+34
+00:03:04,370 --> 00:03:06,740
+So it's an RFID reader in fact.
+
+35
+00:03:06,890 --> 00:03:09,140
+So it's playing the role of a reader.
+
+36
+00:03:09,140 --> 00:03:14,660
+It gives access to the smart card instructions, it generates a field to activate the Pic.
+
+37
+00:03:14,660 --> 00:03:20,690
+And it can be developed for different applications like identity card readers or passport readers or
+
+38
+00:03:20,690 --> 00:03:22,820
+banking readers, or by phones.
+
+39
+00:03:22,850 --> 00:03:25,490
+So by the way, let's get back to the first slide.
+
+40
+00:03:26,000 --> 00:03:27,140
+So here the pic.
+
+41
+00:03:27,170 --> 00:03:28,730
+It can be different.
+
+42
+00:03:28,730 --> 00:03:30,500
+It can be in different applications.
+
+43
+00:03:30,500 --> 00:03:39,980
+For example tags for animals car keys uh passports, uh tags for the for the bags in the airport.
+
+44
+00:03:40,520 --> 00:03:44,720
+Transport cards and also tags for medicines.
+
+45
+00:03:44,930 --> 00:03:51,770
+However, for the reader it can be a banking reader but a reader for passport, etc., etc..
+
+46
+00:03:54,310 --> 00:04:01,270
+So the most important thing here is the communication between the Pic and the PCD.
+
+47
+00:04:01,720 --> 00:04:03,880
+How this communication works.
+
+48
+00:04:04,120 --> 00:04:10,300
+So as we said, a contactless smart card is a smart card that uses inductive coupling.
+
+49
+00:04:10,300 --> 00:04:16,810
+I'm always repeating this part because inductive coupling is the key of the communication between a
+
+50
+00:04:16,810 --> 00:04:21,279
+PCD and a pic, between a reader and a card.
+
+51
+00:04:21,279 --> 00:04:27,190
+In some cases we can call can call the reader a polar and the card a listener.
+
+52
+00:04:28,270 --> 00:04:35,680
+So, as I said, a contactless smart card is a smart card that uses inductive coupling to communicate
+
+53
+00:04:35,680 --> 00:04:36,460
+with its coupling.
+
+54
+00:04:37,030 --> 00:04:41,110
+Inductive coupling is the principle behind electrical transformers.
+
+55
+00:04:41,140 --> 00:04:45,610
+A primary coil is powered by an AC voltage and create a magnetic field.
+
+56
+00:04:46,240 --> 00:04:51,430
+The magnetic field induces a current in the secondary coil in the contact.
+
+57
+00:04:51,520 --> 00:04:53,140
+The case of contactless cards.
+
+58
+00:04:53,140 --> 00:05:01,420
+The primary coil is driven by a sinusoidal voltage at 1356, as you can see here in the picture, and
+
+59
+00:05:01,420 --> 00:05:07,900
+hence create a magnetic field, which is this one with a 1356 carrier.
+
+60
+00:05:08,080 --> 00:05:11,230
+1350 six megahertz carrier frequency.
+
+61
+00:05:11,260 --> 00:05:18,490
+This magnetic field is not constrained in a confined volume, as it would be the case in an actual transformer.
+
+62
+00:05:19,030 --> 00:05:27,100
+Instead, the field flows virtually freely within a part of the open air, limited only by the directivity
+
+63
+00:05:27,100 --> 00:05:30,010
+of the coil and the decrease of the magnetic waves.
+
+64
+00:05:31,480 --> 00:05:38,560
+This coil and its driven circuit forming the primary of a virtual transformer, is named the proximity
+
+65
+00:05:38,560 --> 00:05:40,120
+coupling device PCD.
+
+66
+00:05:41,050 --> 00:05:48,550
+When a mobile or a secondary coil is moved into the part of the space where the PCD is filled floats.
+
+67
+00:05:52,100 --> 00:05:55,310
+It comes to the in proximity to the primary circuit.
+
+68
+00:05:55,310 --> 00:05:58,460
+The transformer, once virtual, now becomes real.
+
+69
+00:05:59,450 --> 00:06:07,160
+The flow of the magnetic field through the secondary coil provides electrical power to a secondary passive
+
+70
+00:06:07,160 --> 00:06:07,790
+circuit.
+
+71
+00:06:08,480 --> 00:06:14,810
+As you may have guessed, this mobile part of the transformer made of a coil and of an electronic circuit
+
+72
+00:06:14,810 --> 00:06:19,790
+or a chip, for example, is a proximity integrated circuit card pick.
+
+73
+00:06:20,900 --> 00:06:23,900
+So here what you can see here in this picture.
+
+74
+00:06:24,440 --> 00:06:28,160
+So here the PCD is looks like a transformer.
+
+75
+00:06:28,160 --> 00:06:30,830
+The same thing for the second part which is the pack.
+
+76
+00:06:31,280 --> 00:06:36,890
+And here the magnetic field as you can see here is the one is the one generated by the field which will
+
+77
+00:06:36,890 --> 00:06:39,890
+create the current.
+
+78
+00:06:39,890 --> 00:06:41,870
+And the second part of this picture.
+
+79
+00:06:51,330 --> 00:06:58,380
+So the magnetic field emitted by the coupler not only provides a power supply to the card, but is also
+
+80
+00:06:58,380 --> 00:07:01,500
+suitable to convey data in both directions.
+
+81
+00:07:01,710 --> 00:07:08,400
+The coupler modulates its carrier to transmit information to the card, and the card uses load modulation
+
+82
+00:07:08,400 --> 00:07:08,970
+to answer.
+
+83
+00:07:08,970 --> 00:07:10,470
+We will get back to this later.
+
+84
+00:07:10,470 --> 00:07:11,820
+We will detail this part.
+
+85
+00:07:12,060 --> 00:07:19,770
+So the communication between the PAC and the PCD is based on the load modulation principle, which means
+
+86
+00:07:19,770 --> 00:07:24,840
+that the card is able to vary its impedance according to Ohm's law.
+
+87
+00:07:24,870 --> 00:07:32,340
+Under a fixed voltage, any variation of the impedance causes a variation in the current, and as this
+
+88
+00:07:32,340 --> 00:07:39,300
+is the case for any transformer, the variation of the current is in the secondary circuit is also noticeable
+
+89
+00:07:39,300 --> 00:07:41,190
+from the primary circuit.
+
+90
+00:07:41,220 --> 00:07:44,880
+This is how the PCD sees the PAC sensor.
+
+91
+00:07:46,600 --> 00:07:53,800
+In fact, the communication between the PKD Reader unit and the PHC card is described in the ISO 14,443
+
+92
+00:07:53,800 --> 00:07:54,160
+standard.
+
+93
+00:07:54,640 --> 00:08:00,490
+The downlink from the PKD unit and the PK card uses amplitude shift keying.
+
+94
+00:08:00,730 --> 00:08:01,300
+Ask.
+
+95
+00:08:01,330 --> 00:08:03,010
+Ask for amplitude shift keying.
+
+96
+00:08:03,040 --> 00:08:06,820
+For type A and load modulation in the uplink.
+
+97
+00:08:07,060 --> 00:08:12,490
+The type B uses non-return to zero instead of Manchester coding.
+
+98
+00:08:13,120 --> 00:08:19,960
+I will detail what I have just said about the communication in the next session, which presents the
+
+99
+00:08:19,960 --> 00:08:25,360
+different analog aspects of the analog communication between a PCD and a pack.
+

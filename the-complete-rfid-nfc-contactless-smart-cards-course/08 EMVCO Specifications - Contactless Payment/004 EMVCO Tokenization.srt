@@ -1,0 +1,340 @@
+1
+00:00:01,160 --> 00:00:04,580
+Hello to the new session about tokenization.
+
+2
+00:00:04,580 --> 00:00:12,320
+So tokenization is a critical technology in modern payment systems, enhancing security by replacing
+
+3
+00:00:12,320 --> 00:00:16,700
+sensitive payment information with unique identifiers called tokens.
+
+4
+00:00:17,120 --> 00:00:24,380
+This process is essential for protecting cardholder data and reducing the risk of fraud in transactions.
+
+5
+00:00:32,390 --> 00:00:34,550
+So what is tokenization?
+
+6
+00:00:34,580 --> 00:00:41,510
+So EMV tokenization is a security framework designed to protect sensitive payment information during
+
+7
+00:00:41,510 --> 00:00:42,770
+digital transactions.
+
+8
+00:00:43,430 --> 00:00:50,990
+It replaces a cardholder's primary account number Pan with a unique identifier or token.
+
+9
+00:00:51,470 --> 00:00:59,270
+This token can be used to process payments without exposing the actual card number, thereby By reducing
+
+10
+00:00:59,270 --> 00:01:00,590
+the risk of fraud.
+
+11
+00:01:01,460 --> 00:01:07,400
+In practice, when a consumer makes a payment using a mobile wallet or online platform.
+
+12
+00:01:07,670 --> 00:01:12,440
+EMV cost tokenization technology generates a token that represents the Pin.
+
+13
+00:01:13,490 --> 00:01:20,420
+This token is unique to each transaction or merchant, ensuring that even if intercepted, it cannot
+
+14
+00:01:20,420 --> 00:01:23,030
+be reused for authorized transactions.
+
+15
+00:01:23,510 --> 00:01:31,280
+The actual Pan is stored securely by a token service provider, which manages the tokenization and the
+
+16
+00:01:31,280 --> 00:01:32,810
+tokenization process.
+
+17
+00:01:34,610 --> 00:01:36,860
+So how tokenization works.
+
+18
+00:01:41,210 --> 00:01:44,240
+So first of all, we have the token generation.
+
+19
+00:01:44,570 --> 00:01:46,640
+First step is the initialization.
+
+20
+00:01:46,640 --> 00:01:53,480
+When a payment is made, the payment information, for example credit card number is sent to a tokenization
+
+21
+00:01:53,480 --> 00:01:54,560
+service provider.
+
+22
+00:01:55,040 --> 00:01:58,230
+A second step is the token creation.
+
+23
+00:01:58,740 --> 00:02:05,700
+The tokenization service replaces the sensitive data with a unique token and returns this token to the
+
+24
+00:02:05,700 --> 00:02:07,200
+merchant or payment system.
+
+25
+00:02:07,620 --> 00:02:10,500
+A third thing is the data storage.
+
+26
+00:02:10,500 --> 00:02:17,700
+The actual sensitive data is securely stored in a token vault, accessible only by authorized systems.
+
+27
+00:02:19,380 --> 00:02:23,280
+Then, after token generation, we have the transaction processing.
+
+28
+00:02:24,060 --> 00:02:26,430
+So the first step is the use of the token.
+
+29
+00:02:26,430 --> 00:02:31,440
+So during a transaction the token is used instead of the actual card details.
+
+30
+00:02:31,710 --> 00:02:35,280
+The token is sent to the payment processor or issuer.
+
+31
+00:02:36,090 --> 00:02:37,830
+Then the token mapping.
+
+32
+00:02:37,830 --> 00:02:45,030
+So the payment processor or issuer maps the token back to the original sensitive data to authorize and
+
+33
+00:02:45,030 --> 00:02:46,230
+complete the transaction.
+
+34
+00:02:48,090 --> 00:02:50,490
+Third step is the security benefits.
+
+35
+00:02:50,490 --> 00:02:53,340
+So first of all, we have the data protection.
+
+36
+00:02:53,790 --> 00:02:58,830
+Since tokens are meaningless outside of the specific transaction context.
+
+37
+00:02:58,830 --> 00:02:59,880
+Intercepted.
+
+38
+00:02:59,910 --> 00:03:02,190
+Tokens cannot be used for fruit.
+
+39
+00:03:03,150 --> 00:03:08,160
+Then reduce data breach impact in the event of a data breach.
+
+40
+00:03:08,190 --> 00:03:12,420
+Compromised tokens are useless without access to the token vault.
+
+41
+00:03:17,010 --> 00:03:20,100
+So then we have the types of tokenization.
+
+42
+00:03:21,090 --> 00:03:24,930
+So first type is card tokenization.
+
+43
+00:03:25,650 --> 00:03:32,280
+In fact it replaces card numbers with tokens in transactions commonly used in mobile wallets and online
+
+44
+00:03:32,280 --> 00:03:32,850
+payments.
+
+45
+00:03:33,240 --> 00:03:40,140
+For example, mobile payment apps like Apple Pay and Google Pay use card tokenization to secure payment
+
+46
+00:03:40,140 --> 00:03:40,980
+transactions.
+
+47
+00:03:43,230 --> 00:03:50,640
+Second type is the account tokenization, so it's used to protect account information by replacing it
+
+48
+00:03:50,640 --> 00:03:55,300
+with tokens often used in recurring billing and subscriptions.
+
+49
+00:03:55,960 --> 00:03:58,930
+Third type is the network tokenization.
+
+50
+00:03:59,890 --> 00:04:06,880
+So it's applied at the network level to replace card information with tokens during transactions.
+
+51
+00:04:07,240 --> 00:04:10,480
+Enhancing security across the payment ecosystem.
+
+52
+00:04:14,890 --> 00:04:19,269
+Then we have the tokenization and emerging technologies.
+
+53
+00:04:19,899 --> 00:04:26,740
+So tokenization is essential for securing mobile payments and digital wallets, ensuring that card details
+
+54
+00:04:26,740 --> 00:04:34,570
+are not exposed during mobile transaction as Internet of Things devices become more prevalent.
+
+55
+00:04:34,600 --> 00:04:40,360
+Tokenization will play a key role in securing transactions made through connected devices.
+
+56
+00:04:42,010 --> 00:04:45,880
+Third thing we have is challenges and considerations.
+
+57
+00:04:48,130 --> 00:04:55,040
+So implementing tokenization requires integration with tokenization service providers and updates to
+
+58
+00:04:55,070 --> 00:04:59,840
+existing payment systems, which can be complex and resource intensive.
+
+59
+00:05:01,400 --> 00:05:07,790
+Then effective management of tokens and token vaults is crucial to maintaining security and ensuring
+
+60
+00:05:07,790 --> 00:05:10,730
+that tokens are correctly mapped to the original data.
+
+61
+00:05:19,280 --> 00:05:22,220
+So what are the benefits of tokenization?
+
+62
+00:05:22,490 --> 00:05:28,970
+In fact, tokenization provides significant advantages to various stakeholders in the payment ecosystem,
+
+63
+00:05:29,660 --> 00:05:34,940
+including consumers, merchants, payment processors, and financial institutions.
+
+64
+00:05:35,840 --> 00:05:41,660
+These benefits revolve around enhanced security, reduced fraud, and improved compliance.
+
+65
+00:05:43,190 --> 00:05:45,890
+So first thing is benefits to consumers.
+
+66
+00:05:47,060 --> 00:05:53,840
+Tokenization replaces sensitive payment information with unique tokens, reducing the risk of data breaches
+
+67
+00:05:53,840 --> 00:05:55,250
+and identity theft.
+
+68
+00:05:56,060 --> 00:06:03,020
+Even if a token is intercepted, it cannot be used for fraudulent transactions without access to the
+
+69
+00:06:03,020 --> 00:06:04,580
+original payment information.
+
+70
+00:06:06,890 --> 00:06:10,460
+Tokenization helps also to increase the trust.
+
+71
+00:06:10,490 --> 00:06:18,260
+In fact, consumers feel more secure using digital wallets and online payment systems that employ tokenization,
+
+72
+00:06:18,290 --> 00:06:21,740
+leading to increased adoption of this technology.
+
+73
+00:06:24,230 --> 00:06:27,440
+Second part is the benefits to merchants.
+
+74
+00:06:28,130 --> 00:06:36,080
+Tokenization helps merchants shift liability for fraud to payment processors or issuers, reducing financial
+
+75
+00:06:36,080 --> 00:06:41,510
+risk by minimizing the exposure of sensitive data.
+
+76
+00:06:41,690 --> 00:06:48,830
+It simplifies compliance with data security regulations, reducing the costs associated with maintaining
+
+77
+00:06:48,830 --> 00:06:55,010
+compliance, then we have the benefits to payment processors.
+
+78
+00:06:55,640 --> 00:07:02,240
+So payment processors benefit from the added security that tokenization provides, reducing the risk
+
+79
+00:07:02,240 --> 00:07:07,220
+of processing fraudulent transactions and managing fraud prevention more effectively.
+
+80
+00:07:09,140 --> 00:07:12,290
+So then benefits to financial institutions.
+
+81
+00:07:13,550 --> 00:07:20,870
+Financial institutions benefit from tokenization by reducing the exposure of cardholder data, thereby
+
+82
+00:07:20,900 --> 00:07:24,860
+mitigating the risk of data breaches and enhancing overall security.
+
+83
+00:07:26,210 --> 00:07:29,240
+And finally, benefits to technology providers.
+
+84
+00:07:29,480 --> 00:07:36,680
+So tokenization drives innovation by creating opportunities for technology providers to develop new
+
+85
+00:07:36,680 --> 00:07:42,560
+payment solutions and enhance existing systems with advanced security features.
+

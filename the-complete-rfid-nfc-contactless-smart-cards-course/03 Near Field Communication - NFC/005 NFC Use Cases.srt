@@ -1,0 +1,284 @@
+1
+00:00:01,390 --> 00:00:07,810
+We are all familiar with one or another form of near field communication enabled devices.
+
+2
+00:00:08,440 --> 00:00:08,980
+What's.
+
+3
+00:00:09,010 --> 00:00:11,650
+Near field communication and applications.
+
+4
+00:00:11,800 --> 00:00:18,070
+As I said before, near field communication is a technology to transfer information between devices
+
+5
+00:00:18,070 --> 00:00:21,010
+in proximity using RF signals.
+
+6
+00:00:21,730 --> 00:00:29,920
+NFC technology offers a wide range of features, from keyless access to smart tags for medical applications,
+
+7
+00:00:31,360 --> 00:00:42,070
+the option to implement and embed it into credit cards, smartphones and other wearable devices makes
+
+8
+00:00:42,070 --> 00:00:45,550
+NFC technology one of the most convenient ones.
+
+9
+00:00:45,790 --> 00:00:49,450
+So let's have a look at the different NFC applications.
+
+10
+00:00:51,340 --> 00:01:00,790
+First of all, smart cards payment using NFC integrated smart cards offer easier payment compared to
+
+11
+00:01:00,790 --> 00:01:03,700
+the conventional multiple step payment process.
+
+12
+00:01:04,690 --> 00:01:11,050
+Top payment services like Visa and Smart Card are offering NFC embedded smart cards to customers.
+
+13
+00:01:11,950 --> 00:01:19,030
+NFC integrated smart cards can be used for fast payment at grocery shops, parking tickets, adding
+
+14
+00:01:19,030 --> 00:01:24,040
+shopping points, reading coupons with just a single tap of the card.
+
+15
+00:01:24,220 --> 00:01:29,650
+All the major banks around the globe offer smart cards with integrated NFC chips.
+
+16
+00:01:31,630 --> 00:01:37,180
+Second, we have e-wallet, which means payment using a smartphone.
+
+17
+00:01:39,030 --> 00:01:46,590
+Cashless payment system using mobile devices became popular at the beginning of this decade, and more
+
+18
+00:01:46,590 --> 00:01:53,520
+services are offering cashless payment for customers convenience using smartphone applications.
+
+19
+00:01:53,520 --> 00:01:58,320
+Payment can be made using a simple tap or waving the card within proximity.
+
+20
+00:01:59,320 --> 00:02:06,850
+Service providers can integrate a payment option into smartphones using an NFC tag embedded inside the
+
+21
+00:02:06,850 --> 00:02:07,690
+device.
+
+22
+00:02:07,900 --> 00:02:14,680
+Apple pay, Google Wallet, Android Pay, and Samsung Pay are the most popular smartphone payment systems.
+
+23
+00:02:15,370 --> 00:02:20,980
+Data transfer using the smart device is possible using NFC technology like Android Beam.
+
+24
+00:02:21,820 --> 00:02:28,300
+Two users can share documents, photos, resumes, and business cards by just waving their smartphones.
+
+25
+00:02:29,350 --> 00:02:31,480
+Then we have smart ticketing.
+
+26
+00:02:31,840 --> 00:02:39,280
+Integrated smart chips can be used to replace traditional ticketing system with smart tickets for airlines,
+
+27
+00:02:39,280 --> 00:02:48,550
+train and bus tickets, etc. NFC tags can be used for smart posters, movie tickets, tickets to concerts,
+
+28
+00:02:48,550 --> 00:02:51,940
+advertisements, flyers, and information links.
+
+29
+00:02:52,960 --> 00:02:59,920
+Customers will be able to access a reserved area or activate tickets by just tapping NFC tags located
+
+30
+00:02:59,920 --> 00:03:01,720
+at the assigned location.
+
+31
+00:03:03,320 --> 00:03:07,550
+More information, for example, can be found by just scanning the smart tag.
+
+32
+00:03:08,390 --> 00:03:11,480
+Then we have medicine and health care for example.
+
+33
+00:03:11,630 --> 00:03:16,370
+So NFC integrated systems can be used in medicine and health care activities.
+
+34
+00:03:17,120 --> 00:03:24,770
+NFC offers greater accuracy and convenience in prescribing medicine, easier check in payments, checking
+
+35
+00:03:24,770 --> 00:03:30,530
+the status of patients and tracking records by embedding NFC tags to patient charts.
+
+36
+00:03:31,160 --> 00:03:34,940
+NFC integrated devices can be easily paired and configured.
+
+37
+00:03:35,720 --> 00:03:41,090
+Medical professionals can easily check schedules and access medical devices and equipment.
+
+38
+00:03:41,780 --> 00:03:47,810
+The future of NFC in health care is very promising, and many companies have already started investing.
+
+39
+00:03:48,170 --> 00:03:54,890
+Diagnostic tests are under development for monitoring medical conditions like temperature variations.
+
+40
+00:03:56,340 --> 00:03:59,790
+Blood glucose level fluctuation, etc., etc..
+
+41
+00:04:01,280 --> 00:04:03,590
+Fifth, we have keyless access.
+
+42
+00:04:03,950 --> 00:04:08,930
+Keyless access is one of the familiar applications of near-field communication today.
+
+43
+00:04:08,960 --> 00:04:13,580
+NFC is convenient and easy to implement feature make it a popular choice.
+
+44
+00:04:14,000 --> 00:04:20,899
+NFC and RFID tags can be used for access to doors and restricted area with a node to detect feature.
+
+45
+00:04:21,470 --> 00:04:28,070
+It can be used to replace access keys and identification badges, and for easier access to cars and
+
+46
+00:04:28,070 --> 00:04:29,090
+other vehicles.
+
+47
+00:04:33,980 --> 00:04:36,350
+Then we have manufacturing.
+
+48
+00:04:36,350 --> 00:04:43,820
+Smart tags are used in motor manufacturing industries to identify each product from its different processing
+
+49
+00:04:43,820 --> 00:04:51,200
+stages within the company packaging, transportation, and tracking of products during shipment.
+
+50
+00:04:51,500 --> 00:04:58,490
+Unique identification numbers allow manufacturers to efficiently manage products in case of return during
+
+51
+00:04:58,490 --> 00:05:02,120
+the warranty period for replacement, service, and maintenance.
+
+52
+00:05:03,270 --> 00:05:05,700
+Then we have logistics and shipping.
+
+53
+00:05:06,390 --> 00:05:11,910
+NFC and RFID tags can be conveniently used in the logistics and shipping industry.
+
+54
+00:05:12,210 --> 00:05:18,420
+Tracking and scanning of goods using smart tags makes the system smart, errorless, and efficient.
+
+55
+00:05:19,740 --> 00:05:22,590
+Eighth, we have smart inventory management.
+
+56
+00:05:22,830 --> 00:05:29,940
+For example, retail shops and large scale supermarkets can make use of smart RFID tags for better management
+
+57
+00:05:29,940 --> 00:05:31,980
+of inventories in their system.
+
+58
+00:05:32,460 --> 00:05:38,910
+Smart inventory management software can give a real time update on products details for customers and
+
+59
+00:05:38,910 --> 00:05:44,820
+items in their inventory stock, and it could trigger automatic orders if a particular item has a low
+
+60
+00:05:44,820 --> 00:05:45,510
+quantity.
+
+61
+00:05:46,730 --> 00:05:51,470
+Vendors will get an update on items in high demand and better service can be provided.
+
+62
+00:05:52,430 --> 00:05:54,560
+Ninth, we have the theft control.
+
+63
+00:05:55,040 --> 00:05:59,120
+Another attractive use of RFID tags is theft control.
+
+64
+00:05:59,150 --> 00:06:03,260
+Valuable things can be protected using smart tags.
+
+65
+00:06:03,290 --> 00:06:07,520
+Objects embedded with smart tags will trigger if they pass by RFID.
+
+66
+00:06:07,520 --> 00:06:08,330
+Proximity.
+
+67
+00:06:09,200 --> 00:06:12,860
+The active area where the RFID transmitter is installed.
+
+68
+00:06:13,760 --> 00:06:22,070
+Finally, we have NFC information tags similar to QR code scanning using a smartphone camera.
+
+69
+00:06:22,370 --> 00:06:25,730
+Users can access information with NFC tags.
+
+70
+00:06:26,150 --> 00:06:32,870
+If someone wants to access information about product or service, for example, it can be accessed by
+
+71
+00:06:32,870 --> 00:06:35,690
+just tapping their phone on the NFC Smart Tag.
+

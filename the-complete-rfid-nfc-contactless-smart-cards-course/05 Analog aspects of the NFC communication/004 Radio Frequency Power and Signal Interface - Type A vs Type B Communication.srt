@@ -1,0 +1,748 @@
+1
+00:00:01,120 --> 00:00:01,510
+Again.
+
+2
+00:00:01,510 --> 00:00:06,880
+So here we will be talking about radio frequency power and signal interface.
+
+3
+00:00:07,270 --> 00:00:12,010
+So we'll be describing the communication between the type A and type B.
+
+4
+00:00:13,510 --> 00:00:20,770
+So here in fact we will be presenting the different type of modulations for either type A and type B.
+
+5
+00:00:21,040 --> 00:00:28,480
+Then we'll be talking also about the different techniques that describe this type of communication.
+
+6
+00:00:28,930 --> 00:00:30,850
+What are the modulation.
+
+7
+00:00:31,000 --> 00:00:33,280
+What are the bit rates.
+
+8
+00:00:33,310 --> 00:00:41,080
+What are the how is the communication from the reader to the cart or from the car to the reader?
+
+9
+00:00:43,950 --> 00:00:50,490
+So first of all, the basics of data transmission, as you can see here in this picture.
+
+10
+00:00:50,580 --> 00:00:53,730
+So on the left we have a polling device what we can call.
+
+11
+00:00:53,730 --> 00:00:55,110
+So call the reader.
+
+12
+00:00:55,110 --> 00:00:59,370
+And on the right you have the listening device or what we can call the card.
+
+13
+00:00:59,700 --> 00:01:08,460
+So in fact like the RFID 14 443 and Felica standards, NFC uses inductive coupling.
+
+14
+00:01:08,790 --> 00:01:16,110
+As with the transformer principle, the near magnetic field of two conductive coils is used to couple
+
+15
+00:01:16,110 --> 00:01:22,710
+the polling device, which is also the initiator, and the listening device, which is also the target.
+
+16
+00:01:23,280 --> 00:01:32,070
+The operating frequency is 1350 six megahertz, as we have seen earlier, and also the communication
+
+17
+00:01:32,070 --> 00:01:40,850
+is characterized by a bit rate of 106 kilobit per second, 212 kilobit per second, for 24 kilobit per
+
+18
+00:01:40,850 --> 00:01:44,160
+second, and eight 48 kilobit per second are used.
+
+19
+00:01:45,180 --> 00:01:54,740
+The modulation schemes are on off amplitude modulation with different modulation depth 100% or 10 or
+
+20
+00:01:54,740 --> 00:02:02,880
+10% and bpsk depending on the type of communication I mean by that depending if we are using a type
+
+21
+00:02:02,880 --> 00:02:05,370
+A communication or a type B communication.
+
+22
+00:02:06,750 --> 00:02:14,760
+So in fact, a variation in the impedance of the receiving device results in changes in the amplitude
+
+23
+00:02:14,760 --> 00:02:18,390
+or phase of the antenna voltage of the interrogation device.
+
+24
+00:02:19,260 --> 00:02:22,200
+This technique is called load modulation.
+
+25
+00:02:22,200 --> 00:02:26,850
+So the load modulation is the technique that characterizes the communication.
+
+26
+00:02:27,960 --> 00:02:33,120
+In fact it uses an an auxiliary carrier at eight 48kHz.
+
+27
+00:02:33,120 --> 00:02:41,070
+As you can see here earlier here in the picture on the left and also on the right which is baseband
+
+28
+00:02:41,070 --> 00:02:45,180
+modulated and varies the impedance of the receiving device.
+
+29
+00:02:50,440 --> 00:02:57,460
+So here in this table we can see the different options and the different parameters of type A and type
+
+30
+00:02:57,460 --> 00:02:58,510
+B communication.
+
+31
+00:03:00,550 --> 00:03:10,210
+So the ISO 14 443 standard defines two different communication interfaces which are designated type
+
+32
+00:03:10,240 --> 00:03:12,130
+A and type B.
+
+33
+00:03:12,850 --> 00:03:20,650
+The reason for standard standardizing two different protocols does not arise from technical considerations,
+
+34
+00:03:21,040 --> 00:03:28,390
+but instead from the fact that several technical concepts from various manufacturers already existed.
+
+35
+00:03:28,390 --> 00:03:38,050
+When the ISO 14,443 standard was being generated, as is unfortunately often the case with standardization.
+
+36
+00:03:39,010 --> 00:03:47,140
+The diverging interests of the involved parties prevented them from agreeing on a signal on a single
+
+37
+00:03:47,140 --> 00:03:48,010
+protocol.
+
+38
+00:03:48,460 --> 00:03:57,610
+Although this would have been more sensible in the interest of easy interoperability as a compromise
+
+39
+00:03:57,610 --> 00:04:05,470
+solution, agreement was reached on the two protocols mentioned above, and they were published as an
+
+40
+00:04:05,470 --> 00:04:08,230
+international standard in June 2001.
+
+41
+00:04:09,100 --> 00:04:17,380
+So car terminals must support both protocols in order to achieve full interoperability with all cars
+
+42
+00:04:17,380 --> 00:04:20,290
+compliant with ISO 14,443.
+
+43
+00:04:20,740 --> 00:04:24,130
+Since most cars support only one protocol.
+
+44
+00:04:26,370 --> 00:04:28,800
+When the terminal is on the idle state.
+
+45
+00:04:28,800 --> 00:04:34,500
+While waiting to detect a proximity card, it must periodically switch between the two communication
+
+46
+00:04:34,500 --> 00:04:35,550
+protocols.
+
+47
+00:04:36,120 --> 00:04:40,890
+So this enables it to recognize both type A and type B cards.
+
+48
+00:04:41,340 --> 00:04:48,150
+So in fact, this means that a card can support type A or type B.
+
+49
+00:04:48,150 --> 00:04:50,970
+A single card cannot support both types.
+
+50
+00:04:50,970 --> 00:04:57,810
+So that's why because we don't know what kind of reader we will communicate with.
+
+51
+00:04:57,810 --> 00:05:03,690
+By default, the reader should support both types A and B.
+
+52
+00:05:03,840 --> 00:05:10,560
+So by by doing that, the reader has to start the communication by sending in a loop.
+
+53
+00:05:12,390 --> 00:05:15,600
+The first type a command and the first type B command.
+
+54
+00:05:15,600 --> 00:05:18,510
+We will see that later in the digital part.
+
+55
+00:05:18,510 --> 00:05:25,320
+So when I say the first type A command and the type B command I'm talking about request A and the request
+
+56
+00:05:25,320 --> 00:05:26,070
+B.
+
+57
+00:05:26,070 --> 00:05:28,290
+This is like saying hello to the card.
+
+58
+00:05:29,310 --> 00:05:36,870
+So once the PCD has recognized a card, it continues to use the corresponding communication protocol
+
+59
+00:05:36,870 --> 00:05:42,480
+until the card is deactivated by the terminal or leaves the working range of the terminal.
+
+60
+00:05:43,470 --> 00:05:50,100
+Of course, it can happen that type A cards receives a type B command, or type B cards receives a type
+
+61
+00:05:50,100 --> 00:05:51,750
+A command during polling.
+
+62
+00:05:51,750 --> 00:05:59,280
+So polling means that we are going to send a request A and a request B in a loop until we get a card
+
+63
+00:05:59,280 --> 00:06:01,560
+and continue the communication with.
+
+64
+00:06:02,190 --> 00:06:07,320
+To prevent this from blocking communication, there is a rule for the card response.
+
+65
+00:06:07,320 --> 00:06:14,940
+In such situations, the basic rule is that the card must return to the idle state after receiving an
+
+66
+00:06:14,940 --> 00:06:18,240
+unmodulated signal for five milliseconds.
+
+67
+00:06:19,470 --> 00:06:24,270
+In fact, the standard describes examples of the card response to a known commands.
+
+68
+00:06:25,590 --> 00:06:30,960
+That's why now I'm going to present the different way of communication for both type A and B.
+
+69
+00:06:31,590 --> 00:06:33,420
+We will see in the next slides.
+
+70
+00:06:33,420 --> 00:06:37,140
+But here before we do that let's have a look on this table.
+
+71
+00:06:37,140 --> 00:06:44,100
+So as we have seen earlier, the power supply for type A and type B communications, which are described
+
+72
+00:06:44,100 --> 00:06:51,570
+through the ISO 14 443 standards, is characterized by a 1350 six megahertz inductive coupling.
+
+73
+00:06:51,570 --> 00:06:58,170
+So 1350 six megahertz is the frequency that describes or characterize the NFC communication.
+
+74
+00:06:58,770 --> 00:07:01,350
+Then we have the field strength.
+
+75
+00:07:01,350 --> 00:07:06,690
+So here we have 1.58A/m to 7.58 amp per meter.
+
+76
+00:07:06,810 --> 00:07:13,260
+To be honest with you, in fact, this is the most common range that we use in our daily activities
+
+77
+00:07:13,260 --> 00:07:24,210
+because 1.5A/m to 7.5A parameter is the range that characterizes the class one antenna.
+
+78
+00:07:24,810 --> 00:07:29,100
+I mean the class one size for the antennas.
+
+79
+00:07:29,100 --> 00:07:38,700
+And then when we go higher in the class class two, three, four, five and six, the range changes.
+
+80
+00:07:40,770 --> 00:07:45,840
+So then we have the PCD to pick communication for.
+
+81
+00:07:45,840 --> 00:07:54,390
+Type A is characterized by an SK 100%, which is done through a modified Miller coding.
+
+82
+00:07:54,390 --> 00:07:59,430
+So the a SK 100% means amplitude shift keying.
+
+83
+00:07:59,760 --> 00:08:05,340
+So we are going to reduce the amplitude until we reach almost zero.
+
+84
+00:08:05,340 --> 00:08:08,430
+So amplitude shift keying of 100%.
+
+85
+00:08:10,020 --> 00:08:13,500
+However, for a type B it's an ask of 10%.
+
+86
+00:08:13,830 --> 00:08:17,520
+And for the coding we're using we are using the NS coding.
+
+87
+00:08:18,210 --> 00:08:26,970
+So the other way from the pack to PCD communication, if we are in a 106 kilobit per second bit rate,
+
+88
+00:08:26,970 --> 00:08:35,820
+we are going to use the OC modulated and the Manchester for 212 to 8 48 kilobit per second.
+
+89
+00:08:35,820 --> 00:08:40,320
+We use Bpsk and Nzsl coding.
+
+90
+00:08:40,980 --> 00:08:48,270
+However, for type B from 106 to 848 we use Bpsk and Nzsl coding.
+
+91
+00:08:57,890 --> 00:09:03,530
+So there is a sentence that we always see when we talk about NFC communication, which is the carrier
+
+92
+00:09:03,530 --> 00:09:04,280
+frequency.
+
+93
+00:09:04,730 --> 00:09:13,610
+So the carrier frequency, which is symbolized by FC in the standard of an RFID system as defined in
+
+94
+00:09:13,610 --> 00:09:19,550
+the ISO 14,443, is 1350 six megahertz plus -seven kilohertz.
+
+95
+00:09:20,000 --> 00:09:29,120
+The carrier is used to supply power to the PC via a transformer coupling and the resulting induced voltage.
+
+96
+00:09:29,960 --> 00:09:35,570
+The modulation of the carrier signal allows the PCD to transmit information to the PC.
+
+97
+00:09:40,050 --> 00:09:45,660
+So here we will be talking about the principle of modulation type A versus type B.
+
+98
+00:09:46,590 --> 00:09:55,140
+So in fact cards may be type A and type B, both of which communicate via radio at 1350 six megahertz.
+
+99
+00:09:55,590 --> 00:10:00,060
+The main differences between these types concern modulation methods.
+
+100
+00:10:00,060 --> 00:10:03,210
+As you can see here on the left we have the modulation type.
+
+101
+00:10:03,210 --> 00:10:06,720
+For type A it's like 100% ask.
+
+102
+00:10:06,720 --> 00:10:15,450
+So as you see here, normally in the beginning the signal from the reader is like a perfect sinusoidal.
+
+103
+00:10:15,450 --> 00:10:17,100
+So it's something like this.
+
+104
+00:10:19,440 --> 00:10:31,920
+Then you see here when we apply the isq 100%, we decrease the signal until we reach almost zero.
+
+105
+00:10:31,920 --> 00:10:35,550
+So that's why we have the word ask 100%.
+
+106
+00:10:35,550 --> 00:10:37,920
+And then we have an overshoot.
+
+107
+00:10:37,920 --> 00:10:41,790
+And then it tries to go back to its initial value.
+
+108
+00:10:41,790 --> 00:10:48,660
+When we do this some time some timings will be generated like T1, t2, T3 and T4.
+
+109
+00:10:50,490 --> 00:10:51,000
+Okay.
+
+110
+00:10:51,000 --> 00:10:58,830
+So for example, T1 is the timing from the beginning of the falling edge until the beginning of the
+
+111
+00:10:58,830 --> 00:11:00,030
+rising edge.
+
+112
+00:11:04,620 --> 00:11:08,640
+So here for example here this part is the overshoot.
+
+113
+00:11:09,990 --> 00:11:13,560
+Here on the right we have the modulation for the type B.
+
+114
+00:11:14,550 --> 00:11:17,610
+It's an ask of 10%.
+
+115
+00:11:17,610 --> 00:11:24,180
+And for doing that we have some parameters that we will be generated like the parameter b and the timings
+
+116
+00:11:24,180 --> 00:11:29,670
+d f and tr f for falling r for rising.
+
+117
+00:11:40,990 --> 00:11:45,190
+So what about the modulation principle?
+
+118
+00:11:45,190 --> 00:11:50,890
+So the PCD uses an amplitude modulation of the carrier frequency to transmit information.
+
+119
+00:11:51,550 --> 00:12:00,220
+The modulation used is either type A or type B during communication from PCD to Pic.
+
+120
+00:12:00,370 --> 00:12:04,960
+Type A is used, providing 100% amplitude modulation.
+
+121
+00:12:07,150 --> 00:12:14,500
+And type B involves 10% amplitude shift keying in the communication from Pic to PCD.
+
+122
+00:12:14,530 --> 00:12:21,100
+As you have seen earlier, a distinction must be made between the individual bit rates.
+
+123
+00:12:21,130 --> 00:12:28,150
+Different modulation types are used depending on the bit rate, to detect whether a type A or type B
+
+124
+00:12:28,150 --> 00:12:31,390
+pic is present in the PCD operating field.
+
+125
+00:12:31,510 --> 00:12:34,060
+The PCD alternates the modulation.
+
+126
+00:12:34,060 --> 00:12:39,940
+It then selects the modulation matching the Pic type in order to initialize communication.
+
+127
+00:12:44,280 --> 00:12:50,220
+So here in the first part let's focus on the type A communication interface.
+
+128
+00:12:51,870 --> 00:12:59,880
+So during initialization and anti-collision a bitrate of 106 kilobit per second is used for data transmission
+
+129
+00:12:59,880 --> 00:13:04,380
+from the terminal to the card or from the reader to the card with type A cards.
+
+130
+00:13:05,250 --> 00:13:11,160
+After initialization and anti-collision, any of the following bitrates can be used for data transmission
+
+131
+00:13:11,160 --> 00:13:18,780
+106 kilobit per second, two, 12, 424, and eight 48 Kilobit per second.
+
+132
+00:13:32,890 --> 00:13:43,090
+So regarding the transmission from PCD to Pic, digital amplitude modulation one for for 100% of Assk
+
+133
+00:13:43,120 --> 00:13:51,160
+at a bit rate of 106kbps with modified Miller coding is using is used for data transmission from the
+
+134
+00:13:51,160 --> 00:13:52,810
+PCD to to the Pic.
+
+135
+00:13:53,200 --> 00:13:59,380
+So here on the left we have the picture that describes the modified Miller coding.
+
+136
+00:14:00,460 --> 00:14:10,840
+So as I said, the the digital amplitude modulation at a bit rate of 106 kilobit per second with modified
+
+137
+00:14:10,840 --> 00:14:17,050
+Miller coding is used for data transmission from the reader to the car, with a maximum pose of interval
+
+138
+00:14:17,140 --> 00:14:19,360
+of three microseconds.
+
+139
+00:14:19,990 --> 00:14:26,830
+This relatively short pose makes it easier to provide a continuous supply of power to the cart.
+
+140
+00:14:29,200 --> 00:14:36,940
+So coding of a bit sequence from the terminal to the cart using a type A communication with 100% ask
+
+141
+00:14:36,940 --> 00:14:40,540
+modified Miller coding and 106 kilobit per second.
+
+142
+00:14:40,540 --> 00:14:43,720
+It is described through this picture.
+
+143
+00:14:44,470 --> 00:14:46,930
+In fact, the coding is defined as follows.
+
+144
+00:14:46,930 --> 00:14:48,670
+So for the logic one.
+
+145
+00:14:49,570 --> 00:14:56,560
+Pose after half the bit interval for the logic zero no pose, with the following exceptions.
+
+146
+00:14:56,890 --> 00:14:59,110
+So a first one.
+
+147
+00:14:59,230 --> 00:15:07,120
+If there are two or more logic zero states in succession, there is a pose at the start of the bit interval.
+
+148
+00:15:07,810 --> 00:15:14,740
+Then, if the first bit of a protocol frame is zero, it's represented by a pose at the start of the
+
+149
+00:15:14,740 --> 00:15:15,700
+bit interval.
+
+150
+00:15:17,620 --> 00:15:24,130
+Then we have a start of message, which is a pose at the start of a bit interval end of message which
+
+151
+00:15:24,130 --> 00:15:31,060
+is logic zero, followed by one bit with no pose and then no data, which means no pose for the duration
+
+152
+00:15:31,060 --> 00:15:32,560
+of at least two bits.
+
+153
+00:15:35,730 --> 00:15:41,550
+Then, regarding the transmission from the car to the terminal, we use Manchester coding.
+
+154
+00:15:43,890 --> 00:15:50,280
+So load modulation for data transmission from the car to the reader, using a subcarrier with a frequency
+
+155
+00:15:50,280 --> 00:15:59,550
+of FC divided by 16, which means eight 48kHz uh kilobit per second, and Manchester coding with a bit
+
+156
+00:15:59,550 --> 00:16:02,370
+rate of 106 kilobit per second.
+
+157
+00:16:02,550 --> 00:16:06,870
+And okay, the figure shows the voltage on the card coil.
+
+158
+00:16:08,780 --> 00:16:12,080
+So the coding is defined as follows.
+
+159
+00:16:12,080 --> 00:16:13,550
+So logic one.
+
+160
+00:16:16,880 --> 00:16:24,320
+Here means that the carrier is modulated by the subcarrier in the first half of the bit interval, then
+
+161
+00:16:24,320 --> 00:16:25,340
+logic zero.
+
+162
+00:16:25,370 --> 00:16:29,960
+The carrier is modulated by the subcarrier in the second half of the bit interval.
+
+163
+00:16:33,210 --> 00:16:36,540
+So what about the type B communication interface?
+
+164
+00:16:40,820 --> 00:16:45,860
+So here, as you can see here we have an ask of 10%.
+
+165
+00:16:45,860 --> 00:16:51,200
+So ask modulation with a modulation index of 10% is used for the data transmission.
+
+166
+00:16:52,310 --> 00:16:58,940
+So a continuous supply of power is achieved by using a relatively low modulation index, defined such
+
+167
+00:16:58,940 --> 00:17:04,220
+that at least 8,686% of the carrier field is always available.
+
+168
+00:17:04,520 --> 00:17:12,500
+So that's why we are talking about a 10% of ask the bit rate during initialization, and anti-collision
+
+169
+00:17:12,500 --> 00:17:14,060
+is 106.
+
+170
+00:17:14,150 --> 00:17:20,150
+Any of the other bit rates can be used after initialization and interpolation, as I said earlier.
+
+171
+00:17:20,150 --> 00:17:26,990
+And we will talk about this more in the digital part, the the initialization of the communication from
+
+172
+00:17:26,990 --> 00:17:36,830
+the first command to the last command of the layer three of ISO 14 443.3 is always done at 106 kilobit
+
+173
+00:17:36,830 --> 00:17:39,740
+per second until we reach the PES.
+
+174
+00:17:39,740 --> 00:17:48,950
+When we talk about the protocol negotiation, bitrate negotiation, then after that we change the bit
+
+175
+00:17:48,950 --> 00:17:50,510
+rates if needed.
+
+176
+00:17:52,780 --> 00:17:56,290
+So regarding the transmission from PC to PC.
+
+177
+00:18:00,050 --> 00:18:06,800
+Coding of a bit sequence from the terminal to the card using a type B communication interface with 10%.
+
+178
+00:18:06,800 --> 00:18:16,220
+Ask is characterized by an energy coding and a bit rate of 106 kilobit per second, as we have seen
+
+179
+00:18:16,220 --> 00:18:16,760
+earlier.
+
+180
+00:18:25,720 --> 00:18:29,860
+Then regarding the transmission from the card to the terminal.
+
+181
+00:18:32,560 --> 00:18:40,720
+The communication is described or characterized by an r, z, L encoding, so load modulation with a
+
+182
+00:18:40,720 --> 00:18:45,670
+subcarrier is also used for data transmission from the card to the terminal with type B cards.
+
+183
+00:18:46,510 --> 00:18:47,740
+Here as well.
+
+184
+00:18:49,000 --> 00:18:55,420
+Same for type A, the subcarrier frequency FS is 848kHz.
+
+185
+00:18:55,780 --> 00:19:04,780
+In contrast to type A, the subcarrier is modulated using binary phase shift keying, Bpsk and Nrzi
+
+186
+00:19:04,780 --> 00:19:08,740
+coding with a bitrate of 106 kilobit per second.
+
+187
+00:19:08,980 --> 00:19:11,500
+During initialization and anti-collision.
+

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 70, "questions": [{"_class": "assessment", "id": 89465633, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the primary frequency range used by ISO 14443?</strong></p>", "relatedLectureIds": ["43040238"], "feedbacks": ["", "", "", ""], "answers": ["<p>125 kHz</p>", "<p>13.56 MHz</p>", "<p>2.4 GHz</p>", "<p>433 MHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the primary frequency range used by ISO 14443?", "related_lectures": [{"_class": "lecture", "id": 43040238, "title": "Radio Frequency Power and Signal Interface", "created": "2024-03-28T14:05:26Z", "is_published": true, "asset": {"_class": "asset", "id": 56884508, "asset_type": "Video", "title": "Radio Frequency Power and Signal Interface.mp4", "created": "2024-05-29T14:35:49Z"}, "object_index": 17, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040238"}]}, {"_class": "assessment", "id": 89466081, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which part of ISO 14443 specifies the protocol for communication between contactless cards and readers?</strong></p>", "relatedLectureIds": ["43040242"], "feedbacks": ["", "", "", "", ""], "answers": ["<p>ISO 14443-A &amp; ISO 14443-B</p>", "<p>ISO 14443-A</p>", "<p>ISO 14443-B</p>", "<p>ISO 14443-C</p>", "<p>ISO 14443-D</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which part of ISO 14443 specifies the protocol for communication between contactless cards and readers?", "related_lectures": [{"_class": "lecture", "id": 43040242, "title": "Radio Frequency Power and Signal Interface - Type A vs Type B Communication", "created": "2024-03-28T14:05:34Z", "is_published": true, "asset": {"_class": "asset", "id": 57203202, "asset_type": "Video", "title": "Type A vs Type B Communication.mp4", "created": "2024-06-13T20:46:23Z"}, "object_index": 18, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040242"}]}, {"_class": "assessment", "id": 89466187, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What type of RFID tag is used in ISO 14443?</strong></p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>Active RFID Tag</p>", "<p>Passive RFID Tag</p>", "<p>Semi-Passive RFID Tag</p>", "<p>All of the above</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What type of RFID tag is used in ISO 14443?", "related_lectures": []}, {"_class": "assessment", "id": 89466291, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>ISO 14443 is commonly used in which of the following applications?</strong></p>", "relatedLectureIds": ["43040138"], "feedbacks": ["", "", "", ""], "answers": ["<p>Long-range vehicle tracking</p>", "<p>Contactless payment systems</p>", "<p>GPS navigation</p>", "<p>Satellite communications</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "ISO 14443 is commonly used in which of the following applications?", "related_lectures": [{"_class": "lecture", "id": 43040138, "title": "NFC Use Cases", "created": "2024-03-28T14:02:19Z", "is_published": true, "asset": {"_class": "asset", "id": 56758676, "asset_type": "Video", "title": "NFC Use Cases.mp4", "created": "2024-05-23T11:13:41Z"}, "object_index": 10, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040138"}]}, {"_class": "assessment", "id": 89466495, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the maximum communication range of ISO 14443 cards?</strong></p>", "relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>1 meter</p>", "<p>10 meters</p>", "<p>5 centimeters</p>", "<p>30 centimeters</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the maximum communication range of ISO 14443 cards?", "related_lectures": []}, {"_class": "assessment", "id": 90362313, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following is a key difference between ISO/IEC 14443 Type A and Type B?</p>", "relatedLectureIds": ["43040256"], "feedbacks": ["", "", "", ""], "answers": ["<p>Modulation schemes</p>", "<p>Communication range</p>", "<p>Operating frequency</p>", "<p>Security algorithms</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which of the following is a key difference between ISO/IEC 14443 Type A and Type B?", "related_lectures": [{"_class": "lecture", "id": 43040256, "title": "Advanced Presentation of a Full Type A Communication", "created": "2024-03-28T14:06:30Z", "is_published": true, "asset": {"_class": "asset", "id": 56913690, "asset_type": "Video", "title": "Advanced Presentation of a Full Type A Communication.mp4", "created": "2024-05-30T20:22:35Z"}, "object_index": 20, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040256"}]}, {"_class": "assessment", "id": 90362409, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How is data transmitted from the reader to the card in ISO/IEC 14443 Type A?</p>", "relatedLectureIds": ["43040242"], "feedbacks": ["", "", "", ""], "answers": ["<p>Amplitude Shift Keying (ASK)</p>", "<p>Frequency Shift Keying (FSK)</p>", "<p>Phase Shift Keying (PSK)</p>", "<p>Manchester encoding</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "How is data transmitted from the reader to the card in ISO/IEC 14443 Type A?", "related_lectures": [{"_class": "lecture", "id": 43040242, "title": "Radio Frequency Power and Signal Interface - Type A vs Type B Communication", "created": "2024-03-28T14:05:34Z", "is_published": true, "asset": {"_class": "asset", "id": 57203202, "asset_type": "Video", "title": "Type A vs Type B Communication.mp4", "created": "2024-06-13T20:46:23Z"}, "object_index": 18, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040242"}]}, {"_class": "assessment", "id": 90362423, "assessment_type": "multiple-choice", "prompt": {"question": "<p>In ISO/IEC 14443 Type A, how is the communication between the card and reader initiated?</p>", "relatedLectureIds": ["43040238"], "feedbacks": ["", "", "", ""], "answers": ["<p>The reader sends an \"anti-collision\" command</p>", "<p>The card continuously transmits its UID</p>", "<p>The card sends a beacon signal</p>", "<p>The reader sends a carrier signal to power the card</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "In ISO/IEC 14443 Type A, how is the communication between the card and reader initiated?", "related_lectures": [{"_class": "lecture", "id": 43040238, "title": "Radio Frequency Power and Signal Interface", "created": "2024-03-28T14:05:26Z", "is_published": true, "asset": {"_class": "asset", "id": 56884508, "asset_type": "Video", "title": "Radio Frequency Power and Signal Interface.mp4", "created": "2024-05-29T14:35:49Z"}, "object_index": 17, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040238"}]}, {"_class": "assessment", "id": 90362441, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which modulation technique is used in ISO/IEC 14443 Type A to transmit data from the card to the reader?</p>", "relatedLectureIds": ["43040242"], "feedbacks": ["", "", "", ""], "answers": ["<p>ASK (Amplitude Shift Keying)</p>", "<p>BPSK (Binary Phase Shift Keying)</p>", "<p>FSK (Frequency Shift Keying)</p>", "<p>Load modulation</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which modulation technique is used in ISO/IEC 14443 Type A to transmit data from the card to the reader?", "related_lectures": [{"_class": "lecture", "id": 43040242, "title": "Radio Frequency Power and Signal Interface - Type A vs Type B Communication", "created": "2024-03-28T14:05:34Z", "is_published": true, "asset": {"_class": "asset", "id": 57203202, "asset_type": "Video", "title": "Type A vs Type B Communication.mp4", "created": "2024-06-13T20:46:23Z"}, "object_index": 18, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040242"}]}, {"_class": "assessment", "id": 90362451, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What encoding method is used by ISO/IEC 14443 Type A for data transmission from the card to the reader?</p>", "relatedLectureIds": ["43040238"], "feedbacks": ["", "", ""], "answers": ["<p>Manchester encoding</p>", "<p>NRZ (Non-Return-to-Zero)</p>", "<p>FM0 encoding</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What encoding method is used by ISO/IEC 14443 Type A for data transmission from the card to the reader?", "related_lectures": [{"_class": "lecture", "id": 43040238, "title": "Radio Frequency Power and Signal Interface", "created": "2024-03-28T14:05:26Z", "is_published": true, "asset": {"_class": "asset", "id": 56884508, "asset_type": "Video", "title": "Radio Frequency Power and Signal Interface.mp4", "created": "2024-05-29T14:35:49Z"}, "object_index": 17, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040238"}]}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

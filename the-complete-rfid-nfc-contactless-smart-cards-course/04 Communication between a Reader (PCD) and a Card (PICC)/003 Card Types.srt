@@ -1,0 +1,544 @@
+1
+00:00:00,870 --> 00:00:01,740
+Hello.
+
+2
+00:00:01,740 --> 00:00:07,290
+So here we will be talking about the different car types in the NFC field.
+
+3
+00:00:13,980 --> 00:00:20,460
+The scepter, in fact provides an overview of variety of cards in Id1 format.
+
+4
+00:00:20,460 --> 00:00:28,170
+Because many applications have a special interest in combining several functions, especially when the
+
+5
+00:00:28,170 --> 00:00:34,020
+cards used in an existing system, such as magnetic stripe cards.
+
+6
+00:00:34,650 --> 00:00:39,360
+So these cards are intended to be replaced by smart cards.
+
+7
+00:00:39,360 --> 00:00:46,590
+In such cases, it's usually not possible to replace the existing infrastructure by a new technology
+
+8
+00:00:46,590 --> 00:00:47,580
+overnight.
+
+9
+00:00:47,730 --> 00:00:55,110
+The solution to this problem usually consists of issuing cards with magnetic stripes, as well as chips
+
+10
+00:00:55,110 --> 00:00:57,540
+for used during a transition period.
+
+11
+00:00:57,930 --> 00:01:03,120
+Such cards can be used with both types of terminals old and new.
+
+12
+00:01:03,120 --> 00:01:11,880
+For example, naturally, new functions that are only possible with a chip cannot be used with a terminal
+
+13
+00:01:11,880 --> 00:01:14,670
+that only supports magnetic stripe cards.
+
+14
+00:01:15,630 --> 00:01:23,160
+Similar considerations apply to the transition from contact smart cards to contactless smart cards.
+
+15
+00:01:23,900 --> 00:01:32,840
+In many cases, the infrastructure must be able to support both types of cards during an extended transition
+
+16
+00:01:32,840 --> 00:01:33,470
+period.
+
+17
+00:01:34,330 --> 00:01:38,950
+Foreign factors other than id1 have now became established.
+
+18
+00:01:38,950 --> 00:01:44,800
+In some applications where compatibility with magnetic stripe cards is not necessary.
+
+19
+00:01:45,540 --> 00:01:50,130
+SIM cards in ID 000 format are one example.
+
+20
+00:01:50,550 --> 00:01:57,240
+Naturally, the information regarding electrical properties and functions also applies to these other
+
+21
+00:01:57,240 --> 00:01:58,200
+form factors.
+
+22
+00:02:00,150 --> 00:02:03,180
+So first let's talk about embossed cards.
+
+23
+00:02:03,180 --> 00:02:09,660
+For example, we see this type of cards in the banking cards on post cards, meaning this information
+
+24
+00:02:09,660 --> 00:02:17,670
+that we can see the number of the cards, the the value, the expiration date example.
+
+25
+00:02:18,180 --> 00:02:19,560
+Some things like this.
+
+26
+00:02:19,950 --> 00:02:26,970
+So embossing is the oldest technique for adding machine readable features to identification cards.
+
+27
+00:02:27,360 --> 00:02:34,620
+The embossed characters on the card can be transferred to paper using simple, inexpensive devices,
+
+28
+00:02:34,620 --> 00:02:38,970
+and they can easily be read visually, visually by humans.
+
+29
+00:02:39,840 --> 00:02:43,830
+Here is a picture showing the two embossed regions.
+
+30
+00:02:43,830 --> 00:02:45,240
+Region one.
+
+31
+00:02:46,170 --> 00:02:53,790
+For example, this one is intended for the identification number, so it's 19 characters, while region
+
+32
+00:02:53,790 --> 00:03:01,740
+two is intended for the name and address, four lines of 27 characters each.
+
+33
+00:03:02,250 --> 00:03:09,540
+The simplicity of this technique has made worldwide use of credit cards possible even in developing
+
+34
+00:03:09,540 --> 00:03:10,440
+countries.
+
+35
+00:03:13,120 --> 00:03:21,610
+So utilization of this technology requires neither electrical power or a connection to a telephone network.
+
+36
+00:03:22,780 --> 00:03:28,210
+So the second type of cards is the magnetic stripe cards.
+
+37
+00:03:28,900 --> 00:03:36,520
+The essential disadvantage of embossed cards is that their use creates a lot of paper receipts, which
+
+38
+00:03:36,520 --> 00:03:38,890
+are expensive to handle and process.
+
+39
+00:03:39,160 --> 00:03:45,790
+One remedy to this problem is to digitally encode the card data on a magnetic stripe located on the
+
+40
+00:03:45,790 --> 00:03:46,690
+back of the card.
+
+41
+00:03:47,830 --> 00:03:54,850
+The magnetic stripe is read by pulling it across a read head, either manually or automatically.
+
+42
+00:03:56,140 --> 00:04:01,180
+After this, the read data can be used in the system without any human intervention.
+
+43
+00:04:01,510 --> 00:04:08,500
+One of the properties of magnetic stripes are the strength of the magnetic field, necessary to modify
+
+44
+00:04:08,500 --> 00:04:10,270
+the data on the magnetic stripe.
+
+45
+00:04:10,930 --> 00:04:17,200
+The magnetic stripe may have up to three tracks, as illustrated in the first picture.
+
+46
+00:04:17,680 --> 00:04:23,710
+Tracks one and two are specified to be read only tracks, while track 3rd May also be written to.
+
+47
+00:04:24,730 --> 00:04:31,870
+For the first picture, which present the magnetic stripe location on an ID one card, the data region
+
+48
+00:04:31,870 --> 00:04:38,500
+of the magnetic stripe is intentionally not extended to the edges of the card, since the use of hand
+
+49
+00:04:38,500 --> 00:04:43,060
+operated card readers causes rapid wear at the ends of the stripe.
+
+50
+00:04:43,780 --> 00:04:51,610
+Although the storage capacity of the magnetic stripe is fairly small, around 1000 bits, it's more
+
+51
+00:04:51,610 --> 00:04:55,630
+than sufficient for storing the information contained in the embossing.
+
+52
+00:04:56,350 --> 00:05:04,030
+Additional data can be read and written on tracks three, such as the most recent transaction data in
+
+53
+00:05:04,030 --> 00:05:05,500
+the case of a credit card.
+
+54
+00:05:06,160 --> 00:05:09,220
+The track locations are shown in the second picture.
+
+55
+00:05:11,020 --> 00:05:17,470
+The main drawback of magnetic stripe technology is that the stored data can be altered very easily.
+
+56
+00:05:17,830 --> 00:05:27,040
+Manipulating embossed characters requires at least a certain amount of manual dexterity, and such manipulations
+
+57
+00:05:27,040 --> 00:05:31,090
+can readily can readily be detected by a trained eye.
+
+58
+00:05:31,660 --> 00:05:38,410
+By contrast, the data recorded on the magnetic stripe can easily be altered using a standard read or
+
+59
+00:05:38,410 --> 00:05:43,690
+write device, and is difficult to prove such changes afterward.
+
+60
+00:05:50,750 --> 00:05:53,720
+So what about the smart cards?
+
+61
+00:05:53,900 --> 00:06:00,200
+So smart cards are the latest innovation in the family of identification cards in id1 format.
+
+62
+00:06:00,590 --> 00:06:07,370
+Their characteristic feature is an integrated circuit embedded in the card body, which has components
+
+63
+00:06:07,370 --> 00:06:11,180
+for transmitting, storing, and processing data.
+
+64
+00:06:11,720 --> 00:06:17,900
+The data can be transmitted by contacts on the surface of the card, or by an electromagnetic field,
+
+65
+00:06:17,900 --> 00:06:19,430
+without using contacts.
+
+66
+00:06:19,970 --> 00:06:25,730
+Smart cards offer several advantages compared with magnetic stripe cards.
+
+67
+00:06:25,880 --> 00:06:34,040
+For example, the maximum storage capacity capacity of a smart card is many times greater than, uh,
+
+68
+00:06:34,040 --> 00:06:36,830
+than the one of a magnetic stripe card.
+
+69
+00:06:37,790 --> 00:06:45,140
+Chips with memory capacities in the megabyte range are now available, and the maximum capacity increases
+
+70
+00:06:45,140 --> 00:06:47,150
+with each new chip generations.
+
+71
+00:06:47,900 --> 00:06:54,530
+However, one of the most important advantages of smart cards is that their stored data can be protected
+
+72
+00:06:54,530 --> 00:06:57,320
+against unauthorized access and manipulation.
+
+73
+00:06:57,920 --> 00:07:05,120
+The data can only be accessed via a serial interface that is controlled by the operating system or security
+
+74
+00:07:05,120 --> 00:07:12,590
+logic, which means that confidential data can be stored in the card in a manner that prevents it from
+
+75
+00:07:12,590 --> 00:07:15,170
+ever being read from outside the card.
+
+76
+00:07:18,330 --> 00:07:21,120
+So what about contactless memory cards?
+
+77
+00:07:21,120 --> 00:07:27,360
+So contactless memory cards have have come into widespread use in recent years.
+
+78
+00:07:27,660 --> 00:07:35,400
+Standard cards compliant with ISO 14,443 have an operating range of up to ten centimetres.
+
+79
+00:07:35,970 --> 00:07:41,490
+The usable memory capacity ranges from several hundred bytes to a few kilobytes.
+
+80
+00:07:42,870 --> 00:07:50,070
+The memory can be partitioned into several sectors that are independently protected against unauthorized
+
+81
+00:07:50,070 --> 00:07:52,530
+reading, writing, and erasing.
+
+82
+00:07:53,160 --> 00:07:58,020
+This enables a single card to support several different applications.
+
+83
+00:07:58,590 --> 00:08:05,730
+Each card in fact has a unique serial number stored in Rome, as well as authentication logic using
+
+84
+00:08:05,730 --> 00:08:07,320
+a challenge response method.
+
+85
+00:08:08,760 --> 00:08:13,710
+A typical architecture for contactless memory cards is shown in the first picture.
+
+86
+00:08:15,760 --> 00:08:22,090
+Typical applications for contactless memory cards are contactless ticketing in local transport systems
+
+87
+00:08:22,090 --> 00:08:26,920
+and identification cards for companies, official bodies or universities.
+
+88
+00:08:27,580 --> 00:08:33,700
+Electronic purse functionality, such as for company cafeteria or university cafeteria, for example,
+
+89
+00:08:33,700 --> 00:08:36,490
+can also be implemented on such cards.
+
+90
+00:08:37,600 --> 00:08:46,540
+Contactless technology compliant with ISO 4443 is also used extensively, now in radio frequency identification
+
+91
+00:08:46,540 --> 00:08:47,200
+tags.
+
+92
+00:08:47,350 --> 00:08:54,580
+The first picture presents a typical architecture of a memory card with security logic and contactless
+
+93
+00:08:54,580 --> 00:08:55,480
+interface.
+
+94
+00:08:56,200 --> 00:09:02,980
+The second picture here presents typical architecture of a contact processor card with a co-processor
+
+95
+00:09:02,980 --> 00:09:04,480
+and mask programmed role.
+
+96
+00:09:12,270 --> 00:09:16,560
+So what's the difference between contact and contactless smart cards?
+
+97
+00:09:16,590 --> 00:09:23,790
+So as we said, contact smart card are identified by a gold or silver chip that is visible on the card
+
+98
+00:09:23,790 --> 00:09:26,430
+body, much like a computer.
+
+99
+00:09:26,460 --> 00:09:33,270
+This chip contains its own operating system profile and card file structure that varies from application
+
+100
+00:09:33,270 --> 00:09:34,140
+to application.
+
+101
+00:09:34,620 --> 00:09:40,050
+These cards are named contact due to the fact that they physically need to be.
+
+102
+00:09:40,200 --> 00:09:47,580
+They physically need to be inserted into a card reader to make contact with the mechanism for the most
+
+103
+00:09:47,580 --> 00:09:49,950
+secure mode or encrypted communication.
+
+104
+00:09:52,550 --> 00:09:59,420
+In fact, the contact smart card is basically a plastic card which can be read only when it's brought
+
+105
+00:09:59,420 --> 00:10:01,430
+into contact with the card reader.
+
+106
+00:10:02,120 --> 00:10:04,700
+It derives its power from the card reader.
+
+107
+00:10:04,820 --> 00:10:12,200
+It typically has a contact area of approximately one centimeter square with several gold plated contact
+
+108
+00:10:12,200 --> 00:10:12,770
+pads.
+
+109
+00:10:13,280 --> 00:10:17,540
+The contact pads provide electrical connectivity to the reader.
+
+110
+00:10:17,870 --> 00:10:25,280
+Communication protocols for contact smart cards are defined in ISO 7816 three specification.
+
+111
+00:10:25,340 --> 00:10:33,050
+By the way, when we talk about contact smart cards, we refer always to the ISO 7816 standard.
+
+112
+00:10:33,110 --> 00:10:40,850
+However, when we talk about contactless smart cards, we refer to the ISO 14,443 standard.
+
+113
+00:10:41,390 --> 00:10:49,670
+And for your information, as you may know, one card can be contact and contactless at the same time.
+
+114
+00:10:50,180 --> 00:10:56,720
+For example, our banking card today we can pay with contact or contactless mode for the contactless,
+
+115
+00:10:56,720 --> 00:11:00,290
+there is always a limit of payment of amount.
+
+116
+00:11:01,040 --> 00:11:07,280
+So regarding contactless smart card, in fact, contactless smart cards differ from contact because
+
+117
+00:11:07,280 --> 00:11:09,050
+the chip is not visible on the card.
+
+118
+00:11:09,380 --> 00:11:14,990
+Instead, the chip and chip's antenna are embedded within the card body.
+
+119
+00:11:15,470 --> 00:11:22,010
+The card is waved over an RFID reader instead of inserted like a contact card.
+
+120
+00:11:22,490 --> 00:11:29,690
+When the contactless card passes through the specifically tuned RFID field, the antenna powers up the
+
+121
+00:11:29,690 --> 00:11:33,440
+chip and relays the chip's information to the application.
+
+122
+00:11:34,250 --> 00:11:41,090
+As the name suggests, contactless smart cards can be read without bringing the card in contact with
+
+123
+00:11:41,090 --> 00:11:41,540
+the reader.
+
+124
+00:11:41,990 --> 00:11:47,870
+The card communicates with the reader through RFID induction technology, which also powers the card.
+
+125
+00:11:48,560 --> 00:11:55,550
+The RFID technology used in this case works over a short range less than four inches.
+
+126
+00:11:56,060 --> 00:11:59,630
+As such, the card should be held near to the reader.
+
+127
+00:11:59,900 --> 00:12:07,130
+The card includes an embedded secure microcontroller or equivalent intelligence, internal memory,
+
+128
+00:12:07,130 --> 00:12:10,430
+and a small antenna for communicating with the reader.
+
+129
+00:12:11,090 --> 00:12:16,970
+Finally, when the card is brought into the electromagnetic field of the reader, the chip in the card
+
+130
+00:12:17,000 --> 00:12:19,550
+is powered on, as we have seen earlier.
+
+131
+00:12:19,670 --> 00:12:25,940
+Once the chip is powered on, a wireless communication protocol is initiated and established between
+
+132
+00:12:25,940 --> 00:12:28,160
+the card and the reader for data transfer.
+
+133
+00:12:28,190 --> 00:12:35,720
+So as I said before, and I try to repeat this every time the card, the contactless card doesn't communicate
+
+134
+00:12:35,720 --> 00:12:38,330
+without a magnetic field from the reader.
+
+135
+00:12:39,290 --> 00:12:46,820
+So once we put the card into the field, the contactless cards start communicating.
+
+136
+00:12:46,820 --> 00:12:50,630
+So start sending its answers to the comments from the reader.
+

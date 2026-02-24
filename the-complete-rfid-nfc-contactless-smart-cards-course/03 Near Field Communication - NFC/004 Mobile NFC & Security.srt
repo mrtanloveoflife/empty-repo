@@ -1,0 +1,412 @@
+1
+00:00:01,380 --> 00:00:02,370
+Hello again.
+
+2
+00:00:02,370 --> 00:00:07,080
+In this part we will be talking about mobile, NFC and security.
+
+3
+00:00:07,350 --> 00:00:10,890
+The main topic here will be the secure element.
+
+4
+00:00:17,720 --> 00:00:24,830
+So the use of the NFC option in the mobile phones is increasing day after day.
+
+5
+00:00:25,070 --> 00:00:28,130
+The purpose of that is to make our life easier.
+
+6
+00:00:28,820 --> 00:00:36,200
+It offers a range of benefits that make it an attractive option for businesses and consumers alike.
+
+7
+00:00:37,040 --> 00:00:39,830
+One of the key advantages is convenience.
+
+8
+00:00:40,700 --> 00:00:48,260
+With NFC mobile, users can simply tap their phone to a compatible device to make a payment, access
+
+9
+00:00:48,260 --> 00:00:51,830
+information or perform other tasks.
+
+10
+00:00:52,370 --> 00:00:56,780
+This eliminates the need for physical cards or other devices.
+
+11
+00:00:57,650 --> 00:01:04,519
+Streamlining the user experience and making transactions faster and easier than ever before.
+
+12
+00:01:05,269 --> 00:01:14,240
+More than that, a mobile is ergonomic, easy to use, has a test screen, can be characterized by different
+
+13
+00:01:14,240 --> 00:01:16,190
+way of connectivity.
+
+14
+00:01:16,640 --> 00:01:20,060
+Another major benefit of NFC mobile is security.
+
+15
+00:01:20,600 --> 00:01:27,950
+By using encrypted communication protocols and secure authentication methods, NFC mobile ensures that
+
+16
+00:01:27,950 --> 00:01:31,460
+sensitive data is protected from unauthorized access.
+
+17
+00:01:32,800 --> 00:01:41,050
+This makes it popular a choice for applications such as mobile payments, where security is of paramount
+
+18
+00:01:41,050 --> 00:01:42,280
+importance.
+
+19
+00:01:47,770 --> 00:01:53,260
+Here is a table of comparison between what we can do using a mobile phone and the contactless cards.
+
+20
+00:01:53,260 --> 00:01:56,650
+When we say contactless card, we mean pick.
+
+21
+00:01:57,910 --> 00:02:07,180
+We can see clearly that when the services are in the NFC mobile, it offers more advantages and facilitate
+
+22
+00:02:07,300 --> 00:02:12,460
+the tasks because of the interaction with the applications installed in the mobile phone.
+
+23
+00:02:13,330 --> 00:02:21,190
+For example, for transportation, we can just use our NFC subscription card to use the bus or the metro.
+
+24
+00:02:21,190 --> 00:02:27,070
+But when we have the subscription integrated to our mobile through an application, it may offer us
+
+25
+00:02:27,070 --> 00:02:32,530
+the possibility to follow the bus in real time and geolocated traffic information.
+
+26
+00:02:38,500 --> 00:02:45,220
+Most important thing about NFC tags or pick contactless cards is security.
+
+27
+00:02:49,110 --> 00:02:55,710
+It's good to have all these services, but with that we need to protect our information and especially
+
+28
+00:02:55,710 --> 00:02:56,850
+our transaction.
+
+29
+00:03:05,590 --> 00:03:10,510
+The first NFC applications were developed for payment and secure access control.
+
+30
+00:03:10,540 --> 00:03:18,250
+Also, NFC has often been compared to contactless security, even if its scope goes well beyond.
+
+31
+00:03:18,280 --> 00:03:24,070
+NFC technology is adapted to meet the security constraints of contactless.
+
+32
+00:03:24,940 --> 00:03:29,140
+So what are the threats for this kind of communication?
+
+33
+00:03:30,280 --> 00:03:37,450
+By the principle of propagation of radio frequency waves, any contactless transmission can be listened
+
+34
+00:03:37,450 --> 00:03:37,990
+to.
+
+35
+00:03:38,440 --> 00:03:45,610
+But understanding, interpreting, modifying, or altering the content of the message transmitted is
+
+36
+00:03:45,610 --> 00:03:47,290
+a completely different story.
+
+37
+00:03:48,040 --> 00:03:54,610
+NFC technology has intrinsic advantages for securing applications.
+
+38
+00:03:56,020 --> 00:04:02,500
+Applications such as mobile payment require the examination of all vulnerabilities.
+
+39
+00:04:04,540 --> 00:04:11,620
+Interceptions, corruption or modification of data, and problems linked to the theft of mobile devices.
+
+40
+00:04:12,610 --> 00:04:18,820
+They have been resolved in the same way as those linked to the security of contactless bank cards,
+
+41
+00:04:19,149 --> 00:04:23,620
+either at the physical layer or at the applications layers.
+
+42
+00:04:30,850 --> 00:04:33,010
+So what about tax security?
+
+43
+00:04:34,030 --> 00:04:40,720
+Passive NFC tags are just a memory associated with an antenna, possibly with a processor to manage
+
+44
+00:04:40,720 --> 00:04:42,550
+communication and cryptography.
+
+45
+00:04:43,330 --> 00:04:51,700
+Tags can be secured by encrypting data, verifying its integrity, and preventing tag tearing, for
+
+46
+00:04:51,700 --> 00:04:52,450
+example.
+
+47
+00:04:53,170 --> 00:04:54,550
+Data encryption.
+
+48
+00:04:54,910 --> 00:04:58,450
+The data can be saved encrypted in the tag memory.
+
+49
+00:04:59,260 --> 00:05:03,370
+It's up to the reader to decrypt it with the application.
+
+50
+00:05:04,540 --> 00:05:09,100
+Data can be also encrypted by the tag.
+
+51
+00:05:09,250 --> 00:05:17,170
+In the case of exchange with applications of different types, in this case the tag must have a cryptographic
+
+52
+00:05:17,170 --> 00:05:19,420
+processor which is more expensive.
+
+53
+00:05:20,530 --> 00:05:23,080
+Second thing is data integrity.
+
+54
+00:05:23,590 --> 00:05:29,620
+In order to verify that the data has not been modified, or that the tag has not been replaced by a
+
+55
+00:05:29,620 --> 00:05:36,070
+fake, there are integrity verification schemes which are based on a secure signature.
+
+56
+00:05:36,970 --> 00:05:44,080
+For example, RTD signature of the NFC forum or an integrity check using a web service.
+
+57
+00:05:44,770 --> 00:05:47,500
+Third thing is the anti pooling.
+
+58
+00:05:47,800 --> 00:05:50,230
+It's to prevent their tearing.
+
+59
+00:05:50,230 --> 00:05:58,720
+The tags can be sealed in the material non-conductive of course, of the tagged object, and can include
+
+60
+00:05:58,720 --> 00:06:04,210
+self-destruction devices in the event of physical tearing called anti tearing.
+
+61
+00:06:13,730 --> 00:06:16,760
+So what about secure mobile?
+
+62
+00:06:16,760 --> 00:06:27,020
+NFC payment, transport and strong authentication applications have understood all the benefits they
+
+63
+00:06:27,020 --> 00:06:30,350
+could derive from the intrinsic security of NFC.
+
+64
+00:06:31,280 --> 00:06:35,480
+This was not enough to guarantee strong application security.
+
+65
+00:06:36,500 --> 00:06:41,420
+Secure platforms for mobile services have been around for many years.
+
+66
+00:06:42,140 --> 00:06:49,340
+The mobile phone architecture is equipped with tools to ensure secure interaction between applications
+
+67
+00:06:49,340 --> 00:06:52,160
+and with the multiple players in mobile systems.
+
+68
+00:06:52,760 --> 00:07:02,240
+The architecture is mainly based on two elements the application Execution environment and the trusted
+
+69
+00:07:02,240 --> 00:07:09,380
+execution Environment, which have been specified by organizations such as GSMa or Global Platform.
+
+70
+00:07:10,760 --> 00:07:19,070
+In fact, the IEEE Application Execution Environment is not a secure space, but it allows the controlled
+
+71
+00:07:19,070 --> 00:07:23,570
+execution of application within the framework of complex operating system.
+
+72
+00:07:24,050 --> 00:07:29,360
+This is where most of the attacks and viruses in smartphones are concentrated.
+
+73
+00:07:30,750 --> 00:07:33,780
+The te trusted execution environment.
+
+74
+00:07:34,740 --> 00:07:41,130
+Is a space secured by hardware and software which resides in the microprocessor of the phone.
+
+75
+00:07:41,670 --> 00:07:49,440
+Its role is to protect secure data and applications from internal and external attacks, ensuring their
+
+76
+00:07:49,440 --> 00:07:50,370
+separation.
+
+77
+00:07:51,220 --> 00:07:53,080
+And controlled access.
+
+78
+00:07:54,110 --> 00:07:56,270
+These two elements may be sufficient.
+
+79
+00:07:56,270 --> 00:08:02,150
+These two elements, I mean, a and t, may be sufficient to guarantee the security of applications
+
+80
+00:08:02,150 --> 00:08:04,970
+permanently connected to the mobile network.
+
+81
+00:08:05,750 --> 00:08:12,140
+They prove insufficient in many NFC use cases where the transaction is done locally between two NFC
+
+82
+00:08:12,140 --> 00:08:12,920
+devices.
+
+83
+00:08:13,190 --> 00:08:20,120
+Thus appeared the need to create other security bricks to cover the needs of NFC service providers,
+
+84
+00:08:20,120 --> 00:08:24,170
+such as banking, transport or access control services.
+
+85
+00:08:24,920 --> 00:08:34,610
+These security bricks must meet security certifications such as Common Criteria in the NFC ecosystem.
+
+86
+00:08:34,610 --> 00:08:39,679
+This role is carried out by secure elements and trusted service managers.
+
+87
+00:08:44,300 --> 00:08:51,020
+So what is this secure element to carry out secure transactions?
+
+88
+00:08:51,050 --> 00:08:54,140
+A certain number of operations must be protected.
+
+89
+00:08:55,150 --> 00:09:01,090
+Such as identification, authentication, signature or validation by Pin code.
+
+90
+00:09:01,330 --> 00:09:07,780
+This is the role of the secure element, which offers cryptographic processing services and secure memory
+
+91
+00:09:07,780 --> 00:09:14,710
+to store secret information like passwords, encryption keys, personal data, etc., etc..
+
+92
+00:09:16,160 --> 00:09:22,820
+The Secure Element is a highly secure microcontroller that uses the same security principle as the chips
+
+93
+00:09:22,820 --> 00:09:23,810
+of bank cards.
+
+94
+00:09:24,780 --> 00:09:32,100
+It provides transaction authentication, data protection, and backup functions for secure applications
+
+95
+00:09:32,100 --> 00:09:38,400
+such as payment access control or electronic identity control in a mobile phone.
+
+96
+00:09:38,430 --> 00:09:46,260
+It can take several forms a SIM card, a component of the telephone or an SD memory, or even in some
+
+97
+00:09:46,260 --> 00:09:48,930
+cases, a server on the internet network.
+
+98
+00:09:55,180 --> 00:09:55,750
+This.
+
+99
+00:09:55,750 --> 00:10:03,280
+The form factor of this secure element obviously has a great impact in term of markets because the actor
+
+100
+00:10:03,280 --> 00:10:09,040
+who because it's the actor who controls access to the secure element, can control and monetize the
+
+101
+00:10:09,040 --> 00:10:13,090
+relationship with applications, issuers and their clients.
+
+102
+00:10:13,330 --> 00:10:19,660
+Therefore, it's up to the service provider to choose the type of secure element that best corresponds
+
+103
+00:10:19,660 --> 00:10:23,920
+to its business model and the consumer's expectations.
+

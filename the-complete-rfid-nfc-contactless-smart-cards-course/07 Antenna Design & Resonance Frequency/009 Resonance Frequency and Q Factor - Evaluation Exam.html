@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 70, "questions": [{"_class": "assessment", "id": 99921017, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the typical resonance frequency of an NFC contactless card antenna?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>13.56 MHz</p>", "<p>125 kHz</p>", "<p>100 MHz</p>", "<p>3.58 MHz</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the typical resonance frequency of an NFC contactless card antenna?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921033, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What does the \u2018Q factor\u2019 represent in an NFC contactless card?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>The range of the NFC signal</p>", "<p>The efficiency of the antenna circuit</p>", "<p>The power consumption of the NFC chip</p>", "<p>The data rate of NFC communication</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What does the \u2018Q factor\u2019 represent in an NFC contactless card?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921047, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following impacts the resonance frequency of an NFC antenna?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Temperature</p>", "<p>Antenna size and inductance</p>", "<p>Signal strength</p>", "<p>Encryption algorithm</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which of the following impacts the resonance frequency of an NFC antenna?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921059, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What happens if the Q factor of an NFC card is too high?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>The card will work more efficiently</p>", "<p>The card may have difficulty detuning in the reader\u2019s field</p>", "<p>The card will consume less power</p>", "<p>The card will have a longer range</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What happens if the Q factor of an NFC card is too high?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921069, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the optimal Q factor range for NFC contactless cards?</p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>1-2</p>", "<p>10-20</p>", "<p>30-40</p>", "<p>50-60</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the optimal Q factor range for NFC contactless cards?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921073, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The resonance frequency of an NFC card must always match the reader's frequency for efficient communication.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The resonance frequency of an NFC card must always match the reader's frequency for efficient communication.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921081, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>A lower Q factor means the NFC card has a broader bandwidth.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "A lower Q factor means the NFC card has a broader bandwidth.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921087, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The inductance of the NFC antenna has no impact on the resonance frequency.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "The inductance of the NFC antenna has no impact on the resonance frequency.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921107, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which component in an NFC card determines the inductance?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Capacitor</p>", "<p>Antenna coil</p>", "<p>NFC chip</p>", "<p>Resistor</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which component in an NFC card determines the inductance?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921253, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the main purpose of tuning the resonance frequency of an NFC antenna?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>To increase data transfer speed</p>", "<p>To ensure maximum energy transfer between the reader and the card</p>", "<p>To reduce the card's power consumption</p>", "<p>To enhance security protocols</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the main purpose of tuning the resonance frequency of an NFC antenna?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921399, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What happens if the resonance frequency of the NFC card is significantly higher than 13.56 MHz?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>The card will have a longer range</p>", "<p>The card will not respond to the reader</p>", "<p>The card will consume more power</p>", "<p>The card will work faster</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What happens if the resonance frequency of the NFC card is significantly higher than 13.56 MHz?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921545, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>Which of the following factors will increase the Q factor of an NFC card antenna?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Increasing resistance in the circuit</p>", "<p>Reducing inductance</p>", "<p>Increasing the number of turns in the antenna coil</p>", "<p>Reducing the capacitance</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "Which of the following factors will increase the Q factor of an NFC card antenna?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921683, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>How can the resonance frequency of an NFC antenna be adjusted?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>By changing the power supply</p>", "<p>By adding more NFC chips</p>", "<p>By altering the inductance or capacitance of the antenna circuit</p>", "<p>By increasing the communication distance</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "How can the resonance frequency of an NFC antenna be adjusted?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921831, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the effect of a low Q factor on the NFC card's performance?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>It increases the communication distance</p>", "<p>It broadens the bandwidth of the card</p>", "<p>It reduces the card\u2019s sensitivity</p>", "<p>It improves the card's encryption capabilities</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the effect of a low Q factor on the NFC card's performance?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99921977, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The formula for the Q factor of an NFC circuit is:</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Q = L/R</p>", "<p>Q = R/L</p>", "<p>Q = fr/BW</p>", "<p>Q = BW/fr</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "The formula for the Q factor of an NFC circuit is:", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99922113, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>What is the unit of inductance in an NFC circuit?</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Ohms</p>", "<p>Farads</p>", "<p>Henrys</p>", "<p>Volts</p>"]}, "correct_response": ["c"], "section": "", "question_plain": "What is the unit of inductance in an NFC circuit?", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99922493, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The resonance frequency of an NFC card is determined by the combination of the antenna coil\u2019s inductance and a capacitor.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The resonance frequency of an NFC card is determined by the combination of the antenna coil\u2019s inductance and a capacitor.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99922503, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>A high Q factor in an NFC card means the card has a narrow bandwidth.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "A high Q factor in an NFC card means the card has a narrow bandwidth.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99922507, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>An NFC card with a low Q factor is more resistant to detuning caused by interference from other devices.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "An NFC card with a low Q factor is more resistant to detuning caused by interference from other devices.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99922511, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>The operating frequency of NFC systems is typically 125 kHz.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "The operating frequency of NFC systems is typically 125 kHz.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99923523, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>An NFC antenna circuit has an inductance of 1.5 \u00b5H and a capacitance of 80 pF. Calculate the resonance frequency.</strong></p><p><strong><em>Formula:</em></strong></p>\n<img src=\"https://img-c.udemycdn.com/redactor/raw/quiz_question/2025-01-06_10-27-31-61160a4597982d2f1cfc140bb153ec18.jpg\">", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Fr = 13.58 MHz</p>", "<p>Fr = 14.58 MHz</p>", "<p>Fr = 15.58 MHz</p>", "<p>Fr = 16.58 MHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "An NFC antenna circuit has an inductance of 1.5 \u00b5H and a capacitance of 80 pF. Calculate the resonance frequency.Formula:", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99923947, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>If the bandwidth of an NFC circuit is 0.85 MHz and the resonance frequency is 13.56 MHz, calculate the Q factor.</strong></p><p><strong><em>Formula:</em></strong></p>\n<img src=\"https://img-c.udemycdn.com/redactor/raw/quiz_question/2025-01-06_10-32-09-4f4c89ce14fadec44e702f107b25fbb9.JPG\">", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Q = 15.95</p>", "<p>Q = 16.95</p>", "<p>Q = 25.95</p>", "<p>Q = 26.95</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "If the bandwidth of an NFC circuit is 0.85 MHz and the resonance frequency is 13.56 MHz, calculate the Q factor.Formula:", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99924331, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>An NFC card has a Q factor of 40 and an operating frequency of 13.56 MHz. Calculate the bandwidth of the card.</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "BW = 13.56/40", "", ""], "answers": ["<p>BW = 0.155 MHz</p>", "<p>BW = 0.339 MHz</p>", "<p>BW = 0.456 MHz</p>", "<p>BW = 0.786 MHz</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "An NFC card has a Q factor of 40 and an operating frequency of 13.56 MHz. Calculate the bandwidth of the card.", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}, {"_class": "assessment", "id": 99925721, "assessment_type": "multiple-choice", "prompt": {"question": "<p><strong>An NFC circuit has a resistance of 10 ohms, inductance of 1 \u00b5H, and operates at a frequency of 13.56 MHz. Calculate the Q factor using the formula Q = \u03c9L/R, where \u03c9 = 2\u03c0f</strong></p>", "relatedLectureIds": ["47769867"], "feedbacks": ["", "", "", ""], "answers": ["<p>Q = 14.51</p>", "<p>Q = 12.51</p>", "<p>Q = 10.51</p>", "<p>Q = 8.51</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "An NFC circuit has a resistance of 10 ohms, inductance of 1 \u00b5H, and operates at a frequency of 13.56 MHz. Calculate the Q factor using the formula Q = \u03c9L/R, where \u03c9 = 2\u03c0f", "related_lectures": [{"_class": "lecture", "id": 47769867, "title": "Resonance Frequency & Q Factor", "created": "2024-12-31T10:05:10Z", "is_published": true, "asset": {"_class": "asset", "id": 61789931, "asset_type": "Video", "title": "Resonance Frequency & Q Factor.mp4", "created": "2024-12-31T10:07:46Z"}, "object_index": 25, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/47769867"}]}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+1
+00:00:01,190 --> 00:00:07,580
+Hello again to this new session regarding EMV global reach and tokenization.
+
+2
+00:00:12,830 --> 00:00:20,840
+So EMV standards and technologies have a significant global impact, influencing how payments are processed
+
+3
+00:00:20,840 --> 00:00:23,420
+and secured across diverse markets.
+
+4
+00:00:24,260 --> 00:00:30,800
+Invesco's global reach is a testament to the widespread adoption of its standards, ensuring secure
+
+5
+00:00:30,800 --> 00:00:33,950
+and interoperable payments worldwide.
+
+6
+00:00:35,210 --> 00:00:39,470
+So, first of all, global adoption of EMV standards.
+
+7
+00:00:40,310 --> 00:00:47,960
+Emvco standards, including EMV chip, EMV, 3-D secure and EMV contactless, are implemented in payment
+
+8
+00:00:47,960 --> 00:00:54,080
+systems across the globe, making them a cornerstone of the global payment infrastructure.
+
+9
+00:00:55,490 --> 00:01:03,260
+These standards are used in every region, including North America, Europe, Asia, Latin America,
+
+10
+00:01:03,260 --> 00:01:04,099
+and Africa.
+
+11
+00:01:04,970 --> 00:01:12,800
+Major economies and emerging markets alike have embraced EMV standards to secure their payment systems.
+
+12
+00:01:15,470 --> 00:01:18,920
+Second point is key markets and adoption rates.
+
+13
+00:01:19,880 --> 00:01:27,290
+So first of all, Europe was one of the first regions to widely adopt EMV chip technology, leading
+
+14
+00:01:27,320 --> 00:01:30,680
+to a significant reduction in card present fraud.
+
+15
+00:01:31,310 --> 00:01:37,010
+Today, nearly all European countries use EMV standards for card payments.
+
+16
+00:01:38,090 --> 00:01:40,250
+Second is Asia Pacific.
+
+17
+00:01:40,520 --> 00:01:48,020
+So countries in Asia Pacific, particularly those with high mobile payment adoption rates like China
+
+18
+00:01:48,020 --> 00:01:55,400
+and India, have seen rapid adoption of EMV standards, including EMV, QR code and contactless payments.
+
+19
+00:01:56,540 --> 00:01:58,610
+After that, we have North America.
+
+20
+00:01:58,640 --> 00:02:06,740
+So the United States and Canada have also transitioned to EMV standards, with the US undergoing a significant
+
+21
+00:02:06,740 --> 00:02:11,630
+shift from magnetic stripe to EMV chip cards in recent years.
+
+22
+00:02:12,560 --> 00:02:15,350
+Then Latin America and the Caribbean.
+
+23
+00:02:15,950 --> 00:02:22,780
+So many countries in this region have implemented the chip and contactless technologies driven by the
+
+24
+00:02:22,780 --> 00:02:26,290
+need to reduce fraud and improve payment security.
+
+25
+00:02:28,330 --> 00:02:31,840
+And after that, in the end, we have Middle East and Africa.
+
+26
+00:02:32,230 --> 00:02:40,150
+So adoption is growing steadily, with the focus on EMV chip and contactless payments to enhance security
+
+27
+00:02:40,150 --> 00:02:41,830
+in cash heavy markets.
+
+28
+00:02:43,960 --> 00:02:49,180
+So the third point about the global reach is impact on global payment security.
+
+29
+00:02:50,710 --> 00:02:54,310
+So first of all, we have reduction in card fraud.
+
+30
+00:02:54,340 --> 00:03:02,080
+So the global adoption of EMV standards has led to a notable decrease in card present fraud, particularly
+
+31
+00:03:02,080 --> 00:03:09,190
+counterfeit fraud, as the dynamic authentication provided by EMV chip technology makes it difficult
+
+32
+00:03:09,190 --> 00:03:10,240
+to clone card.
+
+33
+00:03:11,590 --> 00:03:15,250
+Second is enhanced online security.
+
+34
+00:03:15,280 --> 00:03:23,740
+So EMV 3-D secure has been pivotal in reducing online fraud, especially as e-commerce continues to
+
+35
+00:03:23,740 --> 00:03:24,400
+grow.
+
+36
+00:03:24,790 --> 00:03:27,940
+By authenticating cardholders in real time.
+
+37
+00:03:27,970 --> 00:03:32,380
+EMV 3-D secure helps protect online transactions worldwide.
+
+38
+00:03:33,430 --> 00:03:36,760
+And finally, we have consistent user experience.
+
+39
+00:03:37,300 --> 00:03:45,490
+So Emvco ensures that regardless of where a transaction takes place, the user experience remains consistent
+
+40
+00:03:45,490 --> 00:03:50,440
+and secure, whether in store, online or on a mobile device.
+
+41
+00:03:52,510 --> 00:03:57,250
+Fourth point we have is EMV Co's role in emerging markets.
+
+42
+00:03:57,820 --> 00:04:04,900
+So in many emerging markets, EMV core standards help to drive financial inclusion by providing secure
+
+43
+00:04:04,930 --> 00:04:09,580
+payment method that can be trusted by consumers and merchants alike.
+
+44
+00:04:10,360 --> 00:04:18,100
+Also, EMV standards, particularly for contactless and mobile payments, are crucial in regions where
+
+45
+00:04:18,100 --> 00:04:23,350
+mobile banking and payments are leapfrogging traditional banking infrastructure.
+
+46
+00:04:25,300 --> 00:04:28,930
+Then we have collaborative partnerships.
+
+47
+00:04:30,280 --> 00:04:32,620
+So first industry collaboration.
+
+48
+00:04:32,620 --> 00:04:39,240
+So Emvco works with payment networks, financial institutions, technology providers and regulators
+
+49
+00:04:39,240 --> 00:04:43,980
+around the world to ensure that its standard meets the needs of the global market.
+
+50
+00:04:45,210 --> 00:04:48,690
+Then we have regulatory compliance.
+
+51
+00:04:48,690 --> 00:04:56,760
+So EMV standards often align with regional regulations, helping markets comply with local laws while
+
+52
+00:04:56,760 --> 00:04:58,890
+maintaining global interoperability.
+
+53
+00:04:59,820 --> 00:05:03,210
+And finally, future expansion and innovation.
+
+54
+00:05:03,570 --> 00:05:11,370
+So first of all, Emvco continues to expand its reach by updating and refining its standards to support
+
+55
+00:05:11,400 --> 00:05:18,330
+new payment technologies and to address the needs of a growing and increasingly digital global economy.
+
+56
+00:05:19,410 --> 00:05:27,840
+Emvco, in fact, is at the forefront of innovation in payment security, ensuring that as new technologies
+
+57
+00:05:27,870 --> 00:05:35,040
+like biometrics, blockchain and digital currencies emerge, they can be securely integrated into the
+
+58
+00:05:35,040 --> 00:05:36,870
+global payment ecosystem.
+

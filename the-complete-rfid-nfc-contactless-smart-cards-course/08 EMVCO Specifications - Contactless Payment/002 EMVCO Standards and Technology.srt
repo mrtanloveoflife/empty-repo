@@ -1,0 +1,428 @@
+1
+00:00:01,970 --> 00:00:07,040
+Hello again in this new session regarding Emvco standards.
+
+2
+00:00:07,220 --> 00:00:14,360
+In this session, I will go in depth on the different aspects of the NCV technology and also present
+
+3
+00:00:14,360 --> 00:00:16,219
+the different EMV standards.
+
+4
+00:00:21,110 --> 00:00:29,750
+So Emvco develops and manages a variety of standards designed to ensure the security, interoperability
+
+5
+00:00:29,750 --> 00:00:32,840
+and efficiency of payment systems globally.
+
+6
+00:00:32,900 --> 00:00:36,350
+Here is an overview of the key Emvco standards.
+
+7
+00:00:37,550 --> 00:00:44,300
+So first of all we have EMV chip specifications, then EMV 3d secure.
+
+8
+00:00:44,720 --> 00:00:52,850
+After that we have EMV contactless specifications, EMV payment tokenization, EMV QR code payments
+
+9
+00:00:52,850 --> 00:00:56,540
+and finally EMV Secure Remote Commerce.
+
+10
+00:01:00,260 --> 00:01:03,960
+So let's start with EMV chip specifications.
+
+11
+00:01:03,990 --> 00:01:10,770
+In fact, the standards ensures secure transactions using integrated circuit.
+
+12
+00:01:11,700 --> 00:01:15,150
+It protects against counterfeit fraud.
+
+13
+00:01:16,350 --> 00:01:21,390
+It allows also cardholders to securely pay using chip cards.
+
+14
+00:01:22,110 --> 00:01:31,290
+Regarding the key features, this standard supports offline and online Pin verification and also provides
+
+15
+00:01:31,290 --> 00:01:33,330
+cryptographic security.
+
+16
+00:01:36,060 --> 00:01:39,990
+Second, we have EMV, 3-D secure.
+
+17
+00:01:40,020 --> 00:01:44,550
+We will go back regarding the standard in depth later.
+
+18
+00:01:44,580 --> 00:01:50,940
+So first of all, this standard enhances the security of online card transactions.
+
+19
+00:01:51,990 --> 00:01:58,410
+Regarding the applications, it reduces fraud and provide a more secure online shopping.
+
+20
+00:01:59,130 --> 00:02:06,100
+And regarding the key features it introduces reduces risk based authentication and supports a wide range
+
+21
+00:02:06,100 --> 00:02:07,090
+of devices.
+
+22
+00:02:08,169 --> 00:02:09,669
+Third standards.
+
+23
+00:02:09,669 --> 00:02:14,950
+In this list we have the EMV contactless specifications.
+
+24
+00:02:15,910 --> 00:02:20,890
+The standards enables secure and fast payment transactions.
+
+25
+00:02:22,090 --> 00:02:29,590
+It uses its using globally for contactless payments in retail or transportation, for example.
+
+26
+00:02:30,040 --> 00:02:39,130
+Regarding key features, it ensures secure data transmission and provides a quick and convenient payment
+
+27
+00:02:39,130 --> 00:02:39,970
+experience.
+
+28
+00:02:42,310 --> 00:02:45,520
+After that, we have the EMV payment.
+
+29
+00:02:45,550 --> 00:02:46,690
+Tokenization.
+
+30
+00:02:48,100 --> 00:02:58,330
+This standard replaces sensitive card details with a unique identifier or token to protect card information
+
+31
+00:02:58,330 --> 00:02:59,770
+during transactions.
+
+32
+00:02:59,860 --> 00:03:10,650
+For for me, This standard with the one regarding the 3D secure is the most important ones regarding
+
+33
+00:03:10,680 --> 00:03:12,120
+EMV technology.
+
+34
+00:03:13,470 --> 00:03:23,520
+So regarding the applications it's using, it's used in mobile payments, e-commerce and other digital
+
+35
+00:03:23,520 --> 00:03:26,040
+payment scenarios to enhance security.
+
+36
+00:03:27,600 --> 00:03:34,980
+Then regarding the key features, it reduces the risk of data breaches by ensuring the actual card data
+
+37
+00:03:34,980 --> 00:03:42,660
+is not exposed and supports secure transactions in both physical and digital environments.
+
+38
+00:03:44,340 --> 00:03:48,300
+Then we have the EMV QR code payments.
+
+39
+00:03:48,690 --> 00:03:58,230
+So this standards so or let's say Emvco has developed QR code standards for both consumer presented
+
+40
+00:03:58,230 --> 00:04:06,880
+and merchant presented transactions particularly Super popular in markets where mobile payments are
+
+41
+00:04:06,880 --> 00:04:07,780
+prevalent.
+
+42
+00:04:09,220 --> 00:04:15,670
+Regarding the key features, it facilitates secure and straightforward transactions.
+
+43
+00:04:17,019 --> 00:04:21,579
+It also supports both static and dynamic QR codes.
+
+44
+00:04:28,360 --> 00:04:32,650
+Then we have the EMV secure remote commerce.
+
+45
+00:04:32,920 --> 00:04:38,740
+It provides a unified, consistent framework for secure digital payments.
+
+46
+00:04:40,540 --> 00:04:45,970
+It's designed to simplify and secure checkout processes in e-commerce.
+
+47
+00:04:46,660 --> 00:04:53,200
+Regarding the key features, it provides a streamlined user experience with a single click.
+
+48
+00:04:53,620 --> 00:04:58,840
+It also enhances security with tokenization and other advanced technologies.
+
+49
+00:05:01,420 --> 00:05:11,330
+So I presented the different EMV standards, and these standards have a very important role in the EMV
+
+50
+00:05:11,600 --> 00:05:13,280
+technology globally.
+
+51
+00:05:13,940 --> 00:05:15,530
+So first of all.
+
+52
+00:05:17,660 --> 00:05:21,980
+Regard let's talk about how it enhanced security.
+
+53
+00:05:23,060 --> 00:05:30,890
+So EMV standards, particularly EMV chip technology, significantly enhance the security of payment
+
+54
+00:05:30,890 --> 00:05:35,690
+transactions by using dynamic data to authenticate each transaction.
+
+55
+00:05:37,010 --> 00:05:44,090
+Unlike traditional magnetic stripe cards, in which chip cards generate a unique cryptogram for each
+
+56
+00:05:44,090 --> 00:05:52,370
+transaction, making it nearly impossible for fraudsters to create counterfeit cards, the adoption,
+
+57
+00:05:52,370 --> 00:06:00,500
+in fact, of EMV standards has led to a marked reduction in card present fraud, particularly in regions
+
+58
+00:06:00,500 --> 00:06:03,230
+that have fully embraced the technology.
+
+59
+00:06:04,940 --> 00:06:08,700
+Second thing is global interoperability.
+
+60
+00:06:08,700 --> 00:06:17,730
+So EMV standards ensure the payment cards and devices can be used across different regions and countries,
+
+61
+00:06:17,730 --> 00:06:26,160
+regardless of the user or payment network, whether in a local store or while traveling abroad.
+
+62
+00:06:26,190 --> 00:06:34,020
+Consumers can expect a consistent and reliable payment experience thanks to the global adoption of EMV
+
+63
+00:06:34,050 --> 00:06:34,770
+standards.
+
+64
+00:06:35,850 --> 00:06:40,500
+Third point is the support for contactless and mobile payments.
+
+65
+00:06:41,850 --> 00:06:48,840
+EMV standards have evolved to support contactless payments and mobile wallets, enabling fast, secure
+
+66
+00:06:48,840 --> 00:06:50,430
+and convenient transactions.
+
+67
+00:06:51,540 --> 00:06:59,070
+These standards are essential in today's fast paced, increasingly digital payment environment, where
+
+68
+00:06:59,070 --> 00:07:02,940
+consumers demand quick and easy payment methods.
+
+69
+00:07:05,280 --> 00:07:12,910
+Emvco continually updates its standards to incorporate new technologies, ensuring that payment systems
+
+70
+00:07:12,940 --> 00:07:16,630
+can adapt to emerging trends and consumer preferences.
+
+71
+00:07:17,830 --> 00:07:24,760
+The fourth point is the is reduced liability for merchants in many.
+
+72
+00:07:24,790 --> 00:07:32,110
+In many regions, the adoption of EMV standards has led to a liability shift where the responsibility
+
+73
+00:07:32,140 --> 00:07:40,570
+for fraudulent transactions shifts from merchants to issuers if the merchant has implemented EMV compliant
+
+74
+00:07:40,600 --> 00:07:41,470
+terminals.
+
+75
+00:07:42,040 --> 00:07:49,810
+By reducing the incidence of fraudulent transactions, EMV standards help merchants lower their chargeback
+
+76
+00:07:49,810 --> 00:07:54,640
+rates, leading to cost savings and improved profitability.
+
+77
+00:07:55,600 --> 00:07:59,410
+The fifth point is regulatory compliance.
+
+78
+00:07:59,410 --> 00:08:08,870
+In many regions, adhering to EMV standards is a regulatory requirement, Particularly in markets where
+
+79
+00:08:08,900 --> 00:08:11,960
+strong consumer protection laws are in place.
+
+80
+00:08:12,770 --> 00:08:20,180
+So EMV standards help businesses comply with various international regulations, making it easier to
+
+81
+00:08:20,210 --> 00:08:25,070
+conduct cross-border transactions in a secure and compliant manner.
+
+82
+00:08:27,230 --> 00:08:31,010
+Last but not least, driving financial inclusion.
+
+83
+00:08:31,400 --> 00:08:38,840
+EMV standards enable financial institutions to offer secure payment options in emerging markets, where
+
+84
+00:08:38,840 --> 00:08:44,780
+the risk of fraud can be higher and where many consumers may be new to digital payments.
+
+85
+00:08:45,500 --> 00:08:53,990
+By providing a secure payment framework, EMV standards help build trust in electronic payments, encouraging
+
+86
+00:08:53,990 --> 00:08:57,230
+more people to participate in the formal financial system.
+
+87
+00:08:58,040 --> 00:09:01,610
+Finally, foundation for Future Innovations.
+
+88
+00:09:01,910 --> 00:09:09,580
+So EMV standards serve as the foundation for integrating emerging technologies Such as biometrics,
+
+89
+00:09:09,610 --> 00:09:13,420
+tokenization and blockchain into the payment ecosystem.
+
+90
+00:09:14,590 --> 00:09:20,890
+EMV Co's commitment to regularly updating and improving its standards ensure that the global payment
+
+91
+00:09:20,890 --> 00:09:24,280
+system can meet future challenges and opportunities.
+
+92
+00:09:24,820 --> 00:09:31,510
+I know with all these slides that we went through, there are many information.
+
+93
+00:09:31,930 --> 00:09:41,410
+You don't really have to learn all of that because later we will see this information and these notes
+
+94
+00:09:41,410 --> 00:09:50,560
+and these keys about the EMV standards in the real life, in the use of the EMV cards, mobile phone,
+
+95
+00:09:50,590 --> 00:09:51,790
+etc., etc..
+
+96
+00:09:57,250 --> 00:10:05,830
+So EMV standards have revolutionized the payment industry by providing a foundation for secure, reliable
+
+97
+00:10:05,830 --> 00:10:13,460
+and globally accepted payment transactions By setting and maintaining standards for chip based cards,
+
+98
+00:10:13,490 --> 00:10:18,500
+contactless payments, and emerging technologies like mobile and QR code payments.
+
+99
+00:10:19,220 --> 00:10:26,060
+Emvco ensures that cardholders, merchants and financial institutions benefit from a secure, seamless
+
+100
+00:10:26,060 --> 00:10:27,320
+payment experience.
+
+101
+00:10:28,160 --> 00:10:32,600
+The adoption of EMV standards has significantly reduced fraud.
+
+102
+00:10:32,630 --> 00:10:39,290
+Enhanced data protection and enabled interoperability across borders, making it possible for consumers
+
+103
+00:10:39,290 --> 00:10:43,760
+to use their cards safely in millions of terminals worldwide.
+
+104
+00:10:43,790 --> 00:10:50,930
+As digital payments continue to evolve, Indico's role remains crucial in fostering innovation while
+
+105
+00:10:50,930 --> 00:10:57,710
+maintaining the highest levels of security for businesses, banks and technology providers.
+
+106
+00:10:58,310 --> 00:11:02,450
+Aligning with EMV standards is not just a matter of compliance.
+
+107
+00:11:02,720 --> 00:11:07,340
+It's an investment in the future of secure global commerce.
+

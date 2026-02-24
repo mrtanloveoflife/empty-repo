@@ -1,0 +1,184 @@
+1
+00:00:00,920 --> 00:00:01,850
+Hello again.
+
+2
+00:00:01,850 --> 00:00:08,630
+So here we are in this new section about analog aspects of the NFC communication.
+
+3
+00:00:10,550 --> 00:00:13,490
+First part we will be talking about the standards.
+
+4
+00:00:15,230 --> 00:00:18,110
+Proximity cards are all proprietary.
+
+5
+00:00:18,230 --> 00:00:23,780
+This is also the case of the memory based first generation of contactless smart cards.
+
+6
+00:00:24,400 --> 00:00:30,520
+This means that there is no compatibility between the readers of a specific brand and the cards of another
+
+7
+00:00:30,520 --> 00:00:31,150
+brand.
+
+8
+00:00:31,850 --> 00:00:42,080
+Contactless smart cards are covered by the ISO 14,443 and ISO 50,693 standards.
+
+9
+00:00:42,110 --> 00:00:49,400
+These standards define two types of cards, A and B, each with different communications protocol.
+
+10
+00:00:50,150 --> 00:00:54,140
+So these standards, as I said, define two types of cards.
+
+11
+00:00:54,880 --> 00:00:58,330
+Which typically have a range up to ten centimetres.
+
+12
+00:00:59,510 --> 00:01:03,980
+The related ISO 15,693 for vicinity cars.
+
+13
+00:01:03,980 --> 00:01:08,990
+Standard typically works up to a longer range of 100cm.
+
+14
+00:01:09,680 --> 00:01:19,610
+The reality is that ISO 14 443, as well as ISO 15 693, can only be fully implemented on microprocessor
+
+15
+00:01:19,610 --> 00:01:21,020
+based cards.
+
+16
+00:01:21,980 --> 00:01:28,910
+The best way to check if a technology meets ISO standards is to ask the manufacturer if it can be emulated
+
+17
+00:01:28,910 --> 00:01:32,150
+on other devices without any proprietary hardware.
+
+18
+00:01:33,280 --> 00:01:37,150
+The standard for proximity cards and couplers.
+
+19
+00:01:37,180 --> 00:01:43,720
+Pics and Pcds is ISO 14,443, which is divided into four layers.
+
+20
+00:01:45,460 --> 00:01:53,770
+The first one is the ISO 14,143 one, which covers the physical aspects of the card.
+
+21
+00:01:53,800 --> 00:02:00,250
+This layer describes the physical part of the receiver and the size of its antenna.
+
+22
+00:02:00,670 --> 00:02:07,960
+Second one is the ISO 14,443 two that defines the field level and bit level modulation.
+
+23
+00:02:08,169 --> 00:02:14,680
+This layer in fact, deals with the frequency at which the transmitter and receiver should operate.
+
+24
+00:02:14,800 --> 00:02:16,360
+In the case of NFC.
+
+25
+00:02:17,080 --> 00:02:19,840
+It's 1350 six megahertz.
+
+26
+00:02:21,120 --> 00:02:23,640
+This is the carrier frequency of the NFC.
+
+27
+00:02:24,510 --> 00:02:28,890
+We also talk about the signal, the transmission rate, etc., etc..
+
+28
+00:02:29,220 --> 00:02:34,800
+There are two variants, A and B, which differ on the modulation and the binary encoding used.
+
+29
+00:02:35,790 --> 00:02:46,530
+The third one is the ISO 14,443 three, which tells how the bits are assembled in bytes and then in
+
+30
+00:02:46,530 --> 00:02:47,310
+frames.
+
+31
+00:02:47,340 --> 00:02:48,870
+There are two options.
+
+32
+00:02:49,050 --> 00:02:57,120
+ISO 14,443 type A that chooses on off keying modulation, okay and Manchester coding.
+
+33
+00:02:57,660 --> 00:03:08,550
+However, ISO 14,443 type B card uses a 10% amplitude shift keying modulation and also nrzi coding.
+
+34
+00:03:08,910 --> 00:03:17,730
+The coupler or the PCD shall implement both types, but the card or pack may choose to implement only
+
+35
+00:03:17,730 --> 00:03:20,190
+one of them through the next.
+
+36
+00:03:20,190 --> 00:03:25,590
+Next sessions, I'm going to present to you these different types of modulations and coding.
+
+37
+00:03:26,190 --> 00:03:32,550
+More than that, in this layer three, we address the creation of communication between the transmitter
+
+38
+00:03:32,550 --> 00:03:39,990
+or PCD and the receiver or pack, and the principle of anti-collision, which makes it possible to manage
+
+39
+00:03:39,990 --> 00:03:44,820
+the case of several receivers which are found at the same time in the magnetic field.
+
+40
+00:03:46,710 --> 00:03:55,200
+And finally the ISO 14,143 four, which stops both types with a block oriented transport protocol.
+
+41
+00:03:55,740 --> 00:03:56,400
+Not far.
+
+42
+00:03:56,670 --> 00:04:01,740
+Not far from T equal one protocol of ISO 7008 16 dot three.
+
+43
+00:04:01,980 --> 00:04:11,460
+This protocol is often referred to as T equal CL, short for transport equal contactless.
+
+44
+00:04:12,270 --> 00:04:15,840
+Although this name does not appear officially in the standard.
+
+45
+00:04:17,700 --> 00:04:23,580
+So this layer also deals with the protocol used in the transmission of information.
+
+46
+00:04:23,730 --> 00:04:30,450
+It describes the data format and communication during a transaction, etc., etc..
+

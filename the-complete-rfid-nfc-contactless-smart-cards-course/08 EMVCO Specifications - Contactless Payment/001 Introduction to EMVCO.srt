@@ -1,0 +1,448 @@
+1
+00:00:01,370 --> 00:00:07,790
+Hello and welcome again to this new section regarding Emvco specifications.
+
+2
+00:00:08,090 --> 00:00:15,620
+In this new section, I will be presenting the different aspects of the payment technology which is
+
+3
+00:00:15,620 --> 00:00:18,050
+presented by the Emvco standard.
+
+4
+00:00:20,570 --> 00:00:23,840
+So first of all, what is Emvco?
+
+5
+00:00:24,470 --> 00:00:33,320
+So Emvco in fact, is a global organization that manages the technical standards for EMV, E for Europe,
+
+6
+00:00:33,500 --> 00:00:40,700
+M for Mastercard and V for visa technology, which is used in payment systems.
+
+7
+00:00:40,730 --> 00:00:48,950
+These standards are essential for ensuring secure, reliable and interoperable payment transactions
+
+8
+00:00:48,950 --> 00:00:57,020
+across various platforms, including credit and debit cards, mobile payments and contactless payments.
+
+9
+00:00:57,980 --> 00:01:05,900
+In fact, Emvco is a global technical body established to facilitate worldwide interoperability and
+
+10
+00:01:05,900 --> 00:01:08,660
+acceptance of secure payment transactions.
+
+11
+00:01:08,900 --> 00:01:17,420
+It develops and manages specifications that ensure the seamless, secure operation of payment systems
+
+12
+00:01:17,420 --> 00:01:19,640
+across borders and platforms.
+
+13
+00:01:20,870 --> 00:01:28,790
+It was also established in the 1990s to reduce card fraud and improve global payment security.
+
+14
+00:01:30,200 --> 00:01:31,700
+For your information, here.
+
+15
+00:01:31,700 --> 00:01:34,700
+On your right, we have the Emvco logo.
+
+16
+00:01:37,760 --> 00:01:46,100
+In fact, Emvco was founded by major credit card companies that we all know about, which are Europay,
+
+17
+00:01:46,130 --> 00:01:50,600
+Mastercard, and visa, which is reflected in the name EMV.
+
+18
+00:01:50,630 --> 00:01:52,160
+As we said earlier.
+
+19
+00:01:52,520 --> 00:02:02,170
+Today, Emvco is collectively owned by six of the world's largest payment networks like American Express,
+
+20
+00:02:02,170 --> 00:02:07,840
+discover, JCB, Mastercard, Union Pin and visa.
+
+21
+00:02:08,289 --> 00:02:12,880
+Who are the most known or let's say, the leaders of the payment industry?
+
+22
+00:02:13,810 --> 00:02:19,390
+These entities collaborate to maintain and develop EMV standards globally.
+
+23
+00:02:20,890 --> 00:02:24,130
+So what about the history of the Emvco technology?
+
+24
+00:02:29,140 --> 00:02:38,560
+In the early 1990s, the payment industry recognized the need for a global standard to combat rising
+
+25
+00:02:38,560 --> 00:02:46,030
+card fraud and to facilitate the interoperability of payment systems across different regions and networks.
+
+26
+00:02:46,660 --> 00:02:53,950
+The development of chip card technology began as a way to enhance security and reduce the reliance on
+
+27
+00:02:53,980 --> 00:02:58,420
+magnetic stripe cards, which were more susceptible to fraud.
+
+28
+00:03:00,310 --> 00:03:11,350
+Then Europay, Mastercard and visa joined forces in 1994 to create a set of specifications for integrated
+
+29
+00:03:11,350 --> 00:03:13,840
+circuit cards and terminals.
+
+30
+00:03:14,860 --> 00:03:17,290
+When we say terminals, we mean readers.
+
+31
+00:03:17,380 --> 00:03:25,480
+So this collaboration resulted in the initial release of the MV standard, which set the foundation
+
+32
+00:03:25,480 --> 00:03:29,740
+for secure, globally interoperable payment system.
+
+33
+00:03:31,090 --> 00:03:40,300
+Then in 1999, the three founding organizations Europay, Mastercard and visa officially established
+
+34
+00:03:40,330 --> 00:03:47,530
+EMV Co as a consortium to manage, maintain and enhance the EMV specifications.
+
+35
+00:03:48,220 --> 00:03:56,350
+In fact, EMV was asked was tasked with ensuring that the specifications would evolve to meet the changing
+
+36
+00:03:56,350 --> 00:03:58,540
+needs of the global payment industry.
+
+37
+00:04:00,490 --> 00:04:10,960
+After that, between 2004 and 2009, the EMV standard quickly gained traction worldwide as countries
+
+38
+00:04:10,960 --> 00:04:15,910
+and regions began adopting chip card technology to combat fraud.
+
+39
+00:04:16,540 --> 00:04:24,520
+During this period, the ownership of Emvco expanded to include other major payment networks such as
+
+40
+00:04:24,550 --> 00:04:28,300
+American Express, JCB, discover, and UnionPay.
+
+41
+00:04:29,110 --> 00:04:37,810
+Then EMV scope also expanded to cover contactless payments and mobile payment technology, reflecting
+
+42
+00:04:37,810 --> 00:04:41,710
+the industry's shift towards these emerging technologies.
+
+43
+00:04:44,350 --> 00:04:55,330
+After that, from 2010 until now, Emvco continued to evolve, introducing standards like EMV 3D secure
+
+44
+00:04:55,360 --> 00:05:02,760
+to enhance security for online payments and payment tokenization to protect sensitive card information.
+
+45
+00:05:04,920 --> 00:05:14,550
+Today, Emvco remains at the forefront of payment security and interoperability with its standards adopted
+
+46
+00:05:14,550 --> 00:05:18,210
+by payment systems in over 18 countries.
+
+47
+00:05:26,040 --> 00:05:29,010
+So what about the EMV technology?
+
+48
+00:05:30,210 --> 00:05:39,570
+So first, EMV chip technology is one of the foundational standards developed by Emvco, revolutionizing
+
+49
+00:05:39,570 --> 00:05:44,250
+the way payment transactions are secured and processed globally.
+
+50
+00:05:44,850 --> 00:05:50,520
+Here is an overview of how EMV chip technology works and its impact on the payment industry.
+
+51
+00:05:50,550 --> 00:05:54,240
+So first of all, what is EMV chip technology?
+
+52
+00:05:54,630 --> 00:05:56,070
+What it refers to?
+
+53
+00:05:56,550 --> 00:06:04,890
+So EMV chip technology refers to the embedded micro chip in payment cards that securely stores and processes
+
+54
+00:06:04,890 --> 00:06:06,270
+transaction data.
+
+55
+00:06:06,810 --> 00:06:15,510
+Unlike magnetic stripe cards, which rely on static data, EMV chips use dynamic data, making it significantly
+
+56
+00:06:15,510 --> 00:06:19,770
+harder for fraudsters to clone or counterfeit cards.
+
+57
+00:06:22,440 --> 00:06:24,810
+So then how it works?
+
+58
+00:06:29,940 --> 00:06:33,270
+So first of all, card authentication.
+
+59
+00:06:33,840 --> 00:06:41,520
+When a card is inserted into a chip enabled terminal, the EMV chip generates a unique transaction code
+
+60
+00:06:41,520 --> 00:06:42,870
+for each transaction.
+
+61
+00:06:44,040 --> 00:06:51,990
+This dynamic authentication process ensures that even if transaction data is intercepted, it cannot
+
+62
+00:06:51,990 --> 00:06:54,450
+be reused for fraudulent purposes.
+
+63
+00:06:56,070 --> 00:06:58,410
+Then cardholder verification.
+
+64
+00:06:58,410 --> 00:07:06,930
+In fact, EMV supports various cardholder verification methods, including Pin, signature, and contactless.
+
+65
+00:07:06,960 --> 00:07:12,990
+The most common method is Pin verification, which adds another layer of security.
+
+66
+00:07:14,970 --> 00:07:18,750
+After that, we have the transaction authorization.
+
+67
+00:07:18,780 --> 00:07:25,980
+The transaction is authorized by the issuer's system, which verifies the authenticity of the chip and
+
+68
+00:07:25,980 --> 00:07:29,760
+the transaction details before approving the transaction.
+
+69
+00:07:30,870 --> 00:07:36,810
+So the third point is what are the key benefits of the technology?
+
+70
+00:07:37,440 --> 00:07:40,590
+First of all, it enhances security.
+
+71
+00:07:40,590 --> 00:07:47,640
+In fact, the primary advantage of EMV chips is their enhanced security compared to magnetic stripe
+
+72
+00:07:47,640 --> 00:07:48,330
+cards.
+
+73
+00:07:48,540 --> 00:07:56,180
+The use of dynamic data during transaction significantly reduces the risk of card fraud, Particularly
+
+74
+00:07:56,210 --> 00:07:57,740
+counterfeit fruit.
+
+75
+00:07:59,540 --> 00:08:08,630
+Then EMV chip technology is widely adopted across the globe, ensuring that EMV enabled cards can be
+
+76
+00:08:08,630 --> 00:08:12,680
+used in any country with an EMV compliant terminal.
+
+77
+00:08:13,580 --> 00:08:18,860
+The fourth point is how was the transition from magnetic stripe to EMV?
+
+78
+00:08:19,250 --> 00:08:21,890
+First of all, global migration.
+
+79
+00:08:22,160 --> 00:08:29,060
+In fact, over the past two decades, the payment industry has gradually transitioned from magnetic
+
+80
+00:08:29,060 --> 00:08:31,580
+stripe cards to EMV chip cards.
+
+81
+00:08:31,610 --> 00:08:38,090
+This shift was driven by the need to reduce fraud and enhance the security of payment systems.
+
+82
+00:08:39,289 --> 00:08:41,360
+Second impact on fraud.
+
+83
+00:08:42,919 --> 00:08:50,030
+So the adoption of EMV chip technology has led to a significant reduction in counterfeit card fraud,
+
+84
+00:08:50,330 --> 00:08:58,610
+particularly in regions that have fully embraced the technology, such as Europe and Canada, for example.
+
+85
+00:08:58,610 --> 00:09:06,380
+Today in Europe it's very rare that you find somewhere where we use magnetic stripe cards.
+
+86
+00:09:06,380 --> 00:09:09,590
+However, in the US we are still using it.
+
+87
+00:09:09,650 --> 00:09:19,640
+And as you can, you could understood EMV technology is more secure than the magnetic stripe technology.
+
+88
+00:09:19,940 --> 00:09:23,540
+So the third point here is the challenges and solutions.
+
+89
+00:09:23,570 --> 00:09:30,530
+The transition to EMV technology required updates to payment infrastructure, including new point of
+
+90
+00:09:30,560 --> 00:09:33,170
+sale terminals and software.
+
+91
+00:09:33,560 --> 00:09:38,810
+Emvco worked with industry stakeholders to facilitate the transition smoothly.
+
+92
+00:09:39,530 --> 00:09:44,270
+In the next session, we will learn more about the the security.
+
+93
+00:09:44,300 --> 00:09:46,190
+We will learn more about the analog test.
+
+94
+00:09:46,220 --> 00:09:50,120
+We will learn more about all the aspects of the EMV technology.
+
+95
+00:09:56,150 --> 00:10:04,370
+So in conclusion, EMV technology has revolutionized the global payments landscape by enhancing security,
+
+96
+00:10:04,370 --> 00:10:13,640
+reducing fraud, and facilitating a more standardized payment process by incorporating chip based authentication.
+
+97
+00:10:14,090 --> 00:10:22,580
+EMV cards significantly mitigate the risks associated with traditional magnetic stripe cards, particularly
+
+98
+00:10:22,580 --> 00:10:23,990
+skimming and cloning.
+
+99
+00:10:24,470 --> 00:10:31,280
+The dynamic nature of data generated during each transaction ensures that even if data is intercepted,
+
+100
+00:10:31,280 --> 00:10:32,750
+it cannot be reused.
+
+101
+00:10:32,780 --> 00:10:41,930
+Offering a robust layer of protection from a global perspective, the adoption of EMV standards has
+
+102
+00:10:41,930 --> 00:10:49,550
+facilitated interoperability enabled, enabling seamless transactions across different regions and payment
+
+103
+00:10:49,580 --> 00:10:50,360
+networks.
+
+104
+00:10:51,230 --> 00:10:57,490
+This has also paved the way for innovations like contactless payments and mobile wallet integration,
+
+105
+00:10:57,520 --> 00:11:01,690
+which built on the secure foundations of EMV technology.
+
+106
+00:11:02,290 --> 00:11:10,660
+However, as payment methods evolve, new vulnerabilities may emerge, particularly in online or card
+
+107
+00:11:10,660 --> 00:11:15,280
+not present transactions where EMV effectiveness is limited.
+
+108
+00:11:15,310 --> 00:11:22,210
+This highlights the need for continued advancements, including technologies like tokenization and biometric
+
+109
+00:11:22,210 --> 00:11:29,080
+verification, to complement and enhance the EMV framework in an increasingly digital economy.
+
+110
+00:11:29,110 --> 00:11:36,550
+So in summary, NV technology represents a critical step forward in secure payment systems, fostering
+
+111
+00:11:36,580 --> 00:11:44,410
+trust between merchants, banks and consumers, and providing a solution a solid foundation for future
+
+112
+00:11:44,410 --> 00:11:46,990
+innovations in the financial ecosystem.
+

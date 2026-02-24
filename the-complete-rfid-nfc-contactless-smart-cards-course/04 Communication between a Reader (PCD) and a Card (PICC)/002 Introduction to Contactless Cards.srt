@@ -1,0 +1,364 @@
+1
+00:00:01,240 --> 00:00:02,050
+Hello.
+
+2
+00:00:02,860 --> 00:00:07,720
+So here we will be talking about the introduction to contactless cards.
+
+3
+00:00:09,370 --> 00:00:15,460
+So contactless smart card is a smart card that uses inductive coupling to communicate with its reader.
+
+4
+00:00:16,329 --> 00:00:23,590
+Inductive coupling in fact, is the technology behind NFC, near-field communication, and short range
+
+5
+00:00:23,590 --> 00:00:30,340
+RFID for for radio frequency identification in the 1350 six megahertz radio band.
+
+6
+00:00:30,370 --> 00:00:40,120
+So high frequency radio band proximity contactless smart cards are defined by the ISO 14,443 set of
+
+7
+00:00:40,120 --> 00:00:41,680
+international standards.
+
+8
+00:00:42,130 --> 00:00:46,780
+The ISO 14,443 is divided into four layers.
+
+9
+00:00:46,930 --> 00:00:55,900
+The upper layers, which is ISO 14,443 four, specifies the contactless transport protocol, sometimes
+
+10
+00:00:55,900 --> 00:01:00,850
+referred to as T equal CL, CL for contactless.
+
+11
+00:01:01,150 --> 00:01:07,660
+The application layer that comes on top of the contactless protocol is supposed to be the very same
+
+12
+00:01:07,660 --> 00:01:13,540
+ISO 7008 16 dash four that comes on top of the T equals zero or t equal one.
+
+13
+00:01:13,540 --> 00:01:15,070
+Transport protocols.
+
+14
+00:01:18,730 --> 00:01:28,390
+As you can see here, I put some example of the contactless technology like car keys, passports, bags,
+
+15
+00:01:28,390 --> 00:01:37,090
+identification or bags, tags, transport, uh, cars, transportation or like medicine tax.
+
+16
+00:01:44,940 --> 00:01:52,440
+So a lot of contactless cards on the market today are not smart cards, but wired logic memories with
+
+17
+00:01:52,440 --> 00:01:53,550
+an RF interface.
+
+18
+00:01:53,970 --> 00:02:01,980
+So the marketing gives them different names like RFID labels, NFC tags, contactless tickets, but
+
+19
+00:02:01,980 --> 00:02:07,740
+they are all based on the same physical principle inductive coupling at 1350 six megahertz.
+
+20
+00:02:07,740 --> 00:02:13,110
+Please remember always that here when we talk about the contactless communication, we are in the range
+
+21
+00:02:13,110 --> 00:02:14,940
+of the 1350 six megahertz.
+
+22
+00:02:14,940 --> 00:02:24,270
+This is the frequency that characterizes that characterize this technology and are all compliant with
+
+23
+00:02:24,270 --> 00:02:32,910
+either ISO 14,143 standard for proximity cards, or ISO 15 15,693 standard for vicinity cards.
+
+24
+00:02:39,210 --> 00:02:46,170
+So here we will be talking about the coupling device or coupler, or let's say the reader.
+
+25
+00:02:46,170 --> 00:02:53,070
+Now that we know that a smart card is basically a secure microcontroller communicating with the external
+
+26
+00:02:53,070 --> 00:03:00,330
+world through a serial line, we must find a better name than reader for the device that ensures the
+
+27
+00:03:00,330 --> 00:03:03,630
+connectivity and gives access to the smart card instructions.
+
+28
+00:03:04,200 --> 00:03:12,240
+Even if the term smart card reader has been popularized by the Pcsc and Ccid specifications, it does
+
+29
+00:03:12,240 --> 00:03:19,710
+not reflect the technical reality, because a card's instruction set opens lots more features than just
+
+30
+00:03:19,710 --> 00:03:20,760
+reading some data.
+
+31
+00:03:21,630 --> 00:03:29,640
+Reading a smart card makes not more sense than reading a remote web server or reading an SQL database.
+
+32
+00:03:29,910 --> 00:03:31,860
+You do not read a raw memory.
+
+33
+00:03:31,860 --> 00:03:38,340
+In fact, your application sends some commands to get authenticated since other commands to explore
+
+34
+00:03:38,340 --> 00:03:44,190
+a file system sends commands also to insert or update or delete the data.
+
+35
+00:03:44,190 --> 00:03:47,370
+Or read it, of course, but not only.
+
+36
+00:03:47,910 --> 00:03:55,080
+Therefore, the device in which the smart card is inserted plays the role of a pass through gateway
+
+37
+00:03:55,080 --> 00:04:01,230
+between a software running in the host computer or host terminal, and the software running inside the
+
+38
+00:04:01,230 --> 00:04:02,760
+card's microcontroller.
+
+39
+00:04:03,780 --> 00:04:11,070
+This pass through gateway translates commands coming from the host application through either USB,
+
+40
+00:04:11,250 --> 00:04:19,019
+serial Ethernet, or any other computer interconnection technology into electronic signals that are
+
+41
+00:04:19,019 --> 00:04:21,690
+compliant with the asynchronous half duplex.
+
+42
+00:04:21,690 --> 00:04:29,340
+Serial T equals zero or T equal one transport protocol, but this gateway does not add any processing
+
+43
+00:04:29,340 --> 00:04:29,970
+logic.
+
+44
+00:04:29,970 --> 00:04:33,630
+Its position is to couple the smart card with the computer.
+
+45
+00:04:34,170 --> 00:04:43,350
+As a consequence, the standard name as defined by the ISO 7816 is coupling device CD or simply a coupler.
+
+46
+00:04:43,770 --> 00:04:53,700
+Contactless coupler are in turn named Proximity Coupling Device or PCD by the ISO 14,443 or vicinity
+
+47
+00:04:53,700 --> 00:04:58,320
+coupling device vxd by the ISO 15,693.
+
+48
+00:05:02,050 --> 00:05:04,660
+So we were talking about the PCD.
+
+49
+00:05:05,500 --> 00:05:08,470
+Now we will be talking about the Picc components.
+
+50
+00:05:09,070 --> 00:05:15,190
+As you can see here in this picture, the card and the reader unit communicates with each other through
+
+51
+00:05:15,190 --> 00:05:18,610
+125kHz radio frequency fields.
+
+52
+00:05:18,700 --> 00:05:28,840
+So 30 56MHz for the contactless smart card cards by a process called resonant energy transfer.
+
+53
+00:05:29,320 --> 00:05:34,300
+Passive cards have three components which are sealed inside the plastic.
+
+54
+00:05:36,810 --> 00:05:46,770
+Inside the plastic, we have an antenna consisting of a coil of of wire, a capacitor and integrated
+
+55
+00:05:46,770 --> 00:05:47,490
+circuit.
+
+56
+00:05:47,490 --> 00:05:53,880
+So as I said, the the course is is composed by three components, as you can see here in the picture.
+
+57
+00:05:55,680 --> 00:06:05,220
+So as I said it contains an antenna consisted of a coil of wire, a capacitor and integrated circuit
+
+58
+00:06:05,220 --> 00:06:10,650
+which contains the user's ID number in specific formats and no other data.
+
+59
+00:06:10,980 --> 00:06:16,980
+The reader has its own antenna, which continuously transmits a short range radio frequency field.
+
+60
+00:06:17,880 --> 00:06:24,390
+When the card is placed within range of the reader, the antenna coil and capacitor, which form a tuned
+
+61
+00:06:24,390 --> 00:06:31,770
+circuit absorb and store energy from the field, resonating at the frequency emitted by the reader.
+
+62
+00:06:32,430 --> 00:06:37,080
+This energy is rectified to direct current, which powers the integrated circuit.
+
+63
+00:06:37,410 --> 00:06:45,570
+The chip sends its ID number or other data to the antenna coil, which transmits it by radio frequency
+
+64
+00:06:45,570 --> 00:06:47,490
+signals back to the reader unit.
+
+65
+00:06:48,150 --> 00:06:54,090
+The reader checks whether the ID number from the card is correct, and then performs whatever function
+
+66
+00:06:54,090 --> 00:06:56,610
+it has been programmed to do for that ID number.
+
+67
+00:06:57,150 --> 00:07:04,650
+All the energy to power the card comes from the reader unit, so passive cards must be close to a reader
+
+68
+00:07:04,650 --> 00:07:06,030
+to transmit their data.
+
+69
+00:07:11,590 --> 00:07:17,320
+So the first part here we will be talking on how the card is fabricated.
+
+70
+00:07:17,320 --> 00:07:22,870
+So the exchange of information between the contactless card and the associated reader is completely
+
+71
+00:07:22,870 --> 00:07:29,320
+accomplished by remote electromagnetic coupling between an antenna lodged in the contactless card and
+
+72
+00:07:29,320 --> 00:07:35,680
+the second antenna located in the reader for developing, storing and processing the information.
+
+73
+00:07:35,680 --> 00:07:41,890
+The card is equipped with a contactless chip or electronic module which is connected to the antenna.
+
+74
+00:07:43,000 --> 00:07:49,450
+The antenna and the chip or contactless module are typically located on a dielectric.
+
+75
+00:07:49,450 --> 00:07:58,060
+Dielectric support made of plastic material can be PVC, polyester, polycarbonate, etc. the antenna
+
+76
+00:07:58,060 --> 00:08:05,170
+here is obtained by chemical, copper or aluminium etching on the support or winding or winding of conductive
+
+77
+00:08:05,170 --> 00:08:09,790
+metal wire, such as a copper.
+
+78
+00:08:09,790 --> 00:08:11,710
+The card is often monoblock.
+
+79
+00:08:11,710 --> 00:08:20,890
+The antenna support is inserted between two layers of plastic materials PVC, Pet, PC, etc., forming
+
+80
+00:08:20,890 --> 00:08:26,530
+the upper and lower card bodies and then heat bonded by hot lamination under pressure.
+
+81
+00:08:26,800 --> 00:08:34,390
+The contactless chip or module is connected to the antenna by an electrically conductive glue or equivalent,
+
+82
+00:08:34,390 --> 00:08:37,690
+which enables the ohmic contact to be established.
+
+83
+00:08:40,900 --> 00:08:42,549
+So here we are in the summary.
+
+84
+00:08:42,549 --> 00:08:48,430
+So as I said before, a pick is a contactless card that uses inductive coupling to communicate with
+
+85
+00:08:48,430 --> 00:08:49,060
+the reader.
+
+86
+00:08:49,270 --> 00:08:55,750
+All picks are based on the same physical principle inductive coupling at 1350 six megahertz.
+
+87
+00:08:55,990 --> 00:09:04,750
+The card and the reader unit communicate with each other through 125kHz radio frequency field by a process
+
+88
+00:09:04,750 --> 00:09:06,610
+called resonant energy transfer.
+
+89
+00:09:07,000 --> 00:09:11,980
+And finally, the exchange of information between the contactless card and the associated reader is
+
+90
+00:09:11,980 --> 00:09:18,520
+accomplished by remote electromagnetic coupling between an antenna loaded in the contactless card and
+
+91
+00:09:18,520 --> 00:09:20,860
+the second antenna located in the reader.
+

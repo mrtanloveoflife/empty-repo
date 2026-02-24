@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+
+  <style>
+    body {
+      font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+        segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-size: 16px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+
+    code {
+      background-color: #fff;
+      border: 1px solid #d1d7dc;
+      color: #b4690e;
+      font-size: 90%;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .quiz-content {
+      padding: 2.4rem;
+      word-break: break-word;
+      max-width: 86rem;
+      margin: 0 auto;
+    }
+
+    .quiz-container {
+      margin: 0 auto;
+      max-width: 84rem;
+      padding: 0;
+    }
+
+    .question {
+      margin-bottom: 5rem;
+    }
+
+    .question span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .question-prompt {
+      margin-top: 0.8rem;
+      font-weight: 700;
+    }
+
+    .question-answer {
+      margin-top: 1.6rem;
+      padding-left: 0;
+      box-sizing: border-box;
+    }
+
+    .question-answer label {
+      max-width: 80rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      min-width: 18rem;
+      border: solid #1c1d1f 2px;
+    }
+
+    .question-answer div {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .question-answer div:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* .question-answer input {
+      display: none;
+    } */
+
+    .question-answer span {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1.6rem;
+      top: 0;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      border: 0.2rem solid #1c1d1f;
+      position: relative;
+    }
+
+    .selected {
+      background: #1c1d1f;
+      box-shadow: 0 0 0 0.4rem #fff inset;
+    }
+
+    .score {
+      position: fixed;
+      background-color: #b4690e;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <div id="score" class="score">
+    <span>Score: N/A of N/A</span>
+  </div>
+  <div id="quiz-container" class="quiz-content"></div>
+
+  <script>
+    const quizData = {"pass_percent": 70, "questions": [{"_class": "assessment", "id": 98218211, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What does PCD stand for in the context of contactless technology?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Passive Coupling Device</p>", "<p>Proximity Coupling Device</p>", "<p>Portable Contactless Device</p>", "<p>Personal Card Detector</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What does PCD stand for in the context of contactless technology?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218217, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What standard defines the communication protocols for PCDs and PICCs?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>ISO/IEC 7816</p>", "<p>ISO/IEC 14443</p>", "<p>EMVCo Contactless Specification</p>", "<p>IEEE 802.11</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What standard defines the communication protocols for PCDs and PICCs?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218221, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which frequency do PCDs typically operate at?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>13.56 MHz</p>", "<p>2.4 GHz</p>", "<p>125 kHz</p>", "<p>433 MHz</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "Which frequency do PCDs typically operate at?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218229, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which of the following is NOT a function of a PCD?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Generating RF fields</p>", "<p>Reading data from a PICC</p>", "<p>Writing data to a PICC</p>", "<p>Cryptographic key generation</p>"]}, "correct_response": ["d"], "section": "", "question_plain": "Which of the following is NOT a function of a PCD?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218233, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the primary role of a PCD in a contactless payment system?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Authenticate the merchant\u2019s account</p>", "<p>Facilitate communication with the PICC</p>", "<p>Store cardholder credentials</p>", "<p>Encrypt payment transaction data</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What is the primary role of a PCD in a contactless payment system?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218235, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The PCD is typically powered by a battery.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "It is usually connected to a power source or embedded in a powered device, such as a POS terminal"], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "The PCD is typically powered by a battery.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218241, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The range of communication between a PCD and a PICC is usually less than 10 cm.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The range of communication between a PCD and a PICC is usually less than 10 cm.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218245, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The PCD must comply with both hardware and software requirements for proper operation.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The PCD must comply with both hardware and software requirements for proper operation.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218249, "assessment_type": "multiple-choice", "prompt": {"question": "<p>In contactless systems, the PICC generates its own RF field for communication.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "The PCD generates the RF field that powers the PICC."], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "In contactless systems, the PICC generates its own RF field for communication.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218251, "assessment_type": "multiple-choice", "prompt": {"question": "<p>The PCD is responsible for initiating communication with the PICC.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "The PCD is responsible for initiating communication with the PICC.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218259, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What does PICC stand for in contactless technology?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Proximity Integrated Circuit Card</p>", "<p>Passive Integrated Contactless Card</p>", "<p>Proximity Interface Communication Card</p>", "<p>Portable Integrated Circuit Chip</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What does PICC stand for in contactless technology?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218261, "assessment_type": "multiple-choice", "prompt": {"question": "<p>How does a PICC typically receive power?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Internal battery</p>", "<p>Through the RF field generated by the PCD</p>", "<p>Solar power</p>", "<p>USB connection</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "How does a PICC typically receive power?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218263, "assessment_type": "multiple-choice", "prompt": {"question": "<p>Which communication standard primarily governs PICCs?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>ISO/IEC 7810</p>", "<p>ISO/IEC 14443</p>", "<p>IEEE 802.15</p>", "<p>EMVCo Level 1 Specification</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "Which communication standard primarily governs PICCs?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218271, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What type of technology is commonly used in PICCs for contactless communication?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Magnetic stripe</p>", "<p>Inductive coupling</p>", "<p>Optical communication</p>", "<p>Wi-Fi</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "What type of technology is commonly used in PICCs for contactless communication?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218275, "assessment_type": "multiple-choice", "prompt": {"question": "<p>What is the typical operating range for a PICC in contactless systems?</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "", "", ""], "answers": ["<p>Less than 10 cm</p>", "<p>1\u20132 meters</p>", "<p>3\u20135 meters</p>", "<p>Over 10 meters</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "What is the typical operating range for a PICC in contactless systems?", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218279, "assessment_type": "multiple-choice", "prompt": {"question": "<p>A PICC can operate without an active RF field.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "A PICC relies on the RF field from the PCD for power and communication."], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "A PICC can operate without an active RF field.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218365, "assessment_type": "multiple-choice", "prompt": {"question": "<p>A PICC uses an internal microcontroller to process commands.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "A PICC uses an internal microcontroller to process commands.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218369, "assessment_type": "multiple-choice", "prompt": {"question": "<p>PICC communication requires a direct line of sight with the PCD.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", "Contactless communication works without a direct line of sight, within the RF field range."], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["b"], "section": "", "question_plain": "PICC communication requires a direct line of sight with the PCD.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218371, "assessment_type": "multiple-choice", "prompt": {"question": "<p>A PICC typically contains a unique identifier (UID).</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "A PICC typically contains a unique identifier (UID).", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}, {"_class": "assessment", "id": 98218373, "assessment_type": "multiple-choice", "prompt": {"question": "<p>PICC functionality depends on compliance with both hardware and software standards.</p>", "relatedLectureIds": ["43040172"], "feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"]}, "correct_response": ["a"], "section": "", "question_plain": "PICC functionality depends on compliance with both hardware and software standards.", "related_lectures": [{"_class": "lecture", "id": 43040172, "title": "Introduction to Contactless Cards", "created": "2024-03-28T14:03:23Z", "is_published": true, "asset": {"_class": "asset", "id": 56765884, "asset_type": "Video", "title": "Introduction to Contactless Cards.mp4", "created": "2024-05-23T17:13:24Z"}, "object_index": 12, "url": "/course/the-complete-rfid-nfc-contactless-smart-cards-course/learn/lecture/43040172"}]}]};
+    var correct = 0;
+    var total = 0;
+    const questionData = quizData.questions
+    const passPercent = quizData.pass_percent
+    function kiemTraDapAn(correctMuti, choise) {
+      // Chuyển đổi các số trong choise thành chữ cái tương ứng
+      const choiseLetters = choise.map(num => String.fromCharCode(parseInt(num) + 'a'.charCodeAt(0)));
+      console.log('choiseLetters',choiseLetters)
+      // Kiểm tra điều kiện:
+      // 1. Chiều dài hai mảng phải bằng nhau
+      // 2. Tất cả các phần tử trong choiseLetters phải có trong correctMuti
+      if (
+        choiseLetters.length === correctMuti.length &&
+        choiseLetters.every(c => correctMuti.includes(c))
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    function main() {
+      total = questionData.length;
+
+      var questions = [];
+      for (var i = 0; i < questionData.length; i++) {
+        var question = questionData[i];
+        var questionText = question.prompt.question;
+        var answers = question.prompt.answers;
+        var correctAnswer = question.correct_response[0];
+        var correctMuti = question.correct_response;
+        var correctAnswerText = answers[correctAnswer.charCodeAt(0) - 97];
+        var questionObj = {
+          question: questionText,
+          correctAnswer: correctAnswerText,
+          answers: answers,
+          id: question.id,
+          explanation: question.prompt.explanation,
+          correctMuti
+
+        };
+        questions.push(questionObj);
+      }
+      console.log(questions.filter(i => i.correctMuti.length > 1))
+
+      updateScore();
+
+      // display the questions
+      var questionsContainer = document.getElementById("quiz-container");
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var questionElement = document.createElement("form");
+        questionElement.className = "question";
+        questionElement.innerHTML =
+          "<span>Question " +
+          (i + 1) +
+          ":</span>" +
+          '<div class="question-prompt">' +
+          question.question +
+          "</div>";
+        questionElement.id = question.id;
+        questionElement.classList.add("quiz-container");
+        var answersElement = document.createElement("ul");
+        answersElement.className = "answers";
+        console.log('question.correctMuti', question.correctMuti.length)
+        if (question.correctMuti.length > 1) {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select2(' +
+              question.id +
+              ", " +
+              j +
+              ')"><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="checkbox" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        } else {
+          for (var j = 0; j < question.answers.length; j++) {
+            var answer = question.answers[j];
+            var answerElement = document.createElement("li");
+            answerElement.className = "answer";
+            answerElement.innerHTML =
+              '<label for="input-' +
+              question.id +
+              "-" +
+              j +
+              '"><div onclick="select(' +
+              question.id +
+              ", " +
+              j +
+              ')"><span></span><input id="input-' +
+              question.id +
+              "-" +
+              j +
+              '" type="radio" name="question' +
+              i +
+              '" value="' +
+              j +
+              '">' +
+              answer +
+              "</input></div></label>";
+            answerElement.classList.add("question-answer");
+            answersElement.appendChild(answerElement);
+          }
+        }
+        questionElement.appendChild(answersElement);
+
+        // add a submit button
+        var submitButton = document.createElement("button");
+        submitButton.className = "submit";
+        submitButton.innerHTML = "Submit";
+        submitButton.classList.add("submit-button");
+
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          var questionElement = e.target.parentElement;
+          var questionId = questionElement.id;
+          var question = questions.filter(function (q) {
+            return q.id == questionId;
+          })[0];
+
+          // set the border color of all answers to black
+          var answers = questionElement.getElementsByClassName("answer");
+          for (var i = 0; i < answers.length; i++) {
+            console.log(answers[i]);
+            answers[i].children[0].style.borderColor = "#1c1d1f";
+          }
+
+          var answer = questionElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          var mutilanswer = questionElement.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          if (answer) {
+            var answerIndex = answer.value;
+            var answerText = question.answers[answerIndex];
+            if (answerText == question.correctAnswer) {
+              answer.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+
+            } else {
+              answer.parentElement.parentElement.style.borderColor = "red";
+              // alert("Incorrect!");
+            }
+          }
+          if (mutilanswer) {
+            var answerIndex = [...mutilanswer].map(a => a.value);
+
+            if (kiemTraDapAn(question.correctMuti, answerIndex)) {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "limegreen";
+              })
+              // alert("Correct!");
+              correct++;
+              updateScore();
+              questionElement.innerHTML += question.explanation
+            } else {
+              [...mutilanswer].map(item => {
+                item.parentElement.parentElement.style.borderColor =
+                "red";
+              })
+            }
+            // var answerText = question.answers[answerIndex];
+            // if (answerText == question.correctAnswer) {
+            //   answer.parentElement.parentElement.style.borderColor =
+            //     "limegreen";
+            //   // alert("Correct!");
+            //   correct++;
+            //   updateScore();
+            //   questionElement.innerHTML += question.explanation
+
+            // } else {
+            //   answer.parentElement.parentElement.style.borderColor = "red";
+            //   // alert("Incorrect!");
+            // }
+          }
+          // else {
+          //   alert("Please select an answer.");
+          // }
+
+        });
+
+        // add button
+        questionElement.appendChild(submitButton);
+
+        questionsContainer.appendChild(questionElement);
+      }
+    }
+
+    function select(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      for (var i = 0; i < answers.length; i++) {
+        var span = answers[i].children[0].children[0].children[0];
+        var input = answers[i].children[0].children[0].children[1];
+        span.classList.remove("selected");
+        input.checked = false;
+      }
+      var span = answers[answer].children[0].children[0].children[0];
+      var input = answers[answer].children[0].children[0].children[1];
+      span.classList.add("selected");
+      input.checked = true;
+    }
+    function select2(question, answer) {
+      var questionElement = document.getElementById(question);
+      var answers = questionElement.getElementsByClassName("answer");
+      // for (var i = 0; i < answers.length; i++) {
+      //   var span = answers[i].children[0].children[0].children[0];
+      //   var input = answers[i].children[0].children[0].children[1];
+      //   if(input.checked){
+      //     span.classList.remove("selected");
+      //     input.checked = false;
+      //   }
+
+      // }
+      // var span = answers[answer].children[0].children[0].children[0];
+      // var input = answers[answer].children[0].children[0].children[1];
+      // span.classList.add("selected");
+      // input.checked = true;
+    }
+    function updateScore() {
+      var scoreElem = document.getElementById("score");
+      const score = (correct / total) * 100;
+      scoreElem.innerHTML = "Score: " + score + "/" + passPercent + "%";
+    }
+  </script>
+</body>
+
+</html>

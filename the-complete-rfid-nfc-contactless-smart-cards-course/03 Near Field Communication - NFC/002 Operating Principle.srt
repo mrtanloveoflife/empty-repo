@@ -1,0 +1,632 @@
+1
+00:00:03,170 --> 00:00:03,950
+Hello.
+
+2
+00:00:03,950 --> 00:00:08,000
+So here we will be talking about operating principle.
+
+3
+00:00:13,100 --> 00:00:15,260
+So how NFC works.
+
+4
+00:00:15,260 --> 00:00:18,680
+How near-field communication technology works.
+
+5
+00:00:18,770 --> 00:00:25,340
+Near-field communication is a wireless communication technology that allows devices to communicate with
+
+6
+00:00:25,340 --> 00:00:31,040
+each other over short distances, typically less than four centimeters.
+
+7
+00:00:31,730 --> 00:00:39,020
+Unlike other wireless communication technologies such as Bluetooth and Wi-Fi, NFC does not require
+
+8
+00:00:39,020 --> 00:00:41,120
+pairing or network setup.
+
+9
+00:00:41,870 --> 00:00:47,870
+NFC works by using electromagnetic radio fields to establish a connection between two devices.
+
+10
+00:00:48,710 --> 00:00:56,120
+One device acts as an initiator and generates an RF field that can power the passive target device.
+
+11
+00:00:56,450 --> 00:00:59,180
+When I say initiator, I mean reader.
+
+12
+00:00:59,210 --> 00:01:04,940
+A PCD and when I say target device, I mean a card or PC.
+
+13
+00:01:05,330 --> 00:01:11,270
+So the initiator then modulates the field to send data to the target device.
+
+14
+00:01:11,630 --> 00:01:14,450
+This process is known as inductive coupling.
+
+15
+00:01:14,450 --> 00:01:19,310
+And this is what makes NFC unique from other wireless communication technology.
+
+16
+00:01:24,700 --> 00:01:30,580
+So how is the operating principle in high frequency mode?
+
+17
+00:01:32,020 --> 00:01:38,230
+This is a quick view regarding the communication between a reader and a card, or between a polling
+
+18
+00:01:38,230 --> 00:01:44,200
+device and a listening device, or also between a PC and a PC.
+
+19
+00:01:44,650 --> 00:01:51,430
+In high frequency that characterize the contactless field or the near field communication NFC.
+
+20
+00:01:52,780 --> 00:01:55,090
+We will get back to this later in detail.
+
+21
+00:01:55,090 --> 00:02:01,030
+But to give you a first idea, the contactless smart card or as mentioned in the picture, a listening
+
+22
+00:02:01,030 --> 00:02:08,860
+device is a smart card that uses inductive coupling to communicate with its coupler or polling device.
+
+23
+00:02:09,400 --> 00:02:15,370
+Inductive coupling is the principle behind electronic or electric transformers.
+
+24
+00:02:15,820 --> 00:02:17,200
+A primary coil.
+
+25
+00:02:18,220 --> 00:02:24,580
+A primary coil is powered by an AC voltage and creates a magnetic field.
+
+26
+00:02:28,390 --> 00:02:33,250
+This magnetic field induces a current in the secondary coil.
+
+27
+00:02:35,140 --> 00:02:40,750
+In the case of contactless cards, the primary coil is driven by a sinusoidal voltage.
+
+28
+00:02:41,650 --> 00:02:51,700
+At 1350 56MHz, as I said before, the frequency of 1350 six megahertz is the one that characterizes
+
+29
+00:02:51,700 --> 00:03:00,280
+the NFC technology and hence creates a magnetic field with a 1350 six megahertz carrier frequency.
+
+30
+00:03:00,820 --> 00:03:03,370
+So high frequency radio band.
+
+31
+00:03:03,610 --> 00:03:10,840
+This magnetic field is not constrained in a confined volume, as it would be the case in an actual transformer.
+
+32
+00:03:11,170 --> 00:03:20,380
+Instead, the fields floats virtually freely within a part of the open air, limited only by the directivity
+
+33
+00:03:20,380 --> 00:03:23,800
+of the coil and the decrease of the magnetic waves.
+
+34
+00:03:25,150 --> 00:03:32,890
+This coil and its driving circuit, forming the primary of a virtual transformer, is named the proximity
+
+35
+00:03:32,890 --> 00:03:35,740
+coupling device, so the PCD the reader.
+
+36
+00:03:36,070 --> 00:03:41,500
+When a mobile secondary coil, which is the mobile, which is the secondary coil, is moved into the
+
+37
+00:03:41,500 --> 00:03:49,570
+part of the space where the PCD field floods the transformer, once virtual now becomes real, the flow
+
+38
+00:03:49,570 --> 00:03:56,200
+of the magnetic field through the secondary coil provides electrical power to a secondary passive circuit.
+
+39
+00:03:56,440 --> 00:04:03,760
+As you may have guessed, this mobile part of the transformer made of a coil and of an electronic circuit
+
+40
+00:04:03,760 --> 00:04:09,160
+or a chip, which is the proximity integrated circuit card pick.
+
+41
+00:04:14,530 --> 00:04:17,860
+So how is the physical operation in high frequency?
+
+42
+00:04:18,730 --> 00:04:24,850
+In this part I'm going to present the physical operation in high frequency or the physical operation
+
+43
+00:04:24,850 --> 00:04:26,800
+let's say of the NFC technology.
+
+44
+00:04:27,190 --> 00:04:40,960
+So first for any communication we need two devices a PCD reader or a pick a card, the PCD, which is
+
+45
+00:04:40,960 --> 00:04:44,260
+our reader and the pick which is our card.
+
+46
+00:04:45,250 --> 00:04:52,240
+Please remember that the card answers only when it's exposed in the field generated by the reader.
+
+47
+00:04:52,240 --> 00:04:54,520
+And if the reader sends a comment.
+
+48
+00:04:54,760 --> 00:04:57,940
+So this means that the card is useful.
+
+49
+00:04:58,780 --> 00:05:02,920
+Uh, sorry is useless when it's not in the sight.
+
+50
+00:05:02,920 --> 00:05:05,350
+I mean, in the field generated by the reader.
+
+51
+00:05:06,250 --> 00:05:06,580
+Okay.
+
+52
+00:05:06,580 --> 00:05:13,270
+So for example, when you are in a restaurant, you need to put your card in the field generated by
+
+53
+00:05:13,270 --> 00:05:20,110
+the reader that the waiter will use in order to be able to do transaction in order to be able to pay.
+
+54
+00:05:22,620 --> 00:05:31,950
+So the PC or the controller or the microcontroller will send some data to the reader, which are in
+
+55
+00:05:31,950 --> 00:05:32,910
+a byte format.
+
+56
+00:05:32,910 --> 00:05:40,140
+So the first when we send the data from the PC to the encoder to the reader, they will be in a byte
+
+57
+00:05:40,140 --> 00:05:40,920
+format.
+
+58
+00:05:41,040 --> 00:05:47,220
+This encoder, which is included in the reader, will convert it to a bit format.
+
+59
+00:05:52,310 --> 00:06:01,700
+Then the modulator of the reader will convert this bits here, and then we will have a waveform signal
+
+60
+00:06:01,700 --> 00:06:02,390
+as an output.
+
+61
+00:06:02,390 --> 00:06:06,680
+So our output here will be.
+
+62
+00:06:09,200 --> 00:06:12,530
+A waveform like this for example.
+
+63
+00:06:15,810 --> 00:06:22,740
+In fact, the field generated by the reader is in fact a perfect sinusoidal.
+
+64
+00:06:22,770 --> 00:06:25,140
+It's a perfect sinusoidal signal.
+
+65
+00:06:25,830 --> 00:06:28,830
+Okay, that's how it looks.
+
+66
+00:06:28,860 --> 00:06:31,560
+A field generated by the by the reader.
+
+67
+00:06:31,560 --> 00:06:32,190
+Okay.
+
+68
+00:06:33,540 --> 00:06:41,130
+This waveform or this field, which is, as I said, a sinusoidal signal will be delivered through the
+
+69
+00:06:41,130 --> 00:06:42,120
+readers antenna.
+
+70
+00:06:42,240 --> 00:06:44,220
+So in fact it will be generated.
+
+71
+00:06:44,220 --> 00:06:47,820
+It will be given to the card through the antenna of the reader.
+
+72
+00:06:48,420 --> 00:06:56,520
+And once the card is in the field, it will activate the card through the interaction with the card's
+
+73
+00:06:56,520 --> 00:06:57,030
+antenna.
+
+74
+00:06:58,050 --> 00:06:59,070
+What does it mean?
+
+75
+00:06:59,070 --> 00:07:07,140
+In fact, it means that, as I said, the card basically is useless and the activation of the card like
+
+76
+00:07:07,140 --> 00:07:11,370
+we are, we will be able to wake up the car to make it functional.
+
+77
+00:07:11,520 --> 00:07:18,330
+When we put it inside the this field, which is given by the antenna of the reader.
+
+78
+00:07:19,800 --> 00:07:27,150
+So this alternating magnetic field around the reader readers antenna will induce a current in the cards
+
+79
+00:07:27,150 --> 00:07:27,480
+antenna.
+
+80
+00:07:27,510 --> 00:07:28,650
+This is how it works.
+
+81
+00:07:28,830 --> 00:07:36,480
+So this current is used to power the card and allow I mean allow the car to communicate with the reader.
+
+82
+00:07:36,990 --> 00:07:41,670
+These two devices here are designed to exchange data in both directions.
+
+83
+00:07:42,480 --> 00:07:47,820
+A comment from the reader, then an answer from the card, then a comment from the reader, then an
+
+84
+00:07:47,820 --> 00:07:48,660
+answer from the card.
+
+85
+00:07:48,810 --> 00:07:54,210
+However, by the way, this part of communication, I mean digital communication between the reader
+
+86
+00:07:54,210 --> 00:07:54,840
+and the card.
+
+87
+00:07:54,840 --> 00:08:02,820
+When I say comment, answer, comment, answer will be detailed in one of the following presentations.
+
+88
+00:08:02,820 --> 00:08:12,300
+We will go back to this part in detail to present the bytes the the the the name of comments or answer.
+
+89
+00:08:12,300 --> 00:08:14,160
+What's the purpose of them?
+
+90
+00:08:14,160 --> 00:08:18,180
+What's the information that we can extract from them, and so on and so on.
+
+91
+00:08:18,900 --> 00:08:20,790
+So let's get back to this part.
+
+92
+00:08:20,790 --> 00:08:24,780
+These two devices are designed to exchange data in both directions.
+
+93
+00:08:24,780 --> 00:08:26,550
+As I said by the way.
+
+94
+00:08:29,100 --> 00:08:37,140
+All of this communication, as I said I would like to remember to to repeat it every time is based in,
+
+95
+00:08:38,070 --> 00:08:45,270
+in an exchange of information and also and also antenna communication, the antenna of the reader communicate
+
+96
+00:08:45,270 --> 00:08:46,560
+with the antenna of the card.
+
+97
+00:08:47,160 --> 00:08:54,570
+So regarding the Pic regarding the card, in fact, it contains a microchip that stores information
+
+98
+00:08:54,570 --> 00:08:59,640
+and an antenna that transmits data to the reader when in close proximity.
+
+99
+00:09:00,120 --> 00:09:07,080
+This answer, or let's say this data, will be presented by a transformation of the waveform sent by
+
+100
+00:09:07,080 --> 00:09:07,770
+the reader.
+
+101
+00:09:07,770 --> 00:09:12,060
+I will detail this later in the analog presentation in the analog aspects.
+
+102
+00:09:12,930 --> 00:09:13,860
+So.
+
+103
+00:09:16,120 --> 00:09:22,600
+As I said, this data will be presented by a transformation of the waveform sent by the reader that
+
+104
+00:09:22,600 --> 00:09:25,300
+will pass through the demodulator of the reader.
+
+105
+00:09:25,300 --> 00:09:33,730
+Then the output will be in bit format, and in the end, we will get the answer of the card in byte
+
+106
+00:09:33,730 --> 00:09:35,380
+format from the decoder of the reader.
+
+107
+00:09:35,380 --> 00:09:37,690
+So it will be in fact the same thing.
+
+108
+00:09:37,690 --> 00:09:39,340
+Here we will have a waveform.
+
+109
+00:09:39,340 --> 00:09:43,930
+Here you will have bits format, and here we will have byte by byte format as an output.
+
+110
+00:09:44,980 --> 00:09:55,450
+So this whole operation is presented by the layers one and two, ISO 14,140 3-1 and ISO 14,440 3-2 standards
+
+111
+00:09:55,450 --> 00:10:00,010
+that I am going to present through the the fourth section.
+
+112
+00:10:07,290 --> 00:10:12,660
+So here in the last slide I was talking about the standards many times.
+
+113
+00:10:12,690 --> 00:10:18,780
+So in fact the RFID, the radio frequency identification, high frequency standards are three.
+
+114
+00:10:18,780 --> 00:10:25,350
+So we have three standards details that details the NFC communication between a card and a read between
+
+115
+00:10:25,350 --> 00:10:27,630
+a PC and the PCD.
+
+116
+00:10:27,660 --> 00:10:36,510
+So first of all, ISO 14,443, which is an international standard that defines proximity cards that
+
+117
+00:10:36,510 --> 00:10:41,400
+used for identification cards may be type A and type B.
+
+118
+00:10:41,940 --> 00:10:50,640
+Both of them communicate via radio at 1350 six megahertz, which is, as I said, the frequency that
+
+119
+00:10:50,640 --> 00:10:53,730
+characterizes the RFID high frequency.
+
+120
+00:10:54,060 --> 00:11:01,170
+The main differences between these types concern modulation methods, coding schemes, and protocol
+
+121
+00:11:01,170 --> 00:11:02,880
+initialization procedures.
+
+122
+00:11:02,880 --> 00:11:07,380
+Both type A and type B cards use the same transmission protocol.
+
+123
+00:11:11,010 --> 00:11:17,040
+ISO 14,443 systems operate at a distance less than ten centimeters.
+
+124
+00:11:17,730 --> 00:11:23,670
+As I said, we will get back to the type A and type B communications in detail, and we will also get
+
+125
+00:11:23,670 --> 00:11:30,780
+back to the one of the main questions of the NFC technology, which is what's the difference, exact
+
+126
+00:11:30,780 --> 00:11:41,820
+difference between type A and type B, why the chip manufacturer can choose to fabricate a card or a
+
+127
+00:11:41,820 --> 00:11:43,740
+chip of type A or a type B.
+
+128
+00:11:45,900 --> 00:11:52,980
+So all of the details about the ISO 14,143 standard will be presented through the fifth and the sixth
+
+129
+00:11:52,980 --> 00:11:53,760
+sections.
+
+130
+00:11:53,850 --> 00:12:00,330
+Then we have ISO 15 693 standard, which is an ISO standard for vicinity cards.
+
+131
+00:12:00,540 --> 00:12:06,450
+Cards which can be read from a greater distance as compared with proximity cards.
+
+132
+00:12:06,990 --> 00:12:15,060
+ISO 15,693 systems operate also at 1350 six megahertz frequency, and offer maximum read distance of
+
+133
+00:12:15,060 --> 00:12:21,210
+1 to 1.5 meters, so it's a huge comparing to the ISO 14 443.
+
+134
+00:12:22,080 --> 00:12:29,910
+As the vicinity cards have to operate at a greater distance, the necessary magnetic field is less than
+
+135
+00:12:29,910 --> 00:12:31,110
+5 ampere/m.
+
+136
+00:12:31,110 --> 00:12:34,200
+It's from zero 15 to 5 ampere/m.
+
+137
+00:12:36,750 --> 00:12:45,120
+So finally, the Felica standard, which is a contactless RFID smart card system for Sony in Japan,
+
+138
+00:12:45,120 --> 00:12:49,290
+primarily used in electronic magnetic money cards.
+
+139
+00:12:49,380 --> 00:12:56,880
+It operates also at 1350 six megahertz, and the proximity of ten centimeter or less is required for
+
+140
+00:12:56,880 --> 00:12:57,690
+communication.
+
+141
+00:13:07,230 --> 00:13:10,230
+So what are the other standards in general?
+
+142
+00:13:10,470 --> 00:13:16,590
+In fact, the standards that define the different type of application in the contactless fields are
+
+143
+00:13:16,590 --> 00:13:16,980
+many.
+
+144
+00:13:16,980 --> 00:13:18,390
+And here are some of them.
+
+145
+00:13:18,660 --> 00:13:22,860
+So we have ISO standards as we said for identity cards.
+
+146
+00:13:22,860 --> 00:13:27,180
+Then we have the EMV standard for payment cards for banking cards.
+
+147
+00:13:27,450 --> 00:13:30,900
+Third one we have NFC forum for mobile phones.
+
+148
+00:13:30,960 --> 00:13:33,660
+Then we have ICAO for passports.
+
+149
+00:13:33,660 --> 00:13:37,860
+And for example we have also ciphers for transportation cards.
+
+150
+00:13:39,330 --> 00:13:41,910
+And here we are in the summary of this part.
+
+151
+00:13:41,910 --> 00:13:48,570
+So NFC is a wireless communication technology that allows devices to communicate with each other over
+
+152
+00:13:48,570 --> 00:13:52,290
+short distances, typically less than four centimeters.
+
+153
+00:13:52,890 --> 00:13:58,950
+A Pic is a smart card that uses inductive coupling to communicate with its coupler, or let's call it
+
+154
+00:13:58,950 --> 00:13:59,760
+also PCD.
+
+155
+00:14:00,480 --> 00:14:07,920
+The magnetic field created is characterized by a 1350 six megahertz carrier frequency, which is the
+
+156
+00:14:07,920 --> 00:14:09,660
+high frequency radio band.
+
+157
+00:14:10,770 --> 00:14:16,470
+Finally, three standards details the NFC communication between a card and the reader, which are ISO
+
+158
+00:14:16,470 --> 00:14:21,270
+14,443, ISO 15,693, and Felica.
+
